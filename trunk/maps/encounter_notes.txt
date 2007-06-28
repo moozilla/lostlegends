@@ -1,0 +1,30 @@
+Normal Encounters:
+
+Grendale         - no encounters                     | --
+Gaia             - GOBLIN, FUNGUS                    | 08
+Living Forest    - FUNGUS, GOBLIN                    | 08
+Marina           - PIRAHNA                           | 08
+Temple of Siren  - no encounters                     | --
+Corel Village    - no encounters                     | --
+Corel Cavern     - PIRHANA                           | 06
+Gaia (2)         - GOBLIN, OGRE                      | 06
+Mt. Hermit       - GOBLIN, OGRE, COCATRICE           | 10
+Karta            - COCATRICE, WYVERN                 | 10
+Kingdom of Karta - no encounters                     | --
+Ruined Temple    - WYVERN, COCATRICE                 | 08
+Colloseum        - no encounters                     | --
+Khimeara Village - no encounters                     | --
+Path of the Gods - CHIMERA, MAGE, WYVERN, COCATRICE  | 10
+
+Boss Encounters:
+
+DJINN     - Living Forest
+SIREN     - Temple of Siren
+HERMIT    - Mt. Hermit
+INDRA     - Kingdom of Karta
+THANATOS  - Colloseum (optional)
+SEI-RYU   - Colloseum (optional)
+DARIUS    - Path of the Gods (final battle)
+DRACONIUS - Path of the Gods (final battle)
+D. SHADOW - Path of the Gods (final battle)
+MIMIC     - some chests (event)

@@ -1,0 +1,23 @@
+(NAME)
+  ATTACKS!
+**********
+(NAME) WAS
+HIT!
+**********
+HIT!
+
+**********
+MISSED!
+
+**********
+INFLICTED
+123 DAMAGE
+**********
+(NAME) WAS
+POISONED!
+**********
+POISON
+DAMAGE!
+**********
+STATUS
+RECOVERED!

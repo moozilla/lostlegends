@@ -1,0 +1,17 @@
+Fire and Cold are elemental modifiers added to weapons, abilities, etc. Some
+enemies can be damaged by targetting an elemental weak spot. Accordingly, the
+following sums up various states in which these modifiers can exist:
+
+added to attack - effect is added to normal attack damage
+vulnerable - no specific defense; normal effect
+invulnerable - defense against effect; no damage
+weakness - weak against effect; damage x2
+
+Poison and Sleep are status modifiers. They can exist in three states:
+
+added to attack - effect is added to normal attack (does not effect damage)
+vulnerable - no specific defense; normal effect (does not effect damage)
+invulnerable - defense against effect; no effect (does not effect damage)
+
+A note: all characters are considered "vulnerable" to all states by default.
+Adding equipment changes this state.

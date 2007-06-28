@@ -1,0 +1,26 @@
+FENRIS
+
+ATT 10 (018)    DEF 10 (015)    HP 28
+MAG 05 (004)    AGI 08 (008)
+
+Slot 1: BROAD   30  Slot 4:  (nothing)
+Slot 2: TUNIC   --  Slot 5:  (nothing)
+Slot 3:  (nothing)  Slot 6: TONIC   03
+
+ROWLEY
+
+ATT 12 (017)    DEF 08 (010)    HP 22
+MAG 05 (000)    AGI 12 (016)
+
+Slot 1: SHORT   20  Slot 4:  (nothing)
+Slot 2: CLOTH   --  Slot 5:  (nothing)
+Slot 3:  (nothing)  Slot 6:  (nothing)
+
+ANNIKA
+
+ATT 05 (008)    DEF 05 (008)    HP 18
+MAG 12 (020)    AGI 08 (006)
+
+Slot 1: WOODEN  10  Slot 4:  (nothing)
+Slot 2: ROBE    --  Slot 5: HEALING 05
+Slot 3:  (nothing)  Slot 6: BLAZE   08
