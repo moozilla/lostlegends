@@ -5,27 +5,27 @@ Swords | Description                    |ATT/DEF/MAG/AGI| Other              |Qt
 -------+--------------------------------+---------------+--------------------+--
 BROAD  | A common sword wrought of iron | +8/---/---/ -1| N/A                |40
 COREL  | A sword belonging to the sea   |+12/---/---/ -1| N/A                |20
-FLAME  | A sword crafted of fire        |+15/---/ +5/ -3| Fire-elemental     |30
-FROST  | A sword crafted of ice crystals|+15/---/ +5/ -3| Cold-elemental     |30
-SILVER | A great sword wrought of silver|+18/---/---/ -3| N/A                |20
-LEGEND | A legendary blade              |+28/ +5/ +5/ -1| N/A                |--
+FLAME  | A sword crafted of fire        |+15/---/ +5/ -1| Fire-elemental     |30
+FROST  | A sword crafted of ice crystals|+15/---/ +5/ -1| Cold-elemental     |30
+SILVER | A great sword wrought of silver|+18/---/---/ -1| N/A                |20
+LEGEND | A legendary blade              |+28/ +5/ +5/---| N/A                |--
 CURSED | A cursed blade                 |+10/ -3/ -3/ -3| Puts enemy to sleep|10
 KATANA | A swift, deadly blade          |+18/---/---/ +8| N/A                |20
 ================================================================================
 Bows   | Description                    |ATT/DEF/MAG/AGI| Other              |Qt
 -------+--------------------------------+---------------+--------------------+--
-SHORT  | A common short bow             | +5/ -1/---/ +1| N/A                |40
+SHORT  | A common short bow             | +5/ -1/---/ +3| N/A                |40
 LONG   | A common long bow              | +8/ -3/---/ +3| N/A                |30
 GREAT  | A common great bow             |+15/ -3/---/ +5| N/A                |20
-ELVEN  | A bow crafted by the elves     |+12/ -1/ +5/ +8| N/A                |60
+ELVEN  | A bow crafted by the elves     |+12/ -3/ +5/ +8| N/A                |60
 POISON | A bow tipped with venom        | +8/ -3/---/ +3| Poisons enemy      |20
-ARTEMIS| Bow belonging to a great deity |+20/ -3/ +5/+12| N/A                |--
+ARTEMIS| Bow belonging to a great deity |+20/---/ +5/+12| N/A                |--
 ================================================================================
 Staves | Description                    |ATT/DEF/MAG/AGI| Other              |Qt
 -------+--------------------------------+---------------+--------------------+--
 WOODEN | A wooden rod                   | +3/---/ +5/ -1| N/A                |20
 CLERIC | A staff held by clerics        | +8/---/+12/ -1| N/A                |20
-MAGUS  | A great magical relic          |+10/---/+28/ -1| N/A                |20
+MAGUS  | A great, magical relic         |+10/---/+28/ -1| N/A                |20
 RUNE   | Ancient staff                  |+12/ +3/+20/ -1| N/A                |--
 
 ================================================================================
@@ -51,14 +51,14 @@ Armor  | Description                      |ATT/DEF/MAG/AGI| Other
 -------+----------------------------------+---------------+---------------------
 CLOTH  |Clothes worn by commoners         |---/ +3/---/ +3| Weak to fire
 ROBE   |A robe worn by nobles             |---/ +3/ +5/ -1| N/A
-ARCANE |A robe worn by high mages         |---/ +5/+12/ -3| Resist cold
+ARCANE |A robe worn by high mages         |---/ +5/+12/ -1| Resist cold
 TUNIC  |Light, yet sturdy clothing        |---/ +5/---/ +1| N/A
 JUDOGI |A uniform used by martial artists | +8/ +5/---/ +8| Weak to fire
-CHAIN  |Shirt layered with chains         |---/+10/---/ -3| N/A
+CHAIN  |Shirt layered with chains         |---/+10/---/ -1| N/A
 MINERVA|Light shirt worn by mages         |---/ +8/ +8/ +1| Resist fire
-PLATE  |Full-plate armor                  |---/+15/---/ -5| N/A
+PLATE  |Full-plate armor                  |---/+15/---/ -3| N/A
 MITHRIL|Extremely lightweight shirt       |---/+12/---/ +1| Weak to cold
-ADAMANT|Crafted of a powerful ore         | +3/+20/---/ -5| Resist fire / cold
+ADAMANT|Crafted of a powerful ore         |---/+20/---/---| Resist fire / cold
 
 ================================================================================
   Rings
@@ -82,10 +82,10 @@ ORNATE | A glimmering ring                | +3/ +3/ +3/ +3| Resist all
 ================================================================================
 Item   | Description                      |ATT/DEF/MAG/AGI| Other
 -------+----------------------------------+---------------+---------------------
-BATTLE | Common battle gauntlets          | +5/ +3/---/ -3| N/A
-OGRE   | Gauntlets that grant ogrish might| +8/ +3/---/ -3| N/A
-ARCHER | Gauntlets worn by archers        | +3/---/---/ +5| N/A
-MAGE   | Gauntlets used by battle mages   |---/ +3/ +8/ -3| N/A
+BATTLE | Common battle gauntlets          | +5/ +3/---/ -1| N/A
+OGRE   | Gauntlets that grant ogrish might| +8/ +3/---/ -1| N/A
+ARCHER | Gauntlets worn by archers        | +3/ +1/---/ +5| N/A
+MAGE   | Gauntlets used by battle mages   |---/ +3/ +8/ -1| N/A
 HERO   | Gauntlets worn by true heroes    | +5/ +5/ +5/ +5| N/A
 
 ================================================================================
@@ -119,12 +119,20 @@ Castle Grendale
 TONIC   |   40
 PURE    |   60
 BROAD   |  200
-SHORT   |  160 
-WOODEN  |  120 
+SHORT   |  160
+WOODEN  |  120
 CLOTH   |   80
 
+Castle Grendale 2 (woman's shop)
+-PAGE 1--------
+BATTLE  |  400
+RUBY    |  600
+GOBALT  |  800
+LAMIA   | 1100
+SERPENT | 1100
+
 Corel Village
--PAGE 1---------PAGE 2-------- -INN COST: 100 GP
+-PAGE 1---------PAGE 2-------- -INN COST:  80 GP
 TONIC   |   40  BLAZE   |  400
 MYRRH   |  400  FROST   |  400
 COREL   |  800  VENOM   |  200
@@ -141,11 +149,20 @@ GREAT   | 1600  HEALING |  800
 CLERIC  | 1100  MIGHT   |  600
 CHAIN   |  800  RAISE   | 1200
 
+Colloseum
+-PAGE 1---------PAGE 2--------
+TONIC   |   40  BATTLE  |  400
+ELIXER  |  250  OGRE    | 1100
+PURE    |   60  RUBY    |  600
+MYRHH   |  400  AZURE   |  800
+HEALING |  800  LAMIA   | 1100
+RAISE   | 1200  SERPENT | 1100
+
 Khimeara Village
 -PAGE 1---------PAGE 2-------- -INN COST: (N/A)
 PURE    |   60  CURE    |  400
 ELIXER  |  250  SHIELD  |  600
 MYRRH   |  400  MIGHT   |  600
 BLAZE   |  400  RAISE   | 1200
-FROST   |  400  CUREALL | 3200
-HEALING |  800  PINION  | 6400
+FROST   |  400  CUREALL | 6400
+HEALING |  800  PINION  | 9800
