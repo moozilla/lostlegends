@@ -1,0 +1,151 @@
+================================================================================
+  Weapons
+================================================================================
+Swords | Description                    |ATT/DEF/MAG/AGI| Other              |Qt
+-------+--------------------------------+---------------+--------------------+--
+BROAD  | A common sword wrought of iron | +8/---/---/ -1| N/A                |40
+COREL  | A sword belonging to the sea   |+12/---/---/ -1| N/A                |20
+FLAME  | A sword crafted of fire        |+15/---/ +5/ -3| Fire-elemental     |30
+FROST  | A sword crafted of ice crystals|+15/---/ +5/ -3| Cold-elemental     |30
+SILVER | A great sword wrought of silver|+18/---/---/ -3| N/A                |20
+LEGEND | A legendary blade              |+28/ +5/ +5/ -1| N/A                |--
+CURSED | A cursed blade                 |+10/ -3/ -3/ -3| Puts enemy to sleep|10
+KATANA | A swift, deadly blade          |+18/---/---/ +8| N/A                |20
+================================================================================
+Bows   | Description                    |ATT/DEF/MAG/AGI| Other              |Qt
+-------+--------------------------------+---------------+--------------------+--
+SHORT  | A common short bow             | +5/ -1/---/ +1| N/A                |40
+LONG   | A common long bow              | +8/ -3/---/ +3| N/A                |30
+GREAT  | A common great bow             |+15/ -3/---/ +5| N/A                |20
+ELVEN  | A bow crafted by the elves     |+12/ -1/ +5/ +8| N/A                |60
+POISON | A bow tipped with venom        | +8/ -3/---/ +3| Poisons enemy      |20
+ARTEMIS| Bow belonging to a great deity |+20/ -3/ +5/+12| N/A                |--
+================================================================================
+Staves | Description                    |ATT/DEF/MAG/AGI| Other              |Qt
+-------+--------------------------------+---------------+--------------------+--
+WOODEN | A wooden rod                   | +3/---/ +5/ -1| N/A                |20
+CLERIC | A staff held by clerics        | +8/---/+12/ -1| N/A                |20
+MAGUS  | A great magical relic          |+10/---/+28/ -1| N/A                |20
+RUNE   | Ancient staff                  |+12/ +3/+20/ -1| N/A                |--
+
+================================================================================
+  Spell Books
+================================================================================
+Book   | Description                      | Effectivity                      |Qt
+-------+----------------------------------+----------------------------------+--
+BLAZE  |Damages the enemy with fire       | 16 + MAG / fire-elemental        |20
+FROST  |Damages the enemy with cold       | 16 + MAG / cold-elemental        |20
+VENOM  |Poisons the enemy                 | 1/6 magic per round / cannot DEF |10
+SLUMBER|Puts the enemy to sleep           | 1 - 3 rounds (random)            |10
+HEALING|Recovers an ally's vitality       | 8 - 16 + MAG                     |10
+CURE   |Removes ailments from an ally     | N/A                              |10
+MIGHT  |Raises an ally's attack           | 8 - 16 (random)                  | 5
+SHIELD |Raises an ally's defense          | 8 - 16 (random)                  | 5
+RAISE  |Restores a fallen ally to life    | Raise with 1/3 of max HP         | 3
+THUNDER|A powerful, heavenly shock        | 32 + magic / non-elemental       | 3
+
+================================================================================
+  Armor
+================================================================================
+Armor  | Description                      |ATT/DEF/MAG/AGI| Other
+-------+----------------------------------+---------------+---------------------
+CLOTH  |Clothes worn by commoners         |---/ +3/---/ +3| Weak to fire
+ROBE   |A robe worn by nobles             |---/ +3/ +5/ -1| N/A
+ARCANE |A robe worn by high mages         |---/ +5/+12/ -3| Resist cold
+TUNIC  |Light, yet sturdy clothing        |---/ +5/---/ +1| N/A
+JUDOGI |A uniform used by martial artists | +8/ +5/---/ +8| Weak to fire
+CHAIN  |Shirt layered with chains         |---/+10/---/ -3| N/A
+MINERVA|Light shirt worn by mages         |---/ +8/ +8/ +1| Resist fire
+PLATE  |Full-plate armor                  |---/+15/---/ -5| N/A
+MITHRIL|Extremely lightweight shirt       |---/+12/---/ +1| Weak to cold
+ADAMANT|Crafted of a powerful ore         | +3/+20/---/ -5| Resist fire / cold
+
+================================================================================
+  Rings
+================================================================================
+Ring   | Description                      |ATT/DEF/MAG/AGI| Other
+-------+----------------------------------+---------------+---------------------
+RUBY   | A ring adorned with rubies       |---/ +1/---/---| Res. fire; weak cold
+AZURE  | A ring adorned with sapphires    |---/ +1/---/---| Res. cold; weak fire
+FORCE  | A ring full of elemental power   |---/ +3/---/---| Resist fire, cold
+CRIMSON| An ominous crimson ring          | +1/---/ +3/---| Fire-elemental att.
+COBALT | An ominous cobalt ring           | +1/---/ +3/---| Cold-elemental att.
+SIREN  | Ring echoing a siren's song      | +1/---/ +3/---| Add sleep to attack
+SNAKE  | Ridden with a snake's curse      | +1/---/ +3/---| Add poison to attack
+BLESSED| A blessed ring                   |---/ +3/---/---| Resist all ailments
+LAMIA  | A ring bearing a lamia's curse   |---/ +1/---/---| Resist sleep
+SERPENT| Ridden with a serpent's curse    |---/ +1/---/---| Resist poison
+ORNATE | A glimmering ring                | +3/ +3/ +3/ +3| Resist all
+
+================================================================================
+  Gauntlets
+================================================================================
+Item   | Description                      |ATT/DEF/MAG/AGI| Other
+-------+----------------------------------+---------------+---------------------
+BATTLE | Common battle gauntlets          | +5/ +3/---/ -3| N/A
+OGRE   | Gauntlets that grant ogrish might| +8/ +3/---/ -3| N/A
+ARCHER | Gauntlets worn by archers        | +3/---/---/ +5| N/A
+MAGE   | Gauntlets used by battle mages   |---/ +3/ +8/ -3| N/A
+HERO   | Gauntlets worn by true heroes    | +5/ +5/ +5/ +5| N/A
+
+================================================================================
+  Potions
+================================================================================
+Potion | Effect                                                              |Qt
+-------+---------------------------------------------------------------------+--
+TONIC  | Recovers 16-32 HP / single ally                                     | 5
+ELIXER | Recovers all HP / single ally                                       | 1
+CUREALL| Recovers 24 HP / all allies                                         | 1
+MYRRH  | Restores a fallen ally to life w/ 1 HP                              | 1
+PURE   | Cures poisoning                                                     | 3
+PINION | Fully resurrects an ally, or resurrects its holder once upon dying  | 1
+
+================================================================================
+ Key Items
+================================================================================
+Item   | Notes                                                               |Qt
+-------+------------------------------------------------------------------------
+SIREN  | Required to enter Temple of Siren                                   | 1
+ANCIENT| Required to enter the Colloseum                                     | 1
+RUNIC  | Required to access locked chests and doors                          | 5
+HIDDEN | Required to access the Dev. Room                                    | 1
+
+================================================================================
+ Shop List
+================================================================================
+
+Castle Grendale
+-PAGE 1--------                -INN COST: (free)
+TONIC   |   40
+PURE    |   60
+BROAD   |  200
+SHORT   |  160 
+WOODEN  |  120 
+CLOTH   |   80
+
+Corel Village
+-PAGE 1---------PAGE 2-------- -INN COST: 100 GP
+TONIC   |   40  BLAZE   |  400
+MYRRH   |  400  FROST   |  400
+COREL   |  800  VENOM   |  200
+LONG    |  400  SLUMBER |  200
+ROBE    |  180  CURE    |  400
+TUNIC   |  180  SHIELD  |  600
+
+Karta Kingdom
+-PAGE 1---------PAGE 2-------- -INN COST: 400 GP
+ELIXER  |  250  PLATE   | 1600
+MYRHH   |  400  BLAZE   |  400
+SILVER  | 2200  FROST   |  400
+GREAT   | 1600  HEALING |  800
+CLERIC  | 1100  MIGHT   |  600
+CHAIN   |  800  RAISE   | 1200
+
+Khimeara Village
+-PAGE 1---------PAGE 2-------- -INN COST: (N/A)
+PURE    |   60  CURE    |  400
+ELIXER  |  250  SHIELD  |  600
+MYRRH   |  400  MIGHT   |  600
+BLAZE   |  400  RAISE   | 1200
+FROST   |  400  CUREALL | 3200
+HEALING |  800  PINION  | 6400
