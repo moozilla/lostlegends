@@ -10,7 +10,7 @@ BLAZE   > 80% hit rate
 FROST   > 80% hit rate
 VENOM   > 70% hit rate
 SLUMBER > 70% hit rate
-ULTIMA  > 70% hit rate
+THUNDER > 70% hit rate
 
 FLARE   > 70% hit rate
 STORM   > 70% hit rate
