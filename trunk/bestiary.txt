@@ -23,7 +23,7 @@ VENOM   10
 ================================================================================
 GOBLIN
 
-HP 0032 | GP 0040 | Spoils: (G)BATTLE 1/16
+HP 0032 | GP 0040 | Spoils: (G)BATTLE 1/32
 
 ATT 024 | DEF 008 | MAG 008 | AGI 016
 
@@ -113,7 +113,7 @@ BREATH  --
 ================================================================================
 WYVERN
 
-HP 0220 | GP 0480 | Spoils: (P)CUREALL 1/16
+HP 0220 | GP 0480 | Spoils: (P)CUREALL 1/32
 
 ATT 056 | DEF 024 | MAG 042 | AGI 024
 
@@ -130,7 +130,7 @@ ATTACK  --
 ================================================================================
 MAGE
 
-HP 0180 | GP 0320 | Spoils: (B)ULTIMA 1/32
+HP 0180 | GP 0320 | Spoils: (B)THUNDER 1/32
 
 ATT 032 | DEF 016 | MAG 036 | AGI 024
 
@@ -244,7 +244,7 @@ DRACONIUS
 
 HP 0666 | GP 0000 | Spoils: (none)
 
-ATT 096 | DEF 024 | MAG 096 | AGI 072
+ATT 096 | DEF 024 | MAG 072 | AGI 072
 
 Fire   : added to attack; invulnerable
 Cold   : weakness
@@ -262,7 +262,7 @@ D.SHADOW
 
 HP 0666 | GP 0000 | Spoils: (none)
 
-ATT 096 | DEF 024 | MAG 096 | AGI 072
+ATT 096 | DEF 024 | MAG 072 | AGI 072
 
 Fire   : weakness
 Cold   : added to attack; invulnerable
