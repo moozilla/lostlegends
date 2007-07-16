@@ -75,7 +75,7 @@ ATTACK  --
 QUAKE   --
 
 ================================================================================
-COCATRICE
+COCATRICE - flying type
 
 HP 0080 | GP 0160 | Spoils: (P)PINION 1/32
 
@@ -93,7 +93,7 @@ SLUMBER 10
 ATTACK  --
 
 ================================================================================
-CHIMERA
+CHIMERA - beast type
 
 HP 0180 | GP 0320 | Spoils: (none)
 
@@ -111,7 +111,7 @@ ATTACK  --
 BREATH  --
 
 ================================================================================
-WYVERN
+WYVERN - beast type, flying type
 
 HP 0220 | GP 0480 | Spoils: (P)CUREALL 1/32
 
@@ -128,7 +128,7 @@ FLARE   --
 ATTACK  --
 ATTACK  --
 ================================================================================
-MAGE
+MAGE - magic type
 
 HP 0180 | GP 0320 | Spoils: (B)THUNDER 1/32
 
@@ -150,7 +150,7 @@ CURSE  --
  --BOSS DATA--
 
 ================================================================================
-DJINN
+DJINN - beast type
 
 HP 0300 | GP 0400 | Spoils: (R)CRIMSON 1/1
 
@@ -204,7 +204,7 @@ QUAKE   --
 QUAKE   --
 
 ================================================================================
-INDRA
+INDRA - magic type
 
 HP 0380 | GP 1100 | Spoils: (R)BLESSED 1/1
 
@@ -222,7 +222,7 @@ FLARE   --
 ATTACK  --
 
 ================================================================================
-DARIUS
+DARIUS - magic type
 
 HP 0500 | GP 0000 | Spoils: (none)
 
@@ -240,7 +240,7 @@ FROST   20
 CURSE   --
 
 ================================================================================
-DRACONIUS
+DRACONIUS - beast type, flying type
 
 HP 0666 | GP 0000 | Spoils: (none)
 
@@ -258,7 +258,7 @@ BREATH  --
 BLAZE   20
 
 ================================================================================
-D.SHADOW
+D.SHADOW - beast type, flying type
 
 HP 0666 | GP 0000 | Spoils: (none)
 
@@ -294,7 +294,7 @@ ATTACK  --
 ATTACK  --
 
 ================================================================================
-THANATOS
+THANATOS - magic type
 
 HP 0666 | GP 4400 | Spoils: (S)RUNE 1/1
 
@@ -312,7 +312,7 @@ SLUMBER 10
 STORM   --
 
 ================================================================================
-SEI-RYU
+SEI-RYU - beast type, flying type
 
 HP 1280 | GP 9800 | Spoils: (R)ORNATE 1/1
 
