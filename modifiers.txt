@@ -5,7 +5,7 @@ following sums up various states in which these modifiers can exist:
 added to attack - effect is added to normal attack damage
 vulnerable - no specific defense; normal effect
 invulnerable - defense against effect; no damage
-weakness - weak against effect; damage x2
+weakness - weak against effect; damage +8
 
 Poison and Sleep are status modifiers. They can exist in three states:
 
