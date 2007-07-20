@@ -181,8 +181,8 @@ Poison : invulnerable
 Sleep  : invulnerable
 
 ATTACK  --
+SLUMBER 10
 FROST   20
-HEALING 10
 STORM   --
 
 ================================================================================
