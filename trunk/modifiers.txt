@@ -15,3 +15,11 @@ invulnerable - defense against effect; no effect (does not effect damage)
 
 A note: all characters are considered "vulnerable" to all states by default.
 Adding equipment changes this state.
+
+----------
+
+A note about the "enemy types" in the equipment and beastiary files:
+
+Enemies may be weak against certain weapons. For instance, swords are effective against "beast" types. The damage added to this attack always ignores defense. So, using a sword against a beast type which has more defense power than the attacker does attack power, the enemy will still sustain the bonus damage from the weapon. Example:
+
+Character has 56 ATK and uses a sword against a beast enemy with 78 DEF. The enemy may sustain 8 - 16 damage instead of 1.
