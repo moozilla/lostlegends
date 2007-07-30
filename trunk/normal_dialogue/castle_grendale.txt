@@ -1,0 +1,125 @@
++-KING-----+
+¦"PLEASE_  ¦
+¦TAKE GOOD >
++----------+
++-KING-----+
+¦CARE OF MY¦
+¦DAUGHTER] ¦
++----------+
+
++-GUARD----+
+¦"FEEL FREE¦
+¦TO TAKE   >
++----------+
++-GUARD----+
+¦ANYTHING  ¦
+¦FROM OUR  >
++----------+
++-GUARD----+
+¦TREASURY] ¦
+¦          ¦
++----------+
+
++-VANSKE---+
+¦"HOW 'BOUT¦
+¦A KISS,   >
++----------+
++-VANSKE---+
+¦FOR LUCK?"¦
+¦          ¦
++----------+
++-BEATRIX--+
+¦"YOU'VE   ¦
+¦GOT TO BE >
++----------+
++-BEATRIX--+
+¦KIDDING!" ¦
+¦          ¦
++----------+
++-VANSKE---+
+¦"_ _ _"   ¦
+¦          ¦
++----------+
+
++-GUARD----+
+¦"GOOD     ¦
+¦LUCK!"    ¦
++----------+
+
++-SHELLY---+
+¦"I JUST   ¦
+¦LOVE      >
++----------+
++-SHELLY---+
+¦PICKING   ¦
+¦FLOWERS!" ¦
++----------+
+
++-VILLAGER-+
+¦"NEED A   ¦
+¦REST?"    ¦
++----------+
++----------+
+¦HEALTH    ¦
+¦RESTORED! ¦
++----------+
+
++-TRADER---+
+¦"NEED SOME¦
+¦NEW GEAR?"¦
++----------+
+ TONIC    40
+ PURE     60
+ BROAD   200
+ SHORT   160
+ WOODEN  120
+ CLOTH    80
+
++-TRADER---+
+¦"NEED SOME¦
+¦NEW GEAR?"¦
++----------+
+ BATTLE  400
+ RUBY    600
+ GOBALT  800
+ LAMIA  1100
+ SERPENT1100
+
+
++-GIDEON---+
+¦"HELLO. I ¦
+¦AM THE    >
++----------+
++-GIDEON---+
+¦WISE SAGE,¦
+¦GIDEON]   ¦
++----------+
++-GIDEON---+
+¦"I TRAVEL ¦
+¦AROUND, SO>
++----------+
++-GIDEON---+
+¦I HAVE    ¦
+¦MANY TIPS >
++----------+
++-GIDEON---+
+¦TO SHARE!"¦
+¦          ¦
++----------+
+
++-GIDEON---+
+¦"SOME     ¦
+¦ITEMS HAVE>
++----------+
++-GIDEON---+
+¦ELEMENTAL ¦
+¦POWERS]   ¦
++----------+
++-GIDEON---+
+¦"TRY THEM ¦
+¦ON ENEMIES>
++----------+
++-GIDEON---+
+¦TO FIND A ¦
+¦WEAKNESS!"¦
++----------+
