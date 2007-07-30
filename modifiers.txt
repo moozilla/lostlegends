@@ -5,7 +5,7 @@ following sums up various states in which these modifiers can exist:
 added to attack - effect is added to normal attack damage
 vulnerable - no specific defense; normal effect
 invulnerable - defense against effect; no damage
-weakness - weak against effect; add half extra damage to attack (i.e., 100 elemental damage would be 150)
+weakness - weak against effect; double damage
 
 Poison and Sleep are status modifiers. They can exist in three states:
 
