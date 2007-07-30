@@ -64,7 +64,7 @@
 ¦RESTORED! ¦
 +----------+
 
-+-TRADER---+
++-VENDOR---+
 ¦"NEED SOME¦
 ¦NEW GEAR?"¦
 +----------+
@@ -75,7 +75,7 @@
  WOODEN  120
  CLOTH    80
 
-+-TRADER---+
++-VENDOR---+
 ¦"NEED SOME¦
 ¦NEW GEAR?"¦
 +----------+
