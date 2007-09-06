@@ -5,7 +5,7 @@
 ================================================================================
 FUNGUS
 
-HP 0024 | GP 0020 | Spoils: (P)PURE 1/16
+HP 0028 | GP 0020 | Spoils: (P)PURE 1/16
 
 ATT 024 | DEF 008 | MAG 012 | AGI 008
 
@@ -23,7 +23,7 @@ VENOM   10
 ================================================================================
 GOBLIN
 
-HP 0032 | GP 0040 | Spoils: (G)BATTLE 1/32
+HP 0036 | GP 0040 | Spoils: (G)BATTLE 1/32
 
 ATT 024 | DEF 008 | MAG 008 | AGI 016
 
@@ -298,7 +298,7 @@ THANATOS - magic type
 
 HP 0666 | GP 4400 | Spoils: (S)RUNE 1/1
 
-ATT 128 | DEF 032 | MAG 096 | AGI 064
+ATT 128 | DEF 048 | MAG 096 | AGI 064
 
 Fire   : vulnerable
 Cold   : invulnerable
@@ -316,7 +316,7 @@ SEI-RYU - beast type, flying type
 
 HP 1280 | GP 9800 | Spoils: (R)ORNATE 1/1
 
-ATT 192 | DEF 056 | MAG 128 | AGI 096
+ATT 192 | DEF 064 | MAG 128 | AGI 096
 
 Fire   : invulnerable
 Cold   : invulnerable
