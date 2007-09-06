@@ -4,6 +4,6 @@ ITEMS - opens the character's inventory. An item may be selected here for use, s
 
 DEFEND - the character takes a defensive stance, negating all damage that turn.
 
-REST - the character takes a moment to rest, recovering 16% his max HP that turn.
+REST - the character takes a moment to rest, recovering 16% of his max HP that turn.
 
 ATTACK - delivers a raw attack without the aid of a weapon. Useful when weapons are ineffective against foes, or no weapons are in stock.
