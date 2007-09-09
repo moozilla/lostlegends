@@ -224,7 +224,7 @@ ATTACK  --
 ================================================================================
 DARIUS - magic type
 
-HP 0500 | GP 0000 | Spoils: (none)
+HP 0380 | GP 0000 | Spoils: (none)
 
 ATT 072 | DEF 024 | MAG 072 | AGI 064
 
@@ -242,7 +242,7 @@ CURSE   --
 ================================================================================
 DRACONIUS - beast type, flying type
 
-HP 0666 | GP 0000 | Spoils: (none)
+HP 0333 | GP 0000 | Spoils: (none)
 
 ATT 096 | DEF 024 | MAG 072 | AGI 072
 
@@ -260,7 +260,7 @@ BLAZE   20
 ================================================================================
 D.SHADOW - beast type, flying type
 
-HP 0666 | GP 0000 | Spoils: (none)
+HP 0333 | GP 0000 | Spoils: (none)
 
 ATT 096 | DEF 024 | MAG 072 | AGI 072
 
