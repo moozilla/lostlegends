@@ -28,24 +28,24 @@ CLERIC | A staff held by clerics        | +8/---/+12/ -1| N/A                |20
 MAGUS  | A great, magical relic         |+10/---/+28/ -1| N/A                |20
 RUNE   | An ancient staff               |+12/ +3/+20/ -1| N/A                |--
 
-* All swords have +8 - 16 attack versus beast types
-* All bows have +8 - 16 attack versus flying types
-* All staves have +8 - 16 attack versus magic types
+* All swords have +4 - 8 attack versus beast types
+* All bows have +4 - 8 attack versus flying types
+* All staves have +4 - 8 attack versus magic types
 
 ================================================================================
   Spell Books
 ================================================================================
 Book   | Description                      | Effectivity                      |Qt
 -------+----------------------------------+----------------------------------+--
-BLAZE  |Damages the enemy with fire       | 8 - 12 + MAG / fire-elemental    |20
-FREEZE |Damages the enemy with cold       | 8 - 12 + MAG / cold-elemental    |20
+BLAZE  |Damages the enemy with fire       | 8 + MAG / fire-elemental         |20
+FREEZE |Damages the enemy with cold       | 8 + MAG / cold-elemental         |20
 VENOM  |Poisons the enemy                 | 1/6 magic per round / no defense |10
 SLUMBER|Puts the enemy to sleep           | 1 - 3 rounds                     |10
-HEALING|Recovers an ally's vitality       | MAG + 0                          |10
+HEALING|Recovers an ally's vitality       | MAG + 1 - 6                      |10
 CURE   |Removes ailments from an ally     | Removes poison, sleep            |10
-MIGHT  |Raises an ally's attack           | 8 - 12                           | 5
-SHIELD |Raises an ally's defense          | 5 - 8                            | 5
-RAISE  |Restores a fallen ally to life    | Raise with 1/3 of max HP         | 3
+MIGHT  |Raises an ally's attack           | 6 - 12 (bias for lower number)   | 5
+SHIELD |Raises an ally's defense          | 6 - 12 (bias for lower number)   | 5
+RAISE  |Restores a fallen ally to life    | Raise with 1 - 24 HP             | 3
 THUNDER|A powerful, heavenly shock        | 24 + magic / effective vs. flying| 3
 
 ================================================================================
@@ -102,7 +102,7 @@ ELIXER | Recovers all HP / single ally                                       | 1
 CUREALL| Recovers 24 HP / all allies                                         | 1
 MYRRH  | Restores a fallen ally to life w/ 1 HP                              | 1
 PURE   | Cures poisoning                                                     | 3
-PINION | Fully resurrects an ally, or resurrects its holder once upon dying  | 1
+PINION | Fully resurrects an ally, or auto-resurrects its holder if unused   | 1
 
 ================================================================================
  Key Items
