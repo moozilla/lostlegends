@@ -16,9 +16,9 @@ Poison : invulnerable
 Sleep  : vulnerable
 
 ATTACK  --
-VENOM   10
+VENOM    3
 ATTACK  --
-VENOM   10
+VENOM    3
 
 ================================================================================
 GOBLIN
@@ -36,7 +36,7 @@ Sleep  : vulnerable
 ATTACK  --
 ATTACK  --
 ATTACK  --
-BLAZE   20
+BLAZE    1
 
 ================================================================================
 PIRAHNA
@@ -72,7 +72,7 @@ Sleep  : vulnerable
 ATTACK  --
 ATTACK  --
 ATTACK  --
-QUAKE   --
+QUAKE    1
 
 ================================================================================
 COCATRICE - flying type
@@ -89,7 +89,7 @@ Sleep  : invulnerable
 
 ATTACK  --
 ATTACK  --
-SLUMBER 10
+SLUMBER  8
 ATTACK  --
 
 ================================================================================
@@ -106,9 +106,9 @@ Poison : vulnerable
 Sleep  : invulnerable
 
 ATTACK  --
-BREATH  --
+BREATH   3
 ATTACK  --
-BREATH  --
+BREATH   3
 
 ================================================================================
 WYVERN - beast type, flying type
@@ -124,7 +124,7 @@ Poison : vulnerable
 Sleep  : invulnerable
 
 ATTACK  --
-FLARE   --
+FLARE    1
 ATTACK  --
 ATTACK  --
 ================================================================================
@@ -140,10 +140,10 @@ Cold   : vulnerable
 Poison : invulnerable
 Sleep  : invulnerable
 
-FROST  20
-BLAZE  20
+FROST   5
+BLAZE   5
 ATTACK --
-CURSE  --
+CURSE   1
 
 ================================================================================
 
@@ -164,8 +164,8 @@ Sleep  : invulnerable
 
 ATTACK  --
 ATTACK  --
-BLAZE   10
-FLARE   --
+BLAZE    3
+FLARE    1
 
 ================================================================================
 SIREN
@@ -181,9 +181,9 @@ Poison : invulnerable
 Sleep  : invulnerable
 
 ATTACK  --
-SLUMBER 10
-FROST   20
-STORM   --
+SLUMBER  5
+FROST    3
+STORM    1
 
 ================================================================================
 HERMIT
@@ -200,8 +200,8 @@ Sleep  : invulnerable
 
 ATTACK  --
 ATTACK  --
-QUAKE   --
-QUAKE   --
+QUAKE    8
+QUAKE    8
 
 ================================================================================
 INDRA - magic type
@@ -216,9 +216,9 @@ Cold   : invulnerable
 Poison : invulnerable
 Sleep  : invulnerable
 
-STORM   --
-QUAKE   --
-FLARE   --
+STORM    3
+QUAKE    5
+FLARE    3
 ATTACK  --
 
 ================================================================================
@@ -235,9 +235,9 @@ Poison : vulnerable
 Sleep  : invulnerable
 
 ATTACK  --
-BLAZE   20
-FROST   20
-CURSE   --
+BLAZE    8
+FROST    8
+CURSE    1
 
 ================================================================================
 DRACONIUS - beast type, flying type
@@ -253,9 +253,9 @@ Poison : invulnerable
 Sleep  : invulnerable
 
 ATTACK  --
-FLARE   --
-BREATH  --
-BLAZE   20
+FLARE    5
+BREATH   5
+BLAZE    5
 
 ================================================================================
 D.SHADOW - beast type, flying type
@@ -271,9 +271,9 @@ Poison : invulnerable
 Sleep  : invulnerable
 
 ATTACK  --
-STORM   --
-BREATH  --
-FROST   20
+STORM    5
+BREATH   5
+FROST    5
 
 ================================================================================
 MIMIC
@@ -289,7 +289,7 @@ Poison : invulnerable
 Sleep  : invulnerable
 
 ATTACK  --
-SLUMBER 10
+SLUMBER  8
 ATTACK  --
 ATTACK  --
 
@@ -308,8 +308,8 @@ Sleep  : invulnerable
 
 ATTACK  --
 CURSE   --
-SLUMBER 10
-STORM   --
+SLUMBER  5
+STORM    3
 
 ================================================================================
 SEI-RYU - beast type, flying type
@@ -325,9 +325,9 @@ Poison : added to attack; invulnerable
 Sleep  : added to attack; invulnerable
 
 ATTACK  --
-BREATH  --
-STORM   --
-FLARE   --
+BREATH   8
+STORM    8
+FLARE    8
 
 ================================================================================
 
