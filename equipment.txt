@@ -1,3 +1,19 @@
+  REFERENCE KEY
+-----------------
+
+ATT = Attack  +/-        Other = describes effect of item
+DEF = Defense +/-        Qt    = item quantity / number of uses available
+MAG = Magic   +/-                ( -- indicates unlimited uses )
+AGI = Agility +/-
+
+ +----------------------------------------------------------------------------+
+  WEAPONS & SPELLS
+ +----------------------------------------------------------------------------+
+
+ - Characters may equip as many of these as they wish
+ - ATT and AGI bonuses on weapons ONLY apply when they are used
+ - DEF and MAG bonuses on weapons are applied at all times
+
 ================================================================================
   Weapons
 ================================================================================
@@ -48,6 +64,12 @@ SHIELD |Raises an ally's defense          | 6 - 12 (bias for lower number)   | 5
 RAISE  |Restores a fallen ally to life    | Raise with 1 - 24 HP             | 3
 THUNDER|A powerful, heavenly shock        | 24 + magic / effective vs. flying| 3
 
+ +----------------------------------------------------------------------------+
+  ARMOR
+ +----------------------------------------------------------------------------+
+
+ - Only one of these may be equipped at any time
+
 ================================================================================
   Armor
 ================================================================================
@@ -63,6 +85,12 @@ MINERVA|Light shirt worn by mages         |---/ +8/ +8/ +1| Resist fire
 PLATE  |Full-plate armor                  |---/+15/---/ -3| N/A
 MITHRIL|Extremely lightweight shirt       |---/+12/---/ +1| Weak to cold
 ADAMANT|Crafted of a powerful ore         |---/+20/---/---| Resist fire / cold
+
+ +----------------------------------------------------------------------------+
+  ACCESSORIES
+ +----------------------------------------------------------------------------+
+
+ - Only two of these may be equipped at any time, using any combination
 
 ================================================================================
   Rings
@@ -92,6 +120,12 @@ ARCHER | Gauntlets worn by archers        | +3/ +1/---/ +5| N/A
 MAGE   | Gauntlets used by battle mages   |---/ +3/ +8/ -1| N/A
 HERO   | Gauntlets worn by true heroes    | +5/ +5/ +5/ +5| N/A
 
+ +----------------------------------------------------------------------------+
+  POTIONS
+ +----------------------------------------------------------------------------+
+
+ - Characters may equip as many of these as they wish
+
 ================================================================================
   Potions
 ================================================================================
@@ -104,6 +138,12 @@ MYRRH  | Restores a fallen ally to life w/ 1 HP                              | 1
 PURE   | Cures poisoning                                                     | 3
 PINION | Fully resurrects an ally, or auto-resurrects its holder if unused   | 1
 
+ +----------------------------------------------------------------------------+
+  KEY ITEMS
+ +----------------------------------------------------------------------------+
+
+ - These cannot be equipment
+
 ================================================================================
  Key Items
 ================================================================================
@@ -114,9 +154,9 @@ ANCIENT| Required to enter the Colloseum                                     | 1
 RUNIC  | Required to access locked chests and doors                          | 5
 HIDDEN | Required to access the Dev. Room                                    | 1
 
-================================================================================
- Shop List
-================================================================================
+ +----------------------------------------------------------------------------+
+  SHOP LIST & INN RATES
+ +----------------------------------------------------------------------------+
 
 Castle Grendale
 -PAGE 1--------                -INN COST: (free)
