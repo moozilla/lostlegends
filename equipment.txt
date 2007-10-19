@@ -10,9 +10,9 @@ AGI = Agility +/-
   WEAPONS & SPELLS
  +----------------------------------------------------------------------------+
 
- - Characters may equip as many of these as they wish
- - ATT and AGI bonuses on weapons ONLY apply when they are used
- - DEF and MAG bonuses on weapons are applied at all times
+ - Two swords, two staves, a sword and a staff, or only one bow may be equipped
+   simultaneously
+ - Attack bonuses on weapons apply ONLY when they are used
 
 ================================================================================
   Weapons
