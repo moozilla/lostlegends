@@ -19,29 +19,29 @@ AGI = Agility +/-
 ================================================================================
 Swords | Description                    |ATT/DEF/MAG/AGI| Other              |Qt
 -------+--------------------------------+---------------+--------------------+--
-BROAD  | A common sword wrought of iron | +8/---/---/ -1| N/A                |40
-COREL  | A sword belonging to the sea   |+12/---/---/ -1| N/A                |20
-FLAME  | A sword crafted of fire        |+15/---/ +5/ -1| Fire-elemental     |30
-FROST  | A sword crafted of ice crystals|+15/---/ +5/ -1| Cold-elemental     |30
-SILVER | A great sword wrought of silver|+18/---/---/ -1| N/A                |20
-LEGEND | A legendary blade              |+28/ +5/ +5/---| N/A                |--
+BROAD  | A common sword wrought of iron | +8/.../.../ -1| N/A                |40
+COREL  | A sword belonging to the sea   |+12/.../.../ -1| N/A                |20
+FLAME  | A sword crafted of fire        |+15/.../ +5/ -1| Fire-elemental     |30
+FROST  | A sword crafted of ice crystals|+15/.../ +5/ -1| Cold-elemental     |30
+SILVER | A great sword wrought of silver|+18/.../.../ -1| N/A                |40
+LEGEND | A legendary blade              |+22/ +5/ +5/...| N/A                |--
 CURSED | A cursed blade                 |+10/ -3/ -3/ -3| Puts enemy to sleep|10
-KATANA | A swift, deadly blade          |+18/---/---/ +8| N/A                |20
+KATANA | A swift, deadly blade          |+18/.../.../ +5| N/A                |20
 ================================================================================
 Bows   | Description                    |ATT/DEF/MAG/AGI| Other              |Qt
 -------+--------------------------------+---------------+--------------------+--
-SHORT  | A common short bow             | +5/ -1/---/ +3| N/A                |40
-LONG   | A common long bow              | +8/ -3/---/ +3| N/A                |30
-GREAT  | A common great bow             |+15/ -3/---/ +5| N/A                |20
+SHORT  | A common short bow             | +5/ -1/.../ +3| N/A                |40
+LONG   | A common long bow              | +8/ -3/.../ +3| N/A                |30
+GREAT  | A common great bow             |+15/ -3/.../ +5| N/A                |20
 ELVEN  | A bow crafted by the elves     |+12/ -1/ +5/ +8| N/A                |60
-POISON | A bow tipped with venom        | +8/ -3/---/ +3| Poisons enemy      |20
-ARTEMIS| Bow belonging to a great deity |+20/---/ +5/+12| N/A                |--
+POISON | A bow tipped with venom        | +8/ -3/.../ +3| Poisons enemy      |20
+ARTEMIS| Bow belonging to a great deity |+20/.../ +5/+12| N/A                |--
 ================================================================================
 Staves | Description                    |ATT/DEF/MAG/AGI| Other              |Qt
 -------+--------------------------------+---------------+--------------------+--
-WOODEN | A wooden rod                   | +3/---/ +5/ -1| N/A                |20
-CLERIC | A staff held by clerics        | +8/---/+12/ -1| N/A                |20
-MAGUS  | A great, magical relic         |+10/---/+28/ -1| N/A                |20
+WOODEN | A wooden rod                   | +3/.../ +5/ -1| N/A                |20
+CLERIC | A staff held by clerics        | +8/.../+12/ -1| N/A                |20
+MAGUS  | A great, magical relic         |+10/.../+18/ -1| N/A                |20
 RUNE   | An ancient staff               |+12/ +3/+20/ -1| N/A                |--
 
 * All swords have +4 - 8 attack versus beast types
@@ -75,16 +75,16 @@ THUNDER|A powerful, heavenly shock        | 24 + magic / effective vs. flying| 3
 ================================================================================
 Armor  | Description                      |ATT/DEF/MAG/AGI| Other
 -------+----------------------------------+---------------+---------------------
-CLOTH  |Clothes worn by commoners         |---/ +3/---/ +3| Weak to fire
-ROBE   |A robe worn by nobles             |---/ +3/ +5/ -1| N/A
-ARCANE |A robe worn by high mages         |---/ +5/+12/ -1| Resist cold
-TUNIC  |Light, yet sturdy clothing        |---/ +5/---/ +1| N/A
-JUDOGI |A uniform worn by martial artists | +8/ +5/---/ +8| Weak to fire
-CHAIN  |Shirt layered with chains         |---/+10/---/ -1| N/A
-MINERVA|Light shirt worn by mages         |---/ +8/ +8/ +1| Resist fire
-PLATE  |Full-plate armor                  |---/+15/---/ -3| N/A
-MITHRIL|Extremely lightweight shirt       |---/+12/---/ +1| Weak to cold
-ADAMANT|Crafted of a powerful ore         |---/+20/---/---| Resist fire / cold
+CLOTH  |Clothes worn by commoners         |.../ +3/.../ +3| Weak to fire
+ROBE   |A robe worn by nobles             |.../ +3/ +5/ -1| N/A
+ARCANE |A robe worn by high mages         |.../ +5/+12/ -1| Resist cold
+TUNIC  |Light, yet sturdy clothing        |.../ +5/.../ +1| N/A
+JUDOGI |A uniform worn by martial artists | +8/ +5/.../ +8| Weak to fire
+CHAIN  |Shirt layered with chains         |.../+10/.../ -1| N/A
+MINERVA|Light shirt worn by mages         |.../ +8/ +8/ +1| Resist fire
+PLATE  |Full-plate armor                  |.../+15/.../ -3| N/A
+MITHRIL|Extremely lightweight shirt       |.../+12/.../ +1| Weak to cold
+ADAMANT|Crafted of a powerful ore         |.../+20/.../...| Resist fire / cold
 
  +----------------------------------------------------------------------------+
   ACCESSORIES
@@ -97,16 +97,16 @@ ADAMANT|Crafted of a powerful ore         |---/+20/---/---| Resist fire / cold
 ================================================================================
 Ring   | Description                      |ATT/DEF/MAG/AGI| Other
 -------+----------------------------------+---------------+---------------------
-RUBY   | A ring adorned with rubies       |---/ +1/---/---| Res. fire; weak cold
-AZURE  | A ring adorned with sapphires    |---/ +1/---/---| Res. cold; weak fire
-FORCE  | A ring full of elemental power   |---/ +3/---/---| Resist fire, cold
-CRIMSON| An ominous crimson ring          | +1/---/ +3/---| Fire-elemental att.
-COBALT | An ominous cobalt ring           | +1/---/ +3/---| Cold-elemental att.
-SIREN  | Ring echoing a siren's song      | +1/---/ +3/---| Add sleep to attack
-SNAKE  | Ridden with a snake's curse      | +1/---/ +3/---| Add poison to attack
-BLESSED| A blessed ring                   |---/ +3/---/---| Resist all ailments
-LAMIA  | A ring bearing a lamia's curse   |---/ +1/---/---| Resist sleep
-SERPENT| Ridden with a serpent's curse    |---/ +1/---/---| Resist poison
+RUBY   | A ring adorned with rubies       |.../ +1/.../...| Res. fire; weak cold
+AZURE  | A ring adorned with sapphires    |.../ +1/.../...| Res. cold; weak fire
+FORCE  | A ring full of elemental power   |.../ +3/.../...| Resist fire, cold
+CRIMSON| An ominous crimson ring          | +1/.../ +3/...| Fire-elemental att.
+COBALT | An ominous cobalt ring           | +1/.../ +3/...| Cold-elemental att.
+SIREN  | Ring echoing a siren's song      | +1/.../ +3/...| Add sleep to attack
+SNAKE  | Ridden with a snake's curse      | +1/.../ +3/...| Add poison to attack
+BLESSED| A blessed ring                   |.../ +3/.../...| Resist all ailments
+LAMIA  | A ring bearing a lamia's curse   |.../ +1/.../...| Resist sleep
+SERPENT| Ridden with a serpent's curse    |.../ +1/.../...| Resist poison
 ORNATE | A glimmering ring                | +3/ +3/ +3/ +3| Resist all
 
 ================================================================================
@@ -114,10 +114,10 @@ ORNATE | A glimmering ring                | +3/ +3/ +3/ +3| Resist all
 ================================================================================
 Item   | Description                      |ATT/DEF/MAG/AGI| Other
 -------+----------------------------------+---------------+---------------------
-BATTLE | Common battle gauntlets          | +5/ +3/---/ -1| N/A
-OGRE   | Gauntlets that grant ogrish might| +8/ +3/---/ -1| N/A
-ARCHER | Gauntlets worn by archers        | +3/ +1/---/ +5| N/A
-MAGE   | Gauntlets used by battle mages   |---/ +3/ +8/ -1| N/A
+BATTLE | Common battle gauntlets          | +5/ +3/.../ -1| N/A
+OGRE   | Gauntlets that grant ogrish might| +8/ +3/.../ -1| N/A
+ARCHER | Gauntlets worn by archers        | +3/ +1/.../ +5| N/A
+MAGE   | Gauntlets used by battle mages   |.../ +3/ +8/ -1| N/A
 HERO   | Gauntlets worn by true heroes    | +5/ +5/ +5/ +5| N/A
 
  +----------------------------------------------------------------------------+
