@@ -171,7 +171,7 @@ Castle Grendale 2 (woman's shop)
 -PAGE 1--------
 BATTLE  |  400
 RUBY    |  600
-GOBALT  |  800
+COBALT  |  800
 LAMIA   | 1100
 SERPENT | 1100
 
