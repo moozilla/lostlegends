@@ -107,7 +107,7 @@ SNAKE  | Ridden with a snake's curse      | +1/.../ +3/...| Add poison to attack
 BLESSED| A blessed ring                   |.../ +3/.../...| Resist all ailments
 LAMIA  | A ring bearing a lamia's curse   |.../ +1/.../...| Resist sleep
 SERPENT| Ridden with a serpent's curse    |.../ +1/.../...| Resist poison
-ORNATE | A glimmering ring                | +3/ +3/ +3/ +3| Resist all
+ORNATE | A glimmering ring                | +3/ +3/ +3/ +3| Resist / add all
 
 ================================================================================
   Gauntlets
@@ -117,7 +117,7 @@ Item   | Description                      |ATT/DEF/MAG/AGI| Other
 BATTLE | Common battle gauntlets          | +5/ +3/.../ -1| N/A
 OGRE   | Gauntlets that grant ogrish might| +8/ +3/.../ -1| N/A
 ARCHER | Gauntlets worn by archers        | +3/ +1/.../ +5| N/A
-MAGE   | Gauntlets used by battle mages   |.../ +3/ +8/ -1| N/A
+MAGE   | Gauntlets used by battle mages   |.../ +3/ +8/ -1| Resist fire
 HERO   | Gauntlets worn by true heroes    | +5/ +5/ +5/ +5| N/A
 
  +----------------------------------------------------------------------------+
