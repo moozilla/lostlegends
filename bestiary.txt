@@ -97,7 +97,7 @@ CHIMERA - beast type
 
 HP 0180 | GP 0320 | Spoils: (none)
 
-ATT 028 | DEF 016 | MAG 024 | AGI 032
+ATT 042 | DEF 016 | MAG 024 | AGI 024
 
 Fire   : invulnerable
 Cold   : invulnerable
@@ -115,7 +115,7 @@ WYVERN - beast type, flying type
 
 HP 0220 | GP 0480 | Spoils: (P)CUREALL 1/32
 
-ATT 056 | DEF 024 | MAG 042 | AGI 024
+ATT 056 | DEF 024 | MAG 042 | AGI 032
 
 Fire   : invulnerable
 Cold   : weakness
