@@ -1,18 +1,36 @@
-Characters
-Battle Order & Transition
-Battle Commands
-Determining Hit Rates
-Deriving Damage Formulas
-Elemental & Status Modifiers
-Character Status Progression
-Equipment - Shop List & Inn Rates
-Bestiary & Enemy Skills
-EX-Mode Information
+ -- LOST LEGENDS PROJECT - DESIGN DOCUMENTATION beta --
+
+written by G.HILMARSSON
+
+platform            - TI-84+
+resolution          - 96x64 px.
+characters per line - 16x8
+sprite / board      - 24;4x6
+
+
+-------------------
+ TABLE OF CONTENTS
+-------------------
+
+  - section -                            - quick search function -
+
+   i.) Characters                            ...   CHA1
+  ii.) Battle Order & Transition             ...   BAT1
+ iii.) Battle Commands                       ...   COM1
+  iv.) Determining Hit Rates                 ...   HIT1
+   v.) Deriving Damage Formulas              ...   DER1
+  vi.) Elemental & Status Modifiers          ...   ELM1
+ vii.) Character Status Progression          ...   STA1
+viii.) Equipment - Shop List & Inn Rates     ...   EQP1
+  ix.) Bestiary & Enemy Skills               ...   BST1
+   x.) EX-Mode Information                   ...   EXM1
+
+
 
 ________________________________________________________________________________
 ________________________________________________________________________________
 
-  C H A R A C T E R S
+  i.) C H A R A C T E R S                                                  CHA1
 ________________________________________________________________________________
 ________________________________________________________________________________
 
@@ -60,15 +78,33 @@ Party begins with 200 GP
 ________________________________________________________________________________
 ________________________________________________________________________________
 
-  B A T T L E  O R D E R  &  T R A N S I T I O N
+  ii.) B A T T L E  O R D E R  &  T R A N S I T I O N                      BAT1
 ________________________________________________________________________________
 ________________________________________________________________________________
 
 
+When an enemy appears, the player is first given the option of engaging or
+fleeing the encounter. (unless the battle is a boss event, which cannot be
+avoided) If fleeing, the party will immediately withdraw from the battle at a
+100% success rate. If engaging, the player will be prompted to input a command
+for each character.
+
+The order in which characters and the enemy act depends on AGI. The target with
+the highest AGI executes his or her action first, followed by the target with
+the second-highest, and so forth. If any two or more targets have precisely the
+same AGI score, then the order is randomized between them.
+
+Battle is completed under two conditions: the enemy is slain, or the party is
+slain. If the party is slain, the game ends and must be resumed from a saved
+position or started anew. If the enemy is slain, GP and spoils are awarded, and
+the party is returned to the map screen to resume exploring.
+
+
+
 ________________________________________________________________________________
 ________________________________________________________________________________
 
-  B A T T L E  C O M M A N D S
+  iii.) B A T T L E  C O M M A N D S                                       COM1
 ________________________________________________________________________________
 ________________________________________________________________________________
 
@@ -91,7 +127,7 @@ are ineffective against foes, or no weapons are in stock.
 ________________________________________________________________________________
 ________________________________________________________________________________
 
-  D E T E R M I N I N G  H I T  R A T E S
+  iv.) D E T E R M I N I N G  H I T  R A T E S                             HIT1
 ________________________________________________________________________________
 ________________________________________________________________________________
 
@@ -107,26 +143,39 @@ scores are to one another within an eight point value determines the hit rate.
 Hit rates for spell books and enemy skills are merely determined by the spell or
 ability itself:
 
-        BLAZE   - 80% hit rate        FLARE   - 70% hit rate
-        FROST   - 80% hit rate        STORM   - 70% hit rate
-        VENOM   - 70% hit rate        QUAKE   - 70% hit rate
-        SLUMBER - 70% hit rate        BREATH  - 80% hit rate
-        THUNDER - 70% hit rate        CURSE   - 50% hit rate
+         BLAZE   - 80% hit rate        FLARE   - 70% hit rate
+         FROST   - 80% hit rate        STORM   - 70% hit rate
+         VENOM   - 70% hit rate        QUAKE   - 70% hit rate
+         SLUMBER - 70% hit rate        BREATH  - 80% hit rate
+         THUNDER - 70% hit rate        CURSE   - 50% hit rate
 
 
 
 ________________________________________________________________________________
 ________________________________________________________________________________
 
-  D E R I V I N G  D A M A G E  F O R M U L A S
+  v.) D E R I V I N G  D A M A G E  F O R M U L A S                        DER1
 ________________________________________________________________________________
 ________________________________________________________________________________
 
 
+Damage formulas are very simple. For normal attacks, (weapons) simply subtract
+the attacker's total ATT score by the target's total DEF score:
+
+       ( attacker's ATT - target's DEF = normal weapon damage )
+
+Damage formulas for spells depend on the caster's MAG score, as well as the
+spell itself. These formulas are outlined in the [Equipment] section.
+
+(note that an attack will still result in 1 point of damage if all the damage
+were normally negated by the target's defense)
+
+
+
 ________________________________________________________________________________
 ________________________________________________________________________________
 
-  E L E M E N T A L  &  S T A T U S  M O D I F I E R S
+  vi.) E L E M E N T A L  &  S T A T U S  M O D I F I E R S                ELM1
 ________________________________________________________________________________
 ________________________________________________________________________________
 
@@ -170,7 +219,7 @@ attacker does attack power, the enemy still sustains the critical damage.
 ________________________________________________________________________________
 ________________________________________________________________________________
 
-  C H A R A C T E R  S T A T U S  P R O G R E S S I O N
+  vii.) C H A R A C T E R  S T A T U S  P R O G R E S S I O N              STA1
 ________________________________________________________________________________
 ________________________________________________________________________________
 
@@ -203,7 +252,7 @@ temporary bonuses in battle such as those granted by spells.
 ________________________________________________________________________________
 ________________________________________________________________________________
 
-  E Q U I P M E N T  -  S H O P  L I S T  &  I N N  R A T E S
+  viii.) E Q U I P M E N T  -  S H O P  L I S T  &  I N N  R A T E S       EQP1
 ________________________________________________________________________________
 ________________________________________________________________________________
 
@@ -426,7 +475,7 @@ HEALING |  800  PINION  | 9800
 ________________________________________________________________________________
 ________________________________________________________________________________
 
-  B E S T I A R Y  &  E N E M Y  S K I L L S
+  ix.) B E S T I A R Y  &  E N E M Y  S K I L L S                          BST1
 ________________________________________________________________________________
 ________________________________________________________________________________
 
@@ -798,7 +847,7 @@ CURSE        | 50% chance to kill one character instantly | N/A
 ________________________________________________________________________________
 ________________________________________________________________________________
 
-  E X - M O D E  I N F O R M A T I O N
+  x.) E X - M O D E  I N F O R M A T I O N                                 EXM1
 ________________________________________________________________________________
 ________________________________________________________________________________
 
@@ -816,6 +865,3 @@ adds more difficulty by including the following conditions in the game:
 
 Nothing special occurs after completing this mode. The player is not prompted to
 save after the EX-Mode ending, either.
-
-
-
