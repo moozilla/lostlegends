@@ -1,9 +1,0 @@
-Battle commands:
-
-ITEM - opens the character's inventory. An item may be selected here for use, such as a weapon.
-
-DEFEND - the character takes a defensive stance, negating all damage that turn.
-
-REST - the character takes a moment to rest, recovering 8 - 12 HP that turn.
-
-MELEE - delivers a raw attack without the aid of a weapon. Useful when weapons are ineffective against foes, or no weapons are in stock.
