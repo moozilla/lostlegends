@@ -303,9 +303,9 @@ CLERIC | A staff held by clerics        | +8/.../+12/ -1| N/A                |20
 MAGUS  | A great, magical relic         |+10/.../+18/ -1| N/A                |20
 RUNE   | An ancient staff               |+12/ +3/+20/ -1| N/A                |--
 
-* All swords have +4 - 8 attack versus beast types
-* All bows have +4 - 8 attack versus flying types
-* All staves have +4 - 8 attack versus magic types
+* All swords have +6 - 12 attack versus beast types
+* All bows have +6 - 12 attack versus flying types
+* All staves have +6 - 12 attack versus magic types
 
 ================================================================================
   Spell Books
