@@ -1,23 +1,123 @@
-(NAME)
-  ATTACKS!
-**********
-(NAME) WAS
-HIT!
-**********
-HIT!
+When an enemy draws near:
 
+AN ENEMY
+APPEARS!
+**********
+>ENGAGE
+ FLEE
+
+(this is a choice menu)
+
+When a character is using an item normally:
+
+(NAME)
+USES
+**********
+(ITEM)
+ON (NAME)_
+
+This is only when used on other characters. For enemies:
+
+(NAME)
+USES
+**********
+(ITEM)
+ON EMEMY_
+
+When an enemy targets an ally with an ability:
+
+(NAME)
+USES
+**********
+(ABILITY)
+ON (NAME)_
+
+If that ability is ATTACK:
+
+(NAME)
+UNLEASHES
+**********
+AN ATTACK
+ON (NAME)!
+
+The damage from an attack is indicated like so:
+
+**********
+SUCCESS!
+999 DAMAGE
+**********
+CRITICAL!
+999 DAMAGE
 **********
 MISSED!
 
 **********
-INFLICTED
-123 DAMAGE
-**********
-(NAME) WAS
+
+Status messages are indicated like so:
+
+(NAME)
 POISONED!
 **********
-POISON
-DAMAGE!
+POISONING!
+999 DAMAGE
+**********
+(NAME)
+IS ASLEEP_
 **********
 STATUS 
 RECOVERED!
+**********
+(NAME)
+WAS FELLED_
+**********
+(NAME)
+GAINS ATT!
+**********
+(NAME)
+GAINS DEF!
+**********
+(NAME)
+IS REVIVED
+
+When ally uses command abilities:
+
+(NAME) IS
+ON GUARD_
+**********
+(NAME) IS
+RESTING_
+**********
+(NAME)
+ATTACKS!
+
+When battle is won or lost:
+
+VICTORY!
+
+**********
+PARTY HAS
+PERISHED_
+**********
+RECIEVED
+9999 GP!
+**********
+FOUND
+(ITEM)!
+
+When stats increase after battle:
+
+(NAME)
+(stat increase)
+
+For example:
+
+FENRIS
+ATT +1
+
+FENRIS
+DEF +2
+
+FENRIS
+AGI -1
+
+(it simply lists each gain one after another)
