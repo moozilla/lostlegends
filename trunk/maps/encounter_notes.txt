@@ -18,13 +18,13 @@ Path of the Gods - CHIMERA, MAGE, WYVERN, COCATRICE  | 10
 
 Boss Encounters:
 
-DJINN     - Living Forest
-SIREN     - Temple of Siren
-HERMIT    - Mt. Hermit
-INDRA     - Kingdom of Karta
-THANATOS  - Colloseum (optional)
-SEI-RYU   - Colloseum (optional)
-DARIUS    - Path of the Gods (final battle)
-DRACONIUS - Path of the Gods (final battle)
-D. SHADOW - Path of the Gods (final battle)
-MIMIC     - some chests (event)
+DJINN    - Living Forest
+SIREN    - Temple of Siren
+HERMIT   - Mt. Hermit
+INDRA    - Kingdom of Karta
+THANATOS - Colloseum (optional)
+SEI-RYU  - Colloseum (optional)
+DARIUS   - Path of the Gods (final battle)
+DRACONUS - Path of the Gods (final battle)
+D.SHADOW - Path of the Gods (final battle)
+MIMIC    - some chests (event)
