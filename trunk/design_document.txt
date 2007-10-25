@@ -629,11 +629,11 @@ HP 0180 | GP 0320 | Spoils: (B)THUNDER 1/32
 
 ATT 032 | DEF 016 | MAG 036 | AGI 024
 
-Fire   : vulnerable
+Fire   : invulnerable
 Cold   : vulnerable
 
 Poison : invulnerable
-Sleep  : invulnerable
+Sleep  : vulnerable
 
 FROST   5
 BLAZE   5
@@ -687,7 +687,7 @@ HERMIT
 
 HP 0320 | GP 0800 | Spoils: (R)FORCE 1/1
 
-ATT 036 | DEF 016 | MAG 028 | AGI 016
+ATT 036 | DEF 024 | MAG 028 | AGI 016
 
 Fire   : vulnerable
 Cold   : vulnerable
@@ -854,7 +854,7 @@ Normal Encounters:
 
 Locale           | Enemy                             |Rate
 -----------------+-----------------------------------+----
-Grendale         | no encounters                     | --
+Grendale         | (no encounters)                   | --
 Gaia             | GOBLIN, FUNGUS                    | 08
 Living Forest    | FUNGUS, GOBLIN                    | 08
 Marina           | PIRAHNA                           | 08
@@ -864,8 +864,8 @@ Corel Cavern     | PIRHANA                           | 06
 Gaia (2)         | GOBLIN, OGRE                      | 06
 Mt. Hermit       | GOBLIN, OGRE, COCATRICE           | 10
 Karta            | COCATRICE, WYVERN                 | 10
-Kingdom of Karta | no encounters                     | --
-Ruined Temple    | WYVERN, COCATRICE                 | 08
+Kingdom of Karta | (no encounters)                   | --
+Ruined Temple    | WYVERN, COCATRICE, CHIMERA        | 08
 Colloseum        | (no encounters)                   | --
 Khimeara Village | (no encounters)                   | --
 Path of the Gods | CHIMERA, MAGE, WYVERN, COCATRICE  | 10
