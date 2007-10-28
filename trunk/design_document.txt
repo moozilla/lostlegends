@@ -518,7 +518,7 @@ VENOM    3
 ================================================================================
 GOBLIN
 
-HP 0036 | GP 0040 | Spoils: (G)BATTLE 1/32
+HP 0036 | GP 0040 | Spoils: (G)TONIC 1/8
 
 ATT 024 | DEF 008 | MAG 008 | AGI 016
 
@@ -868,7 +868,7 @@ Kingdom of Karta | (no encounters)                   | --
 Ruined Temple    | WYVERN, COCATRICE, CHIMERA        | 08
 Colloseum        | (no encounters)                   | --
 Khimeara Village | (no encounters)                   | --
-Path of the Gods | CHIMERA, MAGE, WYVERN, COCATRICE  | 10
+Path of the Gods | CHIMERA, MAGE, WYVERN             | 10
 
 Boss Encounters:
 
