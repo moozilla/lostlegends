@@ -1,0 +1,931 @@
+Castle Grendale:
+
++-KING-----+
+|"YOUR     |
+|FIRST TASK>
++----------+
++-KING-----+
+|IS THE    |
+|LIVING    >
++----------+
++-KING-----+
+|FOREST    |
+|JUST WEST]|
++----------+
+
++-KING-----+
+¦"PLEASE_  ¦
+¦TAKE GOOD >
++----------+
++-KING-----+
+¦CARE OF MY¦
+¦DAUGHTER] ¦
++----------+
+
++-GUARD----+
+¦"FEEL FREE¦
+¦TO TAKE   >
++----------+
++-GUARD----+
+¦ANYTHING  ¦
+¦FROM OUR  >
++----------+
++-GUARD----+
+¦TREASURY] ¦
+¦          ¦
++----------+
+
++-VANSKE---+
+¦"HOW 'BOUT¦
+¦A KISS,   >
++----------+
++-VANSKE---+
+¦FOR LUCK?"¦
+¦          ¦
++----------+
++-BEATRIX--+
+¦"YOU'VE   ¦
+¦GOT TO BE >
++----------+
++-BEATRIX--+
+¦KIDDING!" ¦
+¦          ¦
++----------+
++-VANSKE---+
+¦"_ _ _"   ¦
+¦          ¦
++----------+
+
++-GUARD----+
+¦"GOOD     ¦
+¦LUCK!"    ¦
++----------+
+
++-SHELLY---+
+¦"I JUST   ¦
+¦LOVE      >
++----------+
++-SHELLY---+
+¦PICKING   ¦
+¦FLOWERS!" ¦
++----------+
+
++-VILLAGER-+
+¦"NEED A   ¦
+¦REST?"    ¦
++----------+
++----------+
+¦HEALTH    ¦
+¦RESTORED! ¦
++----------+
+
++-VENDOR---+
+¦"NEED SOME¦ (all vendors say this)
+¦NEW GEAR?"¦
++----------+
+
++-GIDEON---+
+¦"HELLO. I ¦
+¦AM THE    >
++----------+
++-GIDEON---+
+¦WISE SAGE,¦
+¦GIDEON]   ¦
++----------+
++-GIDEON---+
+¦"I TRAVEL ¦
+¦AROUND, SO>
++----------+
++-GIDEON---+
+¦I HAVE    ¦
+¦MANY TIPS >
++----------+
++-GIDEON---+
+¦TO SHARE!"¦
+¦          ¦
++----------+
+
++-GIDEON---+
+¦"SOME     ¦
+¦ITEMS HAVE>
++----------+
++-GIDEON---+
+¦ELEMENTAL ¦
+¦POWERS]   ¦
++----------+
++-GIDEON---+
+¦"TRY THEM ¦
+¦ON ENEMIES>
++----------+
++-GIDEON---+
+¦TO FIND A ¦
+¦WEAKNESS!"¦
++----------+
+
+Temple of Djinn:
+
++-DJINN----+
+|"MORTALS, |
+|WHY DO YOU>
++----------+
++-DJINN----+
+|DISTURB MY|
+|REST?"    |
++----------+
++-FENRIS---+
+|"WE'VE    |
+|COME TO BE>
++----------+
++-FENRIS---+
+|TESTED_"  |
+|          |
++----------+
++-DJINN----+
+|"I SEE_"  |
+|          |
++----------+
++-DJINN----+
+|"IF IT IS |
+|MY POWER  >
++----------+
++-DJINN----+
+|YOU SEEK, |
+|THEN PROVE>
++----------+
++-DJINN----+
+|YOUR      |
+|WORTH!"   |
++----------+
+
++-DJINN----+
+|"INDEED,  |
+|YOU ARE   >
++----------+
++-DJINN----+
+|WORTHY_"  |
+|          |
++----------+
++-DJINN----+
+|"RECIEVE  |
+|THE POWER >
++----------+
++-DJINN----+
+|OF FIRE!" |
+|          |
++----------+
++-DJINN----+
+|"NOW,SEEK |
+|SIREN AND >
++----------+
+|LEAVE ME  |
+|TO MY     >
++----------+
++-DJINN----+
+|SLUMBER_" |
+|          |
++----------+
++-ANNIKA---+
+|"WITH THE |
+|ESSENSE OF>
++----------+
++-ANNIKA---+
+|DJINN,WE  |
+|CAN NOW   >
++----------+
++-ANNIKA---+
+|CROSS THE |
+|MARINA SEA>
++----------+
++-ANNIKA---+
+|UNHARMED] |
+|          |
++----------+
++-FENRIS---+
+|"THEN     |
+|LET'S GO!"|
++----------+
+
++-DJINN----+
+|"ZZZ_"    |
+|          |
++----------+
++-FENRIS---+
+|"ARE THE  |
+|GODS REALLY>
++----------+
++-FENRIS---+
+|THIS      |
+|LAZY?!"   |
++----------+
+
+Corel Village:
+
++-GIRL-----+
+|"WELCOME  |
+|TO COREL] |
++----------+
+
++-GIDEON---+
+|"SOME     |
+|ENEMIES   >
++----------+
++-GIDEON---+
+|ARE WEAK  |
+|TO ITEMS] |
++----------+
++-GIDEON---+
+|"TRY BOWS |
+|ON FLYING >
++----------+
++-GIDEON---+
+|ENEMIES TO|
+|SEE WHAT I>
++----------+
++-GIDEON---+
+|MEAN_"    |
+|          |
++----------+
+
++-ELDER----+
+|"WE HAVE  |
+|THE BEST  >
++----------+
++----------+
+|LIBRARY IN|
+|ALL GAIA!"|
++----------+
+
++-ELDER----+
+|"COME BACK|
+|ONCE YOU  >
++----------+
++-ELDER----+
+|VISIT     |
+|KARTA_"   |
++----------+
+
++-GUARD----+
+|"YES,SIR!"|  (this is the only thing the guards in the game say, unless noted)
+|          |
++----------+
+
++-HERMIT---+
+|"MORTALS_ |
+|IN COREL?"|
++----------+
+
++-HERMIT---+
+|"GODSPEED,|
+|MORTALS!" |
++----------+
+
++-INNKEEP--+
+|"NEED A   |
+|REST?"    |
++----------+
++-INNKEEP--+
+|"xxxx GP  | (X = gold cost)
+|PER NIGHT]| (yes / no choice menu follows)
++----------+
+
++-VENDOR---+
+¦"NEED SOME¦
+¦NEW GEAR?"¦
++----------+
+
++-MONK-----+
+|"YOU ARE  |
+|THE HEROES>
++----------+
++-MONK-----+
+|SENT TO   |
+|VANQUISH  >
++----------+
++-MONK-----+
+|DARIUS?   |
+|THEN TAKE >
++----------+
++-MONK-----+
+|THIS GRAIL|
+|TO SIREN] |
++----------+
+
++-NUN------+
+|"NO ONE   |
+|CAN ENTER >
++----------+
++-NUN------+
+|SIREN'S   |
+|TEMPLE    >
++----------+
++-NUN------+
+|WITHOUT AN|
+|OFFERING_"|
++----------+
+
+Temple of Siren:
+
++-SIREN----+
+|"NO       |
+|OFFERING?"|
++----------+
++-SIREN----+
+|"BEGONE   |
+|WITH YOU!"|
++----------+
+
++-NUN------+
+|"SIREN    |
+|WATCHES   >
++----------+
++-NUN------+
+|OVER THE  |
+|SEAS_"    |
++----------+
+
++-NUN------+
+|"PLEASE   |
+|BRING AN  >
++----------+
++-NUN------+
+|OFFERING  |
+|WITH YOU] |
++----------+
+
++-NUN------+
+|"NEVER    |
+|REFRAIN   >
++----------+
++-NUN------+
+|FROM THE  |
+|LIGHT_"   |
++----------+
+
++----------+
+|GAVE *GRAIL| (* = key icon)
+|TO SIREN_ |
++----------+
++-SIREN----+
+|"MORTALS, |
+|HAVE YOU  >
++----------+
++-SIREN----+
+|COME TO BE|
+|TESTED?"  |
++----------+
++-ANNIKA---+
+|"YES, FAIR|
+|SIREN_"   |
++----------+
++-SIREN----+
+|"VERY WELL]|
+|          |
++----------+
++-SIREN----+
+|"PREPARE  |
+|YOURSELF!"|
++----------+
++-SIREN----+
+|"YOU HAVE |
+|PASSED MY >
++----------+
++-SIREN----+
+|TRIAL?    |
+|INDEED,YOU>
++----------+
++-SIREN----+
+|ARE WORTHY|
+|MORTALS_" |
++----------+
++-SIREN----+
+|"I SHALL  |
+|GIVE YOU  >
++----------+
++-SIREN----+
+|MY POWER  |
+|AND ALLOW >
++----------+
++-SIREN----+
+|YOUR SAFE |
+|PASSAGE_  |
++----------+
+
+Mt. Hermit:
+
++-HERMIT---+
+|"I AM     |
+|AFRAID I  >
++----------+
++-HERMIT---+
+|CANNOT LET|
+|YOU GO ANY>
++----------+
++-HERMIT---+
+|FURTHER_" |
+|          |
++----------+
++-FENRIS---+
+|"BUT WE   |
+|MUST STOP >
++----------+
++-FENRIS---+
+|DARIUS!"  |
+|          |
++----------+
++-HERMIT---+
+|"THAT IS  |
+|BEST LEFT >
++----------+
++-HERMIT---+
+|TO US     |
+|GODS_"    |
++----------+
++-ROWLEY---+
+|"YOU_     |
+|A GOD?!"  |
++----------+
++-ROWLEY---+
+|"YOU'RE AN|
+|OVERGROWN >
++----------+
++-ROWLEY---+
+|CRAB!"    |
+|          |
++----------+
++-HERMIT---+
+|"INDEED,MY|
+|FORM IS   >
++----------+
++-HERMIT---+
+|NOT VERY  |
+|GODLY,BUT >
++----------+
++-HERMIT---+
+|IT WAS THE|
+|BEST I    >
++----------+
++-HERMIT---+
+|COULD DO  |
+|AFTER     >
++----------+
++-HERMIT---+
+|DARIUS    |
+|DEFEATED  >
++----------+
++-HERMIT---+
+|MY MORTAL |
+|AVATAR_"  |
++----------+
++-ANNIKA---+
+|"THEN THAT|
+|MEANS_"   |
++----------+
++-HERMIT---+
+|"YES,     |
+|DARIUS IS >
++----------+
++-HERMIT---+
+|ONE STEP  |
+|CLOSER TO >
++----------+
++-HERMIT---+
+|GODHOOD_" |
+|          |
++----------+
++-FENRIS---+
+|"THEN WE  |
+|MUST      >
++----------+
++-FENRIS---+
+|HURRY!"   |
+|          |
++----------+
++-HERMIT---+
+|"SO BE IT,|
+|BUT I MUST>
++----------+
++-HERMIT---+
+|TEST YOU, |
+|ANYWAY."  |
++----------+
++-HERMIT---+
+|"PREPARE  |
+|YOURSELF!"|
++----------+
++-HERMIT---+
+|"VERY     |
+|GOOD_"    |
++----------+
++-HERMIT---+
+|"GAIA MAY |
+|STILL HAVE>
++----------+
++-HERMIT---+
+|HOPE_"    |
+|          |
++----------+
++-HERMIT---+
+|"GO TO    |
+|KARTA AND >
++----------+
++-HERMIT---+
+|SEEK THE  |
+|COUNSEL OF>
++----------+
++-HERMIT---+
+|INDRA]    |
+|          |
++----------+
++-HERMIT---+
+|"GOOD     |
+|LUCK!"    |
++----------+
+
+Kingdom of Karta:
+
++-MAN------+
+|"WELCOME  |
+|TO KARTA!"|
++----------+
+
++-WISEMAN--+
+|"YOU MAY  |
+|USE MY    >
++----------+
++-WISEMAN--+
+|WARP PAD  |
+|TO REACH  >
++----------+
++-WISEMAN--+
+|COREL MUCH|
+|FASTER!"  |
++----------+
+
++-INDRA----+
+|"WELCOME, |
+|MORTALS_" |
++----------+
++-INDRA----+
+|"THIS IS  |
+|THE FINAL >
++----------+
++-INDRA----+
+|TEST OF   |
+|COSMOS."  |
++----------+
++-FENRIS---+
+|"WE ARE   |
+|READY TO  >
++----------+
++-FENRIS---+
+|FACE      |
+|DARIUS!"  |
++----------+
++-INDRA----+
+|"DARIUS   |
+|CANNOT BE >
++----------+
++-INDRA----+
+|STOPPED_  |
+|IN THIS   >
++----------+
++-INDRA----+
+|WORLD,AT  |
+|LEAST]    |
++----------+
++-ANNIKA---+
+|"WHAT DO  |
+|YOU MEAN?"|
++----------+
++-INDRA----+
+|"YOU MUST |
+|GO TO THE >
++----------+
++-INDRA----+
+|REALM OF  |
+|THE GODS, >
++----------+
++-INDRA----+
+|JUST      |
+|BEYOND    >
++----------+
++-INDRA----+
+|THIS      |
+|PORTAL_"  |
++----------+
++-INDRA----+
+|"BUT      |
+|FIRST_"   |
++----------+
++-INDRA----+
+|"VERY     |
+|WELL. YOU >
++----------+
++-INDRA----+
+|ARE       |
+|PREPARED  >
++----------+
++-INDRA----+
+|TO        |
+|CONFRONT  >
++----------+
++-INDRA----+
+|DARIUS. I |
+|SHALL GIVE>
++----------+
++-INDRA----+
+|YOU MY    |
+|POWER,    >
++----------+
++-INDRA----+
+|ALONG WITH|
+|PASSAGE_" |
++----------+
++-INDRA----+
+|"GOOD     |
+|LUCK!"    |
++----------+
+
+Ruined Temple:
+
++-ELDER----+
+|"COME     |
+|CLOSER,   >
++----------+
++-ELDER----+
+|MORTALS!" |
+|          |
++----------+
++-FENRIS---+
+|"_?"      |
+|          |
++----------+
++-ELDER----+
+|"HEHEHE_" |
+|          |
++----------+
++-ROWLEY---+
+|"HUH? IT'S|
+|A TRAP!"  |
++----------+
++-FENRIS---+
+|"THAT WAS |
+|CLOSE_"   |
++----------+
+
+Colloseum:
+
++-MAN------+
+|"OH,BOY!" |
+|          |
++----------+
++-MAN------+
+|"I CAN'T  |
+|WAIT TO   >
++----------+
++-MAN------+
+|BOMB SOME |
+|DODONGOS!"|
++----------+
++-FENRIS---+
+|"_ _ _"   |
+|          |
++----------+
+
+Khimaera Village:
+
++-DEATH----+
+|"KHIMAERA |
+|IS NO     >
++----------+
++-DEATH----+
+|PLACE FOR |
+|MORTALS!" |
++----------+
+
++-SHELLY---+
+|"OH! HI,  |
+|FENRIS!"  |
++----------+
++-FENRIS---+
+|"SHELLY?! |
+|WHAT ARE  >
++----------+
++-FENRIS---+
+|YOU DOING |
+|IN A PLACE>
++----------+
++-FENRIS---+
+|LIKE      |
+|THIS?!"   |
++----------+
++-SHELLY---+
+|"SHH! I'M |
+|REALLY AN >
++----------+
++-SHELLY---+
+|IMMORTAL  |
+|DEMON!"   |
++----------+
++-SHELLY---+
+|"TEE-HEE!"|
+|          |
++----------+
++-FENRIS---+
+|"_!"      |
+|          |
++----------+
+
++-GIDEON---+
+|"KARTA HAS|
+|MANY      >
++----------+
++-GIDEON---+
+|SECRETS.  |
+|HAVE YOU  >
++----------+
++-GIDEON---+
+|FOUND THEM|
+|ALL?"     |
++----------+
+
+Path of the Gods:
+
++-FENRIS---+
+|"BROTHER  |
+|VANSKE!"  |
++----------+
++-VANSKE---+
+|"FENRIS_  |
+|I_ I_"    >
++----------+
++-ANNIKA---+
+|"HIS      |
+|WOUNDS ARE>
++----------+
++-ANNIKA---+
+|MORTAL_ I |
+|CANNOT    >
++----------+
++-ANNIKA---+
+|HEAL HIM_ |
+|I'M SORRY]|
++----------+
++-FENRIS---+
+|"DARIUS   |
+|WILL PAY!"|
++----------+
++-VANSKE---+
+|"BROTHER_ |
+|TAKE THIS]|
++----------+
++----------+
+| RECIEVED |
+| *LEGEND  | (* = sword icon)
++----------+
++-VANSKE---+
+|"DO_ NOT_ |
+|REFRAIN_" |
++----------+
++-FENRIS---+
+|"BROTHER!"|
+|          |
++----------+
++-VANSKE---+
+|"_ _ _"   |
+|          |
++----------+
++-ROWLEY---+
+|"COME ON, |
+|LET'S     >
++----------+
++-ROWLEY---+
+|TEACH THIS|
+|GUY A     >
++----------+
++-ROWLEY---+
+|LESSON!"  |
+|          |
++----------+
++-FENRIS---+
+|"I_ WON'T |
+|FAIL YOU_"|
++----------+
++----------+
+|VANSKE HAS|
+|PERISHED_ |
++----------+
+
++-FENRIS---+
+|"_DARIUS!"|
+|          |
++----------+
++-DARIUS---+
+|"MISERABLE|
+|FOOLS_"   |
++----------+
++-DARIUS---+
+|"HOW DARE |
+|THE KING'S>
++----------+
++-DARIUS---+
+|UNDERLINGS|
+|DEFY ME!" |
++----------+
++-ANNIKA---+
+|"THIS ENDS|
+|NOW]      |
++----------+
++-DARIUS---+
+|"INDEED,  |
+|AND I     >
++----------+
++-DARIUS---+
+|THANK YOU |
+|FOR       >
++----------+
++-DARIUS---+
+|GATHERING |
+|THE       >
++----------+
++-DARIUS---+
+|AVATARS'  |
+|POWER FOR >
++----------+
++-DARIUS---+
+|ME. NOW,  |
+|TO TAKE   >
++----------+
++-DARIUS---+
+|WHAT IS   |
+|RIGHTFULLY>
++----------+
++-DARIUS---+
+|MINE!"    |
+|          |
++----------+
++-DARIUS---+
+|"UGH_     |
+|BESTED BY >
++----------+
++-DARIUS---+
+|MERE      |
+|MORTALS?!"|
++----------+
+
++-UNKOWN---+
+|"HAHAHA_" |
+|          |
++----------+
++-FENRIS---+
+|"WHO'S    |
+|THERE?!"  |
++----------+
++-ROWLEY---+
+|"I CAN'T  |
+|SEE!"     |
++----------+
++-UNKNOWN--+
+|"PARDON   |
+|ME_"      |
++----------+
++-DARSEL---+
+|"I AM     |
+|DARSEL]   |
++----------+
++-ANNIKA---+
+|"THE      |
+|DRACONIC  >
++----------+
++-ANNIKA---+
+|HIGH      |
+|MAGE?!"   |
++----------+
++-DARSEL---+
+|"NAY,THE  |
+|DRACONIC  >
++----------+
++-DARSEL---+
+|GOD!"     |
+|          |
++----------+
++-FENRIS---+
+|"_!"      |
+|          |
++----------+
++-DARSEL---+
+|"ENOUGH OF|
+|YOUR      >
++----------+
++-DARSEL---+
+|MEDDLING!"|
+|          |
++----------+
++-DARSEL---+
+|"DARIUS,  |
+|RECIEVE   >
++----------+
++-DARSEL---+
+|MY POWER!"|
+|          |
++----------+
