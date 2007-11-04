@@ -294,7 +294,7 @@ LONG   | A common long bow              | +8/ -3/.../ +3| N/A                |30
 GREAT  | A common great bow             |+15/ -3/.../ +5| N/A                |20
 ELVEN  | A bow crafted by the elves     |+12/ -1/ +5/ +8| N/A                |60
 POISON | A bow tipped with venom        | +8/ -3/.../ +3| Poisons enemy      |20
-ARTEMIS| Bow belonging to a great deity |+20/.../ +5/+12| N/A                |--
+ARTEMIS| Bow belonging to a great deity |+18/.../ +5/+12| N/A                |--
 ================================================================================
 Staves | Description                    |ATT/DEF/MAG/AGI| Other              |Qt
 -------+--------------------------------+---------------+--------------------+--
