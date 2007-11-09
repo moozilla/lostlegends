@@ -1,0 +1,63 @@
+.nolist
+#include "ti83plus.inc"
+.list
+.org	$9D93	; 9D95-2 because of following db
+	.db	t2ByteTok, tAsmCmp
+
+	b_call(_RunIndicOff)
+
+	in a,(06)		;get page?
+	ld hl,FontHook
+	b_call($4fe4)		;enable font hook
+
+        b_call(_GrBufClr)
+	ld hl, scrn_end1
+	ld de, PlotSScreen+(1*12)
+	ld bc, 24*12
+	ldir
+	ld hl, scrn_end2
+	ld de, PlotSScreen+(44*12)
+	ld bc, 18*12
+	ldir
+	ld hl,str_end
+	push hl
+reset:
+	b_call(_GrBufCpy)
+	ld hl,$1C0A
+	ld (PenCol),hl
+	pop hl
+	ld a,(hl)
+	dec a
+	jr z,done
+	b_call(_VPutS)
+	ld a,(hl)
+	dec a		;test if 1, then only 1 line
+	jr nz, nres
+	inc hl
+	jr pause
+nres:
+	push hl
+	ld hl,$240A
+	ld (PenCol),hl
+	pop hl
+	b_call(_VPutS)
+pause:
+	push hl
+	ld b,140	;delay a bit
+delay:
+	halt		;1/20 second
+	halt
+	djnz delay
+	jr reset
+done:
+	b_call(_GrBufClr)
+exit:
+	b_call($4fe7)		;disable font hook
+	ret
+
+#include "text.z80"
+#include "font.z80"
+#include "screens.z80"
+
+.end
+.end
