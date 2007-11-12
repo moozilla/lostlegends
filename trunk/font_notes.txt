@@ -1,0 +1,41 @@
+Notes on the font
+=================
+
+Problem:
+
+As you know, the font does not follow the standard ASCII format, and it also can't. After looking at it I figured that I would just agree with Liazon. A solution is presented below.
+
+Solution:
+
+The font map includes many extended characters that are unique to this game. I will be writing a "compiler" to convert text written by a person in a .txt file into what it should equal for the Lost Legends font map. I will write this in C, and probably complete it this week. Improvements can be suggested to my approach in this document in this document, or Issues. Here is how I propose to solve this extended character map problem.
+
+Standard characters that will be "compiled:
+0 1 2 3 4 5 6 7 8 9 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ! ? (space) (period) : ' , - / * # +
+
+Characters that will need to be special cased, and my proposed names(refer to font.gst for the characters; NN = Need Name):
+
+40 - [elip]
+44 - [right_quotation]
+45 - [left_quotation]
+46 - [left_quotation_period]
+52 - NN
+53 - NN
+54 - NN
+55 - [right_arrow]
+56 - [left_arrow]
+57 - [up_arrow]
+58 - NN
+59 - NN
+60 - [heart]
+61 - [sword]
+62 - NN
+63 - [bow_and_arrow]
+64-95 - NN
+
+As you can see, I need a lot of name suggestions. Here is a mockup compilation:
+
+He said, [right_quotation]Hi![left_quotation_period][elip]Bye.
+
+compiles to:
+
+.db 19,16,38,30,12,15,38,44,19,20,10,46,40,13,36,16

@@ -1,9 +1,9 @@
- 	.nolist
+.nolist
 #include "spasm.inc"
-	.list
+.list
 
 defpage(0,"LLegends")
- 
+
 Tile_width = 2
 Map_Entry_Size = 1
 MAP_MASK = $ff
@@ -16,10 +16,8 @@ PMAPHIEGHT = 5
 #define AllocStart $9d95
 
 #include "grayapp.inc"
-
 ;#include "Graymapper.inc"
-
-
+#include "portinput.inc"
 
 ;NOTE:  You must allocate some memory for the mapper(see below)
 
@@ -142,81 +140,47 @@ Loop:
 Keyloop:
 	nop
 	nop
-	ld a,$FF
-	out (1),a
-	nop
-	nop
-	nop
-	nop
+	ResetKeyPort()
 	ld a,$80
 	out (1),a
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
+	NOPS
 	in a,(1)
 	inc a
 	jr z,Keyloop
-	ld a,$FF
-	out (1),a
-	nop
-	nop
-	nop
-	nop
-	ld a,$FE
-	out (1),a
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
+	ResetKeyPort()
+	
+	KeyGroup7()
 	in a,(1)
-	bit 0,a
+	bit B_DOWN,a
 	call z,down
-	bit 1,a
+	bit B_LEFT,a
 	call z,left
-	bit 2,a
+	bit B_RIGHT,a
 	call z,right
-	bit 3,a
+	bit B_UP,a
 	call z,up
 
-	ld a,$FF
-	out (1),a
-	nop
-	nop
-	nop
-	nop
-	ld a,$BF
-	out (1),a
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
-	in a,(1)
+	ResetKeyPort()
+	KeyGroup1()
 	ld hl,(delta)	;this just changes  the scroll speed with the F keys
-	bit 0,a
+	bit B_GRAPH,a
 	jr nz,$+2+3
 	ld hl,8
-	bit 1,a
+	bit B_TRACE,a
 	jr nz,$+2+3
 	ld hl,6
-	bit 2,a
+	bit B_ZOOM,a
 	jr nz,$+2+3
 	ld hl,4
-	bit 3,a
+	bit B_WINDOW,a
 	jr nz,$+2+3
 	ld hl,2
-	bit 4,a
+	bit B_YEQUAL,a
 	jr nz,$+2+3
 	ld hl,1
 	ld (delta),hl
 
-	bit 5,a			;2nd turns SE speed on
+	bit B_2ND,a			;2nd turns SE speed on
 	jr nz,skipspeedon
 	in a,(2)
 	rla
@@ -237,12 +201,8 @@ skipspeedoff:
 
 	ld a,$FF
 	out (1),a
-	ld a,$FD
-	out (1),a
-	nop
-	nop
-	in a,(1)
-	bit 6,a			;CLEAR = quit
+	KeyGroup6()
+	bit B_CLEAR,a			;CLEAR = quit
 	jp nz,loop
 	call GSdisable
 	
