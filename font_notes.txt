@@ -1,3 +1,5 @@
+(UPDATE: see Grendel's notation on the bottom)
+
 Notes on the font
 =================
 
@@ -18,19 +20,50 @@ Characters that will need to be special cased, and my proposed names(refer to fo
 44 - [right_quotation]
 45 - [left_quotation]
 46 - [left_quotation_period]
-52 - NN
-53 - NN
-54 - NN
+52 - LI
+53 - IL
+54 - LL
 55 - [right_arrow]
 56 - [left_arrow]
 57 - [up_arrow]
-58 - NN
-59 - NN
+58 - [up_double1]
+59 - [up_double2]
 60 - [heart]
 61 - [sword]
-62 - NN
+62 - [staff]
 63 - [bow_and_arrow]
-64-95 - NN
+64 - [book]
+65 - [armor]
+66 - [glove]
+67 - [ring]
+68 - [potion]
+69 - [key]
+70 - [poison]
+71 - [seperator]
+72 - [corner_pane_ul]
+73 - [upper_pane]
+74 - [corner_pane_ur]
+75 - [side_pane_l]
+76 - [side_pane_r]
+77 - [corner_pane_bl]
+78 - [lower_pane]
+79 - [corner_pane_br]
+80 - [status1]
+81 - [status2]
+82 - [status3]
+83 - [status4]
+84 - [equip1]
+85 - [equip2]
+86 - [equip3]
+87 - [item1]
+88 - [item2]
+89 - [item3]
+90 - [command1]
+91 - [command2]
+92 - [command3]
+93 - [command4]
+94 - [left_arrow_blend]
+95 - [right_arrow_blend]
 
 As you can see, I need a lot of name suggestions. Here is a mockup compilation:
 
@@ -39,3 +72,6 @@ He said, [right_quotation]Hi![left_quotation_period][elip]Bye.
 compiles to:
 
 .db 19,16,38,30,12,15,38,44,19,20,10,46,40,13,36,16
+
+Grendel's note:
+* characters 58, 59 and 72 - 93 are multi-byte characters. When assembled, they form characters longer than the standard 8 pixel width.
