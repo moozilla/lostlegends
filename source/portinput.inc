@@ -118,31 +118,16 @@
 #define B_UP  3
 
 ;######################################
-;# ResetKeyPort()
-;#
-;#   Used to reset the port(write 0xFF).
-;######################################
-
-;;
-#define NOPS nop \ nop \ nop \ nop
-;;
-
-#define ResetKeyPort() ld a,$FF \ out (1),a \ NOPS
-
-;######################################
-;# KeyGroup[1...7]()
+;# KG_[1...7]()
 ;#
 ;#   Specify the key group that you would
 ;#   like to scan for keys
 ;######################################
 
-;;
-#define OUT_NOPS_IN out (1),a \ NOPS \  in a,(1)
-;;
-#define KeyGroup1() ld a,$BF \ OUT_NOPS_IN
-#define KeyGroup2() ld a,$DF \ OUT_NOPS_IN
-#define KeyGroup3() ld a,$EF \ OUT_NOPS_IN
-#define KeyGroup4() ld a,$F7 \ OUT_NOPS_IN
-#define KeyGroup5() ld a,$FB \ OUT_NOPS_IN
-#define KeyGroup6() ld a,$FD \ OUT_NOPS_IN
-#define KeyGroup7() ld a,$FE \ OUT_NOPS_IN
+#define KG_1 $BF
+#define KG_2 $DF
+#define KG_3 $EF
+#define KG_4 $F7
+#define KG_5 $FB
+#define KG_6 $FD
+#define KG_7 $FE
