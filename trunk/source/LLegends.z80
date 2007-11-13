@@ -138,18 +138,23 @@ Loop:
 
 
 Keyloop:
-	nop
-	nop
-	ResetKeyPort()
+	nop \ nop
+	ld a,$FF
+	out (1),a
+	nop \ nop \ nop \ nop
+
 	ld a,$80
 	out (1),a
-	NOPS
+	nop \ nop \ nop \ nop
 	in a,(1)
 	inc a
 	jr z,Keyloop
-	ResetKeyPort()
+	ld a,$FF
+	out (1),a
 	
-	KeyGroup7()
+	ld a,KG_7
+	out (1),a
+	nop \ nop \ nop \ nop
 	in a,(1)
 	bit B_DOWN,a
 	call z,down
@@ -160,8 +165,12 @@ Keyloop:
 	bit B_UP,a
 	call z,up
 
-	ResetKeyPort()
-	KeyGroup1()
+	ld a,$FF
+	out (1),a
+	ld a,KG_1
+	out (1),a
+	nop \ nop \ nop \ nop
+	in a,(1)
 	ld hl,(delta)	;this just changes  the scroll speed with the F keys
 	bit B_GRAPH,a
 	jr nz,$+2+3
@@ -201,7 +210,10 @@ skipspeedoff:
 
 	ld a,$FF
 	out (1),a
-	KeyGroup6()
+	ld a,KG_6
+	out (1),a
+	nop \ nop \ nop \ nop
+	in a,(1)
 	bit B_CLEAR,a			;CLEAR = quit
 	jp nz,loop
 	call GSdisable
