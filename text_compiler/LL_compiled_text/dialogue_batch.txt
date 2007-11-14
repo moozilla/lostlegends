@@ -1,0 +1,238 @@
+<str_castle_grendale_king1>
+[left_quotation]Your_
+first task_
+is the_
+living_
+forest_
+just west[right_quotation]\
+
+<str_castle_grendale_king2>
+[left_quotation]Please_
+take good_
+care of my_
+daughter[right_quotation]\
+
+<str_castle_grendale_guard1>
+[left_quotation]Feel free_
+to take_
+anything_
+from our_
+treasury[right_quotation]\
+
+<str_castle_grendale_guard2>
+[left_quotation]Good_
+luck![right_quotation]\
+
+<str_castle_grendale_vanske1>
+[left_quotation]How 'bout_
+a kiss,_
+for luck?[right_quotation]\
+
+<str_castle_grendale_vanske2>
+[left_quotation][elip][right_quotation]\
+
+<str_castle_grendale_beatrix1>
+[left_quotation]You've_
+got to be_
+kidding![right_quotation]\
+
+<str_castle_grendale_shelly1>
+[left_quotation]I just_
+love_
+picking_
+flowers![right_quotation]\
+
+<str_castle_grendale_villager1>
+[left_quotation]Need a_
+rest?[right_quotation]\
+
+<str_castle_grendale_villager2>
+Health_
+restored!\
+
+<str_castle_grendale_vendor1>
+[left_quotation]Need some_
+new gear?[right_quotation]\
+
+<str_castle_grendale_gideon1>
+[left_quotation]Hello. I_
+am the_
+wise sage,_
+gideon[right_quotation]\
+
+<str_castle_grendale_gideon2>
+[left_quotation]I travel_
+around, so_
+I have_
+many tips_
+to share![right_quotation]\
+
+<str_castle_grendale_gideon3>
+[left_quotation]Some_
+items have_
+elemental_
+powers[right_quotation]\
+
+<str_castle_grendale_gideon4>
+[left_quotation]Try them_
+on enemies_
+to find a_
+weakness![right_quotation]\
+
+<str_tod_djinn1>
+[left_quotation]Mortals,_
+why do you_
+disturb my_
+rest?[right_quotation]\
+
+<str_tod_djinn2>
+[left_quotation]I see[elip][right_quotation]\
+
+<str_tod_djinn3>
+[left_quotation]If it is_
+my power_
+you seek,_
+then prove_
+your_
+worth![right_quotation]\
+
+<str_tod_djinn4>
+[left_quotation]Indeed,_
+you are_
+worthy[elip][right_quotation]\
+
+<str_tod_djinn5>
+[left_quotation]Recieve_
+the power_
+of fire![right_quotation]\
+
+<str_tod_djinn6>
+[left_quotation]Now, seek_
+siren and_
+leave me_
+to my_
+slumber.[right_quotation]\
+
+<str_tod_djinn7>
+[left_quotation]ZZZ[elip][right_quotation]\
+
+<str_tod_fenris1>
+[left_quotation]We've_
+come to be_
+tested[elip][right_quotation]\
+
+<str_tod_fenris2>
+[left_quotation]Then_
+let's go![right_quotation]\
+
+<str_tod_fenris3>
+[left_quotation]Are the_
+gods really_
+this_
+lazy?![right_quotation]\
+
+<str_tod_annika1>
+[left_quotation]With the_
+essense of_
+djinn,we_
+can now_
+cross the_
+marina sea_
+unharmed[right_quotation]\
+
+<str_corel_village_girl1>
+[left_quotation]Welcome_
+to corel[right_quotation]\
+
+<str_corel_village_gideon1>
+[left_quotation]Some_
+enemies_
+are weak_
+to items[right_quotation]\
+
+<str_corel_village_gideon2>
+[left_quotation]Try bows_
+on flying_
+enemies to_
+see what I_
+mean[elip][right_quotation]\
+
+<str_corel_village_elder1>
+[left_quotation]We have_
+the best_
+library in_
+all gaia![right_quotation]\
+
+<str_corel_village_elder2>
+[left_quotation]Come back_
+once you_
+visit_
+karta[elip][right_quotation]\
+
+<str_generic_guard>
+[left_quotation]Yes,sir![right_quotation]\
+
+<str_corel_village_hermit1>
+[left_quotation]Mortals_
+in corel?[right_quotation]\
+
+<str_corel_village_hermit2>
+[left_quotation]Godspeed,_
+mortals![right_quotation]\
+
+<str_generic_innkeep1>
+[left_quotation]Need a_
+rest?[right_quotation]\
+
+<str_generic_innkeep2>
+[left_quotation]XXXX GP_
+pre night[right_quotation]\
+
+<str_generic_vendor1>
+[left_quotation]Need some_
+new gear?[right_quotation]\
+
+<str_generic_monk1>
+[left_quotation]You are_
+the heroes_
+sent to_
+vanquish_
+darius?_
+then take_
+this grail_
+to siren[right_quotation]\
+
+<str_generic_nun1>
+[left_quotation]No one_
+can enter_
+siren's_
+temple_
+without an_
+offering[right_quotation]\
+
+<str_tos_siren1>
+[left_quotation]No_
+offering?[right_quotation]\
+
+<str_tos_siren2>
+[left_quotation]Begone_
+with you![right_quotation]\
+
+<str_tos_nun1>
+[left_quotation]siren_
+watches_
+over the_
+seas[elip][right_quotation]\
+
+<str_tos_nun2>
+[left_quotation]Please_
+bring an_
+offering_
+with you[right_quotation]\
+
+<str_tos_nun3>
+[left_quotation]Never_
+refrain_
+from the_
+light[right_quotation]\
+
