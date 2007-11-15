@@ -125,7 +125,7 @@ int main(int argc, char* argv[])
 		} else if (c_char == '\\') {
 			c_char = CNULL;
 			byte_count++;
-			fprintf(outfile, "-2\n");
+			fprintf(outfile, "-2\n\t.db ");
 		}
 		
 		if (llchar_map[c_char] != CNULL) {
