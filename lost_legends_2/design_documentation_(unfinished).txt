@@ -161,8 +161,8 @@ O-BLIND   - prevents [BLIND] status
 O-DEATH   - prevents [DEATH] status
 O-STATUS  - prevents any status change
 O-ALL     - resist any elemental damage / status change
-W-FIRE    - weak against [FIRE] damage
-W-COLD    - weak against [COLD] damage
+W-FIRE    - weak against [FIRE] damage (such damage ignores ABSORB)
+W-COLD    - weak against [COLD] damage (such damage ignores ABSORB)
 DRAIN     - restores 6-12 HP to the wielder when attacking
 SHELL     - +16 ABSORB vs. magic damage
 COUNTER   - sometimes counterattacks when struck (1/8 chance)
