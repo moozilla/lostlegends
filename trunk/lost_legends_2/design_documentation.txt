@@ -1,5 +1,13 @@
-  -= LOST LEGENDS II - DESIGN DOCUMENTATION =-
-  written by Grendel Hilmarsson
+ __               __     __                             __          __ __ 
+|  |.-----.-----.|  |_  |  |.-----.-----.-----.-----.--|  |.-----. |__|__|
+|  ||  _  |__ --||   _| |  ||  -__|  _  |  -__|     |  _  ||__ --| |  |  |
+|__||_____|_____||____| |__||_____|___  |_____|__|__|_____||_____| |__|__|
+----------------------------------|_____|---------------------------------
+                                 s h a d o w   o v e r   r a g n o t h
+
+
+  -= LOST LEGENDS II: DESIGN DOCUMENTATION =-
+       written by G.HILMARSSON
 
 platform            - TI-83/84+ series
 resolution          - 96x64 px.
@@ -13,9 +21,10 @@ font routine        - 4x8 px. per character (extended font is 4x4)
 composed using TextPad 5.0: 32-bit Edition
 =================================================================================================================================132
 
+TABLE OF CONTENTS
 
 INVENTORIES
-MAGICK
+MAGIC
 ARMORY
  ITEM MODIFIERS
 KEY ITEMS
@@ -23,28 +32,85 @@ KEY ITEMS
 BESTIARY DATA
 ENEMY SKILLS
 
- --------
-  MAGICK
- --------
---------------+----+----+----------------------------------------------------------------------------------
- Spell        |Req.|Hit%| Effect
---------------+----+----+----------------------------------------------------------------------------------
-LAY ON HANDS  | -- |100%| heals damage: INT/1.25 = amount / single ally
-NEUTRALIZE    | -- |100%| heals any status ailmentation, except [DEATH] / single ally
-EGRRESSION    | -- |100%| warps out of dungeons / battles
-MASS HEALING  | 32 |100%| heals party: INT/2 = amount
-WARD EVIL     | 16 |100%| increases single ally ABSORB by 6-12
-INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12
-RAISE DEAD    | 24 |100%| raises fallen ally with 20% mHP
-FAERIE FIRE   | -- | 90%| damages enemy: INT x1.5 = damage / [FIRE]-elemental
-CHILL TOUCH   | -- | 90%| damages enemy: INT x1.5 = damage / [COLD]-elemental
-FIRESTORM     | 24 | 80%| damages enemy: INT x1.75 = damage / [FIRE]-elemental
-ARCTIC BLAST  | 24 | 80%| damages enemy: INT x1.75 = damage / [COLD]-elemental
-CALL LIGHTNING| 32 | 80%| damages enemy: INT x1.25 = damage / non-elemental; x2 vs. marine; x1.5 vs. winged
-SCOURGE       |  8 | 70%| damages enemy: INT/1.5 = damage; causes [POISON] status
-SIREN'S SONG  | -- | 70%| induces [ENCHANT] status on enemy
-SUMMON FOG    | 16 | 70%| induces [BLIND] status on enemy; raises party EVADE by 2-4
-STONE GAZE    | 48 | 60%| induces [DEATH] status on enemy
+MAYA              255 mHP
+
+STR 99 | STA 99 | INT 99 | AGI 99
+
+WPN WOODEN STAFF  SHD  (none)
+HLM  (none)       ARM WOVEN ROBES
+ACC  (none)       ITM  (none)
+
+FAERIE FIRE
+----------------------------------
+SIR EDMUND        255 mHP
+
+STR 99 | STA 99 | INT 99 | AGI 99
+
+WPN BROADSWORD    SHD BUCKLER
+HLM  (none)       ARM BRIGANDINE
+ACC  (none)       ITM  (none)
+----------------------------------
+GLENN             255 mHP
+
+STR 99 | STA 99 | INT 99 | AGI 99
+
+WPN BATTLE AXE    SHD BUCKLER
+HLM HEADBAND      ARM BRIGANDINE
+ACC  (none)       ITM  (none)
+----------------------------------
+D. KNIGHT         255 mHP
+
+STR 99 | STA 99 | INT 99 | AGI 99
+
+WPN CUTLAS STEEL  SHD FULL SHIELD
+HLM FULL HELMET   ARM CUIRASS
+ACC  (none)       ITM  (none)
+
+FAERIE FIRE     INNER STRENGTH
+SCOURGE         NEUTRALIZE
+----------------------------------
+ROSE              255 mHP
+
+STR 99 | STA 99 | INT 99 | AGI 99
+
+WPN CUTLAS STEEL  SHD FULL SHIELD
+HLM FULL HELMET   ARM CUIRASS
+ACC  (none)       ITM  (none)
+
+FAERIE FIRE     INNER STRENGTH
+SCOURGE         NEUTRALIZE
+----------------------------------
+MARSHAL           250 mHP
+
+STR 92 | STA 92 | INT  0 | AGI 64
+
+WPN  PISTOL       SHD  (none)
+HLM  (none)       ARM  TIN PLATE
+ACC  (none)       ITM  (none)
+----------------------------------
+
+ -------
+  MAGIC
+ -------
+--------------+----+----+-------------------------------------------------------------------------------+---------------------------
+ Spell        |Req.|Hit%| Effect                                                                        | Description
+--------------+----+----+-------------------------------------------------------------------------------+---------------------------
+LAY ON HANDS  | -- |100%| heals damage: INT/1.25 = amount / single ally                                 |HEALS SINGLE ALLY
+NEUTRALIZE    | -- |100%| heals any status ailmentation, except [DEATH] / single ally                   |CURES ALLY STATUS
+EGRRESSION    | -- |100%| warps out of dungeons / battles                                               |WARP OUT OF DUNGEONS
+MASS HEALING  | 32 |100%| heals party: INT/2 = amount                                                   |HEALS ALL ALLIES
+WARD EVIL     | 16 |100%| increases single ally ABSORB by 6-12 (lasts until battle is over)             |RAISES DEFENSE POWER
+INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12 (lasts until battle is over)             |RAISES ATTACK POWER
+RAISE DEAD    | 24 |100%| raises fallen ally with 20% mHP                                               |RESURRECTS FALLEN ALLY
+FAERIE FIRE   | -- | 90%| damages enemy: INT x1.5 = damage / [FIRE]-elemental                           |MINOR FIRE DAMAGE ON ENEMY
+CHILL TOUCH   | -- | 90%| damages enemy: INT x1.5 = damage / [COLD]-elemental                           |MINOR COLD DAMAGE ON ENEMY
+FIRESTORM     | 24 | 80%| damages all: INT x1.75 = damage / [FIRE]-elemental                            |HEAVY FIRE DAMAGE ON ALL
+ARCTIC BLAST  | 24 | 80%| damages all: INT x1.75 = damage / [COLD]-elemental                            |HEAVY COLD DAMAGE ON ALL
+CALL LIGHTNING| 32 | 80%| damages all: INT x1.5 = damage / non-elemental; x2 vs. marine; x1.5 vs. winged|NON-ELEMENTAL DAMAGE ON ALL
+SCOURGE       |  8 | 70%| damages all: INT/1.5 = damage; causes [POISON] status                         |LIGHT DAMAGE AND POISON
+SIREN'S SONG  | -- | 70%| induces [ENCHANT] status on all enemies for 1-3 rounds                        |INDUCES SLEEP
+SUMMON FOG    | 16 | 70%| induces [BLIND] status on all enemies; raises party EVADE by 2-4              |RAISES PARTY EVADE
+STONE GAZE    | 32 | 60%| induces [DEATH] status on enemy                                               |PETRIFIES ENEMY
 
  --------
   ARMORY
@@ -59,8 +125,8 @@ FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 |  0  | +6  | +12 |  0  |
 WYRMSBANE   |SWORD EFFECTIVE VS. DRAGONS         | +22 |  0  |  0  | +12 |  0  |X-DRAGON, (FIRESTORM)       | +2 STR
 AVENGER     |SWORD THAT AVENGES ITS WIELDER      | +20 | +6  |  0  | +10 | +2  |COUNTER                     | +1 STA, +1 STR, -1 INT
 CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +4  | +4  | +12 |  0  |CRITICAL, (CALL LIGHTNING)  | +2 STR
-BLOOD SWORD |SWORD THAT STEALS LIFE              |   0 |  0  |  0  |  -2 |  0  |DRAIN                       | +1 HP, -1 to any
-MURASAMA    |FABLED SWORD OF DARKNESS            | +18 |  0  |  0  | +14 | +4  |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR
+BLOOD SWORD |BRITTLE SWORD THAT STEALS LIFE      |  +2 |  0  |  0  |  -2 |  0  |DRAIN                       | +1 HP, -1 to any
+MURASAME    |FABLED SWORD OF DARKNESS            | +18 |  0  |  0  | +14 | +4  |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Axes       | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -73,7 +139,7 @@ RUNE AXE    |AN ANCIENT,ENCHANTED AXE            | +44 | +4  |  0  | +4  | -4  |
  Bows       | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 LONG BOW    | (none)                             |  +8 | -2  |  0  | +16 | -2  |X-WINGED                    | +1 AGI, +1 STR
-SYLVAN BOW  |BOW THAT ENHANCES MAGICK            | +14 | -2  | +4  | +16 | -2  |X-WINGED                    | +2 AGI, +1 INT
+SYLVAN BOW  |BOW THAT ENHANCES MAGIC             | +14 | -2  | +4  | +16 | -2  |X-WINGED                    | +2 AGI, +1 INT
 POISON BOW  |BOW TIPPED WITH VENOM               | +18 | -2  |  0  | +16 | -2  |X-WINGED, X-POISON          | +2 AGI, +1 STR
 ARTEMIS BOW | (none)                             | +22 |  0  | +6  | +16 | -2  |X-WINGED                    | +4 AGI, +1 STR
 GASTRAPHETES|A LIGHT CROSSBOW                    | +28 |  0  |  0  | +20 |  0  |X-WINGED, CRITICAL          | +2 AGI, +1 STR
@@ -82,9 +148,13 @@ GASTRAPHETES|A LIGHT CROSSBOW                    | +28 |  0  |  0  | +20 |  0  |
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 WOODEN STAFF| (none)                             |  +6 |  0  | +10 | +10 |  0  | N/A                        | +1 INT, -1 STR
 WAR SCEPTER |STAFF MADE FOR COMBAT               | +12 |  0  | +12 | +10 |  0  | N/A                        | +1 STR, +1 INT
-SERAPH ROD  | (none)                             | +10 |  0  | +18 | +10 |  0  |RECOVERY                    | +2 INT, -1 STR
+SERAPH ROD  |STAFF THAT GRANTS LIFE              | +10 |  0  | +18 | +10 |  0  |RECOVERY                    | +2 INT, -1 STR
 VESPERTINE  |STAFF ENCOMPASSING DARKNESS         | +16 |  0  | +28 | +10 |  0  |X-BLIND, X-ENCHANT          | +4 INT, -1 STR
-RUNE STAFF  |ANCIENT STAFF OF CURATIVE MAGICK    |  +8 |  0  | +32 | +10 |  0  |(MASS HEALING)              | +2 INT, -1 STR
+RUNE STAFF  |ANCIENT STAFF OF CURATIVE MAGIC     |  +8 |  0  | +32 | +10 |  0  |(MASS HEALING)              | +2 INT, -1 STR
+------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
+ Other*     | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
+------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
+PISTOL*     | (none)                             | +8  |  0  |  0  | +32 |  0  |X-FIRE, CRITICAL            | (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Shields    | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -99,9 +169,9 @@ KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    |  0  | +12 |  0  |  0  | +2  |
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 FEATHER CAP | (none)                             |  0  | +2  | +4  |  0  | +2  | N/A                        | +1 INT
 FULL HELMET | (none)                             |  0  | +6  |  0  |  0  | -2  | N/A                        | +1 STA, -1 AGI
-HEADBAND    | (none)                             | +4  | +2  |  0  | +2  | +2  | N/A                        | +1 STR
-IOUN STONE  |MAGICK STONE THAT SURROUNDS THE HEAD|  0  | +2  | +4  | +2  | +4  | N/A                        | +1 to any
-SKULL VISAGE|A GRIM HELMET                       |  0  | +4  | +8  | -2  | -2  |W-COLD                      | +1 INT, +1 STA, -1 AGI
+HEADBAND    | (none)                             | +8  | +2  |  0  | +2  | +2  | N/A                        | +1 STR
+IOUN STONE  |MAGIC STONE THAT SURROUNDS THE HEAD |  0  | +2  | +4  | +2  | +4  | N/A                        | +1 to any
+SKULL VISAGE|A GRIM HELMET USED BY UNDEAD ARMIES |  0  | +4  | +8  | -2  | -2  |DRAIN, W-COLD               | +1 INT, +1 STA, -1 AGI
 DRAGON HELM |HELMET THAT WARDS FIRE              |  0  | +8  |  0  |  0  | -2  |O-FIRE                      | +1 HP, +1 STA, -1 AGI
 RIBBON      | (none)                             |  0  |  0  |  0  |  0  | +2  |O-STATUS                    | +1 to any
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -115,7 +185,8 @@ DARK SHROUD |SWIFT CLOTHING WORN BY NINJAS       |  0  | +14 |  0  | +4  | +8  |
 MINERVA     |LIGHT ARMOR WORN BY ELVES           |  0  | +14 | +4  |  0  | +2  |SHELL                       | +4 HP, +1 STA, +1 INT
 SERPENTSKIN |CLOTHES FITTED WITH SERPENT SKIN    |  0  | +16 |  0  |  0  | +2  |O-FIRE, W-COLD              | +4 HP, +1 STA
 ARCHON ROBES| (none)                             |  0  | +12 | +8  |  0  |  0  |O-COLD, SHELL               | +2 HP, +1 INT
-MIRROR MAIL |ARMOR THAT REFLECTS MAGICK          |  0  | +28 | +2  |  0  | -2  |SHELL                       | +6 HP, +2 STA, -1 AGI
+MIRROR MAIL |ARMOR THAT WARDS MAGIC              |  0  | +28 | +2  |  0  | -2  |SHELL                       | +6 HP, +2 STA, -1 AGI
+TIN PLATE*  | (none)                             |  0  |  0  |  0  |  0  |  0  |O-STATUS, SHELL             | (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Accessories| Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -124,20 +195,22 @@ POWER SASH  |SASH WORN BY FIGHTERS               | +8  | +2  |  0  | +2  | +2  |
 GENJI GLOVES| (none)                             | +4  | +2  |  0  | +4  | +2  |CRITICAL                    | +1 to any
 PEGASUS SHOE|WINGED SHOES THAT GRANT AGILITY     |  0  | +2  |  0  | +4  | +4  | N/A                        | +1 AGI
 DRAGON SCALE|SCALE THAT WARDS FIRE               |  0  | +2  |  0  |  0  |  0  |O-FIRE, W-COLD              | +1 STA
-COBALT RING |RING THAT WARDS COLD                |  0  |  0  |  0  |  0  |  0  |O-COLD                      | (none)
-SERPENT RING|RING THAT WARDS POISON              |  0  |  0  |  0  |  0  |  0  |O-POISON                    | (none)
-LAMIA'S RING|RING THAT WARDS ENCHANTMENT         |  0  |  0  |  0  |  0  |  0  |O-ENCHANT                   | (none)
+COBALT RING |RING THAT WARDS COLD                |  0  |  0  | +2  |  0  |  0  |O-COLD                      | +1 INT
+SERPENT RING|RING THAT WARDS POISON              |  0  |  0  | +2  |  0  |  0  |O-POISON                    | +1 INT
+LAMIA'S RING|RING THAT WARDS ENCHANTMENT         |  0  |  0  | +2  |  0  |  0  |O-ENCHANT                   | +1 INT
 ANGEL RING  |RING THAT WARDS DEATH               |  0  |  0  | +2  |  0  |  0  |O-DEATH, RECOVERY           | +1 INT
-ORNATE RING |RING THAT WARDS MAGICK              | +2  | +2  | +2  | +2  | +2  |O-ALL                       | +1 to any
+ORNATE RING |RING THAT WARDS MAGIC               | +2  | +2  | +2  | +2  | +2  |O-ALL, SHELL                | +1 to any
 ------------+------------------------------------+----------------------------------------------------------------------------------
  Potions    | Description                        | Effect
 ------------+------------------------------------+----------------------------------------------------------------------------------
 GINSENG     |RECOVERS SOME HP                    | Restores 12-24 HP
-ANTIDOTE    |NEUTRALIZES POISONING               | Cures [POISON] status
-EYE DROPS   |RESTORES SIGHT                      | Cures [BLIND] status
+CATHOLICON  |RESTORES STATUS                     | Cures [POISON] and / or [BLIND] status
+MANA ROOT   |RESTORES MANA                       | Restores a spell charge
 ANGEL TEAR  |RESURRECTS FALLEN ALLIES            | Restores a fallen ally with 1 HP
 SOMA DROP   |RESTORES 50% OF MAX HP              | Restores 50% of mHP
-ELIXER      |FULLY RESTORES HP / STATUS          | Restores all HP and removes [POISON] and [BLIND] status
+ELIXER      |FULLY RESTORES HP / STATUS          | Restores all HP and cures [POISON] and / or [BLIND] status
+
+* Special equipment only used by MARSHAL
 
  -----------
   MODIFIERS
@@ -149,9 +222,9 @@ X-POISON  - inflicts [POISON] status on target with attack (1/8 chance)
 X-SLEEP   - inflicts [ENCHANT] status on target with attack (1/8 chance)
 X-BLIND   - inflicts [BLIND] status on target with attack (1/8 chance)
 X-DEATH   - inflicts [DEATH] status on target with attack (1/8 chance)
-X-OGRE    - x2 damage vs. OGRE and TITAN
-X-DRAGON  - x2 damage vs. FIRE DRAKE, STORM DRAGON and WYRM
-X-WINGED  - x2 damage vs. flying monsters
+X-OGRE    - ignore ABSORB vs. OGRE and TITAN
+X-DRAGON  - ignore ABSORB vs. FIRE DRAKE, STORM DRAGON and WYRM
+X-WINGED  - ignore ABSORB vs. [WINGED] monsters
 O-FIRE    - negates [FIRE] damage
 O-COLD    - negates [COLD] damage
 O-ELEMENT - negates both [FIRE] and [COLD] damage
@@ -165,9 +238,11 @@ W-FIRE    - weak against [FIRE] damage (such damage ignores ABSORB)
 W-COLD    - weak against [COLD] damage (such damage ignores ABSORB)
 DRAIN     - restores 6-12 HP to the wielder when attacking
 SHELL     - +16 ABSORB vs. magic damage
-COUNTER   - sometimes counterattacks when struck (1/8 chance)
-CRITICAL  - has a higher success rate of critical hits (1/16 chance)
+COUNTER   - sometimes counterattacks when struck; (1/8 chance) base DAMAGE/1.25
+CRITICAL  - has a higher success rate of critical hits* (1/16 chance)
 RECOVERY  - automatically recovers 4-8% mHP per round
+
+* Critical hits usually occur at a rate of 1/32
 
 (MASS HEALING)   - randomly casts MASS HEALING on the party when used (1/8 chance)
 (FIRESTORM)      - randomly casts FIRESTORM on the enemy when used (1/16 chance)
@@ -178,12 +253,21 @@ RECOVERY  - automatically recovers 4-8% mHP per round
   KEY ITEMS
  -----------
 
+RUNE KEY    - KEY TO THE ARCANIAN RUINS
+MANA SPHERE - MAGICAL RELIC OF THE ARCANIANS
+ADAMANT ORE - POWERFUL METAL USED IN FORGING
+DYNAMITE    - EXPLOSIVE THAT DESTROYS BLOCKAGE
+
  -------------------
   NORMAL ENCOUNTERS
  -------------------
 
+notes:
+
+[UNDEAD] foes are invulnerable to HP drain (negates ALL the effects of BLOOD SWORD)
+
 ================================================================================
-KILLER MOTH
+KILLER MOTH [WINGED]
 
 DAM DEF INT AGI HIT EVA
 
@@ -195,7 +279,7 @@ STINGER
 Modifiers:
 
 ================================================================================
-VENOM WING
+VENOM WING [WINGED]
 
 FANGS
 VENOMOUS CLOUD
@@ -205,53 +289,158 @@ VENOMOUS CLOUD
 ================================================================================
 TREANT
 
+CLAWS
+CLAWS
+CLAWS
+TENTACLES
+
 ================================================================================
 ROPER
+
+CLAWS
+CLAWS
+TENTACLES
+TENTACLES
 
 ================================================================================
 CAVE TOAD
 
+FANGS
+FANGS
+FANGS
+FANGS
+
 ================================================================================
 GIGAN TOAD
+
+FANGS
+FANGS
+FANGS
+FANGS
 
 ================================================================================
 OGRE
 
+BATTLE AXE
+BATTLE AXE
+BATTLE AXE
+BATTLE AXE
+
 ================================================================================
 TITAN
 
+OGRE AXE
+OGRE AXE
+OGRE AXE
+EARTH SHATTER
+
 ================================================================================
-ZOMBIE
+ZOMBIE [UNDEAD]
+
+CLAWS
+CHILL TOUCH
+FANGS
+VAMPIRIC TOUCH
+
+W-FIRE
 
 ================================================================================
 SCORPION
 
+STINGER
+CLAWS
+STINGER
+STINGER
+
 ================================================================================
-SEA SCORPION
+SEA SCORPION [MARINE]
+
+CLAWS
+STINGER
+CLAWS
+CLAWS
 
 ================================================================================
 LAMIA
 
-================================================================================
-FIRE DRAKE
+CLAWS
+STONE GAZE
+STONE GAZE
+FANGS
 
 ================================================================================
-STORM DRAGON
+COCKATRICE
+
+CLAWS
+CLAWS
+CLAWS
+STONE GAZE
 
 ================================================================================
-WYRM
+ROC
+
+CLAWS
+STONE GAZE
+CLAWS
+STONE GAZE
 
 ================================================================================
-CROCODILE
+FIRE DRAKE [WINGED]
+
+CLAWS
+SERPENT'S BREATH
+CLAWS
+SERPENT'S BREATH
 
 ================================================================================
-FROST GATOR
+STORM DRAGON [WINGED]
+
+CLAWS
+STORM BREATH
+CLAWS
+STORM BREATH
 
 ================================================================================
-HERMIT
+WYRM [WINGED]
+
+CLAWS
+SERPENT'S BREATH
+STORM BREATH
+MAELSTROM
 
 ================================================================================
-DIRE CRAB
+CROCODILE [MARINE]
+
+CLAWS
+CLAWS
+CLAWS
+CLAWS
+
+================================================================================
+FROST GATOR [MARINE]
+
+CLAWS
+CLAWS
+ARCTIC BLAST
+ARCTIC BLAST
+
+X-COLD, W-FIRE
+
+================================================================================
+HERMIT [MARINE]
+
+CLAWS
+CLAWS
+CLAWS
+CLAWS
+
+================================================================================
+DIRE CRAB [MARINE]
+
+CLAWS
+CLAWS
+CLAWS
+EARTH SHATTER
 
 ================================================================================
 
@@ -263,12 +452,12 @@ DIRE CRAB
 MEDUSA
 
 CLAWS
-STONE GAZE
 CLAWS
+STONE GAZE
 STONE GAZE
 
 ================================================================================
-DOPPLEGANGER
+DOPPLEGANGER [UNDEAD]
 
 FANGS
 VAMPIRIC TOUCH
@@ -282,24 +471,32 @@ W-FIRE, RECOVER
 
 ================================================================================
 SHADOW LORD
+
+SCOURGE
+WAR SCEPTER
+FIRESTORM
+DEATHLY STRIKE
+
 ================================================================================
 SHADOW LORD (2)
 
 BLOODSWORD
-CHILL TOUCH
+ARCTIC BLAST
 SCOURGE
 INNER STRENGTH
 
 ================================================================================
-SHADOW LORD (3)
+SHADOW LORD (3) [UNDEAD]
 
 VAMPIRIC TOUCH
 FANGS
 DEATHLY STRIKE
-EARTH SHATTER
+MAELSTROM
+
+W-FIRE
 
 ================================================================================
-KRAKEN
+KRAKEN [MARINE]
 
 HP 3200 | GP 9800 | Spoils: KRAKEN SHELL [ 1/ 1]
 
@@ -312,7 +509,21 @@ DEATHLY STRIKE
 
 Modifiers:
 
-X-BLIND, X-DEATH, CRITICAL, COUNTER
+X-BLIND, CRITICAL, COUNTER
 O-FIRE, O-COLD, O-STATUS, RECOVER
 
 ================================================================================
+
+Enemy Skills:
+
+CLAWS - base DAMAGE
+FANGS - base DAMAGE; 1/2 chance of [POISON]
+TENTACLES - eight seperate attacks; damage = DAMAGE/4 (ignore ABSORB)
+STINGER - DAMAGE/3 (ignore ABSORB) and [POISON] to target
+SERPENT'S BREATH - [FIRE]-elemental; DAMAGE/2 + INT/4; entire party
+STORM BREATH - [COLD]-elemental; DAMAGE/2 + INT/4; entire party
+VENOMOUS CLOUD - [POISON] entire party at 100% success, depending on base HIT (no damage)
+DEATHLY STRIKE - DAMAGE x1.25; add [DEATH]
+VAMPIRIC TOUCH - damage = 10% target mHP; (ignore ABSORB) heals 10% of enemy mHP
+EARTH SHATTER - non-elemental damage against party; damage = base INT
+MAELSTROM - non-elemental damage against party; damage = INT x1.25; induces [DEATH] with hit
