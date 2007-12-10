@@ -200,6 +200,7 @@ SERPENT RING|RING THAT WARDS POISON              |  0  |  0  | +2  |  0  |  0  |
 LAMIA'S RING|RING THAT WARDS ENCHANTMENT         |  0  |  0  | +2  |  0  |  0  |O-ENCHANT                   | +1 INT
 ANGEL RING  |RING THAT WARDS DEATH               |  0  |  0  | +2  |  0  |  0  |O-DEATH, RECOVERY           | +1 INT
 ORNATE RING |RING THAT WARDS MAGIC               | +2  | +2  | +2  | +2  | +2  |O-ALL, SHELL                | +1 to any
+
 ------------+------------------------------------+----------------------------------------------------------------------------------
  Potions    | Description                        | Effect
 ------------+------------------------------------+----------------------------------------------------------------------------------
