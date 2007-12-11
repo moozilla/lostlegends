@@ -1,4 +1,4 @@
- __               __     __                             __          __ __ 
+ __               __     __                             __          __ __
 |  |.-----.-----.|  |_  |  |.-----.-----.-----.-----.--|  |.-----. |__|__|
 |  ||  _  |__ --||   _| |  ||  -__|  _  |  -__|     |  _  ||__ --| |  |  |
 |__||_____|_____||____| |__||_____|___  |_____|__|__|_____||_____| |__|__|
@@ -113,9 +113,9 @@ notes:
  - all augmentive spells (i.e., WARD EVIL) are effective until the end of battle, and their values may stack
 
  - only 6 spells may be memorized total; they must be purchased from alchemists / magic shops
- 
+
  - each character has a "spell charge" value, which determines how many spells can be cast in one day (8 max)
- 
+
  - spell charges are replenished by praying (donating GP) to shrines; the number gained depends on how much GP is donated
 
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
@@ -145,9 +145,12 @@ STONE GAZE    | 32 | 60%| induces [DEATH] status on enemy                       
 
 notes:
 
- - equipping axes and bows disables the use of shields, since both weapons are two-handed; conversely, equipping shields disables the use of axes and bows
+ - equipping axes and bows disables the use of shields, since both weapons are two-handed; conversely, equipping shields disables
+ the use of axes and bows
 
- - after battle, there is a 12% chance for every first gain to occur, followed by a 8% chance for every second gain, and finally a 4% chance for every third gain; when determining "+ or - 1 to any" gains, simply randomize between STR, STA, INT and AGI. (HP is excluded)
+ - after battle, there is a 12% chance for every first gain to occur, followed by a 8% chance for every second gain, and finally a
+ 4% chance for every third gain; when determining "+ or - 1 to any" gains, simply randomize between STR, STA, INT and AGI. (HP is
+ excluded)
 
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Swords     | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
