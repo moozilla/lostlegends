@@ -15,22 +15,30 @@ characters per line - 16x8
 sprite / board      - 24 sprites per board; 4 sprites vertical by 6 sprites horizontal
 font routine        - 4x8 px. per character (extended font is 4x4)
 
+
 =================================================================================================================================132
 !! DOCUMENT IS BEST VIEWED WITH LINE BREAK AT COLUMN NUMBER 132
 
 composed using TextPad 5.0: 32-bit Edition
 =================================================================================================================================132
 
+
 TABLE OF CONTENTS
 
-INVENTORIES
-MAGIC
-ARMORY
- ITEM MODIFIERS
-KEY ITEMS
+1.) CHARACTER DATA
+2.) INVENTORIES
+3.) MAGIC
+4.) ARMORY
+ 4.a MODIFIERS
+5.) KEY ITEMS
+6.) BESTIARY DATA
+7.) ENEMY SKILLS
+8.) SYSTEM
 
-BESTIARY DATA
-ENEMY SKILLS
+
+ ----------------
+  CHARACTER DATA
+ ----------------
 
 MAYA              255 mHP
 
@@ -39,6 +47,8 @@ STR 99 | STA 99 | INT 99 | AGI 99
 WPN WOODEN STAFF  SHD  (none)
 HLM  (none)       ARM WOVEN ROBES
 ACC  (none)       ITM  (none)
+
+spells:
 
 FAERIE FIRE
 ----------------------------------
@@ -66,6 +76,8 @@ WPN CUTLAS STEEL  SHD FULL SHIELD
 HLM FULL HELMET   ARM CUIRASS
 ACC  (none)       ITM  (none)
 
+spells:
+
 FAERIE FIRE     INNER STRENGTH
 SCOURGE         NEUTRALIZE
 ----------------------------------
@@ -89,9 +101,23 @@ HLM  (none)       ARM  TIN PLATE
 ACC  (none)       ITM  (none)
 ----------------------------------
 
+
  -------
   MAGIC
  -------
+
+notes:
+
+ - "Req." represents the INTELLECT value required to learn the spell
+
+ - all augmentive spells (i.e., WARD EVIL) are effective until the end of battle, and their values may stack
+
+ - only 6 spells may be memorized total; they must be purchased from alchemists / magic shops
+ 
+ - each character has a "spell charge" value, which determines how many spells can be cast in one day (8 max)
+ 
+ - spell charges are replenished by praying (donating GP) to shrines; the number gained depends on how much GP is donated
+
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
  Spell        |Req.|Hit%| Effect                                                                        | Description
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
@@ -99,8 +125,8 @@ LAY ON HANDS  | -- |100%| heals damage: INT/1.25 = amount / single ally         
 NEUTRALIZE    | -- |100%| heals any status ailmentation, except [DEATH] / single ally                   |CURES ALLY STATUS
 EGRRESSION    | -- |100%| warps out of dungeons / battles                                               |WARP OUT OF DUNGEONS
 MASS HEALING  | 32 |100%| heals party: INT/2 = amount                                                   |HEALS ALL ALLIES
-WARD EVIL     | 16 |100%| increases single ally ABSORB by 6-12 (lasts until battle is over)             |RAISES DEFENSE POWER
-INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12 (lasts until battle is over)             |RAISES ATTACK POWER
+WARD EVIL     | 16 |100%| increases single ally ABSORB by 6-12                                          |RAISES DEFENSE POWER
+INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12                                          |RAISES ATTACK POWER
 RAISE DEAD    | 24 |100%| raises fallen ally with 20% mHP                                               |RESURRECTS FALLEN ALLY
 FAERIE FIRE   | -- | 90%| damages enemy: INT x1.5 = damage / [FIRE]-elemental                           |MINOR FIRE DAMAGE ON ENEMY
 CHILL TOUCH   | -- | 90%| damages enemy: INT x1.5 = damage / [COLD]-elemental                           |MINOR COLD DAMAGE ON ENEMY
@@ -112,9 +138,16 @@ SIREN'S SONG  | -- | 70%| induces [ENCHANT] status on all enemies for 1-3 rounds
 SUMMON FOG    | 16 | 70%| induces [BLIND] status on all enemies; raises party EVADE by 2-4              |RAISES PARTY EVADE
 STONE GAZE    | 32 | 60%| induces [DEATH] status on enemy                                               |PETRIFIES ENEMY
 
+
  --------
   ARMORY
  --------
+
+notes:
+
+ - equipping axes and bows disables the use of shields, since both weapons are two-handed; conversely, equipping shields disables the use of axes and bows
+
+ - after battle, there is a 12% chance for every first gain to occur, followed by a 8% chance for every second gain, and finally a 4% chance for every third gain; when determining "+ or - 1 to any" gains, simply randomize between STR, STA, INT and AGI. (HP is excluded)
 
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Swords     | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
@@ -213,6 +246,7 @@ ELIXER      |FULLY RESTORES HP / STATUS          | Restores all HP and cures [PO
 
 * Special equipment only used by MARSHAL
 
+
  -----------
   MODIFIERS
  -----------
@@ -243,12 +277,18 @@ COUNTER   - sometimes counterattacks when struck; (1/8 chance) base DAMAGE/1.25
 CRITICAL  - has a higher success rate of critical hits* (1/16 chance)
 RECOVERY  - automatically recovers 4-8% mHP per round
 
-* Critical hits usually occur at a rate of 1/32
-
 (MASS HEALING)   - randomly casts MASS HEALING on the party when used (1/8 chance)
 (FIRESTORM)      - randomly casts FIRESTORM on the enemy when used (1/16 chance)
 (ARCTIC BLAST)   - randomly casts ARCTIC BLAST on the enemy when used (1/16 chance)
 (CALL LIGHTNING) - randomly casts CALL LIGHTNING on the enemy when used (1/16 chance)
+
+------------------------------------------------------------------------------------------------------------------------------------
+ * note on critical hits:
+
+ - critical hits simply ignore ASBORB when determining damage
+ - each character has a 1/32 chance of scoring a critical hit by default
+------------------------------------------------------------------------------------------------------------------------------------
+
 
  -----------
   KEY ITEMS
@@ -258,6 +298,7 @@ RUNE KEY    - KEY TO THE ARCANIAN RUINS
 MANA SPHERE - MAGICAL RELIC OF THE ARCANIANS
 ADAMANT ORE - POWERFUL METAL USED IN FORGING
 DYNAMITE    - EXPLOSIVE THAT DESTROYS BLOCKAGE
+
 
  -------------------
   NORMAL ENCOUNTERS
@@ -445,6 +486,7 @@ EARTH SHATTER
 
 ================================================================================
 
+
  -----------------
   BOSS ENCOUNTERS
  -----------------
@@ -515,6 +557,7 @@ O-FIRE, O-COLD, O-STATUS, RECOVER
 
 ================================================================================
 
+
 Enemy Skills:
 
 CLAWS - base DAMAGE
@@ -528,3 +571,21 @@ DEATHLY STRIKE - DAMAGE x1.25; add [DEATH]
 VAMPIRIC TOUCH - damage = 10% target mHP; (ignore ABSORB) heals 10% of enemy mHP
 EARTH SHATTER - non-elemental damage against party; damage = base INT
 MAELSTROM - non-elemental damage against party; damage = INT x1.25; induces [DEATH] with hit
+
+
+ --------
+  SYSTEM
+ --------
+
+STRENGTH - the base value of attack power; may not exceed 99
+STAMINA - the base value of defense power; may not exceed 99
+INTELLECT - the base value of magic power; may not exceed 99
+AGILITY - the base value of hit and evasion; may not exceed 99
+
+DAMAGE - the derived value of STRENGTH and weapon damage, which equals total attack damage; may not exceed 255
+ABSORB - the derived value of STAMINA and armor defense, which equals total defense power; may not exceed 99
+
+HIT - the derived value of AGILITY and weapon accuracy, which equals total attack accuracy; may not exceed 99
+EVADE - the derived value of AGILITY and armor evasion, which equals total chance to evade; may not exceed 32
+
+When determining hit and evasion percentages, simply subtract the target's EVADE value from the attacker's HIT value.
