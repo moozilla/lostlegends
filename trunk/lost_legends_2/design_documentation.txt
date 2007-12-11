@@ -173,7 +173,7 @@ HEADBAND    | (none)                             | +8  | +2  |  0  | +2  | +2  |
 IOUN STONE  |MAGIC STONE THAT SURROUNDS THE HEAD |  0  | +2  | +4  | +2  | +4  | N/A                        | +1 to any
 SKULL VISAGE|A GRIM HELMET USED BY UNDEAD ARMIES |  0  | +4  | +8  | -2  | -2  |DRAIN, W-COLD               | +1 INT, +1 STA, -1 AGI
 DRAGON HELM |HELMET THAT WARDS FIRE              |  0  | +8  |  0  |  0  | -2  |O-FIRE                      | +1 HP, +1 STA, -1 AGI
-RIBBON      | (none)                             |  0  |  0  |  0  |  0  | +2  |O-STATUS                    | +1 to any
+RIBBON      |RIBBON THAT WARDS STATUS CHANGE     |  0  |  0  |  0  |  0  | +2  |O-STATUS                    | +1 to any
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Armor      | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
