@@ -4,7 +4,7 @@
 ;modified by Jason Lee still very ROUGH
 ;------
 ;curRow = x (0-11), curCol = y (0-7) in aligned characters
-;a = index of character to be displayer
+;a = index of character to be displayed + 1 (0x00 is the terminator)
 ;textinverse SET = dark gray text
 ;textScrolled SET = light gray text
 ;BOTH SET = blank 8x8 aligned tile.
@@ -27,9 +27,10 @@
 ;to convert strings to this custom charset.
 customPutC:
 	push hl			;assuming that this will be used w/ an appsafe Puts, this will be useful
-	ld de, customfontset
+	ld de, FontData
 ;---------------------------------
 ;Finds the tile
+	dec a		;-1 because 1 is the first tile, not 0 like normal
 	ld h,0
 	ld l,a
 	sla l				;clears 
@@ -182,10 +183,5 @@ customPutCNL:
 	ret
 
 ;Tile data goes here.  Will establish later what the codes are.
-customfontset:
-;blank
-	.db $00, $00,$00, $00, $00, $00, $00, $00
-	.db $00, $00,$00, $00, $00, $00, $00, $00
-;A
-	.db $FF, $FF, $FF, $FF,$FF, $FF, $FF, $FF
-	.db $FF, $FF, $FF, $FF,$FF, $FF, $FF, $FF
+;FontData:
+#include "FontSet.z80"
