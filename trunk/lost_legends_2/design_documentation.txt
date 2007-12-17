@@ -123,7 +123,7 @@ notes:
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
 LAY ON HANDS  | -- |100%| heals damage: INT/1.25 = amount / single ally                                 |HEALS SINGLE ALLY
 NEUTRALIZE    | -- |100%| heals any status ailmentation, except [DEATH] / single ally                   |CURES ALLY STATUS
-EGRRESSION    | -- |100%| warps out of dungeons / battles                                               |WARP OUT OF DUNGEONS
+EGRESSION     | -- |100%| warps out of dungeons / battles                                               |WARP OUT OF DUNGEONS
 MASS HEALING  | 32 |100%| heals party: INT/2 = amount                                                   |HEALS ALL ALLIES
 WARD EVIL     | 16 |100%| increases single ally ABSORB by 6-12                                          |RAISES DEFENSE POWER
 INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12                                          |RAISES ATTACK POWER
