@@ -20,23 +20,19 @@ start:
 ;========================================
 ;READ NOTES FOR ENTRY/EXIT INSTRUCTIONS!!
 ;========================================
+	ld hl,$00
+	add hl,sp
+	ld (saveSP),hl		;save stack pointer
 	bcall(_ClrLCDFull)
 	ld hl,AllocSize
-	bcall(_EnoughMem)
+	bcall(_EnoughMem)	;check if enough RAM for RGP allocation
 	jr nc, start2
-	ld hl,$00
-	ld (currow),hl
-	ld hl,MemErrStr
-	call appPutS
-	bjump(_JForceCmdNoChar)
-MemErrStr:
-	.db 39,26,27,32,39,17,26,27,33,19,20,39
-	.db 39,39,39,30,13,25,11,11,11,11,39,39,0
+	bjump(_JForceCmdNoChar)		;exit if not enough
 start2:
 	ld de,$9d95
 	ld hl,AllocSize
-	bcall(_InsertMem)
-	call GSenable
+	bcall(_InsertMem)		;allocate RAM for RGP
+	call GSenable			;turn on grayscale
 	call gsclearbuffer
 	
 	ld hl,$00
@@ -51,11 +47,14 @@ start2:
 	ld (camY),hl
 	ld a,24
 	ld (mapWidth),a
-	ld hl,map
+	ld a,16
+	ld (mapHeight),a
+	ld hl,grendale_castle
 	ld (mapBase),hl
 gameloop:
 ;drawing section
 	call mapper
+
 	call gscopybuffer
 ;key analysis section
 	call keyget
@@ -68,7 +67,7 @@ gameloop:
 	bit b_right,a
 	call z,moveright
 	bit b_yequal,a
-	jp z,exit
+	jp z,exit	
 	
 	jp gameloop
 
@@ -76,7 +75,7 @@ movedown:
 	ld c,a
 	ld a,(camY)
 	inc a
-	cp 13
+	cp 17
 	jr nc,$+3
 	ld (camY),a
 	ld a,c
@@ -85,7 +84,7 @@ moveup:
 	ld c,a
 	ld a,(camY)
 	dec a
-	cp 13
+	cp 17
 	jr nc,$+3
 	ld (camY),a
 	ld a,c
@@ -94,7 +93,7 @@ moveright:
 	ld c,a
 	ld a,(camX)
 	inc a
-	cp 19
+	cp 25
 	jr nc,$+3
 	ld (camX),a
 	ld a,c
@@ -103,18 +102,23 @@ moveleft:
 	ld c,a
 	ld a,(camX)
 	dec a
-	cp 19
+	cp 25
 	jr nc,$+3
 	ld (camX),a
 	ld a,c
 	ret
 	
-exit:	
-	call GSdisable
+exit:
+	call gsclearbuffer
+	call GSdisable			;disable gs
 	ld hl,$9d95
 	ld de,AllocSize
-	bcall(_DelMem)	
-	bjump(_JForceCmdNoChar)
+	bcall(_DelMem)			;deallocate RAM
+	ld hl,(saveSP)
+	ld sp,hl				;restore stack pointer
+	res textinverse, (iy + textflags)
+	res textscrolled, (iy + textflags)
+	bjump(_JForceCmdNoChar)		;exit
 
 appPutS:						; appsafe _PutS
 	ld a,(hl)
@@ -127,6 +131,7 @@ appPutS:						; appsafe _PutS
 myString:
 	.db 24,27,31,32,39,24,17,19,17,26,16,31,0
 #include "01.grendale_castle.inc"	
+#include "0.2gaia.inc"
 
 #include "keyboard.z80"
 #include "graylib2.inc"
