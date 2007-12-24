@@ -1,0 +1,741 @@
+TRANSLATION NOTES: string in brackets [] do not need to be translated. They are person / location names.
+
+Keep track of the character limits. Items are limited to 8 characters, and words cannot be longer than 16 characters, because they won't fit into the window space evenly.
+
+When you encounter a string that isn't English, such as the item MYRHH (which is used to resurrect fallen allies) feel free to leave them alone if you think it will sound fine in the target language. Not every item string needs to be transliterated.
+
+Try to transliterate what you can, though. For example, if you see something like GORGON and you want to represent it in French, use GORGONE, because GORGONE is the French counter-part.
+
+################################################################################
+ introduction and ending text start here
+################################################################################
+
+GAIA,A WORLD SUSTAINED BY THE GRACE OF THE PRIME FORCES_
+THEY ARE SAID TO GRANT POWER TO THEIR WIELDERS,BUT WITH POWER COMES RESPONSIBILITY,AND
+OFTEN CORRUPTION_
+ONE INDIVIDUAL POSSESSES SUCH A BURDEN.
+THEY CALL HIM DARIUS_
+ONCE A LOYAL KNIGHT,DARIUS WAS CORRUPTED BY THE TEMPTATION OF POWER.
+NOW,THE FORCES LIE TREMORING IN HIS WAKE_
+HOWEVER,THREE WARRIORS SHALL STEP FORWARD,STANDING ABROAD THE STARS.
+TOGETHER,THEY SHALL USHER THE WORLD INTO A NEW AGE OF PEACE.
+COME,START YOUR JOURNEY!
+RESTORE THE LIGHT OF PEACE TO OUR WORLD!
+
+
+
+AND SO, THEIR JOURNEY ENDS...
+WITH THE PRIME FORCES SET BACK INTO BALANCE, A NEW WORLD DAWNS.
+NEW HOPES AND DREAMS NOW SOAR EVER ABROAD.
+ALL THANKS TO THE VALIANT EFFORT OF HEROES LIKE YOU!
+YOUR LEGACY SHALL LIVE ON,ACROSS THE AGES, FOREVER MORE...
+CONGRATULATIONS, TRUE HERO.
+
+
+
+################################################################################
+  game dialogue starts here
+################################################################################
+
+YOUR FIRST TASK IS THE [LIVING FOREST] JUST WEST.
+
+
+
+PLEASE TAKE GOOD CARE OF MY DAUGHTER.
+
+
+
+FEEL FREE TO TAKE ANYTHING FROM OUR TREASURY.
+
+
+
+HOW 'BOUT A KISS, FOR LUCK?
+
+
+
+YOU'VE GOT TO BE KIDDING!
+
+
+
+GOOD LUCK!
+
+
+
+I JUST LOVE PICKING FLOWERS!
+
+
+
+NEED A REST?
+
+
+
+HEALTH RESTORED!
+
+
+
+NEED SOME NEW GEAR?
+
+
+
+HELLO. I AM THE WISE SAGE [GIDEON].
+
+
+
+I TRAVEL AROUND, SO I HAVE MANY TIPS TO SHARE!
+
+
+
+SOME ITEMS HAVE ELEMENTAL POWERS.
+
+
+
+TRY THEM ON ENEMIES TO FIND A WEAKNESS!
+
+
+
+MORTALS, WHY DO YOU DISTURB MY REST?
+
+
+
+WE'VE COME TO BE TESTED...
+
+
+
+I SEE...
+
+
+
+IF IT IS MY POWER YOU SEEK, THEN PROVE YOUR WORTH!
+
+
+
+INDEED, YOU ARE WORTHY...
+
+
+
+RECIEVE THE POWER OF FIRE!
+
+
+
+NOW, SEEK [SIREN] AND LEAVE ME TO MY SLUMBER...
+
+
+
+WITH THE ESSENCE OF [DJINN], WE CAN NOW CROSS THE [MARINA] SEA UNHARMED.
+
+
+
+THEN LET'S GO!
+
+
+
+ZZZ...
+
+
+
+ARE THE GODS REALLY THIS LAZY?!
+
+
+
+WELCOME TO [COREL].
+
+
+
+SOME ENEMIES ARE WEAK TO ITEMS.
+
+
+
+TRY BOWS ON FLYING ENEMIES TO SEE WHAT I MEAN...
+
+
+
+WE HAVE THE BEST LIBRARY IN ALL [GAIA]!
+
+
+
+COME BACK ONCE YOU VISIT [KARTA]...
+
+
+
+YES, SIR!
+
+
+
+MORTALS... IN [COREL]?
+
+
+
+GODSPEED, MORTALS!
+
+
+
+NEED A REST?
+
+
+
+[X] GP PER NIGHT
+
+
+
+NEED SOME NEW GEAR?
+
+
+
+YOU ARE THE HEROES SENT TO VANQUISH [DARIUS]? THEN TAKE THIS [X] TO [SIREN].
+
+
+
+NO ONE CAN ENTER [SIREN]'S TEMPLE WITHOUT AN OFFERING...
+
+
+
+NO OFFERING? BEGONE WITH YOU!
+
+
+
+[SIREN] WATCHES OVER THE SEAS...
+
+
+
+PLEASE BRING AN OFFERING WITH YOU.
+
+
+
+NEVER REFRAIN FROM THE LIGHT...
+
+
+
+GAVE [X] TO [SIREN]...
+
+
+
+MORTALS, HAVE YOU COME TO BE TESTED?
+
+
+
+YES, FAIR [SIREN]...
+
+
+
+VERY WELL.
+
+
+
+PREPARE YOURSELVES!
+
+
+
+YOU HAVE PASSED MY TRIAL?
+
+
+
+INDEED, YOU ARE WORTHY MORTALS...
+
+
+
+I SHALL GIVE YOU MY POWER AND ALLOW YOUR SAFE PASSAGE...
+
+
+
+I AM AFRAID I CANNOT LET YOU GO ANY FURTHER...
+
+
+
+BUT WE MUST STOP [DARIUS]!
+
+
+
+THAT IS BEST LEFT TO US GODS...
+
+
+
+YOU, A GOD?! YOU'RE AN OVERGROWN GRAB!
+
+
+
+INDEED, MY FORM IS NOT VERY GODLY, BUT IT WAS THE BEST I COULD DO AFTER [DARIUS] DEFEATED MY MORTAL AVATAR...
+
+
+
+THEN THAT MEANS...
+
+
+
+YES, [DARIUS] IS ONE STEP CLOSER TO GODHOOD...
+
+
+
+THEN WE MUST HURRY!
+
+
+
+SO BE IT, BUT I MUST TEST YOU ANYWAY.
+
+
+
+PREPARE YOURSELVES!
+
+
+
+VERY GOOD..
+
+
+
+GAIA MAY STILL HAVE HOPE...
+
+
+
+GO TO [KARTA] AND SEEK THE COUNSEL OF [INDRA].
+
+
+
+GOOD LUCK.
+
+
+
+WELCOME TO [KARTA]!
+
+
+
+YOU MAY USE MY WARP PAD TO REACH COREL MUCH FASTER!
+
+
+
+WELCOME, MORTALS...
+
+
+
+THIS IS THE FINAL TEST OF COSMOS.
+
+
+
+WE ARE READY TO FACE [DARIUS]!
+
+
+
+[DARIUS] CANNOT BE STOPPED... IN THIS WORLD, AT LEAST.
+
+
+
+WHAT DO YOU MEAN?
+
+
+
+YOU MUST GO TO THE REALM OF THE GODS, JUST BEYOND THIS PORTAL...
+
+
+
+BUT FIRST...
+
+
+
+VERY WELL. YOU ARE PREPARED TO CONFRONT [DARIUS]. I SHALL GIVE YOU MY POWER, ALONG WITH PASSAGE...
+
+
+
+GOOD LUCK!
+
+
+
+COME CLOSER, MORTALS!
+
+
+
+HEHEHE...
+
+
+
+HUH? IT'S A TRAP!
+
+
+
+THAT WAS CLOSE...
+
+
+
+OH, BOY! I CAN'T WAIT TO BOMB SOME [DODONGOS]!
+
+
+
+[KHIMAERA] IS NO PLACE FOR MORTALS!
+
+
+
+OH! HI, [FENRIS]!
+
+
+
+[SHELLY]?! WHAT ARE YOU DOING IN A PLACE LIKE THIS?!
+
+
+
+SHH! I'M REALLY AN IMMORTAL DEMON! TEE-HEE!
+
+
+
+[KARTA] HAS MANY SECRETS. HAVE YOU FOUND THEM ALL?
+
+
+
+BROTHER [VANSKE]!
+
+
+
+FENRIS... I... I...
+
+
+
+HIS WOUNDS ARE MORTAL... I CANNOT HEAL HIM... I'M SORRY.
+
+
+
+[DARIUS] WILL PAY!
+
+
+
+BROTHER... TAKE THIS.
+
+
+
+RECIEVED [X]
+
+
+
+DO... NOT... REFRAIN...
+
+
+
+BROTHER!
+
+
+
+COME ON, LET'S TEACH THIS GUY A LESSON!
+
+
+
+I... WON'T FAIL YOU...
+
+
+
+[VANSKE] HAS PERISHED...
+
+
+
+MISERABLE FOOLS...
+
+
+
+HOW DARE THE KING'S UNDERLINGS DEFY ME!
+
+
+
+THIS ENDS NOW.
+
+
+
+INDEED, AND I THANK YOU FOR GATHERING THE AVATARS' POWER FOR ME. NOW, TO TAKE WHAT IS RIGHTFULLY MINE!
+
+
+
+UGH... BESTED BY MERE MORTALS?!
+
+
+
+HAHAHA...
+
+
+
+WHO'S THERE?!
+
+
+
+I CAN'T SEE!
+
+
+
+PARDON ME... I AM [DARSEL].
+
+
+
+THE DRACONIC HIGH MAGE?!
+
+
+
+NAY, THE DRACONIC GOD!
+
+
+
+ENOUGH OF YOUR MEDDLING!
+
+
+
+[DARIUS], RECIEVE MY POWER!
+
+
+
+################################################################################
+  battle dialogue starts here
+################################################################################
+
+AN ENEMY APPEARS!
+
+
+
+ENGAGE
+
+
+
+FLEE
+
+[NAME] USES [ITEM] ON [NAME]...
+
+
+
+[NAME] USES [ITEM] ON EMEMY...
+
+
+
+[NAME] USES [ABILITY[ ON [NAME]...
+
+
+
+[NAME] UNLEASHES AN ATTACK ON [NAME]!
+
+
+
+SUCCESS!
+
+
+
+[NUMBER OF] DAMAGE
+
+
+
+CRITICAL HIT!
+
+
+
+MISSED!
+
+
+
+[NAME] WAS POISONED!
+
+
+
+POISONING!
+
+
+
+[NAME] IS ASLEEP...
+
+
+
+STATUS RECOVERED!
+
+
+
+[NAME] WAS FELLED...
+
+
+
+[NAME] GAINS [POWER]
+
+
+
+[NAME] IS REVIVED
+
+
+
+[NAME] IS ON GUARD...
+
+
+
+[NAME] IS RESTING...
+
+
+
+[NAME] ATTACKS!
+
+
+
+VICTORY!
+
+
+
+PARTY HAS PERISHED...
+
+
+
+FOUND [ITEM]!
+
+################################################################################
+  item strings start here
+################################################################################
+
+BROAD (sword)
+FLAME (sword)
+FROST (sword)
+SILVER (sword)
+LEGEND (sword)
+CURSED (sword)
+KATANA (sword)
+
+
+
+SHORT (bow)
+LONG (bow)
+GREAT (bow)
+ELEVEN (bow)
+POISON (bow)
+ARTEMIS (bow)
+
+
+
+WOODEN (staff)
+CLERIC (staff)
+MAGUS (staff)
+RUNE (staff)
+
+
+
+BLAZE (magic book)
+FREEZE (magic book)
+VENOM (magic book)
+SLUMBER (magic book)
+HEALING (magic book)
+CURE (magic book)
+MIGHT (magic book)
+SHIELD (magic book)
+RAISE (magic book)
+THUNDER (magic book)
+
+
+
+CLOTH (armor)
+RUBE (armor)
+ARCANE (armor)
+TUNIC (armor)
+JUDO GI (armor)
+CHAINMAIL (armor)
+MINERVA (armor)
+PLATEMAIL (armor)
+MITHRIL (armor)
+ADAMANT (armor)
+
+
+
+RUBY (ring / accessory)
+AZURE (ring / accessory)
+FORCE (ring / accessory)
+CRIMSON (ring / accessory)
+COBALT (ring / accessory)
+SIREN (ring / accessory)
+SNAKE (ring / accessory)
+BLESSED (ring / accessory)
+LAMIA (ring / accessory)
+SERPENT (ring / accessory)
+ORNATE (ring / accessory)
+
+
+
+BATTLE (gauntlet / accessory)
+OGRE'S (gauntlet / accessory)
+ARCHER'S (gauntlet / accessory)
+MAGE'S (gauntlet / accessory)
+HERO'S (gauntlet / accessory)
+
+
+
+ATTACK (enemy skill)
+FLARE (enemy skill)
+STORM (enemy skill)
+QUAKE (enemy skill)
+BREATH (enemy skill)
+CURSE (enemy skill)
+
+
+
+
+################################################################################
+  enemy strings start here
+################################################################################
+
+FUNGUS
+GOBLIN
+PIRAHNA
+OGRE
+COCKATRICE
+CHIMERA
+WYVERN
+MAGE
+
+
+################################################################################
+  system related strings start here
+################################################################################
+
+YES
+
+
+
+NO
+
+
+NEW GAME
+
+
+
+CONTINUE
+
+
+
+SELECT DATA TO LOAD
+
+
+
+INVENTORY
+
+
+
+EQUIP
+
+
+
+STATUS
+
+
+
+SAVE GAME
+
+
+
+USE
+
+
+
+DROP
+
+
+
+CANNOT USE!
+
+
+
+INVENTORY IS FULL!
+
+
+
+STRENGTH / ATTACK POWER
+
+
+
+STAMINA / DEFENSE POWER
+
+
+
+INTELLIGENCE / MAGIC POWER
+
+
+
+AGILITY
