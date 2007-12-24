@@ -8,6 +8,10 @@
 	ld hl,FontHook
 	b_call($4FE4)		;enable font hook
 
+	set textEraseBelow, (iy+textFlags) ;enable 7th row
+
+	b_call(_clrscrnfull)
+
 	ld hl,0
 	ld (PenCol),hl
 	ld a,$40
@@ -18,9 +22,13 @@ loop:
 	inc a
 	cp $7b
 	jr nc,endloop
-	cp $79
+	cp $70
+	jr z,row4
+	cp $64
+	jr z,row3
+	cp $58
 	jr z,row2
-	cp $66
+	cp $4C
 	jr z,row
 	cp $53
 	jr nz,loop
@@ -33,6 +41,14 @@ row:
 	jr loop
 row2:
 	ld hl,$1800
+	ld (PenCol),hl
+	jr loop
+row3:
+	ld hl,$2000
+	ld (PenCol),hl
+	jr loop
+row4:
+	ld hl,$2800
 	ld (PenCol),hl
 	jr loop
 endloop:
