@@ -1,12 +1,12 @@
 ;=======================================
 ;customPutC
-;Mostly by James Montelengo
-;modified by Jason Lee still very ROUGH
+;using gsalignedsprite by James Montelengo (Jim e)
+;modified by Jason Lee (Liazon)
 ;------
 ;curRow = x (0-11), curCol = y (0-7) in aligned characters
 ;a = index of character to be displayed + 1 (0x00 is the terminator)
-;textinverse SET = dark gray text
-;textScrolled SET = light gray text
+;DGFont SET = dark gray text
+;LGFont SET = light gray text
 ;BOTH SET = blank 8x8 aligned tile.
 ;
 ;Important!
@@ -46,7 +46,7 @@ customPutC:
 	ldir
 ;---------------------------------
 ;erase where necessary
-	bit textScrolled,(iy + textflags)
+	bit LGFont,(iy + myFontFlags)
 	jp z,customPutCNLG
 	ld c,a
 	xor a
@@ -58,7 +58,7 @@ customPutC:
 	ld c,7
 	ldir
 customPutCNLG:
-	bit textInverse,(iy + textflags)
+	bit DGFont,(iy + myFontFlags)
 	jp z,customPutCNDG
 	ld c,a
 	xor a
@@ -97,72 +97,27 @@ customPutCNDG:
 ;---------------------------------
 ;I got lazy here XD, definitely optimizable later
 ;XD
-	ld bc,12			;Add after each load to get to next row
+	ld bc,$0808		;save time and store both loop counters
+customPutCrend:
+	push bc
+	ld bc,12		;amount needed to get to next row on screen buffer
 	ld a,(de)
 	ld (hl),a
 	add hl,bc
 	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	inc de
-;------------------------
-;next layer
+	pop bc
+	djnz customPutCrend
 	pop hl
+	ld b,c			;second counter for second loop
+customPutCrend2:
+	push bc
+	ld bc,12		;amount needed to get to next row on screen buffer
 	ld a,(de)
 	ld (hl),a
 	add hl,bc
 	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	add hl,bc
-	inc de
-	ld a,(de)
-	ld (hl),a
-	inc de
+	pop bc
+	djnz customPutCrend2	
 ;--------------------------
 ;update Currow and CurCol
 	ld a,(curcol)
@@ -181,7 +136,6 @@ customPutCNL:
 	ld (currow),a
 	pop hl
 	ret
-
 ;Tile data goes here.  Will establish later what the codes are.
 ;FontData:
-#include "FontSet.z80"
+#include "FontSet.inc"

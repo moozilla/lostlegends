@@ -4,6 +4,7 @@
  	.nolist
 #include "spasm.inc"
 #include "LLegends.inc"
+#define APP16SPRITEMASK
 	.list
 
 defpage(0,"LLegends")
@@ -34,14 +35,12 @@ start2:
 	bcall(_InsertMem)		;allocate RAM for RGP
 	call GSenable			;turn on grayscale
 	call gsclearbuffer
-	
 	ld hl,$00
 	ld (currow),hl
 	ld hl,mystring
 	call appPutS
 	call gscopybuffer
 	call keyget
-
 ;SET UP MAPPER
 	ld hl,$00
 	ld (camY),hl
@@ -54,7 +53,13 @@ start2:
 gameloop:
 ;drawing section
 	call mapper
-
+	ld hl,charspritebase + (96*7)
+	ld (gs16maskedsprite),hl
+	ld ix,charspritebase + (96*7 + 64)
+	ld b,16
+	ld a,16
+	ld l,a
+	call gs16masked
 	call gscopybuffer
 ;key analysis section
 	call keyget
@@ -116,8 +121,9 @@ exit:
 	bcall(_DelMem)			;deallocate RAM
 	ld hl,(saveSP)
 	ld sp,hl				;restore stack pointer
-	res textinverse, (iy + textflags)
-	res textscrolled, (iy + textflags)
+	res DGFont,(iy + myfontflags)		;older ROM versions don't auto restore flags
+	res LGFont,(iy + myfontflags)
+	res 7,(iy+20)			;Jim told me this was something that needed to be done for RGP
 	bjump(_JForceCmdNoChar)		;exit
 
 appPutS:						; appsafe _PutS
@@ -130,13 +136,16 @@ appPutS:						; appsafe _PutS
 	
 myString:
 	.db 24,27,31,32,39,24,17,19,17,26,16,31,0
-#include "01.grendale_castle.inc"	
-#include "0.2gaia.inc"
 
 #include "keyboard.z80"
-#include "graylib2.inc"
+#include "graylibx.inc"
 #include "customfont.z80"
 #include "mapper.z80"
+
+#include "01.grendale_castle.inc"	
+#include "02.gaia.inc"
+#include "charsprite.inc"
+
 .echo "to allocate:", AllocSize
 .echo "actual size:",$-start
 
