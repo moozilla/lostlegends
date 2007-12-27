@@ -124,8 +124,8 @@ notes:
 LAY ON HANDS  | -- |100%| heals damage: INT/1.25 = amount / single ally                                 |HEALS SINGLE ALLY
 NEUTRALIZE    | -- |100%| heals any status ailmentation, except [DEATH] / single ally                   |CURES ALLY STATUS
 EGRESSION     | -- |100%| warps out of dungeons / battles                                               |WARP OUT OF DUNGEONS
-ANGELIC ORISON| 32 |100%| heals party: INT/2 = amount                                                   |HEALS ALL ALLIES
-PROTASIA      | 16 |100%| increases single ally ABSORB by 6-12                                          |RAISES DEFENSE POWER
+ANGEL'S ORISON| 32 |100%| heals party: INT/2 = amount                                                   |HEALS ALL ALLIES
+MALICE MIRROR | 16 |100%| increases single ally ABSORB by 6-12                                          |RAISES DEFENSE POWER
 INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12                                          |RAISES ATTACK POWER
 PHOENIX PLUME | 24 |100%| raises fallen ally with 20% mHP                                               |RESURRECTS FALLEN ALLY
 FAERIE FIRE   | -- | 90%| damages enemy: INT x1.5 = damage / [FIRE]-elemental                           |MINOR FIRE DAMAGE ON ENEMY
@@ -158,9 +158,9 @@ notes:
 BROADSWORD  | (none)                             | +12 |  0  |  0  | +12 |  0  | N/A                        | +1 STR, -1 INT
 GLADIUS     | (none)                             | +18 |  0  |  0  | +12 |  0  | N/A                        | +2 STR, -1 INT
 FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 |  0  | +6  | +12 |  0  |X-FIRE                      | +1 STR, +1 INT
-WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 |  0  |  0  | +12 |  0  |X-DRAGON, (FIRESTORM)       | +2 STR
+WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 |  0  |  0  | +12 |  0  |X-DRAGON, (BRIMSTONE HAIL)  | +2 STR
 EINHERJAR   |SWORD THAT AVENGES ITS WIELDER      | +20 | +6  |  0  | +10 | +2  |COUNTER                     | +1 STA, +1 STR, -1 INT
-CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +4  | +4  | +12 |  0  |CRITICAL, (CALL LIGHTNING)  | +2 STR
+CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +4  | +4  | +12 |  0  |CRITICAL, (GODLY SUNDER)    | +2 STR
 BLOOD ASH   |BRITTLE SWORD THAT STEALS LIFE      |  +2 |  0  |  0  |  -2 |  0  |DRAIN                       | +1 HP, -1 to any
 MURASAMA    |FABLED SWORD OF DARKNESS            | +18 |  0  |  0  | +14 | +4  |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -168,7 +168,7 @@ MURASAMA    |FABLED SWORD OF DARKNESS            | +18 |  0  |  0  | +14 | +4  |
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 FRANCESCA   | (none)                             | +16 |  0  |  0  | +4  | -4  | N/A                        | +2 STR, +1 HP, -1 AGI
 OGRISH AXE  |EFFECTIVE VS. OGRES                 | +20 |  0  |  0  | +4  | -4  |X-OGRE                      | +4 STR, +1 HP, -1 AGI
-STORM RENDER|AXE THAT CONJURES STORMS            | +36 |  0  | +4  | +4  | -4  |X-COLD, (ARCTIC BLAST)      | +2 STR, +1 HP, -1 AGI
+STORM RENDER|AXE THAT CONJURES STORMS            | +36 |  0  | +4  | +4  | -4  |X-COLD, (RENDING GALE)      | +2 STR, +1 HP, -1 AGI
 STONEGRINDER|RIDDEN WITH A GORGON'S CURSE        | +24 |  0  |  0  | +4  | -4  |X-DEATH                     | +2 STR, +1 STA, -1 AGI
 RUIN AXE    |AN ANCIENT,ENCHANTED AXE            | +44 | +4  |  0  | +4  | -4  |X-ENCHANT                   | +2 STR, +1 HP, -1 AGI
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -186,7 +186,7 @@ WOODEN STAFF| (none)                             |  +6 |  0  | +10 | +10 |  0  |
 WAR SCEPTER |A COMBATIVE MACE                    | +12 |  0  | +12 | +10 |  0  | N/A                        | +1 STR, +1 INT
 SERAPHIM ROD|STAFF THAT GRANTS LIFE              | +10 |  0  | +18 | +10 |  0  |RECOVERY                    | +2 INT, -1 STR
 VESPERTINE  |STAFF ENCOMPASSING DARKNESS         | +16 |  0  | +28 | +10 |  0  |X-BLIND, X-ENCHANT          | +4 INT, -1 STR
-RUNIC STAFF |ANCIENT STAFF OF CURATIVE MAGIC     |  +8 |  0  | +32 | +10 |  0  |(MASS HEALING)              | +2 INT, -1 STR
+RUNIC STAFF |ANCIENT STAFF OF CURATIVE MAGIC     |  +8 |  0  | +32 | +10 |  0  |(ANGEL'S ORISON)            | +2 INT, -1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Other*     | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -241,7 +241,7 @@ ORNATE RING |WARDS MAGIC                         | +2  | +2  | +2  | +2  | +2  |
  Alchemy    | Description                        | Effect
 ------------+------------------------------------+----------------------------------------------------------------------------------
 LIFE ROOT   |RECOVERS SOME HP                    | Restores 12-24 HP
-CATHOLICON  |RESTORES STATUS                     | Cures [POISON] and / or [BLIND] status
+PANACEA     |RESTORES STATUS                     | Cures [POISON] and / or [BLIND] status
 MANA DEW    |RESTORES MANA                       | Restores a spell charge
 ANGEL'S TEAR|RESURRECTS FALLEN ALLIES            | Restores a fallen ally with 1 HP
 SOMA DROP   |RESTORES 50% OF MAX HP              | Restores 50% of mHP
@@ -280,10 +280,10 @@ COUNTER   - sometimes counterattacks when struck; (1/8 chance) base DAMAGE/1.25
 CRITICAL  - increases critical rate by 8 (stackable)
 RECOVERY  - automatically recovers 4-8% mHP per round
 
-(MASS HEALING)   - randomly casts MASS HEALING on the party when used (1/8 chance)
-(FIRESTORM)      - randomly casts FIRESTORM on the enemy when used (1/16 chance)
-(ARCTIC BLAST)   - randomly casts ARCTIC BLAST on the enemy when used (1/16 chance)
-(CALL LIGHTNING) - randomly casts CALL LIGHTNING on the enemy when used (1/16 chance)
+(ANGEL'S ORISON) - randomly casts ANGEL'S ORISON on the party when used (1/8 chance)
+(BRIMSTONE HAIL) - randomly casts BRIMSTONE HAIL on the enemy when used (1/16 chance)
+(RENDING GALE)   - randomly casts RENDING GALE on the enemy when used (1/16 chance)
+(GODLY SUNDER)   - randomly casts GODLY SUNDER on the enemy when used (1/16 chance)
 
 ------------------------------------------------------------------------------------------------------------------------------------
  * note on critical hits:
