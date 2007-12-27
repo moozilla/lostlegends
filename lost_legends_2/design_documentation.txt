@@ -285,6 +285,8 @@ RECOVERY  - automatically recovers 4-8% mHP per round
 (RENDING GALE)   - randomly casts RENDING GALE on the enemy when used (1/16 chance)
 (GODLY SUNDER)   - randomly casts GODLY SUNDER on the enemy when used (1/16 chance)
 
+(abilities in parenthesis are not displayed on the equipment check screen)
+
 ------------------------------------------------------------------------------------------------------------------------------------
  * note on critical hits:
 
