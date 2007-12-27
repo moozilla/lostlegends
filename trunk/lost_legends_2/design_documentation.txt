@@ -45,7 +45,7 @@ MAYA              255 mHP
 STR 99 | STA 99 | INT 99 | AGI 99
 
 WPN WOODEN STAFF  SHD  (none)
-HLM  (none)       ARM WOVEN ROBES
+HLM  (none)       ARM CAMBRIC
 ACC  (none)       ITM  (none)
 
 spells:
@@ -59,12 +59,14 @@ STR 99 | STA 99 | INT 99 | AGI 99
 WPN BROADSWORD    SHD BUCKLER
 HLM  (none)       ARM BRIGANDINE
 ACC  (none)       ITM  (none)
+
+LAY ON HANDS
 ----------------------------------
 GLENN             255 mHP
 
 STR 99 | STA 99 | INT 99 | AGI 99
 
-WPN BATTLE AXE    SHD BUCKLER
+WPN BATTLE AXE    SHD ESCUTCHEON
 HLM HEADBAND      ARM BRIGANDINE
 ACC  (none)       ITM  (none)
 ----------------------------------
@@ -72,25 +74,25 @@ D. KNIGHT         255 mHP
 
 STR 99 | STA 99 | INT 99 | AGI 99
 
-WPN CUTLAS STEEL  SHD FULL SHIELD
-HLM FULL HELMET   ARM CUIRASS
+WPN GLADIUS       SHD FULL SHIELD
+HLM BASINET       ARM CUIRASS
 ACC  (none)       ITM  (none)
 
 spells:
 
 FAERIE FIRE     INNER STRENGTH
-SCOURGE         NEUTRALIZE
+UNHOLY SCOURGE  NEUTRALIZE
 ----------------------------------
 ROSE              255 mHP
 
 STR 99 | STA 99 | INT 99 | AGI 99
 
-WPN CUTLAS STEEL  SHD FULL SHIELD
-HLM FULL HELMET   ARM CUIRASS
+WPN GLADIUS       SHD FULL SHIELD
+HLM BASINET       ARM CUIRASS
 ACC  (none)       ITM  (none)
 
 FAERIE FIRE     INNER STRENGTH
-SCOURGE         NEUTRALIZE
+UNHOLY SCOURGE  NEUTRALIZE
 ----------------------------------
 MARSHAL           250 mHP
 
@@ -213,15 +215,15 @@ RIBBON      |RIBBON THAT WARDS STATUS CHANGE     |  0  |  0  |  0  |  0  | +2  |
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Armor      | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-CAMBRIC     | (none)                             |  0  |  +8 | +2  |  0  |  0  |W-FIRE                      | +1 HP, +1 INT
+CAMBRIC     | (none)                             |  0  |  +8 |  0  |  0  | +2  |W-FIRE                      | +1 HP, +1 INT
 BRIGANDINE  | (none)                             |  0  | +14 |  0  |  0  | +2  |W-FIRE                      | +2 HP, +1 STA
 CUIRASS     | (none)                             |  0  | +20 |  0  |  0  | -2  | N/A                        | +6 HP, +2 STA, -1 AGI
-KENPO GI    |TRAINING GARB WORN BY FIGHTERS      | +12 | +10 |  0  | +2  | +2  |W-FIRE, COUNTER             | +2 HP, +1 STR
+KENPO GI    |TRAINING GARB WORN BY FIGHTERS      | +12 | +10 |  0  | +2  | +4  |W-FIRE, COUNTER             | +2 HP, +1 STR
 DARK SHROUD |SWIFT CLOTHING WORN BY NINJAS       |  0  | +14 |  0  | +4  | +8  |W-FIRE                      | +4 HP, +1 AGI
-MINERVA     |LIGHT ARMOR WORN BY ELVES           |  0  | +14 | +4  |  0  | +2  |SHELL                       | +4 HP, +1 STA, +1 INT
+MINERVA     |LIGHT ARMOR WORN BY ELVES           |  0  | +14 | +8  |  0  | +2  |SHELL                       | +4 HP, +1 STA, +1 INT
 SERPENTSKIN |TUNIC THAT WARDS FIRE               |  0  | +16 |  0  |  0  | +2  |O-FIRE, W-COLD              | +4 HP, +1 STA
-ARCHON ROBES| (none)                             |  0  | +12 | +8  |  0  |  0  |O-COLD, SHELL               | +2 HP, +1 INT
-MIRROR MAIL |ARMOR THAT WARDS MAGIC              |  0  | +28 | +2  |  0  | -2  |SHELL                       | +6 HP, +2 STA, -1 AGI
+ARCHON ROBES| (none)                             |  0  | +12 | +12 |  0  |  0  |O-COLD, SHELL               | +2 HP, +1 INT
+MIRROR MAIL |ARMOR THAT WARDS MAGIC              |  0  | +28 |  0  |  0  | -2  |SHELL                       | +6 HP, +2 STA, -1 AGI
 TIN PLATE*  | (none)                             |  0  |  0  |  0  |  0  |  0  |O-STATUS, SHELL             | (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Accessories| Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
@@ -594,3 +596,12 @@ HIT - the derived value of AGILITY and weapon accuracy, which equals total attac
 EVADE - the derived value of AGILITY and armor evasion, which equals total chance to evade; may not exceed 32
 
 When determining hit and evasion percentages, simply subtract the target's EVADE value from the attacker's HIT value.
+
+
+Poison - the target will suffer damage equal to mHP/8 every round, until healed. If the poison is not neutralized by the end of battle, the target will sustain 1 damage for every step taken while poisoned. (under no condition can poison kill a target)
+
+Enchantment - the target will become paralyzed, (asleep) and unable to act for several rounds. The number of rounds is a randomly generated integer between 1 and 3.
+
+Blindness - the target's hit% will be cut in half, until the condition is healed.
+
+Death / Petrify - the target is instantly slain, regardless of any other condition.
