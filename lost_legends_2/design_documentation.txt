@@ -110,7 +110,7 @@ ACC  (none)       ITM  (none)
 
 notes:
 
- - "Req." represents the INTELLECT value required to learn the spell
+ - "Req." represents the WISDOM score required to learn the spell
 
  - all augmentive spells (i.e., WARD EVIL) are effective until the end of battle, and their values may stack
 
