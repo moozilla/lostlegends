@@ -3,7 +3,8 @@
 |  ||  _  |__ --||   _| |  ||  -__|  _  |  -__|     |  _  ||__ --| |  |  |
 |__||_____|_____||____| |__||_____|___  |_____|__|__|_____||_____| |__|__|
 ----------------------------------|_____|---------------------------------
-                                 s h a d o w   o v e r   r a g n o t h
+
+                                s h a d o w   o v e r   r a g n o t h
 
 
   -= LOST LEGENDS II: DESIGN DOCUMENTATION =-
@@ -40,39 +41,41 @@ TABLE OF CONTENTS
   CHARACTER DATA
  ----------------
 
-MAYA              255 mHP
+MAYA              030 mHP
 
-STR 99 | STA 99 | INT 99 | AGI 99
+STR 10 | STA 08 | WIS 16 | AGI 16
 
 WPN WOODEN STAFF  SHD  (none)
 HLM  (none)       ARM CAMBRIC
-ACC  (none)       ITM  (none)
+ACC JADE ARMLET   ITM LIFE ROOT
 
 spells:
 
 FAERIE FIRE
 ----------------------------------
-SIR EDMUND        255 mHP
+SIR EDMUND        042 mHP
 
-STR 99 | STA 99 | INT 99 | AGI 99
+STR 16 | STA 12 | WIS 12 | AGI 14
 
 WPN BROADSWORD    SHD BUCKLER
 HLM  (none)       ARM BRIGANDINE
 ACC  (none)       ITM  (none)
 
+spells:
+
 LAY ON HANDS
 ----------------------------------
-GLENN             255 mHP
+GLENN             060 mHP
 
-STR 99 | STA 99 | INT 99 | AGI 99
+STR 24 | STA 20 | WIS 08 | AGI 18
 
 WPN BATTLE AXE    SHD ESCUTCHEON
 HLM HEADBAND      ARM BRIGANDINE
 ACC  (none)       ITM  (none)
 ----------------------------------
-D. KNIGHT         255 mHP
+D. KNIGHT         072 mHP
 
-STR 99 | STA 99 | INT 99 | AGI 99
+STR 22 | STA 18 | WIS 20 | AGI 18
 
 WPN GLADIUS       SHD FULL SHIELD
 HLM BASINET       ARM CUIRASS
@@ -80,23 +83,23 @@ ACC  (none)       ITM  (none)
 
 spells:
 
-FAERIE FIRE     INNER STRENGTH
+CHILL TOUCH     INNER STRENGTH
 UNHOLY SCOURGE  NEUTRALIZE
 ----------------------------------
-ROSE              255 mHP
+ROSE
 
-STR 99 | STA 99 | INT 99 | AGI 99
+(stats carry over from D. KNIGHT)
 
 WPN GLADIUS       SHD FULL SHIELD
 HLM BASINET       ARM CUIRASS
 ACC  (none)       ITM  (none)
 
-FAERIE FIRE     INNER STRENGTH
+CHILL TOUCH     INNER STRENGTH
 UNHOLY SCOURGE  NEUTRALIZE
 ----------------------------------
-MARSHAL           250 mHP
+MARSHAL           180 mHP
 
-STR 92 | STA 92 | INT  0 | AGI 64
+STR 92 | STA 80 | WIS 00 | AGI 64
 
 WPN  PISTOL       SHD  (none)
 HLM  (none)       ARM  TIN PLATE
@@ -123,19 +126,19 @@ notes:
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
  Spell        |Req.|Hit%| Effect                                                                        | Description
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
-LAY ON HANDS  | -- |100%| heals damage: INT/1.25 = amount / single ally                                 |HEALS SINGLE ALLY
+LAY ON HANDS  | -- |100%| heals damage: WIS/1.25 = amount / single ally                                 |HEALS SINGLE ALLY
 NEUTRALIZE    | -- |100%| heals any status ailmentation, except [DEATH] / single ally                   |CURES ALLY STATUS
 EGRESSION     | -- |100%| warps out of dungeons / battles                                               |WARP OUT OF DUNGEONS
-ANGEL'S ORISON| 32 |100%| heals party: INT/2 = amount                                                   |HEALS ALL ALLIES
+VIM ORISON    | 32 |100%| heals party: WIS/2 = amount                                                   |HEALS ALL ALLIES
 MALICE MIRROR | 16 |100%| increases single ally ABSORB by 6-12                                          |RAISES DEFENSE POWER
 INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12                                          |RAISES ATTACK POWER
 PHOENIX PLUME | 24 |100%| raises fallen ally with 20% mHP                                               |RESURRECTS FALLEN ALLY
-FAERIE FIRE   | -- | 90%| damages enemy: INT x1.5 = damage / [FIRE]-elemental                           |MINOR FIRE DAMAGE ON ENEMY
-CHILL TOUCH   | -- | 90%| damages enemy: INT x1.5 = damage / [COLD]-elemental                           |MINOR COLD DAMAGE ON ENEMY
-BRIMSTONE HAIL| 24 | 80%| damages all: INT x1.75 = damage / [FIRE]-elemental                            |HEAVY FIRE DAMAGE ON ALL
-RENDING GALE  | 24 | 80%| damages all: INT x1.75 = damage / [COLD]-elemental                            |HEAVY COLD DAMAGE ON ALL
-GODLY SUNDER  | 32 | 80%| damages all: INT x1.5 = damage / non-elemental; x2 vs. marine; x1.5 vs. winged|NON-ELEMENTAL DAMAGE ON ALL
-UNHOLY SCOURGE|  8 | 70%| damages all: INT/1.5 = damage; causes [POISON] status                         |LIGHT DAMAGE AND POISON
+FAERIE FIRE   | -- | 90%| damages enemy: WIS x1.5 = damage / [FIRE]-elemental                           |MINOR FIRE DAMAGE ON ENEMY
+CHILL TOUCH   | -- | 90%| damages enemy: WIS x1.5 = damage / [COLD]-elemental                           |MINOR COLD DAMAGE ON ENEMY
+BRIMSTONE HAIL| 24 | 80%| damages all: WIS x1.75 = damage / [FIRE]-elemental                            |HEAVY FIRE DAMAGE ON ALL
+RENDING GALE  | 24 | 80%| damages all: WIS x1.75 = damage / [COLD]-elemental                            |HEAVY COLD DAMAGE ON ALL
+GODLY SUNDER  | 32 | 80%| damages all: WIS x1.5 = damage / non-elemental; x2 vs. marine; x1.5 vs. winged|NON-ELEMENTAL DAMAGE ON ALL
+UNHOLY SCOURGE|  8 | 70%| damages all: WIS/1.5 = damage; causes [POISON] status                         |LIGHT DAMAGE AND POISON
 SIREN'S ARIA  | -- | 70%| induces [ENCHANT] status on all enemies for 1-3 rounds                        |INDUCES SLEEP
 FEIGN DARKNESS| 16 | 70%| induces [BLIND] status on all enemies; raises party EVADE by 2-4              |RAISES PARTY EVADE
 LEADEN GAZE   | 32 | 60%| induces [DEATH] status on enemy                                               |PETRIFIES ENEMY
@@ -151,22 +154,22 @@ notes:
  the use of axes and bows
 
  - after battle, there is a 12% chance for every first gain to occur, followed by a 8% chance for every second gain, and finally a
- 4% chance for every third gain; when determining "+ or - 1 to any" gains, simply randomize between STR, STA, INT and AGI. (HP is
+ 4% chance for every third gain; when determining "+ or - 1 to any" gains, simply randomize between STR, STA, WIS and AGI. (HP is
  excluded)
 
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
- Swords     | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
+ Swords     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-BROADSWORD  | (none)                             | +12 |  0  |  0  | +12 |  0  | N/A                        | +1 STR, -1 INT
-GLADIUS     | (none)                             | +18 |  0  |  0  | +12 |  0  | N/A                        | +2 STR, -1 INT
-FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 |  0  | +6  | +12 |  0  |X-FIRE                      | +1 STR, +1 INT
+BROADSWORD  | (none)                             | +12 |  0  |  0  | +12 |  0  | N/A                        | +1 STR, -1 WIS
+GLADIUS     | (none)                             | +18 |  0  |  0  | +12 |  0  | N/A                        | +2 STR, -1 WIS
+FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 |  0  | +6  | +12 |  0  |X-FIRE                      | +1 STR
 WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 |  0  |  0  | +12 |  0  |X-DRAGON, (BRIMSTONE HAIL)  | +2 STR
-EINHERJAR   |SWORD THAT AVENGES ITS WIELDER      | +20 | +6  |  0  | +10 | +2  |COUNTER                     | +1 STA, +1 STR, -1 INT
+EINHERJAR   |SWORD THAT AVENGES ITS WIELDER      | +20 | +6  |  0  | +10 | +2  |COUNTER                     | +1 STA, +1 STR
 CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +4  | +4  | +12 |  0  |CRITICAL, (GODLY SUNDER)    | +2 STR
 BLOOD ASH   |BRITTLE SWORD THAT STEALS LIFE      |  +2 |  0  |  0  |  -2 |  0  |DRAIN                       | +1 HP, -1 to any
 MURASAMA    |FABLED SWORD OF DARKNESS            | +18 |  0  |  0  | +14 | +4  |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
- Axes       | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
+ Axes       | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 FRANCESCA   | (none)                             | +16 |  0  |  0  | +4  | -4  | N/A                        | +2 STR, +1 HP, -1 AGI
 OGRISH AXE  |EFFECTIVE VS. OGRES                 | +20 |  0  |  0  | +4  | -4  |X-OGRE                      | +4 STR, +1 HP, -1 AGI
@@ -174,69 +177,69 @@ STORM RENDER|AXE THAT CONJURES STORMS            | +36 |  0  | +4  | +4  | -4  |
 STONEGRINDER|RIDDEN WITH A GORGON'S CURSE        | +24 |  0  |  0  | +4  | -4  |X-DEATH                     | +2 STR, +1 STA, -1 AGI
 RUIN AXE    |AN ANCIENT,ENCHANTED AXE            | +44 | +4  |  0  | +4  | -4  |X-ENCHANT                   | +2 STR, +1 HP, -1 AGI
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
- Bows       | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
+ Bows       | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 LONG BOW    | (none)                             |  +8 | -2  |  0  | +16 | -2  |X-WINGED                    | +1 AGI, +1 STR
-SYLVAN BOW  |BOW THAT ENHANCES MAGIC             | +14 | -2  | +4  | +16 | -2  |X-WINGED                    | +2 AGI, +1 INT
+SYLVAN BOW  |BOW THAT ENHANCES MAGIC             | +14 | -2  | +4  | +16 | -2  |X-WINGED                    | +2 AGI, +1 WIS
 ACRID SHOT  |BOW TIPPED WITH VENOM               | +18 | -2  |  0  | +16 | -2  |X-WINGED, X-POISON          | +2 AGI, +1 STR
 ARTEMIS BOW | (none)                             | +22 |  0  | +6  | +16 | -2  |X-WINGED                    | +4 AGI, +1 STR
 GASTRAPHETES|A LIGHTWEIGHT CROSSBOW              | +28 |  0  |  0  | +20 |  0  |X-WINGED, CRITICAL          | +2 AGI, +1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
- Staves     | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
+ Staves     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-WOODEN STAFF| (none)                             |  +6 |  0  | +10 | +10 |  0  | N/A                        | +1 INT, -1 STR
-WAR SCEPTER |A COMBATIVE MACE                    | +12 |  0  | +12 | +10 |  0  | N/A                        | +1 STR, +1 INT
-SERAPHIM ROD|STAFF THAT GRANTS LIFE              | +10 |  0  | +18 | +10 |  0  |RECOVERY                    | +2 INT, -1 STR
-VESPERTINE  |STAFF ENCOMPASSING DARKNESS         | +16 |  0  | +28 | +10 |  0  |X-BLIND, X-ENCHANT          | +4 INT, -1 STR
-RUNIC STAFF |ANCIENT STAFF OF CURATIVE MAGIC     |  +8 |  0  | +32 | +10 |  0  |(ANGEL'S ORISON)            | +2 INT, -1 STR
+WOODEN STAFF| (none)                             |  +6 |  0  | +10 | +10 |  0  | N/A                        | +1 WIS, -1 STR
+WAR SCEPTER |A COMBATIVE MACE                    | +12 |  0  | +12 | +10 |  0  | N/A                        | +1 STR, +1 WIS
+SERAPHIM ROD|STAFF THAT GRANTS LIFE              | +10 |  0  | +18 | +10 |  0  |RECOVERY                    | +2 WIS, -1 STR
+VESPERTINE  |STAFF ENCOMPASSING DARKNESS         | +16 |  0  | +28 | +10 |  0  |X-BLIND, X-ENCHANT          | +4 WIS, -1 STR
+RUNIC STAFF |ANCIENT STAFF OF CURATIVE MAGIC     |  +8 |  0  | +32 | +10 |  0  |(VIM ORISON)                | +2 WIS, -1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
- Other*     | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
+ Other*     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 PISTOL*     | (none)                             | +8  |  0  |  0  | +32 |  0  |X-FIRE, CRITICAL            | (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
- Shields    | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
+ Shields    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 CLOAK       |CLOAK USED AS A SHIELD              |  0  |  +1 |  0  |  0  | +4  | N/A                        | +1 AGI
 ESCUTCHEON  |A SMALL FENCING SHIELD              |  0  |  +2 |  0  |  0  | +2  | N/A                        | +1 HP
 FULL SHIELD | (none)                             |  0  |  +4 |  0  |  0  | +4  | N/A                        | +1 HP
 AEGIS SHIELD|SHIELD THAT WARDS GORGONS           |  0  |  +8 |  0  |  0  | +4  |O-DEATH                     | +1 HP, +1 STA
-GOLD CAPOTE |LIGHT CAPE USED AS A SHIELD         |  0  |  +2 | +6  |  0  | +8  | N/A                        | +2 AGI, +1 INT
+GOLD CAPOTE |LIGHT CAPE USED AS A SHIELD         |  0  |  +2 | +6  |  0  | +8  | N/A                        | +2 AGI, +1 WIS
 KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    |  0  | +12 |  0  |  0  | +2  |O-ELEMENT, SHELL, RECOVERY  | +2 HP, +1 STA
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
- Helmets    | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
+ Helmets    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-FEATHER CAP | (none)                             |  0  | +2  | +4  |  0  | +2  | N/A                        | +1 INT
+FEATHER CAP | (none)                             |  0  | +2  | +4  |  0  | +2  | N/A                        | +1 WIS
 BASINET     | (none)                             |  0  | +6  |  0  |  0  | -2  | N/A                        | +1 STA, -1 AGI
 HEADBAND    |HEADWEAR WORN BY FIGHTERS           | +8  | +2  |  0  | +2  | +2  | N/A                        | +1 STR
 IOUN STONE  |MAGIC STONE THAT SURROUNDS THE HEAD |  0  | +2  | +4  | +2  | +4  | N/A                        | +1 to any
-SKULL VISAGE|A GRIM HELMET USED BY UNDEAD ARMIES |  0  | +4  | +8  | -2  | -2  |DRAIN, W-COLD               | +1 INT, +1 STA, -1 AGI
+SKULL VISAGE|A GRIM HELMET USED BY UNDEAD ARMIES |  0  | +4  | +8  | -2  | -2  |DRAIN, W-COLD               | +1 WIS, +1 STA, -1 AGI
 DRAGON HELM |HELMET THAT WARDS FIRE              |  0  | +8  |  0  |  0  | -2  |O-FIRE                      | +1 HP, +1 STA, -1 AGI
 RIBBON      |RIBBON THAT WARDS STATUS CHANGE     |  0  |  0  |  0  |  0  | +2  |O-STATUS                    | +1 to any
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
- Armor      | Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
+ Armor      | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-CAMBRIC     | (none)                             |  0  |  +8 |  0  |  0  | +2  |W-FIRE                      | +1 HP, +1 INT
+CAMBRIC     | (none)                             |  0  |  +8 |  0  |  0  | +2  |W-FIRE                      | +1 HP, +1 WIS
 BRIGANDINE  | (none)                             |  0  | +14 |  0  |  0  | +2  |W-FIRE                      | +2 HP, +1 STA
 CUIRASS     | (none)                             |  0  | +20 |  0  |  0  | -2  | N/A                        | +6 HP, +2 STA, -1 AGI
 KENPO GI    |TRAINING GARB WORN BY FIGHTERS      | +12 | +10 |  0  | +2  | +4  |W-FIRE, COUNTER             | +2 HP, +1 STR
 DARK SHROUD |SWIFT CLOTHING WORN BY NINJAS       |  0  | +14 |  0  | +4  | +8  |W-FIRE                      | +4 HP, +1 AGI
-MINERVA     |LIGHT ARMOR WORN BY ELVES           |  0  | +14 | +8  |  0  | +2  |SHELL                       | +4 HP, +1 STA, +1 INT
+MINERVA     |LIGHT ARMOR WORN BY ELVES           |  0  | +14 | +8  |  0  | +2  |SHELL                       | +4 HP, +1 STA, +1 WIS
 SERPENTSKIN |TUNIC THAT WARDS FIRE               |  0  | +16 |  0  |  0  | +2  |O-FIRE, W-COLD              | +4 HP, +1 STA
-ARCHON ROBES| (none)                             |  0  | +12 | +12 |  0  |  0  |O-COLD, SHELL               | +2 HP, +1 INT
+ARCHON ROBES| (none)                             |  0  | +12 | +12 |  0  |  0  |O-COLD, SHELL               | +2 HP, +1 WIS
 MIRROR MAIL |ARMOR THAT WARDS MAGIC              |  0  | +28 |  0  |  0  | -2  |SHELL                       | +6 HP, +2 STA, -1 AGI
 TIN PLATE*  | (none)                             |  0  |  0  |  0  |  0  |  0  |O-STATUS, SHELL             | (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
- Accessories| Description                        | DAM | DEF | INT | HIT | EVA | Modifiers                  | Gain
+ Accessories| Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 GAUNTLET    | (none)                             | +2  | +2  |  0  | +2  | +2  | N/A                        | +1 HP
 POWER SASH  |SASH WORN BY FIGHTERS               | +8  | +2  |  0  | +2  | +2  | N/A                        | +1 STR
 GENJI GLOVE | (none)                             | +4  | +2  |  0  | +4  | +2  |CRITICAL                    | +1 to any
 PEGASUS SHOE|WINGED SHOES THAT GRANT AGILITY     |  0  | +2  |  0  | +4  | +4  | N/A                        | +1 AGI
 DRAGON SCALE|SCALE THAT WARDS FIRE               |  0  | +2  |  0  |  0  |  0  |O-FIRE, W-COLD              | +1 STA
-COBALT BAND |WARDS COLD                          |  0  |  0  | +2  |  0  |  0  |O-COLD                      | +1 INT
-JADE ARMLET |WARDS POISON                        |  0  |  0  | +2  |  0  |  0  |O-POISON                    | +1 INT
-LAMIA'S TEAR|WARDS ENCHANTMENT                   |  0  |  0  | +2  |  0  |  0  |O-ENCHANT                   | +1 INT
-ANGEL RING  |WARDS DEATH                         |  0  |  0  | +2  |  0  |  0  |O-DEATH, RECOVERY           | +1 INT
+COBALT BAND |WARDS COLD                          |  0  |  0  | +2  |  0  |  0  |O-COLD                      | +1 WIS
+JADE ARMLET |WARDS POISON                        |  0  |  0  | +2  |  0  |  0  |O-POISON                    | +1 WIS
+LAMIA'S TEAR|WARDS ENCHANTMENT                   |  0  |  0  | +2  |  0  |  0  |O-ENCHANT                   | +1 WIS
+ANGEL RING  |WARDS DEATH                         |  0  |  0  | +2  |  0  |  0  |O-DEATH, RECOVERY           | +1 WIS
 ORNATE RING |WARDS MAGIC                         | +2  | +2  | +2  | +2  | +2  |O-ALL, SHELL                | +1 to any
 
 ------------+------------------------------------+----------------------------------------------------------------------------------
@@ -282,7 +285,7 @@ COUNTER   - sometimes counterattacks when struck; (1/8 chance) base DAMAGE/1.25
 CRITICAL  - increases critical rate by 8 (stackable)
 RECOVERY  - automatically recovers 4-8% mHP per round
 
-(ANGEL'S ORISON) - randomly casts ANGEL'S ORISON on the party when used (1/8 chance)
+(VIM ORISON)     - randomly casts VIM ORISON on the party when used (1/8 chance)
 (BRIMSTONE HAIL) - randomly casts BRIMSTONE HAIL on the enemy when used (1/16 chance)
 (RENDING GALE)   - randomly casts RENDING GALE on the enemy when used (1/16 chance)
 (GODLY SUNDER)   - randomly casts GODLY SUNDER on the enemy when used (1/16 chance)
@@ -318,7 +321,7 @@ notes:
 ================================================================================
 GLOOMWING [WINGED]
 
-DAM DEF INT AGI HIT EVA
+DAM DEF WIS AGI HIT EVA
 
 FANGS
 FANGS
@@ -550,7 +553,7 @@ KRAKEN [MARINE]
 
 HP 3200 | GP 9800 | Spoils: KRAKEN SHELL [ 1/ 1]
 
-DAM 200 | DEF 099 | INT 99 | AGI 99 | HIT 99% | EVA 24%
+DAM 200 | DEF 099 | WIS 99 | AGI 99 | HIT 99% | EVA 24%
 
 TENTACLES
 FANGS
@@ -571,13 +574,13 @@ CLAWS - base DAMAGE
 FANGS - base DAMAGE; 1/2 chance of [POISON]
 TENTACLES - eight seperate attacks; damage = DAMAGE/4 (ignore ABSORB)
 STINGER - DAMAGE/3 (ignore ABSORB) and [POISON] to target
-SERPENT'S BREATH - [FIRE]-elemental; DAMAGE/2 + INT/4; entire party
-STORM BREATH - [COLD]-elemental; DAMAGE/2 + INT/4; entire party
+SERPENT'S BREATH - [FIRE]-elemental; DAMAGE/2 + WIS/4; entire party
+STORM BREATH - [COLD]-elemental; DAMAGE/2 + WIS/4; entire party
 VENOMOUS CLOUD - [POISON] entire party at 100% success, depending on base HIT (no damage)
 DEATHLY STRIKE - DAMAGE x1.25; add [DEATH]
 VAMPIRIC TOUCH - damage = 10% target mHP; (ignore ABSORB) heals 10% of enemy mHP
-EARTH SHATTER - non-elemental damage against party; damage = base INT
-MAELSTROM - non-elemental damage against party; damage = INT x1.25; induces [DEATH] with hit
+EARTH SHATTER - non-elemental damage against party; damage = base WIS
+MAELSTROM - non-elemental damage against party; damage = WIS x1.25; induces [DEATH] with hit
 
 
  --------
