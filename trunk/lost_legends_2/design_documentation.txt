@@ -57,7 +57,7 @@ SIR EDMUND        042 mHP
 
 STR 16 | STA 12 | WIS 12 | AGI 14
 
-WPN BROADSWORD    SHD BUCKLER
+WPN BROADSWORD    SHD ESCUTCHEON
 HLM  (none)       ARM BRIGANDINE
 ACC  (none)       ITM  (none)
 
@@ -69,7 +69,7 @@ GLENN             060 mHP
 
 STR 24 | STA 20 | WIS 08 | AGI 18
 
-WPN BATTLE AXE    SHD ESCUTCHEON
+WPN BATTLE AXE    SHD CLOAK
 HLM HEADBAND      ARM BRIGANDINE
 ACC  (none)       ITM  (none)
 ----------------------------------
