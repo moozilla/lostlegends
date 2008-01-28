@@ -53,7 +53,7 @@ spells:
 
 FAERIE FIRE
 ----------------------------------
-SIR EDMUND        042 mHP
+EDMUND            042 mHP
 
 STR 16 | STA 12 | WIS 12 | AGI 14
 
@@ -69,7 +69,7 @@ GLENN             060 mHP
 
 STR 24 | STA 20 | WIS 08 | AGI 18
 
-WPN BATTLE AXE    SHD CLOAK
+WPN FRANCESCA     SHD CLOAK
 HLM HEADBAND      ARM BRIGANDINE
 ACC  (none)       ITM  (none)
 ----------------------------------
@@ -115,7 +115,7 @@ notes:
 
  - "Req." represents the WISDOM score required to learn the spell
 
- - all augmentive spells (i.e., WARD EVIL) are effective until the end of battle, and their values may stack
+ - all augmentive spells (i.e., MALICE MIRROR) are effective until the end of battle, and their values may stack
 
  - only 6 spells may be memorized total; they must be purchased from alchemists / magic shops
 
@@ -126,10 +126,10 @@ notes:
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
  Spell        |Req.|Hit%| Effect                                                                        | Description
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
-LAY ON HANDS  | -- |100%| heals damage: WIS/1.25 = amount / single ally                                 |HEALS SINGLE ALLY
+LAY ON HANDS  | -- |100%| heals damage: base WIS = amount / single ally                                 |HEALS SINGLE ALLY
 NEUTRALIZE    | -- |100%| heals any status ailmentation, except [DEATH] / single ally                   |CURES ALLY STATUS
 EGRESSION     | -- |100%| warps out of dungeons / battles                                               |WARP OUT OF DUNGEONS
-VIM ORISON    | 32 |100%| heals party: WIS/2 = amount                                                   |HEALS ALL ALLIES
+VIM ORISON    | 32 |100%| heals party: WIS/1.75 = amount                                                |HEALS ALL ALLIES
 MALICE MIRROR | 16 |100%| increases single ally ABSORB by 6-12                                          |RAISES DEFENSE POWER
 INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12                                          |RAISES ATTACK POWER
 PHOENIX PLUME | 24 |100%| raises fallen ally with 20% mHP                                               |RESURRECTS FALLEN ALLY
@@ -167,7 +167,7 @@ WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 |  0  |  0  | +12 |  0  |
 EINHERJAR   |SWORD THAT AVENGES ITS WIELDER      | +20 | +6  |  0  | +10 | +2  |COUNTER                     | +1 STA, +1 STR
 CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +4  | +4  | +12 |  0  |CRITICAL, (GODLY SUNDER)    | +2 STR
 BLOOD ASH   |BRITTLE SWORD THAT STEALS LIFE      |  +2 |  0  |  0  |  -2 |  0  |DRAIN                       | +1 HP, -1 to any
-MURASAMA    |FABLED SWORD OF DARKNESS            | +18 |  0  |  0  | +14 | +4  |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR
+MURASAME    |FABLED SWORD OF DARKNESS            | +18 |  0  |  0  | +14 | +4  |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Axes       | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -279,7 +279,7 @@ O-STATUS  - prevents any status change
 O-ALL     - resist any elemental damage / status change
 W-FIRE    - weak against [FIRE] damage (such damage ignores ABSORB)
 W-COLD    - weak against [COLD] damage (such damage ignores ABSORB)
-DRAIN     - restores 6-12 HP to the wielder when attacking
+DRAIN     - damages 10% of enemy mHP and restores 10% mHP to the wielder when attacking
 SHELL     - +16 ABSORB vs. magic damage
 COUNTER   - sometimes counterattacks when struck; (1/8 chance) base DAMAGE/1.25
 CRITICAL  - increases critical rate by 8 (stackable)
@@ -310,13 +310,27 @@ ADAMANT ORE - POWERFUL METAL USED IN FORGING
 DYNAMITE    - EXPLOSIVE THAT DESTROYS BLOCKAGE
 
 
+ ---------------
+  TREASURE LIST 
+ ---------------
+
+------------+------------------------------------------------------------------------------------------------------+----------------
+ Treasure   | Location                                                                                             | Guarded by...
+------------+------------------------------------------------------------------------------------------------------+----------------
+CALIBURN    | CELESTIAL REALM, B2                                                                                  | STORM DRAGON x3
+RUIN AXE    | CELESTIAL REALM, B2                                                                                  | TITAN x3
+ARTEMIS BOW | CELESTIAL REALM, B1                                                                                  | ROC x3
+VESPERTINE  | CELESTIAL REALM, B1                                                                                  | GORGON x3
+
  -------------------
   NORMAL ENCOUNTERS
  -------------------
 
 notes:
 
-[UNDEAD] foes are invulnerable to HP drain (negates ALL the effects of BLOOD SWORD)
+ - up to three enemies of the same type may be encountered at once (enemies are never mixed)
+
+ - [UNDEAD] foes are invulnerable to HP drain (i.e., negates the drain effect of BLOOD ASH sword)
 
 ================================================================================
 GLOOMWING [WINGED]
@@ -346,6 +360,8 @@ CLAWS
 CLAWS
 TENTACLES
 
+W-FIRE
+
 ================================================================================
 ROPER
 
@@ -353,6 +369,8 @@ CLAWS
 CLAWS
 TENTACLES
 TENTACLES
+
+W-FIRE
 
 ================================================================================
 CAVE TOAD
@@ -373,17 +391,17 @@ FANGS
 ================================================================================
 OGRE
 
-BATTLE AXE
-BATTLE AXE
-BATTLE AXE
-BATTLE AXE
+FRANCESCA
+FRANCESCA
+FRANCESCA
+FRANCESCA
 
 ================================================================================
 TITAN
 
-OGRE AXE
-OGRE AXE
-OGRE AXE
+OGRISH AXE
+OGRISH AXE
+OGRISH AXE
 EARTH SHATTER
 
 ================================================================================
@@ -394,7 +412,7 @@ CHILL TOUCH
 FANGS
 VAMPIRIC TOUCH
 
-W-FIRE
+O-DEATH, W-FIRE
 
 ================================================================================
 SCORPION
@@ -420,6 +438,8 @@ STONE GAZE
 STONE GAZE
 FANGS
 
+O-DEATH
+
 ================================================================================
 COCKATRICE
 
@@ -427,6 +447,8 @@ CLAWS
 CLAWS
 CLAWS
 STONE GAZE
+
+O-DEATH
 
 ================================================================================
 ROC
@@ -436,6 +458,8 @@ STONE GAZE
 CLAWS
 STONE GAZE
 
+O-DEATH
+
 ================================================================================
 FIRE DRAKE [WINGED]
 
@@ -443,6 +467,8 @@ CLAWS
 SERPENT'S BREATH
 CLAWS
 SERPENT'S BREATH
+
+O-FIRE, W-COLD
 
 ================================================================================
 STORM DRAGON [WINGED]
@@ -452,6 +478,8 @@ STORM BREATH
 CLAWS
 STORM BREATH
 
+O-COLD, W-FIRE
+
 ================================================================================
 WYRM [WINGED]
 
@@ -459,6 +487,8 @@ CLAWS
 SERPENT'S BREATH
 STORM BREATH
 MAELSTROM
+
+O-ELEMENT
 
 ================================================================================
 CROCODILE [MARINE]
@@ -476,7 +506,7 @@ CLAWS
 ARCTIC BLAST
 ARCTIC BLAST
 
-X-COLD, W-FIRE
+X-COLD, O-COLD, W-FIRE
 
 ================================================================================
 HERMIT [MARINE]
@@ -486,6 +516,8 @@ CLAWS
 CLAWS
 CLAWS
 
+SHELL
+
 ================================================================================
 DIRE CRAB [MARINE]
 
@@ -493,6 +525,8 @@ CLAWS
 CLAWS
 CLAWS
 EARTH SHATTER
+
+SHELL
 
 ================================================================================
 
@@ -533,10 +567,14 @@ DEATHLY STRIKE
 ================================================================================
 SHADOW LORD (2)
 
-BLOODSWORD
+BLOOD ASH
 ARCTIC BLAST
 SCOURGE
 INNER STRENGTH
+
+Modifiers:
+
+SHELL, CRITICAL
 
 ================================================================================
 SHADOW LORD (3) [UNDEAD]
@@ -546,7 +584,9 @@ FANGS
 DEATHLY STRIKE
 MAELSTROM
 
-W-FIRE
+Modifiers:
+
+W-FIRE, CRITICAL
 
 ================================================================================
 KRAKEN [MARINE]
