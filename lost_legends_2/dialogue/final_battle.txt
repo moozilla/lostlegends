@@ -1,6 +1,4 @@
 Edmund
-"The Shadow Lord...'Tis but a drifting shadow, cast over ash and cinder..."
-
 "I care not to know your narrative, as I care not to look upon darkness.
 We wield the fire of vengeance, and so shall this light extinguish the shadow!"
 
@@ -74,50 +72,6 @@ Shadow Lord
 
 "And if I humbly resist?"
 
-Maya
-"Then in sound mind and judgment, I decree it is necessary to take you by force."
-
 [Shadow Lord 2 battle ensues]
-
-Shadow Lord
-"Descendant of Arcania... you are all I seek."
-
-"Why place your comrades... in harm's way?"
-
-"Just surrender... to... me...."
-
-Maya
-"Your reign has ended, Shadow Lord."
-
-Shadow Lord
-"Hmph. So you have... bested me."
-
-[Shadow Lord moves toward the orb]
-
-Shadow Lord
-"The battle may... be over..."
-
-"...but not... the war!"
-
-[screen shakes and flashes as Shadow Lord regains strength from the orb]
-
-Edmund
-"What is this?!"
-
-Glenn
-"The orb!"
-
-Shadow Lord
-"Fill me, heaven!"
-
-"Ah, hah, hah, hah!"
-
-Maya
-"That relic! An outlet to the Arcanian realm?!"
-
-[shaking stops, Shadow Lord floats above the platform]
-
-Shadow Lord
-"Maggots. Contemptible maggots."
 
 "I shall pave my way to Arcania with your blood!"
