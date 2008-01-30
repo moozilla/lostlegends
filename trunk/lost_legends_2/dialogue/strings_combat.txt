@@ -1,0 +1,45 @@
+{name} unleashes {attack} upon {target} -- 
+
+hit!
+
+missed!
+
+a mighty blow!
+
+{name} suffered {amount} damage.
+
+{name} was poisoned!
+
+{name} suffered {amount} poison damage.
+
+{name} was blinded!
+
+{name} fell into a deep slumber...
+
+{name} has awoken.
+
+{target} guarded the attack.
+
+{name} has perished...
+
+{name} was recalled.
+
+{name} takes a moment to rest...
+
+{name} is on guard.
+
+The party fled...
+
+{name} uses {item} on {target}.
+
+Victory!
+
+Recieved {amount} gold.
+
+Procured {item}.
+
+{name}'s {stat} increased by {amount}.
+
+{name}'s {stat} decreased by {amount}.
+
+Maya's resistance has been destroyed...
