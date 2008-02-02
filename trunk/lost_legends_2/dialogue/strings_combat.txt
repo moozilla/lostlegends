@@ -1,45 +1,71 @@
-{name} unleashes {attack} upon {target} -- 
+AN ENEMY APPEARED!
 
-hit!
+AN ENEMY PARTY APPEARED!
 
-missed!
+{NAME} CHANTS THE SPELL OF {SPELL NAME}...
 
-a mighty blow!
+(NAME) UNLEASHES THE {WEAPON} AGAINST {NAME} -- 
 
-{name} suffered {amount} damage.
+A BLAZE BEGINS TO RISE.
 
-{name} was poisoned!
+AN ICY WIND SETTLES IN.
 
-{name} suffered {amount} poison damage.
+THE SKY BEGINS TO TREMBLE.
 
-{name} was blinded!
+FOG BEGINS TO GATHER.
 
-{name} fell into a deep slumber...
+{ENEMY} UNLEASHES {ATTACK} UPON {TARGET} -- 
 
-{name} has awoken.
+THE PARTY
 
-{target} guarded the attack.
+THE ENEMY
 
-{name} has perished...
+HIT!
 
-{name} was recalled.
+MISS!
 
-{name} takes a moment to rest...
+A MIGHTY BLOW!
 
-{name} is on guard.
+{NAME} SUFFERED {AMOUNT} DAMAGE.
 
-The party fled...
+{NAME} RECOVERED {AMOUNT} HIT POINTS.
 
-{name} uses {item} on {target}.
+{NAME} RECOVERED A SPELL.
 
-Victory!
+{NAME} RECOVERED STATUS.
 
-Recieved {amount} gold.
+{NAME} WAS POISONED!
 
-Procured {item}.
+{NAME} SUFFERED {AMOUNT} POISON DAMAGE.
 
-{name}'s {stat} increased by {amount}.
+{NAME} WAS BLINDED!
 
-{name}'s {stat} decreased by {amount}.
+{NAME} FELL INTO A DEEP SLUMBER...
 
-Maya's resistance has been destroyed...
+{NAME} HAS AWOKEN.
+
+{TARGET} GUARDED THE ATTACK.
+
+{NAME} HAS PERISHED...
+
+{NAME} WAS RECALLED.
+
+{NAME} TAKES A MOMENT TO REST...
+
+{NAME} IS ON GUARD.
+
+THE PARTY FLED...
+
+{NAME} USES THE {ITEM} ON {TARGET}.
+
+THE ENEMY HAS BEEN VANQUISHED!
+
+RECIEVED {AMOUNT} GOLD.
+
+PROCURED {ITEM}.
+
+{NAME}'S {STAT} INCREASED BY {AMOUNT}.
+
+{NAME}'S {STAT} DECREASED BY {AMOUNT}.
+
+MAYA'S RESISTANCE HAS BEEN DESTROYED...
