@@ -27,19 +27,35 @@ composed using TextPad 5.0: 32-bit Edition
 TABLE OF CONTENTS
 
 1.) CHARACTER DATA
+
 2.) INVENTORIES
-3.) MAGIC
-4.) ARMORY
- 4.a MODIFIERS
-5.) KEY ITEMS
-6.) BESTIARY DATA
-7.) ENEMY SKILLS
-8.) SYSTEM
+ 2.a MAGIC
+ 2.b ARMORY
+ 2.c MODIFIERS
+ 2.d KEY ITEMS
+ 2.e TREASURE LIST
+ 2.f SHOP LIST
+ 2.g BESTIARY DATA
+     -NORMAL ENCOUNTERS
+     -BOSS ENCOUNTERS
+ 2.h ENEMY SKILLS
+
+8.) SYSTEM NOTES
+ 8.a STATUS MODIFIERS
 
 
- ----------------
-  CHARACTER DATA
- ----------------
+
+
+====================================================================================================================================
+  1.) CHARACTER DATA
+====================================================================================================================================
+
+These are starting positions for each player character.
+
+ - D. KNIGHT, ROSE and MARSHAL may not be re-equipped at any point in the game, as they are guest characters
+
+
+Party GP: 600
 
 MAYA              030 mHP
 
@@ -107,6 +123,10 @@ ACC  (none)       ITM  (none)
 ----------------------------------
 
 
+====================================================================================================================================
+  2.) INVENTORIES
+====================================================================================================================================
+
  -------
   MAGIC
  -------
@@ -117,11 +137,13 @@ notes:
 
  - all augmentive spells (i.e., MALICE MIRROR) are effective until the end of battle, and their values may stack
 
- - only 6 spells may be memorized total; they must be purchased from alchemists / magic shops
+ - only 6 spells may be memorized total; they must be purchased from magic shops
 
- - each character has a "spell charge" value, which determines how many spells can be cast in one day (8 max)
+ - each character has a "spell charge" (MANA) value, which determines how many spells can be cast in one day (8 max)
 
- - spell charges are replenished by praying (donating GP) to shrines; the number gained depends on how much GP is donated
+ - spell charges are replenished by praying (donating GP) to shrines; the number gained depends on how much GP is donated (1 charge
+ per 100 GP)
+
 
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
  Spell        |Req.|Hit%| Effect                                                                        | Description
@@ -259,6 +281,7 @@ ELIXER      |FULLY RESTORES HP/STATUS            | Restores all HP and cures [PO
   MODIFIERS
  -----------
 
+
 X-FIRE    - damage is [FIRE]-elemental
 X-COLD    - damage is [COLD]-elemental
 X-POISON  - inflicts [POISON] status on target with attack (1/8 chance)
@@ -304,6 +327,7 @@ RECOVERY  - automatically recovers 4-8% mHP per round
   KEY ITEMS
  -----------
 
+
 RUNE KEY    - KEY TO THE ARCANIAN RUINS
 MANA SPHERE - MAGICAL RELIC OF THE ARCANIANS
 ADAMANT ORE - POWERFUL METAL USED IN FORGING
@@ -313,6 +337,7 @@ DYNAMITE    - EXPLOSIVE THAT DESTROYS BLOCKAGE
  ---------------
   TREASURE LIST
  ---------------
+
 
 ------------+------------------------------------------------------------------------------------------------------+----------------
  Treasure   | Location                                                                                             | Guarded by...
@@ -356,6 +381,7 @@ KRAKEN SHELL| drop from KRAKEN                                                  
  -----------
   SHOP LIST
  -----------
+
 
 ------------------+--------------+-------+----------------+-------+----------
  LOCALE           | ITEM         | PRICE | SPELL          | PRICE | INN RATE
@@ -411,6 +437,12 @@ ASNOTH AIRSHIP    | SOMA DROP    |   200 |  --            |  --   |    40 GP
                   | ELIXER       |  1100 |  --            |  --   |
 
 
+
+
+====================================================================================================================================
+ BESTIARY
+====================================================================================================================================
+
  -------------------
   NORMAL ENCOUNTERS
  -------------------
@@ -420,6 +452,7 @@ notes:
  - up to three enemies of the same type may be encountered at once (enemies are never mixed)
 
  - [UNDEAD] foes are invulnerable to HP drain (i.e., negates the drain effect of BLOOD ASH sword)
+
 
 ================================================================================
 THE GLOOMWING [WINGED]
@@ -638,6 +671,7 @@ SHELL
   BOSS ENCOUNTERS
  -----------------
 
+
 ================================================================================
 THE MEDUSA
 
@@ -719,24 +753,31 @@ O-FIRE, O-COLD, O-STATUS, RECOVER
 ================================================================================
 
 
-Enemy Skills:
-
-ITS CLAWS - base DAMAGE
-ITS FANGS - base DAMAGE; 1/2 chance of [POISON]
-ITS TENTACLES - eight seperate attacks; damage = DAMAGE/4 (ignore ABSORB)
-ITS STINGER - DAMAGE/3 (ignore ABSORB) and [POISON] to target
-SERPENT'S BREATH - [FIRE]-elemental; DAMAGE/2 + WIS/4; entire party
-A STORMY BREATH - [COLD]-elemental; DAMAGE/2 + WIS/4; entire party
-A VENOMOUS CLOUD - [POISON] entire party at 100% success, depending on base HIT (no damage)
-A DEATHLY STRIKE - DAMAGE x1.25; add [DEATH]
-A VAMPIRIC TOUCH - damage = 10% target mHP; (ignore ABSORB) heals 10% of enemy mHP
-AN EARTH SHATTERING SPELL - non-elemental damage against party; damage = base WIS
-A MAELSTROM - non-elemental damage against party; damage = WIS x1.25; induces [DEATH] with hit
+ --------------
+  ENEMY SKILLS
+ --------------
 
 
- --------
-  SYSTEM
- --------
+(attack name as it appears in game | effect of attack)
+
+                ITS CLAWS | base DAMAGE
+                ITS FANGS | base DAMAGE; 1/2 chance of [POISON]
+            ITS TENTACLES | eight seperate attacks; damage = DAMAGE/4 (ignore ABSORB)
+              ITS STINGER | DAMAGE/3 (ignore ABSORB) and [POISON] to target
+         SERPENT'S BREATH | [FIRE]-elemental; DAMAGE/2 + WIS/4; entire party
+          A STORMY BREATH | [COLD]-elemental; DAMAGE/2 + WIS/4; entire party
+         A VENOMOUS CLOUD | [POISON] entire party at 100% success, depending on base HIT (no damage)
+         A DEATHLY STRIKE | DAMAGE x1.25; add [DEATH]
+         A VAMPIRIC TOUCH | damage = 10% target mHP; (ignore ABSORB) heals 10% of enemy mHP
+AN EARTH SHATTERING SPELL | non-elemental damage against party; damage = base WIS
+              A MAELSTROM | non-elemental damage against party; damage = WIS x1.25; induces [DEATH] with hit
+
+
+
+
+====================================================================================================================================
+  3.) SYSTEM NOTES
+====================================================================================================================================
 
 STRENGTH - the base value of attack power; may not exceed 99
 STAMINA - the base value of defense power; may not exceed 99
@@ -747,20 +788,27 @@ DAMAGE - the derived value of STRENGTH and weapon damage, which equals total att
 ABSORB - the derived value of STAMINA and armor defense, which equals total defense power; may not exceed 255
 
 HIT - the derived value of AGILITY and weapon accuracy, which equals total attack accuracy; may not exceed 99
-HIT = AGILITY/2 + derived equipment bonus
+  (HIT = AGILITY/2 + derived equipment bonus)
 
 EVADE - the derived value of AGILITY and armor evasion, which equals total chance to evade; may not exceed 32
-EVADE = AGILITY/8 + derived equipment bonus
+  (EVADE = AGILITY/8 + derived equipment bonus)
 
-When determining hit and evasion in battle, simply subtract the target's EVADE value from the attacker's HIT value.
+When determining hit and evasion formulas in battle, simply subtract the target's EVADE value from the attacker's HIT value.
 
 
-Poison - the target will suffer damage equal to mHP/8 every round, until healed. If the poison is not neutralized by the end of
-battle, the target will sustain 1 damage for every step taken while poisoned. (under no condition can poison kill a target)
+ ------------------
+  STATUS MODIFIERS
+ ------------------
 
-Enchantment - the target will become paralyzed, (asleep) and unable to act for several rounds. The number of rounds is a randomly
-generated integer between 1 and 3.
 
-Blindness - the target's hit% will be cut in half, until the condition is healed.
+Poison (POISONED status) - the target will suffer damage equal to mHP/8 every round, until healed. If the poison is not neutralized
+by the end of battle, the target will sustain 1 damage for every step taken while poisoned. (under no condition can poison kill a
+target)
 
-Death / Petrify - the target is instantly slain, regardless of any other condition.
+Enchantment (COMATOS status) - the target will become paralyzed, (asleep) and unable to act for several rounds. The number of rounds
+is a randomly generated integer between 1 and 3.
+
+Blindness (BLIND status) - the target's hit% will be cut in half, until the condition is healed.
+
+Death / Petrify (FELLED status) - the target is instantly slain, regardless of any other condition. (the game generally doesn't
+distinguish between death and petrification, as they result in the same effect)
