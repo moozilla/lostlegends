@@ -317,22 +317,21 @@ DYNAMITE    - EXPLOSIVE THAT DESTROYS BLOCKAGE
 ------------+------------------------------------------------------------------------------------------------------+----------------
  Treasure   | Location                                                                                             | Guarded by...
 ------------+------------------------------------------------------------------------------------------------------+----------------
+ACRID SHOT  | chest in FEY WOOD (1)                                                                                | none
+MINERVA     | chest in FEY WOOD (2)                                                                                | none
 KENPO GI    | chest in TRISTRAN VILLAGE                                                                            | none
 POWER SASH  | search pot in house in TRISTRAN VILLAGE                                                              | none
 FLAMETONGUE | chest in ARCANIAN RUINS, 4F                                                                          | FIRE DRAKE
 WYRMSCORNE  | chest in ARCANIAN RUINS, B4                                                                          | FIRE DRAKE
-STORM RENDER| search pot in house in GLADSHEIM VILLAGE                                                             | none
-ACRID SHOT  | chest in FEY WOOD (2)                                                                                | none
 AEGIS SHIELD| chest in ARCANIAN RUINS, B2                                                                          | GORGON
+PEGASUS SHOE| chest in ARCANIAN RUINS, 3F                                                                          | none
+MIRROR MAIL | chest in ARCANIAN RUINS, 9F                                                                          | none
+STORM RENDER| search pot in house in GLADSHEIM VILLAGE                                                             | none
 GOLD CAPOTE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
+GENJI GLOVE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
 EINHERJAR   | chest in VALHALLA PALACE                                                                             | none
 SKULL VISAGE| chest in VALHALLA PALACE, BARRACKS                                                                   | WRAITH x3
 DARK SHROUD | chest in ASNOTH WARSHIP, CARGO HOLD                                                                  | none
-MINERVA     | chest in FEY WOOD (1)                                                                                | none
-SERPENTSKIN | rare drop from STORM DRAGON                                                                          | N/A
-MIRROR MAIL | chest in ARCANIAN RUINS, 9F                                                                          | none
-GENJI GLOVE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
-PEGASUS SHOE| chest in ARCANIAN RUINS, 3F                                                                          | none
 ORNATE RING | chest in CELESTIAL REALM, B2                                                                         | STORM DRAGON x3
 RUIN AXE    | chest in CELESTIAL REALM, B2                                                                         | TITAN x3
 ARTEMIS BOW | chest in CELESTIAL REALM, B1                                                                         | ROC x3
@@ -345,8 +344,10 @@ BLOOD ASH   | search first shelf in GIELGUD's room (ASNOTH CASTLE)              
 MURASAME    | search skull in UNDERSEA SHRINE DETOUR                                                               | WRAITH
 HEADBAND    | comes equipped on GLENN                                                                              | N/A
 CALIBURN    | trade ADAMANT to weapon smith in SHIPBUILDER'S VILLAGE                                               | N/A
+ANGEL RING  | drop from MEDUSA                                                                                     | N/A
 OGRISH AXE  | rare drop from TITAN                                                                                 | N/A
 STONEGRINDER| rare drop from GORGON                                                                                | N/A
+SERPENTSKIN | rare drop from STORM DRAGON                                                                          | N/A
 DRAGON HELM | rare drop from WYRM                                                                                  | N/A
 SERAPHIM ROD| drop from SHADOW LORD (1)                                                                            | N/A
 KRAKEN SHELL| drop from KRAKEN                                                                                     | N/A
@@ -359,55 +360,55 @@ KRAKEN SHELL| drop from KRAKEN                                                  
 ------------------+--------------+-------+----------------+-------+----------
  LOCALE           | ITEM         | PRICE | SPELL          | PRICE | INN RATE
 ------------------+--------------+-------+----------------+-------+----------
-RAGNOTH VILLAGE   | BROADSWORD   |       | LAY ON HANDS   |   200 |    40 GP
-                  | LONGBOW      |       | NEUTRALIZE     |   200 |
-                  | WOODEN STAFF |       | FAIRIE FIRE    |   400 |
-                  | CAMBRIC      |       | CHILL TOUCH    |   400 |
-                  | FEATHER CAP  |       |  --            |  --   |
-                  | CLOAK        |       |  --            |  --   |
-- (page 2) ------ | LIFE ROOT    |       |  --            |  --   |
-                  | PANACEA      |       |  --            |  --   |
-                  | ANGEL'S TEAR |       |  --            |  --   |
+RAGNOTH VILLAGE   | BROADSWORD   |   300 | LAY ON HANDS   |   200 |    40 GP
+                  | LONGBOW      |   200 | NEUTRALIZE     |   200 |
+                  | WOODEN STAFF |   100 | FAIRIE FIRE    |   400 |
+                  | CAMBRIC      |    60 | CHILL TOUCH    |   400 |
+                  | FEATHER CAP  |    80 |  --            |  --   |
+                  | CLOAK        |    80 |  --            |  --   |
+- (page 2) ------ | LIFE ROOT    |    40 |  --            |  --   |
+                  | PANACEA      |   120 |  --            |  --   |
+                  | ANGEL'S TEAR |   400 |  --            |  --   |
 ------------------+--------------+-------+----------------+-------+----------
-TRISTRAN VILLAGE  | FRANCESCA    |       | EGRESSION      |   800 |   120 GP
-                  | SYLVAN BOW   |       | MALICE MIRROR  |  1100 |
-                  | BRIGANDINE   |       | INNER STRENGTH |  1100 |
-                  | FEATHER CAP  |       | UNHOLY SCOURGE |  1400 |
-                  | ESCUTCHEON   |       | SIREN'S ARIA   |  1200 |
-                  | GAUNTLET     |       | FEIGN DARKNESS |  2600 |
-- (page 2) ------ | COBALT BAND  |       |  --            |  --   |
-                  | JADE ARMLET  |       |  --            |  --   |
-                  | LAMIA'S TEAR |       |  --            |  --   |
-                  | LIFE ROOT    |       |  --            |  --   |
-                  | PANACEA      |       |  --            |  --   |
-                  | ANGEL'S TEAR |       |  --            |  --   |
+TRISTRAN VILLAGE  | FRANCESCA    |   600 | EGRESSION      |   800 |   120 GP
+                  | SYLVAN BOW   |   800 | MALICE MIRROR  |  1100 |
+                  | BRIGANDINE   |   400 | INNER STRENGTH |  1100 |
+                  | FEATHER CAP  |    80 | UNHOLY SCOURGE |  1400 |
+                  | ESCUTCHEON   |   600 | SIREN'S ARIA   |  1200 |
+                  | GAUNTLET     |   800 | FEIGN DARKNESS |  2600 |
+- (page 2) ------ | COBALT BAND  |  1100 |  --            |  --   |
+                  | JADE ARMLET  |  1100 |  --            |  --   |
+                  | LAMIA'S TEAR |  1100 |  --            |  --   |
+                  | LIFE ROOT    |    40 |  --            |  --   |
+                  | PANACEA      |   120 |  --            |  --   |
+                  | ANGEL'S TEAR |   400 |  --            |  --   |
 ------------------+--------------+-------+----------------+-------+----------
-GLADSHEIM VILLAGE | BROADSWORD   |       |  --            |  --   |   180 GP
-                  | FRANCESCA    |       |  --            |  --   |
-                  | BRIGANDINE   |       |  --            |  --   |
-                  | BASINET      |       |  --            |  --   |
-                  | ESCUTCHEON   |       |  --            |  --   |
-                  | DRAGON SCALE |       |  --            |  --   |
-- (page 2) ------ | LIFE ROOT    |       |  --            |  --   |
-                  | SOMA DROP    |       |  --            |  --   |
-                  | PANACEA      |       |  --            |  --   |
-                  | ANGEL'S TEAR |       |  --            |  --   |
+GLADSHEIM VILLAGE | BROADSWORD   |   300 |  --            |  --   |   180 GP
+                  | FRANCESCA    |   600 |  --            |  --   |
+                  | BRIGANDINE   |   400 |  --            |  --   |
+                  | BASINET      |   800 |  --            |  --   |
+                  | ESCUTCHEON   |   600 |  --            |  --   |
+                  | DRAGON SCALE |  1100 |  --            |  --   |
+- (page 2) ------ | LIFE ROOT    |    40 |  --            |  --   |
+                  | SOMA DROP    |   200 |  --            |  --   |
+                  | PANACEA      |   120 |  --            |  --   |
+                  | ANGEL'S TEAR |   400 |  --            |  --   |
 ------------------+--------------+-------+----------------+-------+----------
-ASNOTH ARMORY     | GLADIUS      |       | VIM ORISON     |  4400 |      N/A
-                  | WAR SCEPTER  |       | PHOENIX PLUME  |  4400 |
-                  | CUIRASS      |       | BRIMSTONE HAIL |  9800 |
-                  | BASINET      |       | RENDING GALE   |  9800 |
-                  | FULL SHIELD  |       | GODLY SUNDER   | 16000 |
-                  | GAUNTLET     |       | LEADEN GAZE    | 12000 |
-- (page 2) ------ | LIFE ROOT    |       |  --            |  --   |
-                  | PANACEA      |       |  --            |  --   |
-                  | ANGEL'S TEAR |       |  --            |  --   |
-                  | MANA DEW     |       |  --            |  --   |
+ASNOTH ARMORY     | GLADIUS      |  1200 | VIM ORISON     |  4400 |      N/A
+                  | WAR SCEPTER  |   900 | PHOENIX PLUME  |  4400 |
+                  | CUIRASS      |  1400 | BRIMSTONE HAIL |  9800 |
+                  | BASINET      |   800 | RENDING GALE   |  9800 |
+                  | FULL SHIELD  |  1100 | GODLY SUNDER   | 16000 |
+                  | GAUNTLET     |   800 | LEADEN GAZE    | 12000 |
+- (page 2) ------ | LIFE ROOT    |    40 |  --            |  --   |
+                  | PANACEA      |   120 |  --            |  --   |
+                  | ANGEL'S TEAR |   400 |  --            |  --   |
+                  | MANA DEW     |   800 |  --            |  --   |
 ------------------+--------------+-------+----------------+-------+----------
-ASNOTH AIRSHIP    | SOMA DROP    |       |  --            |  --   |    40 GP
-                  | PANACEA      |       |  --            |  --   |
-                  | ANGEL'S TEAR |       |  --            |  --   |
-                  | ELIXER       |       |  --            |  --   |
+ASNOTH AIRSHIP    | SOMA DROP    |   200 |  --            |  --   |    40 GP
+                  | PANACEA      |   120 |  --            |  --   |
+                  | ANGEL'S TEAR |   400 |  --            |  --   |
+                  | ELIXER       |  1100 |  --            |  --   |
 
 
  -------------------
@@ -421,7 +422,7 @@ notes:
  - [UNDEAD] foes are invulnerable to HP drain (i.e., negates the drain effect of BLOOD ASH sword)
 
 ================================================================================
-GLOOMWING [WINGED]
+THE GLOOMWING [WINGED]
 
 DAM DEF WIS AGI HIT EVA
 
@@ -433,7 +434,9 @@ STINGER
 Modifiers:
 
 ================================================================================
-VENOM WING [WINGED]
+THE VENOM WING [WINGED]
+
+Spoils: PANACEA [ 1/16]
 
 FANGS
 VENOMOUS CLOUD
@@ -441,7 +444,7 @@ STINGER
 VENOMOUS CLOUD
 
 ================================================================================
-TREANT
+THE TREANT
 
 CLAWS
 CLAWS
@@ -451,7 +454,7 @@ TENTACLES
 W-FIRE
 
 ================================================================================
-ROPER
+THE ROPER
 
 CLAWS
 CLAWS
@@ -461,7 +464,7 @@ TENTACLES
 W-FIRE
 
 ================================================================================
-CAVE TOAD
+THE CAVE TOAD
 
 FANGS
 FANGS
@@ -469,7 +472,7 @@ FANGS
 FANGS
 
 ================================================================================
-GIGAS TOAD
+THE GIGAS TOAD
 
 FANGS
 FANGS
@@ -477,7 +480,7 @@ FANGS
 FANGS
 
 ================================================================================
-OGRE
+THE OGRE
 
 Spoils: LIFE ROOT [ 1/16]
 
@@ -487,7 +490,7 @@ FRANCESCA
 FRANCESCA
 
 ================================================================================
-TITAN
+THE TITAN
 
 Spoils: OGRISH AXE [ 1/48]
 
@@ -497,7 +500,7 @@ OGRISH AXE
 EARTH SHATTER
 
 ================================================================================
-WRAITH [UNDEAD]
+THE WRAITH [UNDEAD]
 
 CLAWS
 CHILL TOUCH
@@ -507,7 +510,7 @@ VAMPIRIC TOUCH
 O-DEATH, W-FIRE
 
 ================================================================================
-SCORPION
+THE SCORPION
 
 STINGER
 CLAWS
@@ -515,7 +518,7 @@ STINGER
 STINGER
 
 ================================================================================
-SEA SCORPION [MARINE]
+THE SEA SCORPION [MARINE]
 
 CLAWS
 STINGER
@@ -523,7 +526,7 @@ CLAWS
 CLAWS
 
 ================================================================================
-GORGON
+THE GORGON
 
 Spoils: STONEGRINDER [ 1/64]
 
@@ -535,7 +538,7 @@ FANGS
 O-DEATH
 
 ================================================================================
-COCKATRICE
+THE COCKATRICE
 
 CLAWS
 CLAWS
@@ -545,7 +548,7 @@ STONE GAZE
 O-DEATH
 
 ================================================================================
-ROC
+THE ROC
 
 CLAWS
 STONE GAZE
@@ -555,7 +558,7 @@ STONE GAZE
 O-DEATH
 
 ================================================================================
-FIRE DRAKE [WINGED]
+THE FIRE DRAKE [WINGED]
 
 Spoils: DRAGON SCALE [ 1/32]
 
@@ -567,7 +570,7 @@ SERPENT'S BREATH
 O-FIRE, W-COLD
 
 ================================================================================
-STORM DRAGON [WINGED]
+THE STORM DRAGON [WINGED]
 
 Spoils: SERPENTSKIN [ 1/32]
 
@@ -579,7 +582,7 @@ STORM BREATH
 O-COLD, W-FIRE
 
 ================================================================================
-WYRM [WINGED]
+THE WYRM [WINGED]
 
 Spoils: DRAGON HELM [ 1/32]
 
@@ -591,7 +594,7 @@ MAELSTROM
 O-ELEMENT
 
 ================================================================================
-CROCODILE [MARINE]
+THE CROCODILE [MARINE]
 
 CLAWS
 CLAWS
@@ -599,7 +602,7 @@ CLAWS
 CLAWS
 
 ================================================================================
-FROST GATOR [MARINE]
+THE FROST GATOR [MARINE]
 
 CLAWS
 CLAWS
@@ -609,7 +612,7 @@ ARCTIC BLAST
 X-COLD, O-COLD, W-FIRE
 
 ================================================================================
-HERMIT [MARINE]
+THE HERMIT [MARINE]
 
 CLAWS
 CLAWS
@@ -619,7 +622,7 @@ CLAWS
 SHELL
 
 ================================================================================
-DIRE CRAB [MARINE]
+THE DIRE CRAB [MARINE]
 
 CLAWS
 CLAWS
@@ -636,9 +639,9 @@ SHELL
  -----------------
 
 ================================================================================
-MEDUSA
+THE MEDUSA
 
-Spoils: LAMIA'S TEAR [ 1/ 1]
+Spoils: ANGEL RING [ 1/ 1]
 
 CLAWS
 CLAWS
@@ -648,7 +651,9 @@ STONE GAZE
 O-DEATH, O-ENCHANTMENT
 
 ================================================================================
-DOPPLEGANGER [UNDEAD]
+THE DOPPLEGANGER [UNDEAD]
+
+Spoils: ELIXER [ 1/ 1]
 
 FANGS
 VAMPIRIC TOUCH
@@ -661,7 +666,7 @@ O-DEATH, COUNTER
 W-FIRE, RECOVER
 
 ================================================================================
-SHADOW LORD
+THE SHADOW LORD
 
 Spoils: SERAPHIM ROD [ 1/ 1]
 
@@ -671,7 +676,7 @@ FIRESTORM
 DEATHLY STRIKE
 
 ================================================================================
-SHADOW LORD (2)
+THE SHADOW LORD (2)
 
 BLOOD ASH
 ARCTIC BLAST
@@ -683,7 +688,7 @@ Modifiers:
 SHELL, CRITICAL
 
 ================================================================================
-SHADOW LORD (3) [UNDEAD]
+THE SHADOW LORD (3) [UNDEAD]
 
 VAMPIRIC TOUCH
 FANGS
@@ -695,7 +700,7 @@ Modifiers:
 W-FIRE, CRITICAL
 
 ================================================================================
-KRAKEN [MARINE]
+THE KRAKEN [MARINE]
 
 HP 3200 | GP 9800 | Spoils: KRAKEN SHELL [ 1/ 1]
 
@@ -716,17 +721,17 @@ O-FIRE, O-COLD, O-STATUS, RECOVER
 
 Enemy Skills:
 
-CLAWS - base DAMAGE
-FANGS - base DAMAGE; 1/2 chance of [POISON]
-TENTACLES - eight seperate attacks; damage = DAMAGE/4 (ignore ABSORB)
-STINGER - DAMAGE/3 (ignore ABSORB) and [POISON] to target
+ITS CLAWS - base DAMAGE
+ITS FANGS - base DAMAGE; 1/2 chance of [POISON]
+ITS TENTACLES - eight seperate attacks; damage = DAMAGE/4 (ignore ABSORB)
+ITS STINGER - DAMAGE/3 (ignore ABSORB) and [POISON] to target
 SERPENT'S BREATH - [FIRE]-elemental; DAMAGE/2 + WIS/4; entire party
-STORM BREATH - [COLD]-elemental; DAMAGE/2 + WIS/4; entire party
-VENOMOUS CLOUD - [POISON] entire party at 100% success, depending on base HIT (no damage)
-DEATHLY STRIKE - DAMAGE x1.25; add [DEATH]
-VAMPIRIC TOUCH - damage = 10% target mHP; (ignore ABSORB) heals 10% of enemy mHP
-EARTH SHATTER - non-elemental damage against party; damage = base WIS
-MAELSTROM - non-elemental damage against party; damage = WIS x1.25; induces [DEATH] with hit
+A STORMY BREATH - [COLD]-elemental; DAMAGE/2 + WIS/4; entire party
+A VENOMOUS CLOUD - [POISON] entire party at 100% success, depending on base HIT (no damage)
+A DEATHLY STRIKE - DAMAGE x1.25; add [DEATH]
+A VAMPIRIC TOUCH - damage = 10% target mHP; (ignore ABSORB) heals 10% of enemy mHP
+AN EARTH SHATTERING SPELL - non-elemental damage against party; damage = base WIS
+A MAELSTROM - non-elemental damage against party; damage = WIS x1.25; induces [DEATH] with hit
 
 
  --------
