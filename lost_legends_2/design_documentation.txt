@@ -311,7 +311,7 @@ DYNAMITE    - EXPLOSIVE THAT DESTROYS BLOCKAGE
 
 
  ---------------
-  TREASURE LIST 
+  TREASURE LIST
  ---------------
 
 ------------+------------------------------------------------------------------------------------------------------+----------------
@@ -752,9 +752,11 @@ EVADE - the derived value of AGILITY and armor evasion, which equals total chanc
 When determining hit and evasion percentages, simply subtract the target's EVADE value from the attacker's HIT value.
 
 
-Poison - the target will suffer damage equal to mHP/8 every round, until healed. If the poison is not neutralized by the end of battle, the target will sustain 1 damage for every step taken while poisoned. (under no condition can poison kill a target)
+Poison - the target will suffer damage equal to mHP/8 every round, until healed. If the poison is not neutralized by the end of
+battle, the target will sustain 1 damage for every step taken while poisoned. (under no condition can poison kill a target)
 
-Enchantment - the target will become paralyzed, (asleep) and unable to act for several rounds. The number of rounds is a randomly generated integer between 1 and 3.
+Enchantment - the target will become paralyzed, (asleep) and unable to act for several rounds. The number of rounds is a randomly
+generated integer between 1 and 3.
 
 Blindness - the target's hit% will be cut in half, until the condition is healed.
 
