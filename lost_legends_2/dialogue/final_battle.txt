@@ -1,77 +1,94 @@
-Edmund
-"I care not to know your narrative, as I care not to look upon darkness.
-We wield the fire of vengeance, and so shall this light extinguish the shadow!"
-
-Shadow Lord
-"This is your meager lot? Justice? Hmph."
-
-"An eye for an eye leaves the world blind."
-
-Maya
-"You would pardon forgiveness for your sins now?!"
-
-Shadow Lord
-"I care not for your forgiveness..."
-
-"Revenge is an inexorable cycle of reprisal provoking counter reprisal. You follow in the path of light, but ask yourselves--is justice not a sin in itself?"
-
-Edmund
-"Shut-up! Curse you! You will pay for your sins in Hell!"
-
-Shadow Lord
-"This is how you requite my mercy? Foolish cur."
-
-Glenn
-"Mercy? The charlatan speaks of mercy!"
-
-Shadow Lord
-"Ah, the coward of Ragnoth. I suppose you have come to atone for your cowardice, as well?"
-
-Glenn
-"My sins cannot be atoned for. I merely owe my life for Ragnoth."
-
-Shadow Lord
-"A martyr of self-pity, no less."
-
-Maya
-"Glenn..."
-
-Edmund
-"Enough of this repartee! You will answer for your sins with your own blood!"
-
-Maya
-(Gracious Sir Edmund... Has vengeance consumed you so?)
-
-Maya
-"We've endured many a loss, but is this truly the answer we seek?"
-
-Edmund
-"...Milady? What of the resistance?!"
-
-(The Prince...)
-
-Maya
-"We mustn't succumb to the ways of darkness, as did the Shadow Lord. Do you not understand, Sir Edmund? The plight of our people cannot be forsaken for revenge."
-
-"Vengeance is still an act of self."
-
-Edmund
-"..."
-
-Glenn
-"Vengeance is a thirst as insatiable as regret..."
-
-Shadow Lord
-"Then you accede, your journey is in vain."
-
-Maya
-"Surrender yourself to the Magistrate of Ragnoth, and you will not come to harm!"
-
-Shadow Lord
-"I see. You still wish to craft my doom..."
-
-"And if I humbly resist?"
-
-[Shadow Lord 2 battle ensues]
-
-"I shall pave my way to Arcania with your blood!"
++MAYA+
+"YOUR REIGN OF TERROR ENDS HERE,SHADOW LORD!"
+#
++SHADOW LORD+
+"I SEE.DO YOU NOT WISH TO JOIN ME INSTEAD?"
++MAYA+
+"... ... ..."
+#
++SHADOW LORD+
+"SIR EDMUND,ONCE LOYAL KINGSMAN OF ASNOTH...WOULD YOU NOT TAKE YOUR LORD'S PLACE BY MY SIDE?"
+#
++EDMUND+
+"I CARE NOT TO KNOW YOUR NARRATIVE,JUST AS I CARE NOT TO LOOK UPON DARKNESS.WE WIELD THE FIRE OF VENGEANCE,AND SO SHALL THIS LIGHT EXTINGUISH THE SHADOW!"
+#
++SHADOW LORD+
+"THIS IS YOUR MEAGER LOT?JUSTICE?HMPH."
+#
+"AN EYE FOR AN EYE LEAVES THE WORLD BLIND."
+#
++MAYA+
+"YOU WOULD PARDON FORGIVENESS FOR YOUR SINS NOW?!"
+#
++SHADOW LORD+
+"I CARE NOT FOR YOUR FORGIVENESS..."
+#
+"REVENGE IS AN INEXORABLE CYCLE OF REPRISAL PROVOKING COUNTER REPRISAL.YOU FOLLOW IN THE PATH OF LIGHT,BUT ASK YOURSELVES--IS JUSTICE NOT A SIN IN ITSELF?"
+#
++EDMUND+
+"SHUT-UP!CURSE YOU!YOU WILL PAY FOR YOUR SINS IN HELL!"
+#
++SHADOW LORD+
+"THIS IS HOW YOU REQUITE MY MERCY?FOOLISH CUR."
+#
++GLENN+
+"MERCY?THE CHARLATAN SPEAKS OF MERCY!"
+#
++SHADOW LORD+
+"AH,THE COWARD OF RAGNOTH.I SUPPOSE YOU HAVE COME TO ATONE FOR YOUR COWARDICE?"
+#
++GLENN+
+"MY SINS CANNOT BE ATONED FOR.I MERELY OWE MY LIFE FOR RAGNOTH."
+#
++SHADOW LORD+
+"A MARTYR OF SELF-PITY,NO LESS."
+#
++MAYA+
+"GLENN..."
+#
++EDMUND+
+"ENOUGH OF THIS REPARTEE!YOU WILL ANSWER FOR YOUR SINS WITH YOUR OWN BLOOD!"
+#
++MAYA+
+"GRACIOUS SIR EDMUND...HAS VENGEANCE CONSUMED US ALL?"
+#
++EDMUND+
+"...MILADY?"
+#
++MAYA+
+"WE'VE ENDURED MANY A LOSS,BUT IS THIS TRULY THE ANSWER WE SEEK?"
+#
++EDMUND+
+"BUT WHAT OF THE RESISTANCE?"
+#
++EDMUND+
+"THE PRINCE..."
+#
++MAYA+
+"WE MUSTN'T SUCCUMB TO THE WAYS OF DARKNESS,AS DID THE SHADOW LORD.DO YOU NOT UNDERSTAND?THE PLIGHT OF OUR PEOPLE CANNOT BE FORSAKEN FOR REVENGE."
+#
+"VENGEANCE IS STILL AN ACT OF SELF."
+#
++EDMUND+
+"........."
+#
++GLENN+
+"I KNOW TOO WELL THAT THE NEED FOR VENGEANCE IS AS INSATIABLE AS REGRET..."
+#
++GLENN+
+"WE HAVE ALL SUFFERED LOSSES,SIR EDMUND.LOOK INTO YOUR HEART THAT YOU DO NOT BECOME LIKE HIM."
+#
++SHADOW LORD+
+"SURELY,YOU DON'T BELIEVE THIS HOGWASH.YOU MUST ACCEDE THAT YOUR JOURNEY IS IN VAIN."
+#
++EDMUND+
+"MAYA..."
+#
++MAYA+
+"THERE CAN EXIST JUSTICE WITHOUT VENGEANCE,SHADOW LORD.SURRENDER YOURSELF TO THE MAGISTRATE OF RAGNOTH."
+#
++SHADOW LORD+
+"I SEE.YOU STILL WISH TO CRAFT MY DOOM..."
+#
++SHADOW LORD+
+"SO BE IT.I SHALL PAVE MY WAY TO ARCANIA WITH YOUR BLOOD!"
