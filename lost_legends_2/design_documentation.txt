@@ -157,6 +157,7 @@ notes:
  4% chance for every third gain; when determining "+ or - 1 to any" gains, simply randomize between STR, STA, WIS and AGI. (HP is
  excluded)
 
+
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Swords     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -211,7 +212,6 @@ KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    |  0  | +12 |  0  |  0  | +2  |
 FEATHER CAP | (none)                             |  0  | +2  | +4  |  0  | +2  | N/A                        | +1 WIS
 BASINET     | (none)                             |  0  | +6  |  0  |  0  | -2  | N/A                        | +1 STA, -1 AGI
 HEADBAND    |HEADWEAR WORN BY FIGHTERS           | +8  | +2  |  0  | +2  | +2  | N/A                        | +1 STR
-IOUN STONE  |MAGIC STONE THAT SURROUNDS THE HEAD |  0  | +2  | +4  | +2  | +4  | N/A                        | +1 to any
 SKULL VISAGE|GRIM HELMET USED BY UNDEAD ARMIES   |  0  | +4  | +8  | -2  | -2  |DRAIN, W-COLD               | +1 WIS, +1 STA, -1 AGI
 DRAGON HELM |HELMET THAT WARDS FIRE              |  0  | +8  |  0  |  0  | -2  |O-FIRE                      | +1 HP, +1 STA, -1 AGI
 RIBBON      |RIBBON THAT WARDS STATUS CHANGE     |  0  |  0  |  0  |  0  | +2  |O-STATUS                    | +1 to any
@@ -317,10 +317,98 @@ DYNAMITE    - EXPLOSIVE THAT DESTROYS BLOCKAGE
 ------------+------------------------------------------------------------------------------------------------------+----------------
  Treasure   | Location                                                                                             | Guarded by...
 ------------+------------------------------------------------------------------------------------------------------+----------------
-CALIBURN    | CELESTIAL REALM, B2                                                                                  | STORM DRAGON x3
-RUIN AXE    | CELESTIAL REALM, B2                                                                                  | TITAN x3
-ARTEMIS BOW | CELESTIAL REALM, B1                                                                                  | ROC x3
-VESPERTINE  | CELESTIAL REALM, B1                                                                                  | GORGON x3
+KENPO GI    | chest in TRISTRAN VILLAGE                                                                            | none
+POWER SASH  | search pot in house in TRISTRAN VILLAGE                                                              | none
+FLAMETONGUE | chest in ARCANIAN RUINS, 4F                                                                          | FIRE DRAKE
+WYRMSCORNE  | chest in ARCANIAN RUINS, B4                                                                          | FIRE DRAKE
+STORM RENDER| search pot in house in GLADSHEIM VILLAGE                                                             | none
+ACRID SHOT  | chest in FEY WOOD (2)                                                                                | none
+AEGIS SHIELD| chest in ARCANIAN RUINS, B2                                                                          | GORGON
+GOLD CAPOTE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
+EINHERJAR   | chest in VALHALLA PALACE                                                                             | none
+SKULL VISAGE| chest in VALHALLA PALACE, BARRACKS                                                                   | WRAITH x3
+DARK SHROUD | chest in ASNOTH WARSHIP, CARGO HOLD                                                                  | none
+MINERVA     | chest in FEY WOOD (1)                                                                                | none
+SERPENTSKIN | rare drop from STORM DRAGON                                                                          | N/A
+MIRROR MAIL | chest in ARCANIAN RUINS, 9F                                                                          | none
+GENJI GLOVE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
+PEGASUS SHOE| chest in ARCANIAN RUINS, 3F                                                                          | none
+ORNATE RING | chest in CELESTIAL REALM, B2                                                                         | STORM DRAGON x3
+RUIN AXE    | chest in CELESTIAL REALM, B2                                                                         | TITAN x3
+ARTEMIS BOW | chest in CELESTIAL REALM, B1                                                                         | ROC x3
+VESPERTINE  | chest in CELESTIAL REALM, B1                                                                         | GORGON x3
+ARCHON ROBES| chest in CELESTIAL REALM, B2                                                                         | none
+RIBBON      | chest in CELESTIAL REALM, B2; UNDERSEA SHRINE, 1F, B1 (3 total)                                      | none
+GASTRAPHETES| chest in UNDERSEA SHRINE, B1                                                                         | WYRM x2
+RUNIC STAFF | chest in UNDERSEA SHRINE, B1                                                                         | WYRM x3
+BLOOD ASH   | search first shelf in GIELGUD's room (ASNOTH CASTLE)                                                 | none
+MURASAME    | search skull in UNDERSEA SHRINE DETOUR                                                               | WRAITH
+HEADBAND    | comes equipped on GLENN                                                                              | N/A
+CALIBURN    | trade ADAMANT to weapon smith in SHIPBUILDER'S VILLAGE                                               | N/A
+OGRISH AXE  | rare drop from TITAN                                                                                 | N/A
+STONEGRINDER| rare drop from GORGON                                                                                | N/A
+DRAGON HELM | rare drop from WYRM                                                                                  | N/A
+SERAPHIM ROD| drop from SHADOW LORD (1)                                                                            | N/A
+KRAKEN SHELL| drop from KRAKEN                                                                                     | N/A
+
+
+ -----------
+  SHOP LIST
+ -----------
+
+------------------+--------------+-------+----------------+-------+----------
+ LOCALE           | ITEM         | PRICE | SPELL          | PRICE | INN RATE
+------------------+--------------+-------+----------------+-------+----------
+RAGNOTH VILLAGE   | BROADSWORD   |       | LAY ON HANDS   |   200 |    40 GP
+                  | LONGBOW      |       | NEUTRALIZE     |   200 |
+                  | WOODEN STAFF |       | FAIRIE FIRE    |   400 |
+                  | CAMBRIC      |       | CHILL TOUCH    |   400 |
+                  | FEATHER CAP  |       |  --            |  --   |
+                  | CLOAK        |       |  --            |  --   |
+- (page 2) ------ | LIFE ROOT    |       |  --            |  --   |
+                  | PANACEA      |       |  --            |  --   |
+                  | ANGEL'S TEAR |       |  --            |  --   |
+------------------+--------------+-------+----------------+-------+----------
+TRISTRAN VILLAGE  | FRANCESCA    |       | EGRESSION      |   800 |   120 GP
+                  | SYLVAN BOW   |       | MALICE MIRROR  |  1100 |
+                  | BRIGANDINE   |       | INNER STRENGTH |  1100 |
+                  | FEATHER CAP  |       | UNHOLY SCOURGE |  1400 |
+                  | ESCUTCHEON   |       | SIREN'S ARIA   |  1200 |
+                  | GAUNTLET     |       | FEIGN DARKNESS |  2600 |
+- (page 2) ------ | COBALT BAND  |       |  --            |  --   |
+                  | JADE ARMLET  |       |  --            |  --   |
+                  | LAMIA'S TEAR |       |  --            |  --   |
+                  | LIFE ROOT    |       |  --            |  --   |
+                  | PANACEA      |       |  --            |  --   |
+                  | ANGEL'S TEAR |       |  --            |  --   |
+------------------+--------------+-------+----------------+-------+----------
+GLADSHEIM VILLAGE | BROADSWORD   |       |  --            |  --   |   180 GP
+                  | FRANCESCA    |       |  --            |  --   |
+                  | BRIGANDINE   |       |  --            |  --   |
+                  | BASINET      |       |  --            |  --   |
+                  | ESCUTCHEON   |       |  --            |  --   |
+                  | DRAGON SCALE |       |  --            |  --   |
+- (page 2) ------ | LIFE ROOT    |       |  --            |  --   |
+                  | SOMA DROP    |       |  --            |  --   |
+                  | PANACEA      |       |  --            |  --   |
+                  | ANGEL'S TEAR |       |  --            |  --   |
+------------------+--------------+-------+----------------+-------+----------
+ASNOTH ARMORY     | GLADIUS      |       | VIM ORISON     |  4400 |      N/A
+                  | WAR SCEPTER  |       | PHOENIX PLUME  |  4400 |
+                  | CUIRASS      |       | BRIMSTONE HAIL |  9800 |
+                  | BASINET      |       | RENDING GALE   |  9800 |
+                  | FULL SHIELD  |       | GODLY SUNDER   | 16000 |
+                  | GAUNTLET     |       | LEADEN GAZE    | 12000 |
+- (page 2) ------ | LIFE ROOT    |       |  --            |  --   |
+                  | PANACEA      |       |  --            |  --   |
+                  | ANGEL'S TEAR |       |  --            |  --   |
+                  | MANA DEW     |       |  --            |  --   |
+------------------+--------------+-------+----------------+-------+----------
+ASNOTH AIRSHIP    | SOMA DROP    |       |  --            |  --   |    40 GP
+                  | PANACEA      |       |  --            |  --   |
+                  | ANGEL'S TEAR |       |  --            |  --   |
+                  | ELIXER       |       |  --            |  --   |
+
 
  -------------------
   NORMAL ENCOUNTERS
@@ -391,6 +479,8 @@ FANGS
 ================================================================================
 OGRE
 
+Spoils: LIFE ROOT [ 1/16]
+
 FRANCESCA
 FRANCESCA
 FRANCESCA
@@ -398,6 +488,8 @@ FRANCESCA
 
 ================================================================================
 TITAN
+
+Spoils: OGRISH AXE [ 1/48]
 
 OGRISH AXE
 OGRISH AXE
@@ -433,6 +525,8 @@ CLAWS
 ================================================================================
 GORGON
 
+Spoils: STONEGRINDER [ 1/64]
+
 CLAWS
 STONE GAZE
 STONE GAZE
@@ -463,6 +557,8 @@ O-DEATH
 ================================================================================
 FIRE DRAKE [WINGED]
 
+Spoils: DRAGON SCALE [ 1/32]
+
 CLAWS
 SERPENT'S BREATH
 CLAWS
@@ -473,6 +569,8 @@ O-FIRE, W-COLD
 ================================================================================
 STORM DRAGON [WINGED]
 
+Spoils: SERPENTSKIN [ 1/32]
+
 CLAWS
 STORM BREATH
 CLAWS
@@ -482,6 +580,8 @@ O-COLD, W-FIRE
 
 ================================================================================
 WYRM [WINGED]
+
+Spoils: DRAGON HELM [ 1/32]
 
 CLAWS
 SERPENT'S BREATH
@@ -538,10 +638,14 @@ SHELL
 ================================================================================
 MEDUSA
 
+Spoils: LAMIA'S TEAR [ 1/ 1]
+
 CLAWS
 CLAWS
 STONE GAZE
 STONE GAZE
+
+O-DEATH, O-ENCHANTMENT
 
 ================================================================================
 DOPPLEGANGER [UNDEAD]
@@ -558,6 +662,8 @@ W-FIRE, RECOVER
 
 ================================================================================
 SHADOW LORD
+
+Spoils: SERAPHIM ROD [ 1/ 1]
 
 SCOURGE
 WAR SCEPTER
