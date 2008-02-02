@@ -126,20 +126,20 @@ notes:
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
  Spell        |Req.|Hit%| Effect                                                                        | Description
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
-LAY ON HANDS  | -- |100%| heals damage: base WIS = amount / single ally                                 |HEAL SINGLE ALLY
-NEUTRALIZE    | -- |100%| heals any status ailmentation, except [DEATH] / single ally                   |CURE ALLY STATUS
-EGRESSION     | -- |100%| warps out of dungeons / battles                                               |EXIT DUNGEON
+LAY ON HANDS  |  8 |100%| heals damage: base WIS = amount / single ally                                 |HEAL SINGLE ALLY
+NEUTRALIZE    |  8 |100%| heals any status ailmentation, except [DEATH] / single ally                   |CURE ALLY STATUS
+EGRESSION     |  8 |100%| warps out of dungeons / battles                                               |EXIT DUNGEON
 VIM ORISON    | 32 |100%| heals party: WIS/1.75 = amount                                                |HEAL ALL ALLIES
 MALICE MIRROR | 16 |100%| increases single ally ABSORB by 6-12                                          |RAISE ALLY DEFENSE
 INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12                                          |RAISE ALLY ATTACK
 PHOENIX PLUME | 24 |100%| raises fallen ally with 20% mHP                                               |RESURRECT FALLEN ALLY
-FAERIE FIRE   | -- | 90%| damages enemy: WIS x1.5 = damage / [FIRE]-elemental                           |MINOR FIRE DAMAGE ON ENEMY
-CHILL TOUCH   | -- | 90%| damages enemy: WIS x1.5 = damage / [COLD]-elemental                           |MINOR COLD DAMAGE ON ENEMY
+FAERIE FIRE   |  8 | 90%| damages enemy: WIS x1.5 = damage / [FIRE]-elemental                           |MINOR FIRE DAMAGE ON ENEMY
+CHILL TOUCH   |  8 | 90%| damages enemy: WIS x1.5 = damage / [COLD]-elemental                           |MINOR COLD DAMAGE ON ENEMY
 BRIMSTONE HAIL| 24 | 80%| damages all: WIS x1.75 = damage / [FIRE]-elemental                            |HEAVY FIRE DAMAGE ON ALL
 RENDING GALE  | 24 | 80%| damages all: WIS x1.75 = damage / [COLD]-elemental                            |HEAVY COLD DAMAGE ON ALL
 GODLY SUNDER  | 32 | 80%| damages all: WIS x1.5 = damage / non-elemental; x2 vs. marine; x1.5 vs. winged|NON-ELEMENTAL DAMAGE ON ALL
-UNHOLY SCOURGE|  8 | 70%| damages all: WIS/1.5 = damage; causes [POISON] status                         |MINOR DAMAGE AND POISON ALL
-SIREN'S ARIA  | -- | 70%| induces [ENCHANT] status on all enemies for 1-3 rounds                        |INDUCE SLEEP ON ENEMY
+UNHOLY SCOURGE| 16 | 70%| damages all: WIS/1.5 = damage; causes [POISON] status                         |MINOR DAMAGE AND POISON ALL
+SIREN'S ARIA  |  8 | 70%| induces [ENCHANT] status on all enemies for 1-3 rounds                        |INDUCE SLEEP ON ENEMY
 FEIGN DARKNESS| 16 | 70%| induces [BLIND] status on all enemies; raises party EVADE by 2-4              |BLIND FOES/RAISE ALLY EVADE
 LEADEN GAZE   | 32 | 60%| induces [DEATH] status on enemy                                               |PETRIFY ENEMY
 
@@ -744,12 +744,15 @@ WISDOM - the base value of magic power; may not exceed 99
 AGILITY - the base value of hit and evasion; may not exceed 99
 
 DAMAGE - the derived value of STRENGTH and weapon damage, which equals total attack damage; may not exceed 255
-ABSORB - the derived value of STAMINA and armor defense, which equals total defense power; may not exceed 99
+ABSORB - the derived value of STAMINA and armor defense, which equals total defense power; may not exceed 255
 
 HIT - the derived value of AGILITY and weapon accuracy, which equals total attack accuracy; may not exceed 99
-EVADE - the derived value of AGILITY and armor evasion, which equals total chance to evade; may not exceed 32
+HIT = AGILITY/2 + derived equipment bonus
 
-When determining hit and evasion percentages, simply subtract the target's EVADE value from the attacker's HIT value.
+EVADE - the derived value of AGILITY and armor evasion, which equals total chance to evade; may not exceed 32
+EVADE = AGILITY/8 + derived equipment bonus
+
+When determining hit and evasion in battle, simply subtract the target's EVADE value from the attacker's HIT value.
 
 
 Poison - the target will suffer damage equal to mHP/8 every round, until healed. If the poison is not neutralized by the end of
