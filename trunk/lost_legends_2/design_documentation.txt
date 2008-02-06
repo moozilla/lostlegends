@@ -33,7 +33,7 @@ TABLE OF CONTENTS
  2.b ARMORY
  2.c MODIFIERS
  2.d KEY ITEMS
- 2.e TREASURE LIST
+ 2.e TREASURE LIST / RANDOM ENCOUNTERS
  2.f SHOP LIST
  2.g BESTIARY DATA
      -NORMAL ENCOUNTERS
@@ -49,6 +49,7 @@ TABLE OF CONTENTS
 ====================================================================================================================================
   1.) CHARACTER DATA
 ====================================================================================================================================
+
 
 These are starting positions for each player character.
 
@@ -152,17 +153,17 @@ LAY ON HANDS  |  8 |100%| heals damage: base WIS = amount / single ally         
 NEUTRALIZE    |  8 |100%| heals any status ailmentation, except [DEATH] / single ally                   |CURE ALLY STATUS
 EGRESSION     |  8 |100%| warps out of dungeons / battles                                               |EXIT DUNGEON
 VIM ORISON    | 32 |100%| heals party: WIS/1.75 = amount                                                |HEAL ALL ALLIES
-MALICE MIRROR | 16 |100%| increases single ally ABSORB by 6-12                                          |RAISE ALLY DEFENSE
-INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12                                          |RAISE ALLY ATTACK
-PHOENIX PLUME | 24 |100%| raises fallen ally with 20% mHP                                               |RESURRECT FALLEN ALLY
-FAERIE FIRE   |  8 | 90%| damages enemy: WIS x1.5 = damage / [FIRE]-elemental                           |MINOR FIRE DAMAGE ON ENEMY
-CHILL TOUCH   |  8 | 90%| damages enemy: WIS x1.5 = damage / [COLD]-elemental                           |MINOR COLD DAMAGE ON ENEMY
-BRIMSTONE HAIL| 24 | 80%| damages all: WIS x1.75 = damage / [FIRE]-elemental                            |HEAVY FIRE DAMAGE ON ALL
-RENDING GALE  | 24 | 80%| damages all: WIS x1.75 = damage / [COLD]-elemental                            |HEAVY COLD DAMAGE ON ALL
-GODLY SUNDER  | 32 | 80%| damages all: WIS x1.5 = damage / non-elemental; x2 vs. marine; x1.5 vs. winged|NON-ELEMENTAL DAMAGE ON ALL
-UNHOLY SCOURGE| 16 | 70%| damages all: WIS/1.5 = damage; causes [POISON] status                         |MINOR DAMAGE AND POISON ALL
+MALICE MIRROR | 16 |100%| increases single ally ABSORB by 6-12                                          |RAISE ALLY DEF
+INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12                                          |RAISE ALLY ATT
+PHOENIX PLUME | 24 |100%| raises fallen ally with 20% mHP                                               |RAISE FALLEN ALLY
+FAERIE FIRE   |  8 | 90%| damages enemy: WIS x1.5 = damage / [FIRE]-elemental                           |MINOR FIRE DMG ON ENEMY
+CHILL TOUCH   |  8 | 90%| damages enemy: WIS x1.5 = damage / [COLD]-elemental                           |MINOR COLD DMG ON ENEMY
+BRIMSTONE HAIL| 24 | 80%| damages all: WIS x1.75 = damage / [FIRE]-elemental                            |HEAVY FIRE DMG ON ALL
+RENDING GALE  | 24 | 80%| damages all: WIS x1.75 = damage / [COLD]-elemental                            |HEAVY COLD DMG ON ALL
+GODLY SUNDER  | 32 | 80%| damages all: WIS x1.5 = damage / non-elemental; x2 vs. marine; x1.5 vs. winged|NON-ELEMENTAL DMG ON ALL
+UNHOLY SCOURGE| 16 | 70%| damages all: WIS/1.5 = damage; causes [POISON] status                         |MINOR DMG AND POISON ALL
 SIREN'S ARIA  |  8 | 70%| induces [ENCHANT] status on all enemies for 1-3 rounds                        |INDUCE SLEEP ON ENEMY
-FEIGN DARKNESS| 16 | 70%| induces [BLIND] status on all enemies; raises party EVADE by 2-4              |BLIND FOES/RAISE ALLY EVADE
+FEIGN DARKNESS| 16 | 70%| induces [BLIND] status on all enemies; raises party EVADE by 2-4              |BLIND FOES/RAISE ALLY EVA
 LEADEN GAZE   | 32 | 60%| induces [DEATH] status on enemy                                               |PETRIFY ENEMY
 
 
@@ -185,10 +186,10 @@ notes:
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 BROADSWORD  | (none)                             | +12 |  0  |  0  | +12 |  0  | N/A                        | +1 STR, -1 WIS
 GLADIUS     | (none)                             | +18 |  0  |  0  | +12 |  0  | N/A                        | +2 STR, -1 WIS
-FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 |  0  | +6  | +12 |  0  |X-FIRE                      | +1 STR
+FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 |  0  | +8  | +12 |  0  |X-FIRE                      | +1 STR
 WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 |  0  |  0  | +12 |  0  |X-DRAGON, (BRIMSTONE HAIL)  | +2 STR
-EINHERJAR   |SWORD THAT AVENGES ITS WIELDER      | +20 | +6  |  0  | +10 | +2  |COUNTER                     | +1 STA, +1 STR
-CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +4  | +4  | +12 |  0  |CRITICAL, (GODLY SUNDER)    | +2 STR
+EINHERJAR   |SWORD THAT AVENGES ITS WIELDER      | +20 | +8  |  0  | +10 | +2  |COUNTER                     | +1 STA, +1 STR
+CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +4  | +8  | +12 |  0  |CRITICAL, (GODLY SUNDER)    | +2 STR
 BLOOD ASH   |BRITTLE SWORD THAT STEALS LIFE      |  +2 |  0  |  0  |  -2 |  0  |DRAIN                       | +1 HP, -1 to any
 MURASAME    |FABLED SWORD OF DARKNESS            | +18 |  0  |  0  | +14 | +4  |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -198,7 +199,7 @@ FRANCESCA   | (none)                             | +16 |  0  |  0  | +4  | -4  |
 OGRISH AXE  |EFFECTIVE VS. OGRES                 | +20 |  0  |  0  | +4  | -4  |X-OGRE                      | +4 STR, +1 HP, -1 AGI
 STORM RENDER|AXE THAT CONJURES STORMS            | +36 |  0  | +4  | +4  | -4  |X-COLD, (RENDING GALE)      | +2 STR, +1 HP, -1 AGI
 STONEGRINDER|RIDDEN WITH A GORGON'S CURSE        | +24 |  0  |  0  | +4  | -4  |X-DEATH                     | +2 STR, +1 STA, -1 AGI
-RUIN AXE    |AN ANCIENT, ENCHANTED AXE           | +44 | +4  |  0  | +4  | -4  |X-ENCHANT                   | +2 STR, +1 HP, -1 AGI
+RUIN AXE    |AN ANCIENT,ENCHANTED AXE            | +44 | +4  |  0  | +4  | -4  |X-ENCHANT                   | +2 STR, +1 HP, -1 AGI
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Bows       | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -206,7 +207,7 @@ LONG BOW    | (none)                             |  +8 | -2  |  0  | +16 | -2  |
 SYLVAN BOW  |BOW THAT ENHANCES MAGIC             | +14 | -2  | +4  | +16 | -2  |X-WINGED                    | +2 AGI, +1 WIS
 ACRID SHOT  |BOW TIPPED WITH VENOM               | +18 | -2  |  0  | +16 | -2  |X-WINGED, X-POISON          | +2 AGI, +1 STR
 ARTEMIS BOW | (none)                             | +22 |  0  | +6  | +16 | -2  |X-WINGED                    | +4 AGI, +1 STR
-GASTRAPHETES|A LIGHTWEIGHT CROSSBOW              | +28 |  0  |  0  | +20 |  0  |X-WINGED, CRITICAL          | +2 AGI, +1 STR
+GASTRAPHETES|VERY LIGHT CROSSBOW                 | +28 |  0  |  0  | +20 |  0  |X-WINGED, CRITICAL          | +2 AGI, +1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Staves     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -223,7 +224,7 @@ PISTOL*     | (none)                             | +8  |  0  |  0  | +32 |  0  |
  Shields    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 CLOAK       |CLOAK USED AS A SHIELD              |  0  |  +1 |  0  |  0  | +4  | N/A                        | +1 AGI
-ESCUTCHEON  |A SMALL FENCING SHIELD              |  0  |  +2 |  0  |  0  | +2  | N/A                        | +1 HP
+ESCUTCHEON  |SMALL FENCING SHIELD                |  0  |  +2 |  0  |  0  | +2  | N/A                        | +1 HP
 FULL SHIELD | (none)                             |  0  |  +4 |  0  |  0  | +4  | N/A                        | +1 HP
 AEGIS SHIELD|SHIELD THAT WARDS GORGONS           |  0  |  +8 |  0  |  0  | +4  |O-DEATH                     | +1 HP, +1 STA
 GOLD CAPOTE |LIGHT CAPE USED AS A SHIELD         |  0  |  +2 | +6  |  0  | +8  | N/A                        | +2 AGI, +1 WIS
@@ -241,7 +242,7 @@ RIBBON      |RIBBON THAT WARDS STATUS CHANGE     |  0  |  0  |  0  |  0  | +2  |
  Armor      | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 CAMBRIC     | (none)                             |  0  |  +8 |  0  |  0  | +2  |W-FIRE                      | +1 HP, +1 WIS
-BRIGANDINE  | (none)                             |  0  | +14 |  0  |  0  | +2  |W-FIRE                      | +2 HP, +1 STA
+BRIGANDINE  | (none)                             |  0  | +14 |  0  |  0  | +2  | N/A                        | +2 HP, +1 STA
 CUIRASS     | (none)                             |  0  | +20 |  0  |  0  | -2  | N/A                        | +6 HP, +2 STA, -1 AGI
 KENPO GI    |TRAINING GARB WORN BY FIGHTERS      | +12 | +10 |  0  | +2  | +4  |W-FIRE, COUNTER             | +2 HP, +1 STR
 DARK SHROUD |SWIFT CLOTHING WORN BY NINJAS       |  0  | +14 |  0  | +4  | +8  |W-FIRE                      | +4 HP, +1 AGI
@@ -267,12 +268,12 @@ ORNATE RING |WARDS MAGIC                         | +2  | +2  | +2  | +2  | +2  |
 ------------+------------------------------------+----------------------------------------------------------------------------------
  Alchemy    | Description                        | Effect
 ------------+------------------------------------+----------------------------------------------------------------------------------
-LIFE ROOT   |RECOVERS 12-24 HP                   | Restores 12-24 HP
-PANACEA     |RESTORES STATUS                     | Cures [POISON] and / or [BLIND] status
-MANA DEW    |RESTORES MANA                       | Restores a spell charge
-ANGEL'S TEAR|RESURRECTS FALLEN ALLY              | Restores a fallen ally with 1 HP
-SOMA DROP   |RESTORES 50% OF MAX HP              | Restores 50% of mHP
-ELIXER      |FULLY RESTORES HP/STATUS            | Restores all HP and cures [POISON] and / or [BLIND] status
+LIFE ROOT   |RESTORE 12-24 HP                    | Restores 12-24 HP
+PANACEA     |RESTORE STATUS                      | Cures [POISON] and / or [BLIND] status
+MANA DEW    |RESTORE MANA                        | Restores a spell charge
+ANGEL'S TEAR|RAISE FALLEN ALLY                   | Restores a fallen ally with 1 HP
+SOMA DROP   |RESTORE 50% MAX HP                  | Restores 50% of mHP
+ELIXER      |FULLY RESTORE HP/STATUS             | Restores all HP and cures [POISON] and / or [BLIND] status
 
 * Special equipment only used by MARSHAL
 
@@ -331,12 +332,12 @@ RECOVERY  - automatically recovers 4-8% mHP per round
 RUNE KEY    - KEY TO THE ARCANIAN RUINS
 MANA SPHERE - MAGICAL RELIC OF THE ARCANIANS
 ADAMANT ORE - POWERFUL METAL USED IN FORGING
-DYNAMITE    - EXPLOSIVE THAT DESTROYS BLOCKAGE
+DYNAMITE    - EXPLOSIVE THAT DESTROYS ROCKS
 
 
- ---------------
-  TREASURE LIST
- ---------------
+ -----------------------------------
+  TREASURE LIST / RANDOM ENCOUNTERS
+ -----------------------------------
 
 
 ------------+------------------------------------------------------------------------------------------------------+----------------
@@ -347,6 +348,7 @@ MINERVA     | chest in FEY WOOD (2)                                             
 KENPO GI    | chest in TRISTRAN VILLAGE                                                                            | none
 POWER SASH  | search pot in house in TRISTRAN VILLAGE                                                              | none
 FLAMETONGUE | chest in ARCANIAN RUINS, 4F                                                                          | FIRE DRAKE
+MANA SPHERE | chest in ARCANIAN RUINS, 4F (x2)                                                                     | none
 WYRMSCORNE  | chest in ARCANIAN RUINS, B4                                                                          | FIRE DRAKE
 AEGIS SHIELD| chest in ARCANIAN RUINS, B2                                                                          | GORGON
 PEGASUS SHOE| chest in ARCANIAN RUINS, 3F                                                                          | none
@@ -354,11 +356,13 @@ MIRROR MAIL | chest in ARCANIAN RUINS, 9F                                       
 STORM RENDER| search pot in house in GLADSHEIM VILLAGE                                                             | none
 GOLD CAPOTE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
 GENJI GLOVE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
+DYNAMITE    | purchase from man in house for 32000 GP                                                              | none
 EINHERJAR   | chest in VALHALLA PALACE                                                                             | none
 SKULL VISAGE| chest in VALHALLA PALACE, BARRACKS                                                                   | WRAITH x3
 DARK SHROUD | chest in ASNOTH WARSHIP, CARGO HOLD                                                                  | none
 ORNATE RING | chest in CELESTIAL REALM, B2                                                                         | STORM DRAGON x3
 RUIN AXE    | chest in CELESTIAL REALM, B2                                                                         | TITAN x3
+ADAMANT ORE | chest in CELESTIAL REALM, B2                                                                         | none
 ARTEMIS BOW | chest in CELESTIAL REALM, B1                                                                         | ROC x3
 VESPERTINE  | chest in CELESTIAL REALM, B1                                                                         | GORGON x3
 ARCHON ROBES| chest in CELESTIAL REALM, B2                                                                         | none
@@ -368,6 +372,7 @@ RUNIC STAFF | chest in UNDERSEA SHRINE, B1                                      
 BLOOD ASH   | search first shelf in GIELGUD's room (ASNOTH CASTLE)                                                 | none
 MURASAME    | search skull in UNDERSEA SHRINE DETOUR                                                               | WRAITH
 HEADBAND    | comes equipped on GLENN                                                                              | N/A
+RUNE KEY    | recieve from man in SHIPBUILDER'S VILLAGE                                                            | none
 CALIBURN    | trade ADAMANT to weapon smith in SHIPBUILDER'S VILLAGE                                               | N/A
 ANGEL RING  | drop from MEDUSA                                                                                     | N/A
 OGRISH AXE  | rare drop from TITAN                                                                                 | N/A
@@ -376,6 +381,34 @@ SERPENTSKIN | rare drop from STORM DRAGON                                       
 DRAGON HELM | rare drop from WYRM                                                                                  | N/A
 SERAPHIM ROD| drop from SHADOW LORD (1)                                                                            | N/A
 KRAKEN SHELL| drop from KRAKEN                                                                                     | N/A
+
+
+ -------------------
+  RANDOM ENCOUNTERS
+ -------------------
+
+
+ - when determining an enemy party, the game simply generates 1 through 3 enemies
+
+----------------------------+----------------------------------------+------
+ Location                   | Enemy Party (in oder of priority)      | Rate
+----------------------------+----------------------------------------+------
+TERRA OVERWORLD             | GLOOMWING, TREANT, SCORPION, OGRE      |  16
+TERRA UNDERWORLD            | OGRE, COCKATRICE                       |  16
+TERRA SEA                   | CROCODILE, HERMIT, SEA SCORPION        |  24
+GORGON CAVE                 | CAVE TOAD, SCORPION, COCKATRICE        |  16
+ARCANIAN RUINS, 1F-4F       | WRAITH, OGRE, TITAN                    |   8
+ARCANIAN RUINS, 5F-9F       | TITAN, ROC, FIRE DRAKE, GORGON         |   8
+ARCANIAN RUINS, B1-B4       | WRAITH, GORGON                         |   8
+ASNOTH WARSHIP              | VENOMWING, WRAITH, OGRE                |  16
+FEY WOOD (both)             | VENOMWING, ROPER, GLOOMWING            |  16
+RAGNOTH RUINS - TOWER       | WRAITH                                 |   8
+UNDERSEA SHRINE, 1F, B1, B2 | GIGAS TOAD, DIRE CRAB, FROST GATOR     |   8
+UNDERSEA SHRINE, DETOUR     | DIRE CRAB, WYRM, FIRE DRAKE, GORGON    |   8
+VALHALLA PALACE             | TITAN                                  |  16
+VALHALLA PALACE, BARRACKS   | WRAITH                                 |   8
+CELESTIAL REALM, B1, B3, B4 | FIRE DRAKE, GORGON, STORM DRAGON, WYRM |  16
+CELESTIAL REALM, B2         | STORM DRAGON, TITAN, WYRM, FIRE DRAKE  |  24
 
 
  -----------
@@ -457,7 +490,9 @@ notes:
 ================================================================================
 THE GLOOMWING [WINGED]
 
-DAM DEF WIS AGI HIT EVA
+HP 0036 | GP 0012 | Spoils: (none)
+
+DAM 028 | DEF 006 | WIS 00 | AGI 24 | HIT 72% | EVA 12%
 
 FANGS
 FANGS
@@ -465,6 +500,8 @@ STINGER
 STINGER
 
 Modifiers:
+
+O-POISON, W-FIRE
 
 ================================================================================
 THE VENOM WING [WINGED]
@@ -479,10 +516,16 @@ VENOMOUS CLOUD
 ================================================================================
 THE TREANT
 
+HP 0042 | GP 0024 | Spoils: (none)
+
+DAM 036 | DEF 008 | WIS 00 | AGI 16 | HIT 72% | EVA 08%
+
 CLAWS
 CLAWS
 CLAWS
 TENTACLES
+
+Modifiers:
 
 W-FIRE
 
@@ -494,15 +537,25 @@ CLAWS
 TENTACLES
 TENTACLES
 
+Modifiers:
+
 W-FIRE
 
 ================================================================================
 THE CAVE TOAD
 
+HP 0038 | GP 0014 | Spoils: (none)
+
+DAM 032 | DEF 006 | WIS 00 | AGI 22 | HIT 72% | EVA 08%
+
 FANGS
 FANGS
 FANGS
 FANGS
+
+Modifiers:
+
+O-POISON
 
 ================================================================================
 THE GIGAS TOAD
@@ -512,15 +565,23 @@ FANGS
 FANGS
 FANGS
 
+Modifiers:
+
 ================================================================================
 THE OGRE
 
-Spoils: LIFE ROOT [ 1/16]
+HP 0056 | GP 0042 | Spoils: LIFE ROOT [ 1/16]
+
+DAM 042 | DEF 012 | WIS 00 | AGI 12 | HIT 74% | EVA 08%
 
 FRANCESCA
 FRANCESCA
 FRANCESCA
 FRANCESCA
+
+Modifiers:
+
+(none)
 
 ================================================================================
 THE TITAN
@@ -532,6 +593,8 @@ OGRISH AXE
 OGRISH AXE
 EARTH SHATTER
 
+Modifiers:
+
 ================================================================================
 THE WRAITH [UNDEAD]
 
@@ -540,15 +603,25 @@ CHILL TOUCH
 FANGS
 VAMPIRIC TOUCH
 
+Modifiers:
+
 O-DEATH, W-FIRE
 
 ================================================================================
 THE SCORPION
 
+HP 0038 | GP 0012 | Spoils: (none)
+
+DAM 028 | DEF 006 | WIS 00 | AGI 32 | HIT 78% | EVA 12%
+
 STINGER
 CLAWS
 STINGER
 STINGER
+
+Modifiers:
+
+O-POISON
 
 ================================================================================
 THE SEA SCORPION [MARINE]
@@ -558,15 +631,19 @@ STINGER
 CLAWS
 CLAWS
 
+Modifiers:
+
 ================================================================================
 THE GORGON
 
 Spoils: STONEGRINDER [ 1/64]
 
 CLAWS
-STONE GAZE
-STONE GAZE
+LEADEN GAZE
+SIREN'S ARIA
 FANGS
+
+Modifiers:
 
 O-DEATH
 
@@ -576,7 +653,9 @@ THE COCKATRICE
 CLAWS
 CLAWS
 CLAWS
-STONE GAZE
+LEADEN GAZE
+
+Modifiers:
 
 O-DEATH
 
@@ -584,9 +663,11 @@ O-DEATH
 THE ROC
 
 CLAWS
-STONE GAZE
+LEADEN GAZE
 CLAWS
-STONE GAZE
+LEADEN GAZE
+
+Modifiers:
 
 O-DEATH
 
@@ -600,6 +681,8 @@ SERPENT'S BREATH
 CLAWS
 SERPENT'S BREATH
 
+Modifiers:
+
 O-FIRE, W-COLD
 
 ================================================================================
@@ -611,6 +694,8 @@ CLAWS
 STORM BREATH
 CLAWS
 STORM BREATH
+
+Modifiers:
 
 O-COLD, W-FIRE
 
@@ -624,6 +709,8 @@ SERPENT'S BREATH
 STORM BREATH
 MAELSTROM
 
+Modifiers:
+
 O-ELEMENT
 
 ================================================================================
@@ -634,6 +721,8 @@ CLAWS
 CLAWS
 CLAWS
 
+Modifiers:
+
 ================================================================================
 THE FROST GATOR [MARINE]
 
@@ -641,6 +730,8 @@ CLAWS
 CLAWS
 ARCTIC BLAST
 ARCTIC BLAST
+
+Modifiers:
 
 X-COLD, O-COLD, W-FIRE
 
@@ -652,6 +743,8 @@ CLAWS
 CLAWS
 CLAWS
 
+Modifiers:
+
 SHELL
 
 ================================================================================
@@ -661,6 +754,8 @@ CLAWS
 CLAWS
 CLAWS
 EARTH SHATTER
+
+Modifiers:
 
 SHELL
 
@@ -675,12 +770,16 @@ SHELL
 ================================================================================
 THE MEDUSA
 
-Spoils: ANGEL RING [ 1/ 1]
+HP 0156 | GP 0160 | Spoils: ANGEL RING [ 1/ 1]
+
+DAM 038 | DEF 008 | WIS 00 | AGI 16 | HIT 72% | EVA 10%
 
 CLAWS
 CLAWS
-STONE GAZE
-STONE GAZE
+LEADEN GAZE
+CLAWS
+
+Modifiers:
 
 O-DEATH, O-ENCHANTMENT
 
@@ -708,6 +807,8 @@ SCOURGE
 WAR SCEPTER
 FIRESTORM
 DEATHLY STRIKE
+
+Modifiers:
 
 ================================================================================
 THE SHADOW LORD (2)
