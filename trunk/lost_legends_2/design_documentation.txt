@@ -43,7 +43,7 @@ TABLE OF CONTENTS
 8.) SYSTEM NOTES
  8.a STATUS MODIFIERS
  8.b BATTLE COMMANDS
- 
+
 
 
 
@@ -980,11 +980,15 @@ When determining hit and evasion formulas in battle, simply subtract the target'
  ------------------
 
 
-Poison ("POISONED" status) - the target will suffer damage equal to mHP/8 every round, until healed. If the poison is not neutralized by the end of battle, the target will sustain 1 damage for every step taken while poisoned. (under no condition can poison kill a target)
+Poison ("POISONED" status) - the target will suffer damage equal to mHP/8 every round, until healed. If the poison is not
+neutralized by the end of battle, the target will sustain 1 damage for every step taken while poisoned. (under no condition can
+poison kill a target)
 
-Enchantment ("COMATOSE" status) - the target will become paralyzed, (asleep) and unable to act for a few rounds. The number of rounds is a randomly generated integer between 1 and 3. This status ends after battle.
+Enchantment ("COMATOSE" status) - the target will become paralyzed, (asleep) and unable to act for a few rounds. The number of
+rounds is a randomly generated integer between 1 and 3. This status ends after battle.
 
-Blindness ("BLIND" status) - the target's hit% will be cut in half, until the condition is healed. This status persists after battle.
+Blindness ("BLIND" status) - the target's hit% will be cut in half, until the condition is healed. This status persists after
+battle.
 
 Death / Petrify ("FELLED" status) - the target is instantly slain, regardless of any other condition. (the game generally doesn't
 distinguish between death and petrification, as they result in the same effect) This status persists after battle.
