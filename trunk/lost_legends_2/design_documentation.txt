@@ -57,7 +57,7 @@ These are starting positions for each player character.
  - D. KNIGHT, ROSE and MARSHAL may not be re-equipped at any point in the game, as they are guest characters
 
 
-Party GP: 600
+Party GP: 200
 
 MAYA              030 mHP
 
