@@ -152,19 +152,19 @@ notes:
 --------------+----+----+-------------------------------------------------------------------------------+---------------------------
 LAY ON HANDS  |  8 |100%| heals damage: base WIS = amount / single ally                                 |HEAL SINGLE ALLY
 NEUTRALIZE    |  8 |100%| heals any status ailmentation, except [DEATH] / single ally                   |CURE ALLY STATUS
-EGRESSION     |  8 |100%| warps out of dungeons / battles, but reduces caster HP by 80%                 |EXIT DUNGEON AT COST OF HP
+EGRESSION     |  8 |100%| warps out of dungeons / battles, but reduces caster current HP by 80%         |EXIT DUNGEON AT COST OF HP
 VIM ORISON    | 32 |100%| heals party: WIS/1.75 = amount                                                |HEAL ALL ALLIES
-MALICE MIRROR | 16 |100%| increases single ally ABSORB by 6-12                                          |RAISE ALLY DEF
-INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12                                          |RAISE ALLY ATT
+MALICE MIRROR | 16 |100%| increases single ally ABSORB by 6-12                                          |RAISE ALLY DEFENSE
+INNER STRENGTH| 16 |100%| increases single ally DAMAGE by 6-12                                          |RAISE ALLY ATTACK
 PHOENIX PLUME | 24 |100%| raises fallen ally with 20% mHP                                               |RAISE FALLEN ALLY
-FAERIE FIRE   |  8 | 90%| damages enemy: WIS x1.5 = damage / [FIRE]-elemental                           |MINOR FIRE DMG ON ENEMY
-CHILL TOUCH   |  8 | 90%| damages enemy: WIS x1.5 = damage / [COLD]-elemental                           |MINOR COLD DMG ON ENEMY
-BRIMSTONE HAIL| 24 | 80%| damages all: WIS x1.75 = damage / [FIRE]-elemental                            |HEAVY FIRE DMG ON ALL
-RENDING GALE  | 24 | 80%| damages all: WIS x1.75 = damage / [COLD]-elemental                            |HEAVY COLD DMG ON ALL
+FAERIE FIRE   |  8 | 90%| damages enemy: WIS x1.5 = damage / [FIRE]-elemental                           |MINOR FIRE DAMAGE ON ENEMY
+CHILL TOUCH   |  8 | 90%| damages enemy: WIS x1.5 = damage / [COLD]-elemental                           |MINOR COLD DAMAGE ON ENEMY
+CAUSTIC FOUNT | 24 | 80%| damages all: WIS x1.75 = damage / [FIRE]-elemental                            |HEAVY FIRE DAMAGE ON ALL
+RENDING GALE  | 24 | 80%| damages all: WIS x1.75 = damage / [COLD]-elemental                            |HEAVY COLD DAMAGE ON ALL
 GODLY SUNDER  | 32 | 80%| damages all: WIS x1.5 = damage / non-elemental; x2 vs. marine; x1.5 vs. winged|NON-ELEMENTAL DMG ON ALL
-UNHOLY SCOURGE| 16 | 70%| damages all: WIS/1.5 = damage; causes [POISON] status                         |MINOR DMG AND POISON ALL
+UNHOLY SCOURGE| 16 | 70%| damages all: WIS/1.5 = damage; causes [POISON] status                         |MINOR DAMAGE AND POISON ALL
 SIREN'S ARIA  |  8 | 70%| induces [ENCHANT] status on all enemies for 1-3 rounds                        |INDUCE SLEEP ON ENEMY
-FEIGN DARKNESS| 16 | 70%| induces [BLIND] status on all enemies; raises party EVADE by 2-4              |BLIND FOES/RAISE ALLY EVA
+FEIGN DARKNESS| 16 | 70%| induces [BLIND] status on all enemies; raises party EVADE by 2-6              |BLIND FOES/RAISE ALLY EVADE
 LEADEN GAZE   | 32 | 60%| induces [DEATH] status on enemy                                               |PETRIFY ENEMY
 
 
@@ -188,7 +188,7 @@ notes:
 BROADSWORD  | (none)                             | +12 |  0  |  0  | +56 |  0  | N/A                        | +1 STR, -1 WIS
 GLADIUS     | (none)                             | +18 |  0  |  0  | +56 |  0  | N/A                        | +2 STR, -1 WIS
 FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 |  0  | +8  | +56 |  0  |X-FIRE                      | +1 STR
-WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 |  0  |  0  | +56 |  0  |X-DRAGON, (BRIMSTONE HAIL)  | +2 STR
+WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 |  0  |  0  | +56 |  0  |X-DRAGON, (CAUSTIC FOUNT)   | +2 STR
 EINHERJAR   |SWORD THAT AVENGES ITS WIELDER      | +20 | +8  |  0  | +56 | +2  |COUNTER                     | +1 STA, +1 STR
 CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +4  | +8  | +56 |  0  |CRITICAL, (GODLY SUNDER)    | +2 STR
 BLOOD ASH   |BRITTLE SWORD THAT STEALS LIFE      |  +2 |  0  |  0  |  -2 |  0  |DRAIN                       | +1 HP, -1 to any
@@ -229,11 +229,11 @@ ESCUTCHEON  |SMALL FENCING SHIELD                |  0  |  +2 |  0  |  0  | +2  |
 FULL SHIELD | (none)                             |  0  |  +4 |  0  |  0  | +4  | N/A                        | +1 HP
 AEGIS SHIELD|SHIELD THAT WARDS GORGONS           |  0  |  +8 |  0  |  0  | +4  |O-DEATH                     | +1 HP, +1 STA
 GOLD CAPOTE |LIGHT CAPE USED AS A SHIELD         |  0  |  +2 | +6  |  0  | +8  | N/A                        | +2 AGI, +1 WIS
-KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    |  0  | +12 |  0  |  0  | +2  |O-ELEMENT, SHELL, RECOVERY  | +2 HP, +1 STA
+KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    |  0  | +12 |  0  |  0  | +2  |O-ELEMENT, SHELL            | +2 HP, +1 STA
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Helmets    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-FEATHER CAP | (none)                             |  0  | +2  | +4  |  0  | +2  | N/A                        | +1 WIS
+FEATHER CAP | (none)                             |  0  | +2  | +2  |  0  | +2  | N/A                        | +1 WIS
 BASINET     | (none)                             |  0  | +6  |  0  |  0  | -2  | N/A                        | +1 STA, -1 AGI
 HEADBAND    |HEADWEAR WORN BY FIGHTERS           | +8  | +2  |  0  | +8  | +2  | N/A                        | +1 STR
 SKULL VISAGE|GRIM HELMET USED BY UNDEAD ARMIES   |  0  | +4  | +8  | -8  | -2  |DRAIN, W-COLD               | +1 WIS, +1 STA, -1 AGI
@@ -255,8 +255,8 @@ TIN PLATE*  | (none)                             |  0  |  0  |  0  |  0  |  0  |
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Accessories| Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-GAUNTLET    | (none)                             | +2  | +2  |  0  | +4  | +2  | N/A                        | +1 HP
-POWER SASH  |SASH WORN BY FIGHTERS               | +8  | +2  |  0  |  0  | +2  | N/A                        | +1 STR
+GAUNTLET    | (none)                             | +2  | +2  |  0  | +2  | +2  | N/A                        | +1 HP
+POWER SASH  |SASH WORN BY FIGHTERS               | +8  | +2  |  0  | +2  | +2  | N/A                        | +1 STR
 GENJI GLOVE | (none)                             | +4  | +2  |  0  | +4  | +2  |CRITICAL                    | +1 to any
 PEGASUS SHOE|WINGED SHOES THAT GRANT AGILITY     |  0  | +2  |  0  | +4  | +4  | N/A                        | +1 AGI
 DRAGON SCALE|SCALE THAT WARDS FIRE               |  0  | +2  |  0  |  0  |  0  |O-FIRE, W-COLD              | +1 STA
@@ -311,7 +311,7 @@ CRITICAL  - increases critical rate by 8 (stackable)
 RECOVERY  - automatically recovers 4-8% mHP per round
 
 (VIM ORISON)     - randomly casts VIM ORISON on the party when used (1/8 chance)
-(BRIMSTONE HAIL) - randomly casts BRIMSTONE HAIL on the enemy when used (1/16 chance)
+(CAUSTIC FOUNT)  - randomly casts CAUSTIC FOUNT on the enemy when used (1/16 chance)
 (RENDING GALE)   - randomly casts RENDING GALE on the enemy when used (1/16 chance)
 (GODLY SUNDER)   - randomly casts GODLY SUNDER on the enemy when used (1/16 chance)
 
@@ -456,7 +456,7 @@ GLADSHEIM VILLAGE | BROADSWORD   |   300 |  --            |  --   |   180 GP
 ------------------+--------------+-------+----------------+-------+----------
 ASNOTH ARMORY     | GLADIUS      |  1200 | VIM ORISON     |  4400 |      N/A
                   | WAR SCEPTER  |   900 | PHOENIX PLUME  |  4400 |
-                  | CUIRASS      |  1400 | BRIMSTONE HAIL |  9800 |
+                  | CUIRASS      |  1400 | CAUSTIC FOUNT  |  9800 |
                   | BASINET      |   800 | RENDING GALE   |  9800 |
                   | FULL SHIELD  |  1100 | GODLY SUNDER   | 16000 |
                   | GAUNTLET     |   800 | LEADEN GAZE    | 12000 |
@@ -662,7 +662,7 @@ CLAWS
 
 Modifiers:
 
-[ -none-  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
+[O-POISON ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
 THE GORGON
@@ -873,7 +873,7 @@ DAM 064 | DEF 024 | WIS 48 | AGI 38 | HIT 80% | EVA 12%
 
 SCOURGE
 WAR SCEPTER
-BRIMSTONE HAIL
+CAUSTIC FOUNT
 DEATHLY STRIKE
 
 Modifiers:
