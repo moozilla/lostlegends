@@ -178,7 +178,7 @@ notes:
  the use of axes and bows
 
  - after battle, there is a 12% chance for every first gain to occur, followed by a 8% chance for every second gain, and finally a
- 4% chance for every third gain; when determining "+ or - 1 to any" gains, simply randomize between STR, STA, WIS and AGI. (HP is
+ 4% chance for every third gain; when determining "+ or - 1 to any" gains, simply randomize between STR, STA, WIS and AGI (HP is
  excluded)
 
 
@@ -389,7 +389,7 @@ KRAKEN SHELL| drop from KRAKEN                                                  
  -------------------
 
 
- - when determining an enemy party, the game simply generates 1 through 3 enemies
+ - when determining an enemy party, the game simply generates 1 through 3 enemies (of the same type)
 
 ----------------------------+----------------------------------------+------
  Location                   | Enemy Party (in oder of priority)      | Rate
