@@ -161,7 +161,7 @@ FAERIE FIRE   |  8 | 90%| damages enemy: WIS x1.5 = damage / [FIRE]-elemental   
 CHILL TOUCH   |  8 | 90%| damages enemy: WIS x1.5 = damage / [COLD]-elemental                           |MINOR COLD DAMAGE ON ENEMY
 CAUSTIC FOUNT | 24 | 80%| damages all: WIS x1.75 = damage / [FIRE]-elemental                            |HEAVY FIRE DAMAGE ON ALL
 RENDING GALE  | 24 | 80%| damages all: WIS x1.75 = damage / [COLD]-elemental                            |HEAVY COLD DAMAGE ON ALL
-GODLY SUNDER  | 32 | 80%| damages all: WIS x1.5 = damage / non-elemental; x2 vs. marine; x1.5 vs. winged|NON-ELEMENTAL DMG ON ALL
+GODLY SUNDER  | 32 | 80%| damages all: WIS x1.5 = damage / non-elemental; ignore ABSORB vs MARINE/WINGED|NON-ELEMENTAL DAMAGE ON ALL
 UNHOLY SCOURGE| 16 | 70%| damages all: WIS/1.5 = damage; causes [POISON] status                         |MINOR DAMAGE AND POISON ALL
 SIREN'S ARIA  |  8 | 70%| induces [ENCHANT] status on all enemies for 1-3 rounds                        |INDUCE SLEEP ON ENEMY
 FEIGN DARKNESS| 16 | 70%| induces [BLIND] status on all enemies; raises party EVADE by 2-6              |BLIND FOES/RAISE ALLY EVADE
