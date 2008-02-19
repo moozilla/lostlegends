@@ -1,0 +1,228 @@
+SOMETHING IS WRONG W/ RGP!!!  <-RESOLVED
+
+KEYBOARD WILL NEED A LOT OF MODIFICATION LATER ON!  not too efficient ^^
+
+AVOID bcall text routines at all costs with GS!!!!
+Especially since it's all homescreen.  Duno how 
+
+TEXT!!!!! Whenever you write the converter, you must remember to increase everything by 1 so you can null terminate!
+and REWRITE THAT APPSAFEPUTS to use a CODESTREAM instead!!
+
+Don't forget to go back and get rid of unused code!
+
+=============================
+Entry Procedure
+=============================
+-save stack pointer
+-check if there is enough memory for the allocation bcall(_enoughmem)
+-allocate with bcall(_insertmem) at $9d95
+-call gsenable
+
+=============================
+Exit Procedure
+=============================
+-call gsdisable
+-deallocate memory at $9d95 with bcall(_delmem)
+-res LGFont, (iy + myfontflags)
+-res DGFont,(iy + myfontflags)
+-res 7,(iy+20)   <-THIS IS Something RGP does that may leave a graph screen bug on certain ROM versions!
+	it forces small font to print to plotsscreen instead of directly to the LCD, which may explain why it's so messed up
+-restore stack pointer
+
+
+	jr nc, start2
+	ld hl,$00
+	ld (currow),hl
+	ld hl,MemErrStr
+	call appPutS
+	bjump(_JForceCmdNoChar)		;exit if not enough
+MemErrStr:
+	.db 39,26,27,32,39,17,26,27,33,19,20,39
+	.db 39,39,39,30,13,25,11,11,11,11,39,39,0
+
+#comment	
+#define ALIGNEDMASKEDSPRITE
+	ld hl,$0101
+	ld de,mappertiles
+	ld a,6
+	call gsalignedmaskedsprite
+#endcomment	
+
+
+===========================
+sample key stuff
+===========================
+#comment
+Keyloop:
+	nop
+	nop
+	ld a,$FF
+	out (1),a
+	nop
+	nop
+	nop
+	nop
+	ld a,$80
+	out (1),a
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	in a,(1)
+	inc a
+	jr z,Keyloop
+	ld a,$FF
+	out (1),a
+	nop
+	nop
+	nop
+	nop
+	ld a,$FE
+	out (1),a
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	in a,(1)
+	bit 0,a
+	call z,down
+	bit 1,a
+	call z,left
+	bit 2,a
+	call z,right
+	bit 3,a
+	call z,up
+
+	ld a,$FF
+	out (1),a
+	nop
+	nop
+	nop
+	nop
+	ld a,$BF
+	out (1),a
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	in a,(1)
+	ld hl,(delta)	;this just changes  the scroll speed with the F keys
+	bit 0,a
+	jr nz,$+2+3
+	ld hl,8
+	bit 1,a
+	jr nz,$+2+3
+	ld hl,6
+	bit 2,a
+	jr nz,$+2+3
+	ld hl,4
+	bit 3,a
+	jr nz,$+2+3
+	ld hl,2
+	bit 4,a
+	jr nz,$+2+3
+	ld hl,1
+	ld (delta),hl
+
+	bit 5,a			;2nd turns SE speed on
+	jr nz,skipspeedon
+	in a,(2)
+	rla
+	jr nc,skipspeedon
+	ld a,1
+	out ($20),a
+	ld a,$FF
+skipspeedon:
+	bit 6,a			;mode turns SE speed off
+	jr nz,skipspeedoff
+	in a,(2)
+	rla
+	jr nc,skipspeedoff
+	xor a
+	out ($20),a
+	ld a,$FF
+skipspeedoff:
+
+	ld a,$FF
+	out (1),a
+	ld a,$FD
+	out (1),a
+	nop
+	nop
+	in a,(1)
+	bit 6,a			;CLEAR = quit
+	jp nz,loop
+	call GSdisable
+	
+	ld hl,$9d95
+	ld de,AllocSize
+	bcall(_DelMem)	
+	
+	bjump(_JForceCmdNoChar)
+
+
+down:
+	ld hl,(mapY)	
+	ld de,(delta)
+	add hl,de
+	
+	ld bc,256
+	or a
+	sbc hl,bc
+	add hl,bc
+	jr c,down2 
+	ld hl,256
+down2:	
+	ld (mapY),hl
+	ret
+up:
+	ld hl,(mapY)
+	ld de,(delta)
+	or a
+	sbc hl,de
+	
+	ld bc,256
+	or a
+	sbc hl,bc
+	add hl,bc
+	jr c,up2 
+	ld hl,$0000
+up2:		
+	ld (mapY),hl
+	ret
+right:
+	ld hl,(mapx)
+	ld de,(delta)eez, my 
+	add hl,de
+	
+	ld bc,384
+	or a
+	sbc hl,bc
+	add hl,bc
+	jr c,right2 
+	ld hl,384
+right2:	
+	ld (mapx),hl
+	ret
+left:
+	ld hl,(mapx)
+	ld de,(delta)
+	or a
+	sbc hl,de
+	
+	ld bc,384
+	or a
+	sbc hl,bc
+	add hl,bc
+	jr c,left2 
+	ld hl,$0000
+left2:	
+	ld (mapx),hl
+	ret
+#endcomment
