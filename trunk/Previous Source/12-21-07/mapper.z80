@@ -1,0 +1,97 @@
+;mapper.z80
+;TO AVOID EQUATE PROBLEMS, PLEASE PLACE AFTER graylib2.inc!
+;(camY) = y view in #of tiles
+;(camX) = x view in #of tiles (should be right after camY in memory)
+;(mapBase) = word. address of map to be displayed
+;(mapWidth) = width of the map in tiles
+mapper:
+;Find starting address in the map
+	ld de,(camY)
+	ld c,d			;assuming camY stays before camX save camX in C
+	xor a		;0 accumulator and put in d
+	ld d,a
+	ld a,(mapWidth)
+	call DExA		;find y offset in tile map (whole tiles) in hl
+	add hl,bc		;b should be zero (it was a counter in DExA) c was unaffected (holds camX)
+	ex de,hl
+	ld ix,(mapBase)		;add offset to map base and store in IX
+	add ix,de
+	ld hl,gbuf2
+	ld b,6
+mapper_Rend_Outer:
+	push bc
+	push ix
+	push hl
+	ld b,4
+mapper_Rend_Inner:
+	push bc
+	push hl			;save screen address for light layer
+	ld de,plotsscreen - savesscreen		;find address for dark layer be adding the difference
+	add hl,de
+	push hl			;save screen address for dark layer
+	ld de,64		;each tile has 64 bytes O_O
+	ld a,(ix)
+	call DExA		;hl has offset to the start of the tile of interest
+	ld de,mapperTiles		;tiles base
+	add hl,de		;hl has pointer to tile to be rendered
+	ex de,hl		;de has pointer to tile to be rendered
+	pop hl			;restore screen address for darklayer
+	ld b,16
+mapper_Rend_Core_Dark:
+	ld a,(de)		;1st byte
+	ld (hl),a
+	inc de
+	inc hl
+	ld a,(de)
+	ld (hl),a		;second byte
+	inc de
+	ld a,b			;store counter
+	ld bc,11
+	add hl,bc		;next row on screen
+	ld b,a			;restore counter
+	djnz mapper_Rend_Core_Dark
+	pop hl
+	ld b,16
+mapper_Rend_Core_Light:
+	ld a,(de)		;1st byte
+	ld (hl),a
+	inc de
+	inc hl
+	ld a,(de)
+	ld (hl),a		;second byte
+	inc de
+	ld a,b			;store counter
+	ld bc,11
+	add hl,bc		;next row on screen
+	ld b,a			;restore counter
+	djnz mapper_Rend_Core_Light
+	ld a,(mapWidth)
+	ld c,a
+	add ix,bc		;update ix to point to next map entry
+	pop bc
+	djnz mapper_Rend_Inner
+	pop hl
+	inc hl
+	inc hl			;update the light layer pointer to the next column
+	pop ix
+	inc ix			;update ix to point to next column
+	pop bc
+	djnz mapper_Rend_Outer
+	ret				;exit here almost forgot it XD
+
+;From Sigma's ASMin28
+;outputs: b = 0; de destroyed; a destroyed
+DExA:			;hl = de x a
+	ld hl,0		;use hl to store product
+	ld b,8		;8 bits to check
+DExA_Loop:
+	rrca		;check lsb of a
+	jr nc, DExA_Skip	;if 0, skip add
+	add hl,de
+DExA_skip
+	sla e		;shift de 1 bit left
+	rl d
+	djnz DExA_Loop
+	ret
+
+#include "tiles.z80"
