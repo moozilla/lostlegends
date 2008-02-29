@@ -1,5 +1,7 @@
 #summary Background story for Lost Legends.
 
+http://lostlegends.googlecode.com/svn/trunk/Design%20Resources/cutscene/sword_in_water.PNG
+
 = The Premise =
 
  Long ago, in a vast land known as Gaia, there lived a great and righteous king by the name of Lord Grendale. He presided over the rich country-side of St. Agaea, sustaining peace with a swift and just hand. At his right side was his brother-in-arms, Sir Darius. Sir Darius had sworn an oath to protect his brother's kingdom and preserve his authority. And for many years, he was the most honored and revered knight in all the land... However, some would say that there was a jealous aura about Sir Darius. Though he was arguably mightier than Lord Grendale, he was but a servent to His Majesty.
