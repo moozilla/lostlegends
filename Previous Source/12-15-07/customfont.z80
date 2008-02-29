@@ -1,0 +1,187 @@
+;=======================================
+;customPutC
+;Mostly by James Montelengo
+;modified by Jason Lee still very ROUGH
+;------
+;curRow = x (0-11), curCol = y (0-7) in aligned characters
+;a = index of character to be displayed + 1 (0x00 is the terminator)
+;textinverse SET = dark gray text
+;textScrolled SET = light gray text
+;BOTH SET = blank 8x8 aligned tile.
+;
+;Important!
+;Destroys everything except hl
+;curRow and curCol are updated!!
+;Since almost all text appears as aligned tiles that mask out what's underneath,
+;I didn't both with masking with these.
+;
+;Other Notes:
+;72 characters in the custom font.
+;Uses 8x8 characters
+;Use modified AlignedMaskSprite to get job done
+;=======================================
+;I figured that since it's an APP, we've got plenty of space now
+;It's more important to get working code, then optimize down from there.
+;Custom character set seemed like a good idea because it'd be a lot easier.
+;If I haven't done so already, I'll write some kind of java file parser thing
+;to convert strings to this custom charset.
+customPutC:
+	push hl			;assuming that this will be used w/ an appsafe Puts, this will be useful
+	ld de, FontData
+;---------------------------------
+;Finds the tile
+	dec a		;-1 because 1 is the first tile, not 0 like normal
+	ld h,0
+	ld l,a
+	sla l				;clears 
+	sla l				;upper bits.
+	add hl,hl
+	add hl,hl
+	add hl,de
+;---------------------------------
+;copys to temp area in allocated RAM
+;checks bits and doesn't load the unneeded layer
+	ld de,gsTempSprite
+	ld bc,16
+	ldir
+;---------------------------------
+;erase where necessary
+	bit textScrolled,(iy + textflags)
+	jp z,customPutCNLG
+	ld c,a
+	xor a
+	ld hl, gsTempSprite
+	ld de, gsTempSprite + 1
+	ld (hl),a
+	ld b,a
+	ld a,c
+	ld c,7
+	ldir
+customPutCNLG:
+	bit textInverse,(iy + textflags)
+	jp z,customPutCNDG
+	ld c,a
+	xor a
+	ld hl, gsTempSprite + 8
+	ld de, gsTempSprite + 9
+	ld (hl),a
+	ld b,a
+	ld a,c
+	ld c,7
+	ldir
+customPutCNDG:
+	ld de, gsTempSprite
+	ld hl,(CurRow)
+;---------------------------------
+;find point on buffers
+	ld a,h
+	ld h,0
+	sla l				;*2
+	sla l				;*4
+	sla l
+	sla l
+	sla l
+	ld b,h
+	ld c,l
+	add hl,bc			;*8
+	add hl,bc			;*12
+	ld c,a
+	add hl,bc			;x offset
+	ld b,h
+	ld c,l
+	ld hl,gbuf2 
+	add hl,bc			;de=layer2
+	push hl
+	ld hl,gbuf1
+	add hl,bc			;hl=layer1
+;---------------------------------
+;I got lazy here XD, definitely optimizable later
+;XD
+	ld bc,12			;Add after each load to get to next row
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	inc de
+;------------------------
+;next layer
+	pop hl
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	add hl,bc
+	inc de
+	ld a,(de)
+	ld (hl),a
+	inc de
+;--------------------------
+;update Currow and CurCol
+	ld a,(curcol)
+	cp 11
+	jp nc,customPutCNL
+	inc a
+	ld (curcol),a
+	pop hl
+	ret
+customPutCNL:
+	xor a
+	ld (curcol),a
+	ld a,(currow)
+	inc a
+	and %00000111
+	ld (currow),a
+	pop hl
+	ret
+
+;Tile data goes here.  Will establish later what the codes are.
+;FontData:
+#include "FontSet.z80"
