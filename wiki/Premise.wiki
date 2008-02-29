@@ -1,4 +1,5 @@
 #summary Background story for Lost Legends.
+#labels Featured
 
 = The Premise =
 http://lostlegends.googlecode.com/svn/trunk/Design%20Resources/cutscene/sword_in_water.PNG
