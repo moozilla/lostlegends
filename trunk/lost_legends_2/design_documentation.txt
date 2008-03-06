@@ -370,7 +370,7 @@ RIBBON      | chest in CELESTIAL REALM, B2; UNDERSEA SHRINE, 1F, B1 (3 total)   
 GASTRAPHETES| chest in UNDERSEA SHRINE, B1                                                                         | WYRM x2
 RUNIC STAFF | chest in UNDERSEA SHRINE, B1                                                                         | WYRM x3
 SANGUINARY  | search first shelf in GIELGUD's room (ASNOTH CASTLE)                                                 | none
-MURASAME    | search skull in UNDERSEA SHRINE DETOUR                                                               | WRAITH
+MURASAME    | search skull in FALLS BASIN                                                                          | WRAITH
 HEADBAND    | comes equipped on GLENN                                                                              | N/A
 RUNE KEY    | recieve from man in SHIPBUILDER'S VILLAGE                                                            | N/A
 CALIBURN    | trade ADAMANT to weapon smith in SHIPBUILDER'S VILLAGE                                               | N/A
@@ -404,7 +404,7 @@ ASNOTH WARSHIP              | VENOMWING, WRAITH, OGRE                |  16
 FEY WOOD (both)             | VENOMWING, ROPER, GLOOMWING            |  16
 RAGNOTH RUINS - TOWER       | WRAITH                                 |   8
 UNDERSEA SHRINE, 1F, B1, B2 | GIGAS TOAD, DIRE CRAB, FROST GATOR     |   8
-UNDERSEA SHRINE, DETOUR     | DIRE CRAB, WYRM, FIRE DRAKE, GORGON    |   8
+FALLS BASIN                 | DIRE CRAB, WYRM, FIRE DRAKE, GORGON    |   8
 VALHALLA PALACE             | TITAN                                  |  16
 VALHALLA PALACE, BARRACKS   | WRAITH                                 |   8
 CELESTIAL REALM, B1, B3, B4 | FIRE DRAKE, GORGON, STORM DRAGON, WYRM |  16
@@ -419,7 +419,7 @@ CELESTIAL REALM, B2         | STORM DRAGON, TITAN, WYRM, FIRE DRAKE  |  24
 ------------------+--------------+-------+----------------+-------+----------
  LOCALE           | ITEM         | PRICE | SPELL          | PRICE | INN RATE
 ------------------+--------------+-------+----------------+-------+----------
-RAGNOTH VILLAGE   | BROADSWORD   |   300 | LAY ON HANDS   |   200 |    60 GP
+RAGNOTH VILLAGE   | BROADSWORD   |   300 | LAY ON HANDS   |   200 |    80 GP
                   | LONGBOW      |   200 | NEUTRALIZE     |   200 |
                   | WOODEN STAFF |   100 | FAIRIE FIRE    |   400 |
                   | CAMBRIC      |    60 | CHILL TOUCH    |   400 |
@@ -442,10 +442,10 @@ TRISTRAN VILLAGE  | FRANCESCA    |   600 | EGRESSION      |   800 |   120 GP
                   | PANACEA      |   120 |  --            |  --   |
                   | ANGEL TEAR   |   400 |  --            |  --   |
 ------------------+--------------+-------+----------------+-------+----------
-SHIPBUILDER'S     |  --          |  --   |  --            |  --   |   180 GP (medicine seller)
+SHIPBUILDER'S     |  --          |  --   |  --            |  --   |   160 GP (medicine seller)
         VILLAGE   |  --          |  --   |  --            |  --   |
 ------------------+--------------+-------+----------------+-------+----------
-GLADSHEIM VILLAGE | BROADSWORD   |   300 |  --            |  --   |   180 GP
+GLADSHEIM VILLAGE | BROADSWORD   |   300 |  --            |  --   |   160 GP
                   | FRANCESCA    |   600 |  --            |  --   |
                   | BRIGANDINE   |   400 |  --            |  --   |
                   | BASINET      |   800 |  --            |  --   |
@@ -460,17 +460,20 @@ ASNOTH ARMORY     | GLADIUS      |  1200 | VIM ORISON     |  4400 |      N/A
                   | WAR SCEPTER  |   900 | PHOENIX PLUME  |  4400 |
                   | CUIRASS      |  1400 | CAUSTIC FOUNT  |  9800 |
                   | BASINET      |   800 | RENDING GALE   |  9800 |
-                  | FULL SHIELD  |  1100 | GODLY SUNDER   | 16000 |
-                  | GAUNTLET     |   800 | LEADEN GAZE    | 12000 |
+                  | FULL SHIELD  |  1100 |  --            |  --   |
+                  | GAUNTLET     |   800 |  --            |  --   |
 - (page 2) ------ | LIFE ROOT    |    40 |  --            |  --   |
                   | PANACEA      |   120 |  --            |  --   |
                   | ANGEL TEAR   |   400 |  --            |  --   |
                   | MANA DEW     |   800 |  --            |  --   |
 ------------------+--------------+-------+----------------+-------+----------
-ASNOTH AIRSHIP    | SOMA DROP    |   200 |  --            |  --   |    40 GP
+ASNOTH AIRSHIP    | SOMA DROP    |   200 |  --            |  --   |    80 GP
                   | PANACEA      |   120 |  --            |  --   |
                   | ANGEL TEAR   |   400 |  --            |  --   |
                   | ELIXER       |  1100 |  --            |  --   |
+------------------+--------------+-------+----------------+-------+----------
+FALLS BASIN       |  --          |  --   | GOLDY SUNDER   | 16000 |      N/A
+                  |  --          |  --   | LEADEN GAZE    | 12000 |
 
 
 
