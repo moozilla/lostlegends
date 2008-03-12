@@ -1,5 +1,5 @@
+#summary Portal to all Wiki Pages for Lost Legends
 #labels Featured
-#Portal to all Wiki Pages for Lost Legends
 
 = Table of Contents =
 
