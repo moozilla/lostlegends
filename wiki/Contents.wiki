@@ -1,5 +1,6 @@
+#labels Featured
 #Portal to all Wiki Pages for Lost Legends
 
 = Table of Contents =
 
-Premise
+===[http://code.google.com/p/lostlegends/wiki/Premise Premise]===
