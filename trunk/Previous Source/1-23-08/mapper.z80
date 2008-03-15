@@ -1,0 +1,142 @@
+;mapper.z80
+;by Jason Lee (Liazon)
+;=====================================================
+;TO AVOID EQUATE PROBLEMS, PLEASE PLACE AFTER graylibx.inc!
+;(camY) = y view in #of tiles
+;(camX) = x view in #of tiles (should be right after camY in memory)
+;(mapBase) = word. address of map to be displayed
+;(mapWidth) = width of the map in tiles
+;all registers destroyed!
+;at the section labeled "LOOK AT ME!" the MSB is masked out so that it can be used for hit detection
+mapper:
+;Find starting address in the map
+	ld de,(camY)
+	ld c,d			;assuming camY stays before camX save camX in C
+	xor a		;0 accumulator and put in d
+	ld d,a
+	ld a,(mapWidth)
+	call DExA		;find y offset in tile map (whole tiles) in hl
+	add hl,bc		;b should be zero (it was a counter in DExA) c was unaffected (holds camX)
+	ex de,hl
+	ld ix,(mapBase)		;add offset to map base and store in IX
+	add ix,de
+	ld a,(mapWidth)	;calculate amount to subtract from a vertical map
+	ld e,a
+	ld d,0
+	ld a,(mapHeight)
+	call DExA			;calculate amount to subtract from a vertical map roll
+	ex de,hl  			;make negative
+	ld hl,$00
+	sbc hl,de
+	ld de,(mapBase)		;save the original map base on the stack
+	push de
+	ld (mapBase),hl		;save this offset in where the mapbase should be
+	ld a,(mapWidth)		;check if map needs to be "rolled over" horizontally		
+	sub 6				;width of view
+	ld c,a
+	ld a,(camX)
+	sub c
+	ld c,a
+	ld hl,gbuf2			;light layer
+	ld b,6
+mapper_Rend_Outer:
+	push bc
+	ld a,c			;check counter
+	cp b
+	jr nz, mapper_Rend_Outer2
+	ld a,(mapWidth)
+	neg	
+	ld e,a
+	ld d,$FF		;no sbc for ix
+	add ix,de		;reset to reading from the beginning of the row
+mapper_Rend_Outer2:
+	push ix
+	push hl
+	ld b,4
+	ld a,(mapHeight)
+	sub 4
+	ld c,a
+	ld a,(camY)
+	sub c
+	ld c,a
+mapper_Rend_Inner:
+	push bc
+	push hl			;save screen address for light layer
+	ld a,c
+	cp b
+	jr nz,mapper_Rend_Inner2
+	ld de,(mapBase)
+	add ix,de			;reset map to reading from the first row again
+mapper_Rend_Inner2:
+	ld de,gbuf1-gbuf2		;find address for dark layer be adding the difference
+	add hl,de
+	push hl			;save screen address for dark layer
+	ld de,64		;each tile has 64 bytes O_O
+	ld a,(ix)		;load the tile # into a
+	and %01111111	;mask out MSB for the hit detection bit	 		LOOK AT ME!!!!!!!!!!!!!!!
+	call DExA		;hl has offset to the start of the tile of interest
+	ld de,mapperTiles		;tiles base
+	add hl,de		;hl has pointer to tile to be rendered
+	ex de,hl		;de has pointer to tile to be rendered
+	pop hl			;restore screen address for darklayer
+	ld b,16
+mapper_Rend_Core_Dark:
+	ld a,(de)		;1st byte
+	ld (hl),a
+	inc de
+	inc hl
+	ld a,(de)
+	ld (hl),a		;second byte
+	inc de
+	ld a,b			;store counter
+	ld bc,11
+	add hl,bc		;next row on screen
+	ld b,a			;restore counter
+	djnz mapper_Rend_Core_Dark
+	pop hl
+	ld b,16
+mapper_Rend_Core_Light:
+	ld a,(de)		;1st byte
+	ld (hl),a
+	inc de
+	inc hl
+	ld a,(de)
+	ld (hl),a		;second byte
+	inc de
+	ld a,b			;store counter
+	ld bc,11
+	add hl,bc		;next row on screen
+	ld b,a			;restore counter
+	djnz mapper_Rend_Core_Light
+	ld a,(mapWidth)
+	ld c,a
+	add ix,bc		;update ix to point to next map entry
+	pop bc
+	djnz mapper_Rend_Inner
+	pop hl			
+	inc hl
+	inc hl			;update the light layer pointer to the next column
+	pop ix
+	inc ix			;update ix to point to next column
+	pop bc
+	djnz mapper_Rend_Outer
+	pop hl
+	ld (mapbase),hl		;restore the mapBase
+	ret				;exit here almost forgot it XD
+#comment
+;From Sigma's ASMin28
+;outputs: b = 0; de destroyed; a destroyed
+DExA:			;hl = de x a
+	ld hl,0		;use hl to store product
+	ld b,8		;8 bits to check
+DExA_Loop:
+	rrca		;check lsb of a
+	jr nc, DExA_Skip	;if 0, skip add
+	add hl,de
+DExA_skip
+	sla e		;shift de 1 bit left
+	rl d
+	djnz DExA_Loop
+	ret
+#include "tiles.inc"
+#endcomment

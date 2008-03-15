@@ -1,0 +1,280 @@
+;mapper2.z80
+;by Jason Lee (Liazon)
+;===============================================
+;new rewrite using new map system
+;As always, $0000 is null
+;
+;struct{
+;boolean impassable
+;byte:7 tilenumber
+;}tileEntry
+;
+;struct{
+;tileEntry map[6][4]  //that's [x][y]
+;word {up, down, left, right} //pointer to up, down, left, right nodes respectively
+;//object space
+;byte num_Objects //number of object entries following this
+;}mapNode
+
+
+
+samplemap:
+	.db $08,$08,$08,$08,$08,$08
+	.db $08,$1D,$1B,$1A,$1B,$08
+	.db $08,$02,$02,$02,$02,$08
+	.db $08,$08,$08,$0E,$08,$08
+	.dw 0
+	.dw 0
+	.dw 0
+	.dw 0
+
+;scrollmaps
+;by Jason Lee (Liazon)
+;=====================================================
+;a = direction {0, 1, 2, 3,} respectively for up, down, left, right
+scrollmap:
+	or a		;cp 0
+	jp z,scrollmap_up
+	cp 1
+	jp z,scrollmap_down
+	ld b,mapH			;loop counter 4 rows
+	cp 2
+	jp z,scrollmap_left
+scrollmap_right:
+	ld hl,NBmap + 3 * mapW + 1		;we're going to start from the bottom
+	ld de,NBmap + 3 * mapW
+scrollmap_right_l:
+	ldi \ ldi \ ldi \ ldi \ ldi
+	ld de,-l1						;move up to row above
+	add hl,de
+	ld d,h
+	ld e,l
+	dec de							
+	djnz scrollmap_right_l
+scrollmap_up:
+scrollmap_down:
+scrollmap_left:
+
+;draw6x4map
+;by Jason Lee (Liazon)
+;=====================================================
+;draws the mapWxmapH (6x4) map of 16x16 tiles @ NBmap to the backbuffers
+;equates are as defined in the .inc
+;at the section labeled "LOOK AT ME!" the MSB is masked out so that it can be used for hit detection
+
+draw6x4map:
+	ld ix,NBmap
+	ld hl,gbuf1		;light layer
+	ld b,mapH		;4 rows
+draw6x4map_outer:
+	push bc
+
+	ld b,mapW		;6 columns
+draw6x4map_inner:
+	push bc
+	push hl			;save light layer
+	;saving stuff
+	;ld de,gbuf1 - gbuf2
+	;add hl,de
+	push hl			;save dark layer address
+	ld de,64		;each tile has 64 bytes O_O
+	ld a,(ix)
+	call DExA		;hl has offset to the start of the tile of interest
+	ld de,mapperTiles		;tiles base
+	add hl,de		;hl has pointer to tile to be rendered
+	ex de,hl		;de has pointer to tile to be rendered
+	pop hl			;restore screen address for darklayer
+	ld b,16
+draw6x4map_dark:
+	ld a,(de)		;1st byte
+	ld (hl),a
+	inc de
+	inc hl
+	ld a,(de)
+	ld (hl),a		;second byte
+	inc de
+	ld a,b			;store counter
+	ld bc,11
+	add hl,bc		;next row on screen
+	ld b,a			;restore counter
+	djnz draw6x4map_dark
+	
+	;finding place on light layer
+	;pop hl			;restore light layer address
+	ld bc,-12 * 16 + gbuf2 - gbuf1
+	add hl,bc
+	ld b,16
+draw6x4map_light:
+	ld a,(de)		;1st byte
+	ld (hl),a
+	inc de
+	inc hl
+	ld a,(de)
+	ld (hl),a		;second byte
+	inc de
+	ld a,b			;store counter
+	ld bc,11
+	add hl,bc		;next row on screen
+	ld b,a			;restore counter
+	djnz draw6x4map_light
+	;ld de,-12 * 16 + 2
+	;add hl,de		;next tile to do in row
+	pop hl
+	inc hl
+	inc hl
+	inc ix 			;update ix to point to next map entry
+	pop bc			;restore counter
+	djnz draw6x4map_inner
+	
+	ld de,12 * 15	;one less because of hl will end up on the next row of bytes
+	add hl,de		;address on darklayer for next row of tiles to screen
+	pop bc			;restore counter
+	djnz draw6x4map_outer
+	ret				;exit here almost forgot it XD
+#comment
+draw6x4map:
+	ld ix,NBmap
+	ld hl,gbuf2		;light layer
+	ld b,mapH		;4 rows
+draw6x4map_outer:
+	push bc
+
+	ld b,mapW		;6 columns
+draw6x4map_inner:
+	push bc
+	push hl			;save light layer
+	;saving stuff
+	ld de,gbuf1 - gbuf2
+	add hl,de
+	push hl			;save dark layer address
+	ld de,64		;each tile has 64 bytes O_O
+	ld a,(ix)
+	call DExA		;hl has offset to the start of the tile of interest
+	ld de,mapperTiles		;tiles base
+	add hl,de		;hl has pointer to tile to be rendered
+	ex de,hl		;de has pointer to tile to be rendered
+	pop hl			;restore screen address for darklayer
+	ld b,16
+draw6x4map_dark:
+	ld a,(de)		;1st byte
+	ld (hl),a
+	inc de
+	inc hl
+	ld a,(de)
+	ld (hl),a		;second byte
+	inc de
+	ld a,b			;store counter
+	ld bc,11
+	add hl,bc		;next row on screen
+	ld b,a			;restore counter
+	djnz draw6x4map_dark
+	
+	;finding place on light layer
+	pop hl			;restore light layer address
+	ld b,16
+draw6x4map_light:
+	ld a,(de)		;1st byte
+	ld (hl),a
+	inc de
+	inc hl
+	ld a,(de)
+	ld (hl),a		;second byte
+	inc de
+	ld a,b			;store counter
+	ld bc,11
+	add hl,bc		;next row on screen
+	ld b,a			;restore counter
+	djnz draw6x4map_light
+	ld de,-12 * 16 + 2
+	add hl,de		;next tile to do in row
+	inc ix 			;update ix to point to next map entry
+	pop bc			;restore counter
+	djnz draw6x4map_inner
+	
+	ld de,12 * 15	;one less because of hl will end up on the next row of bytes
+	add hl,de		;address on darklayer for next row of tiles to screen
+	pop bc			;restore counter
+	djnz draw6x4map_outer
+	ret				;exit here almost forgot it XD
+	
+draw6x4map:
+	ld ix,NBmap
+	ld hl,gbuf2		;dark layer
+	ld b,mapH			;4 rows of tiles
+draw6x4map_outer:
+	push bc
+	;push hl
+	ld b,mapW			;6 tiles per row
+draw6x4map_inner:
+	push bc			;save counter
+	push hl
+	ld de,gbuf1 - gbuf2
+	add hl,de
+	push hl			;save screen address for dark layer
+	ld de,64		;each tile has 64 bytes O_O
+	ld a,(ix)		;load the tile # into a
+	and %01111111	;mask out MSB for the hit detection bit	 		LOOK AT ME!!!!!!!!!!!!!!!
+	call DExA		;hl has offset to the start of the tile of interest
+	ld de,mapperTiles		;tiles base
+	add hl,de		;hl has pointer to tile to be rendered
+	ex de,hl		;de has pointer to tile to be rendered
+	pop hl			;restore screen address
+	ld b,16
+draw6x4map_coreD:
+	ld a,(de)		;1st byte
+	ld (hl),a
+	inc de
+	inc hl
+	ld a,(de)
+	ld (hl),a		;second byte
+	inc de
+	ld a,b			;store counter
+	ld bc,11
+	add hl,bc		;next row on screen
+	ld b,a			;restore counter
+	djnz draw6x4map_coreD
+	;ld bc,gbuf2 - gbuf1 + 192	;distance (negative) to light layer from dark taking into account what was already written
+	;add hl,bc
+	pop hl
+	ld b,16			;new counter
+draw6x4map_coreL:
+	ld a,(de)		;1st byte
+	ld (hl),a
+	inc de
+	inc hl
+	ld a,(de)
+	ld (hl),a		;second byte
+	inc de
+	ld a,b			;store counter
+	ld bc,11
+	add hl,bc		;next row on screen
+	ld b,a			;restore counter
+	djnz draw6x4map_coreL
+	inc ix
+	pop hl			;restore screen address for darklayer
+	inc hl
+	inc hl			;address on darklayer for next tile
+	pop bc
+	djnz draw6x4map_inner
+	ld de,180	;one less because of hl will end up on the next row of bytes
+	add hl,de		;address on darklayer for next row of tiles to screen
+	pop bc
+	djnz draw6x4map_outer
+	ret
+#endcomment
+;From Sigma's ASMin28
+;outputs: b = 0; de destroyed; a destroyed
+DExA:			;hl = de x a
+	ld hl,0		;use hl to store product
+	ld b,8		;8 bits to check
+DExA_Loop:
+	rrca		;check lsb of a
+	jr nc, DExA_Skip	;if 0, skip add
+	add hl,de
+DExA_skip
+	sla e		;shift de 1 bit left
+	rl d
+	djnz DExA_Loop
+	ret
+	
+#include "tiles.inc"
