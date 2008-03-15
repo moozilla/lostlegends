@@ -1,0 +1,159 @@
+
+;Code conventions:
+;routinename + number for sub labels
+;p_name and b_name for pointers and buffer pointers
+ 	.nolist
+#include "spasm.inc"
+#include "LLegends.inc"
+#define APP16SPRITEMASK
+	.list
+ClearBreakPoints()
+defpage(0,"LLegends")
+
+	jp start
+
+;USE FOR BCALLING ROUTINES
+;pagedcallname: 
+; .dw address_of_routine
+; .db address_of_routine>>16
+;USE FOR BCALLING ROUTINES
+
+start:
+;========================================
+;READ NOTES FOR ENTRY/EXIT INSTRUCTIONS!!
+;========================================
+	bcall(_ClrLCDFull)
+	ld hl,AllocSize
+	bcall(_EnoughMem)	;check if enough RAM for RGP allocation
+	jr nc, start2
+	bjump(_JForceCmdNoChar)		;exit if not enough
+start2:
+	ld de,$9d95
+	ld hl,AllocSize
+	bcall(_InsertMem)		;allocate RAM for RGP
+	call GSenable			;turn on grayscale
+	call gsclearbuffer
+	ld hl,$00
+	ld (currow),hl
+	ld hl,mystring
+	call appPutS
+	call gscopybuffer
+	call keyget
+	ld de,appbackupscreen
+	ld hl,samplemap
+	ld bc,32
+	ldir
+	;call draw6x4map
+	call draw6x4map
+miniloop
+	call gscopybuffer
+	call keyget
+	bit b_yequal,a
+	jp z,exit
+	jp miniloop
+
+#comment
+;SET UP MAPPER
+	ld hl,$00
+	ld (camY),hl
+	ld a,24
+	ld (mapWidth),a
+	ld a,16
+	ld (mapHeight),a
+	ld hl,grendale_castle
+	ld (mapBase),hl
+gameloop:
+;drawing section
+	call mapper
+	ld hl,charspritebase + (96*7)
+	ld (gs16maskedsprite),hl
+	ld ix,charspritebase + (96*7 + 64)
+	ld b,16
+	ld a,16
+	ld l,a
+	call gs16masked
+	call gscopybuffer
+;key analysis section
+	call keyget
+	bit b_down,a
+	call z,movedown
+	bit b_up,a
+	call z,moveup
+	bit b_left,a
+	call z,moveleft
+	bit b_right,a
+	call z,moveright
+	bit b_yequal,a
+	jp z,exit	
+	
+	jp gameloop
+	
+movedown:
+	ld c,a
+	ld a,(camY)
+	inc a
+	cp 17
+	jr nc,$+3
+	ld (camY),a
+	ld a,c
+	ret
+moveup:
+	ld c,a
+	ld a,(camY)
+	dec a
+	cp 17
+	jr nc,$+3
+	ld (camY),a
+	ld a,c
+	ret
+moveright:
+	ld c,a
+	ld a,(camX)
+	inc a
+	cp 25
+	jr nc,$+3
+	ld (camX),a
+	ld a,c
+	ret
+moveleft:
+	ld c,a
+	ld a,(camX)
+	dec a
+	cp 25
+	jr nc,$+3
+	ld (camX),a
+	ld a,c
+	ret
+#endcomment
+exit:
+	call gsclearbuffer
+	call GSdisable			;disable gs
+	ld hl,$9d95
+	ld de,AllocSize
+	bcall(_DelMem)			;deallocate RAM
+	res DGFont,(iy + myfontflags)		;older ROM versions don't auto restore flags
+	res LGFont,(iy + myfontflags)
+	bjump(_JForceCmdNoChar)		;exit
+
+appPutS:						; appsafe _PutS
+	ld a,(hl)
+	inc hl
+	or a
+	ret z
+	call customPutC
+	jr appPutS
+	
+myString:
+	.db 24,27,31,32,39,24,17,19,17,26,16,31,0
+
+#include "keyboard.z80"
+#include "graylibx.inc"
+#include "customfont.z80"
+#include "mapper2.z80"
+#include "charsprite.inc"
+
+.echo "to allocate:", AllocSize
+.echo "actual size:",$-start
+
+.block ($8000-$)-96			; 96 for signature
+validate()
