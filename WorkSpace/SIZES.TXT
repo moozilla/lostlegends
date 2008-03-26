@@ -21,13 +21,13 @@ mapget.z80 data:528
 mapget.z80 code:168
 
 ++sprite.z80
-Sprite.inc size:1317
+Sprite.inc size:1275
 Sprite.inc data:768
-Sprite.inc code:549
+Sprite.inc code:507
 
 ++OTHER
 to allocate:1577
-actual size:9291
-Code Space:1628
+actual size:9249
+Code Space:1586
 Data Space:7504
 
