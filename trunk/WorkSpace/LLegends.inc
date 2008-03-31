@@ -29,7 +29,7 @@
 #define numAni 4
 #define Anidelta 16 / numAni
 #define numAniS 4
-#define AniSdelta 4 / numAniS
+#define AniSdelta 12 / numAniS
 
 ;mapper2.z80
 ;===========================================
