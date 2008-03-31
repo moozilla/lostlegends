@@ -176,7 +176,7 @@ NSpriteMov_right_shift:
 	ld de, charright
 	call NSpriteMov_LDassist	;pointers to correct animations have been added
 	push hl
-	ld a,%0001000			;scroll it over once
+	xor a			;scroll it over once
 	call scrollmap
 	call draw6x4map			;clean slate
 	pop hl				;x, y in pixels in hl
@@ -227,6 +227,22 @@ NSpriteMov_right_shift2x3:
 	;break()
 	djnz NSpriteMov_right_shift2
 	;break()
+	push hl
+	ld a,5
+	call scrollmap
+	call draw6x4map
+	pop hl
+	ld a, -(14)
+	add a,h				;last shift is -16 + 3 = -14 in x coordinate
+	ld h,a				; update hl
+	ld b,16				;height
+	ld ix,charright + 64
+	ld de,charright
+	ld (gs16maskedsprite),de	;load mask and sprite in right spot
+	call gs16masked
+	call gscopybuffer
+	ld de,(NBright)
+	call mapDatatoRam			;retrieve correct object data
 	ret		
 ;do the last animation
 ;works ok, but too FAST!!!!!!	
