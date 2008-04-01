@@ -188,7 +188,7 @@ BROADSWORD  | (none)                             | +12 |  0  |  0  | +56 |  0  |
 GLADIUS     | (none)                             | +18 |  0  |  0  | +56 |  0  | N/A                        | +2 STR, -1 WIS
 FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 |  0  | +8  | +56 |  0  |X-FIRE                      | +1 STR
 WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 |  0  |  0  | +56 |  0  |X-DRAGON, (CAUSTIC FOUNT)   | +2 STR
-EINHERJAR   |SWORD THAT AVENGES ITS WIELDER      | +20 | +8  |  0  | +56 | +2  |COUNTER                     | +1 STA, +1 STR
+EINHERJAR   |SWORD OF VENGEANCE                  | +20 | +8  |  0  | +56 | +2  |COUNTER                     | +1 STA, +1 STR
 CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +4  | +8  | +56 |  0  |CRITICAL, (GODLY SUNDER)    | +2 STR
 SANGUINARY  |BRITTLE SWORD THAT STEALS LIFE      |  +2 |  0  |  0  |  -2 |  0  |DRAIN                       | +1 HP, -1 to any
 MURASAME    |FABLED SWORD OF DARKNESS            | +18 |  0  |  0  | +64 | +4  |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR
@@ -223,11 +223,11 @@ PISTOL*     | (none)                             | +8  |  0  |  0  | +32 |  0  |
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Shields    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-CLOAK       |CLOAK USED AS A SHIELD              |  0  |  +1 |  0  |  0  | +4  | N/A                        | +1 AGI
+CLOAK       |CLOAK FOR SHIELDING                 |  0  |  +1 |  0  |  0  | +4  | N/A                        | +1 AGI
 ESCUTCHEON  |SMALL FENCING SHIELD                |  0  |  +2 |  0  |  0  | +2  | N/A                        | +1 HP
 FULL SHIELD | (none)                             |  0  |  +4 |  0  |  0  | +4  | N/A                        | +1 HP
 AEGIS SHIELD|SHIELD THAT WARDS GORGONS           |  0  |  +8 |  0  |  0  | +4  |O-DEATH                     | +1 HP, +1 STA
-GOLD CAPOTE |LIGHT CAPE USED AS A SHIELD         |  0  |  +2 | +8  |  0  | +8  | N/A                        | +2 AGI, +1 WIS
+GOLD CAPOTE |LIGHT CAPE FOR EVASION              |  0  |  +2 | +8  |  0  | +8  | N/A                        | +2 AGI, +1 WIS
 KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    |  0  | +12 |  0  |  0  | +2  |O-ELEMENT, SHELL            | +2 HP, +1 STA
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Helmets    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
@@ -235,17 +235,17 @@ KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    |  0  | +12 |  0  |  0  | +2  |
 FEATHER CAP | (none)                             |  0  | +2  | +4  |  0  | +2  | N/A                        | +1 WIS
 BASINET     | (none)                             |  0  | +6  |  0  |  0  | -2  | N/A                        | +1 STA, -1 AGI
 HEADBAND    |HEADWEAR WORN BY FIGHTERS           | +8  | +2  |  0  | +8  | +2  | N/A                        | +1 STR
-SKULL VISAGE|GRIM HELMET USED BY UNDEAD ARMIES   |  0  | +4  | +8  | -8  | -2  |DRAIN, W-COLD               | +1 WIS, +1 STA, -1 AGI
+SKULL VISAGE|GRIM HELMET OF UNDEAD ARMIES        |  0  | +4  | +8  | -8  | -2  |DRAIN, W-COLD               | +1 WIS, +1 STA, -1 AGI
 DRAGON HELM |HELMET THAT WARDS FIRE              |  0  | +8  |  0  |  0  | -2  |O-FIRE                      | +1 HP, +1 STA, -1 AGI
-RIBBON      |RIBBON THAT WARDS STATUS CHANGE     |  0  |  0  |  0  |  0  | +2  |O-STATUS                    | +1 to any
+RIBBON      |RIBBON THAT WARDS STATUS            |  0  |  0  |  0  |  0  | +2  |O-STATUS                    | +1 to any
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Armor      | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 CAMBRIC     | (none)                             |   0 |  +8 |   0 |  0  | +2  |W-FIRE                      | +1 HP, +1 WIS
 BRIGANDINE  | (none)                             |   0 | +14 |   0 |  0  | +2  | N/A                        | +2 HP, +1 STA
 CUIRASS     | (none)                             |   0 | +20 |   0 |  0  | -2  | N/A                        | +6 HP, +2 STA, -1 AGI
-KENPO GI    |TRAINING GARB WORN BY FIGHTERS      | +12 | +10 |   0 | +8  | +4  |W-FIRE, COUNTER             | +2 HP, +1 STR
-DARK SHROUD |SWIFT CLOTHING WORN BY NINJAS       |   0 | +14 |   0 |  0  | +8  |W-FIRE                      | +4 HP, +1 AGI
+KENPO GI    |TRAINING GARB OF FIGHTERS           | +12 | +10 |   0 | +8  | +4  |W-FIRE, COUNTER             | +2 HP, +1 STR
+DARK SHROUD |SWIFT NINJA CLOTHING                |   0 | +14 |   0 |  0  | +8  |W-FIRE                      | +4 HP, +1 AGI
 MINERVA     |LIGHT ARMOR WORN BY ELVES           |   0 | +14 |  +8 |  0  | +2  |SHELL                       | +4 HP, +1 STA, +1 WIS
 SERPENTSKIN |TUNIC THAT WARDS FIRE               |   0 | +16 |   0 |  0  | +2  |O-FIRE, W-COLD              | +4 HP, +1 STA
 ARCHON ROBES| (none)                             |   0 | +12 | +12 |  0  |  0  |O-COLD, SHELL               | +2 HP, +1 WIS
@@ -259,7 +259,7 @@ POWER SASH  |SASH WORN BY FIGHTERS               | +8  | +2  |  0  | +2  | +2  |
 GENJI GLOVE | (none)                             | +4  | +2  |  0  | +4  | +2  |CRITICAL                    | +1 to any
 PEGASUS SHOE|WINGED SHOES THAT GRANT AGILITY     |  0  | +2  |  0  | +4  | +4  | N/A                        | +1 AGI
 DRAGON SCALE|SCALE THAT WARDS FIRE               |  0  | +2  |  0  |  0  |  0  |O-FIRE, W-COLD              | +1 STA
-COBALT BAND |ARMLET THAT WARDS COLD              |  0  |  0  | +2  |  0  |  0  |O-COLD                      | +1 WIS
+COBALT BAND |BAND THAT WARDS COLD                |  0  |  0  | +2  |  0  |  0  |O-COLD                      | +1 WIS
 JADE ARMLET |ARMLET THAT WARDS POISON            |  0  |  0  | +2  |  0  |  0  |O-POISON                    | +1 WIS
 LAMIA'S TEAR|PENDANT THAT WARDS ENCHANTMENT      |  0  |  0  | +2  |  0  |  0  |O-ENCHANT                   | +1 WIS
 ANGEL RING  |RING THAT WARDS DEATH               |  0  |  0  | +2  |  0  |  0  |O-DEATH, RECOVERY           | +1 WIS
@@ -268,12 +268,12 @@ ORNATE RING |GLIMMERING RING THAT WARDS MAGIC    | +2  | +2  | +2  | +2  | +2  |
 ------------+------------------------------------+----------------------------------------------------------------------------------
  Alchemy    | Description                        | Effect
 ------------+------------------------------------+----------------------------------------------------------------------------------
-LIFE ROOT   |RESTORE 12-24 HP                    | Restores 12-24 HP
-PANACEA     |RESTORE STATUS                      | Cures [POISON] and / or [BLIND] status
-MANA DEW    |RESTORE MANA                        | Restores a spell charge
-ANGEL TEAR  |RAISE FALLEN ALLY                   | Restores a fallen ally with 1 HP
-SOMA DROP   |RESTORE 50% MAX HP                  | Restores 50% of mHP
-ELIXER      |FULLY RESTORE HP/STATUS             | Restores all HP and cures [POISON] and / or [BLIND] status
+LIFE ROOT   |RESTORES 12-24 HP                   | Restores 12-24 HP
+PANACEA     |RESTORES STATUS                     | Cures [POISON] and / or [BLIND] status
+MANA DEW    |RESTORES MANA                       | Restores a spell charge
+ANGEL TEAR  |RAISES FALLEN ALLY                  | Restores a fallen ally with 1 HP
+SOMA DROP   |RESTORES 50% MAX HP                 | Restores 50% of mHP
+ELIXER      |FULLY RESTORES HP/STATUS            | Restores all HP and cures [POISON] and / or [BLIND] status
 
 * Special equipment only used by MARSHAL
 
@@ -992,7 +992,7 @@ poison kill a target)
 Enchantment ("COMATOSE" status) - the target will become paralyzed, (asleep) and unable to act for a few rounds. The number of
 rounds is a randomly generated integer between 1 and 3. While comatose, EVADE = 0. This status ends after battle.
 
-Blindness ("BLIND" status) - the target's hit% will be cut in half, until the condition is healed. This status persists after
+Blindness ("BLINDED" status) - the target's hit% will be cut in half, until the condition is healed. This status persists after
 battle.
 
 Death / Petrify ("FELLED" status) - the target is instantly slain, regardless of any other condition. (the game generally doesn't
