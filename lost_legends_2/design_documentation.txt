@@ -273,7 +273,7 @@ PANACEA     |RESTORES STATUS                     | Cures [POISON] and / or [BLIN
 MANA DEW    |RESTORES MANA                       | Restores a spell charge
 ANGEL TEAR  |RAISES FALLEN ALLY                  | Restores a fallen ally with 1 HP
 SOMA DROP   |RESTORES 50% MAX HP                 | Restores 50% of mHP
-ELIXER      |FULLY RESTORES HP/STATUS            | Restores all HP and cures [POISON] and / or [BLIND] status
+ELIXIR      |FULLY RESTORES HP/STATUS            | Restores all HP and cures [POISON] and / or [BLIND] status
 
 * Special equipment only used by MARSHAL
 
@@ -470,7 +470,7 @@ ASNOTH ARMORY     | GLADIUS      |  1200 | VIM ORISON     |  4400 |      N/A
 ASNOTH AIRSHIP    | SOMA DROP    |   200 |  --            |  --   |    80 GP
                   | PANACEA      |   120 |  --            |  --   |
                   | ANGEL TEAR   |   400 |  --            |  --   |
-                  | ELIXER       |  1100 |  --            |  --   |
+                  | ELIXIR       |  1100 |  --            |  --   |
 ------------------+--------------+-------+----------------+-------+----------
 FALLS BASIN       |  --          |  --   | GOLDY SUNDER   | 16000 |      N/A
                   |  --          |  --   | LEADEN GAZE    | 12000 |
@@ -856,7 +856,7 @@ Modifiers:
 ================================================================================
 THE DOPPLEGANGER [UNDEAD]
 
-HP 0320 | GP 0800 | Spoils: ELIXER [ 1/ 1]
+HP 0320 | GP 0800 | Spoils: ELIXIR [ 1/ 1]
 
 DAM 056 | DEF 016 | WIS 36 | AGI 24 | HIT 72% | EVA 08%
 
