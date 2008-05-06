@@ -338,7 +338,7 @@ CLOTH  |Clothes worn by commoners         |.../ +3/.../ +3| Weak to fire
 ROBE   |A robe worn by nobles             |.../ +3/ +5/ -1| N/A
 ARCANE |A robe worn by high mages         |.../ +5/+12/ -1| Resist cold
 TUNIC  |Light, yet sturdy clothing        |.../ +5/.../ +1| N/A
-JUDOGI |A uniform worn by martial artists | +8/ +5/.../ +8| Weak to fire
+JUDO GI|A uniform worn by martial artists | +8/ +5/.../ +8| Weak to fire
 CHAIN  |Shirt layered with chains         |.../+10/.../ -1| N/A
 MINERVA|Light shirt worn by mages         |.../ +8/ +8/ +1| Resist fire
 PLATE  |Full-plate armor                  |.../+15/.../ -3| N/A
@@ -391,7 +391,7 @@ HERO   | Gauntlets worn by true heroes    | +5/ +5/ +5/ +5| N/A
 Potion | Effect                                                              |Qt
 -------+---------------------------------------------------------------------+--
 TONIC  | Recovers 16 HP / single ally                                        | 5
-ELIXER | Recovers all HP / single ally                                       | 1
+ELIXIR | Recovers all HP / single ally                                       | 1
 CUREALL| Recovers 24 HP / all allies                                         | 1
 MYRRH  | Restores a fallen ally to life w/ 1 HP                              | 1
 PURE   | Cures poisoning                                                     | 3
@@ -445,7 +445,7 @@ TUNIC   |  180  SHIELD  |  600
 
 Karta Kingdom
 -PAGE 1---------PAGE 2-------- -INN COST: 400 GP
-ELIXER  |  250  PLATE   | 1600
+ELIXIR  |  250  PLATE   | 1600
 MYRHH   |  400  BLAZE   |  400
 SILVER  | 2200  FROST   |  400
 GREAT   | 1600  HEALING |  800
@@ -455,7 +455,7 @@ CHAIN   |  800  RAISE   | 1200
 Colloseum
 -PAGE 1---------PAGE 2-------- -INN COST: (N/A)
 TONIC   |   40  BATTLE  |  400
-ELIXER  |  250  OGRE    | 1100
+ELIXIR  |  250  OGRE    | 1100
 PURE    |   60  RUBY    |  600
 MYRHH   |  400  AZURE   |  800
 HEALING |  800  LAMIA   | 1100
@@ -464,7 +464,7 @@ RAISE   | 1200  SERPENT | 1100
 Khimeara Village
 -PAGE 1---------PAGE 2-------- -INN COST: (N/A)
 PURE    |   60  CURE    |  400
-ELIXER  |  250  SHIELD  |  600
+ELIXIR  |  250  SHIELD  |  600
 MYRRH   |  400  MIGHT   |  600
 BLAZE   |  400  RAISE   | 1200
 FROST   |  400  CUREALL | 6400
