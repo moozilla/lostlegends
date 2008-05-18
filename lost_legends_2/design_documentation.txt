@@ -3,12 +3,11 @@
 |  ||  _  |__ --||   _| |  ||  -__|  _  |  -__|     |  _  ||__ --| |  |  |
 |__||_____|_____||____| |__||_____|___  |_____|__|__|_____||_____| |__|__|
 ----------------------------------|_____|---------------------------------
-
-                                s h a d o w   o v e r   r a g n o t h
-
+                             -- s h a d o w   o v e r   r a g n o t h --
+--------------------------------------------------------------------------
 
   -= LOST LEGENDS II: DESIGN DOCUMENTATION =-
-       written by G.HILMARSSON
+
 
 platform            - TI-83/84+ series
 resolution          - 96x64 px.
@@ -18,37 +17,39 @@ font routine        - 4x8 px. per character (extended font is 4x4)
 
 
 =================================================================================================================================132
-!! DOCUMENT IS BEST VIEWED WITH LINE BREAK AT COLUMN NUMBER 132
+!! DOCUMENT IS BEST VIEWED WITH LINE-BREAK AT COLUMN NUMBER 132
 
 composed using TextPad 5.0: 32-bit Edition
 =================================================================================================================================132
 
+____________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________
 
 TABLE OF CONTENTS
+____________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________
 
-1.) CHARACTER DATA
+1.) CHARACTER DATA   ......................................................................................................   .[001]
 
-2.) INVENTORIES
- 2.a MAGIC
- 2.b ARMORY
- 2.c MODIFIERS
- 2.d KEY ITEMS
- 2.e TREASURE LIST
- 2.f RANDOM ENCOUNTERS
- 2.g SHOP LIST
- 2.h BESTIARY DATA
- 2.i ENEMY SKILLS
+2.) INVENTORIES   .........................................................................................................   .[002]
+ 2.a MAGIC   ..............................................................................................................   .[0a2]
+ 2.b ARMORY   .............................................................................................................   .[0b2]
+ 2.c MODIFIERS   ..........................................................................................................   .[0c2]
+ 2.d KEY ITEMS   ..........................................................................................................   .[0d2]
+ 2.e TREASURE LIST   ......................................................................................................   .[0e2]
+ 2.f RANDOM ENCOUNTERS   ..................................................................................................   .[0f2]
+ 2.g SHOP LIST   ..........................................................................................................   .[0g2]
+ 2.h BESTIARY DATA   ......................................................................................................   .[0h2]
+ 2.i ENEMY SKILLS   .......................................................................................................   .[0i2]
 
-8.) SYSTEM NOTES
- 8.a STATUS MODIFIERS
- 8.b BATTLE COMMANDS
-
-
+3.) SYSTEM NOTES   ........................................................................................................   .[003]
+ 3.a STATUS MODIFIERS   ...................................................................................................   .[0a3]
+ 3.b BATTLE COMMANDS   ....................................................................................................   .[0b3]
 
 
-====================================================================================================================================
-  1.) CHARACTER DATA
-====================================================================================================================================
+_-================================================================================================================================-_
+    1.) CHARACTER DATA                                                                                                    .[001]
+_-================================================================================================================================-_
 
 
 These are starting positions for each player character.
@@ -56,81 +57,44 @@ These are starting positions for each player character.
  - D. KNIGHT, ROSE and MARSHAL may not be re-equipped at any point in the game, as they are guest characters
 
 
-Party GP: 200
+Inial party GP = 200
 
-MAYA              030 mHP
 
-STR 10 | STA 08 | WIS 16 | AGI 16
+MAYA              030 mHP                 EDMUND            042 mHP                 GLENN             060 mHP
 
-WPN WOODEN STAFF  SHD  (none)
-HLM  (none)       ARM CAMBRIC
-ACC JADE ARMLET   ITM LIFE ROOT
+STR 10 | STA 08 | WIS 16 | AGI 16         STR 16 | STA 12 | WIS 12 | AGI 14         STR 24 | STA 20 | WIS 08 | AGI 18
 
-spells:
+WPN WOODEN STAFF  SHD  (none)             WPN BROADSWORD    SHD ESCUTCHEON          WPN FRANCESCA     SHD CLOAK
+HLM  (none)       ARM CAMBRIC             HLM  (none)       ARM BRIGANDINE          HLM HEADBAND      ARM BRIGANDINE
+ACC JADE ARMLET   ITM LIFE ROOT           ACC  (none)       ITM  (none)             ACC  (none)       ITM  (none)
 
-FAERIE FIRE
-----------------------------------
-EDMUND            042 mHP
+spellbook: (3 mana)                       spellbook: (3 mana)                       spellbook: (0 mana)
 
-STR 16 | STA 12 | WIS 12 | AGI 14
+FAERIE FIRE                               LAY ON HANDS                               (none)
 
-WPN BROADSWORD    SHD ESCUTCHEON
-HLM  (none)       ARM BRIGANDINE
-ACC  (none)       ITM  (none)
+----------------------------------        ----------------------------------        ----------------------------------
+D. KNIGHT         072 mHP                 ROSE                                      MARSHAL           180 mHP
 
-spells:
+STR 22 | STA 14 | WIS 20 | AGI 16         (stats carry over from D. KNIGHT)         STR 92 | STA 80 | WIS 00 | AGI 64
 
-LAY ON HANDS
-----------------------------------
-GLENN             060 mHP
+WPN GLADIUS       SHD FULL SHIELD         WPN GLADIUS       SHD FULL SHIELD         WPN  PISTOL       SHD  (none)
+HLM BASINET       ARM CUIRASS             HLM BASINET       ARM CUIRASS             HLM  (none)       ARM  TIN PLATE
+ACC  (none)       ITM  (none)             ACC  (none)       ITM  (none)             ACC  (none)       ITM  (none)
 
-STR 24 | STA 20 | WIS 08 | AGI 18
+spellbook: (5 mana)                       spellbook:                                spellbook: (0 mana)
 
-WPN FRANCESCA     SHD CLOAK
-HLM HEADBAND      ARM BRIGANDINE
-ACC  (none)       ITM  (none)
-----------------------------------
-D. KNIGHT         072 mHP
-
-STR 22 | STA 14 | WIS 20 | AGI 16
-
-WPN GLADIUS       SHD FULL SHIELD
-HLM BASINET       ARM CUIRASS
-ACC  (none)       ITM  (none)
-
-spells:
-
-CHILL TOUCH     INNER STRENGTH
+CHILL TOUCH     INNER STRENGTH            (carries over from D. KNIGHT)             (cannot use magic)
 UNHOLY SCOURGE  NEUTRALIZE
-----------------------------------
-ROSE
-
-(stats carry over from D. KNIGHT)
-
-WPN GLADIUS       SHD FULL SHIELD
-HLM BASINET       ARM CUIRASS
-ACC  (none)       ITM  (none)
-
-CHILL TOUCH     INNER STRENGTH
-UNHOLY SCOURGE  NEUTRALIZE
-----------------------------------
-MARSHAL           180 mHP
-
-STR 92 | STA 80 | WIS 00 | AGI 64
-
-WPN  PISTOL       SHD  (none)
-HLM  (none)       ARM  TIN PLATE
-ACC  (none)       ITM  (none)
-----------------------------------
+----------------------------------        ----------------------------------        ----------------------------------
 
 
-====================================================================================================================================
-  2.) INVENTORIES
-====================================================================================================================================
+_-================================================================================================================================-_
+    2.) INVENTORIES                                                                                                       .[002]
+_-================================================================================================================================-_
 
- -------
-  MAGIC
- -------
+------------------------------------------------------------------------------------------------------------------------------------
+  2.a MAGIC                                                                                                                 .[0a2]
+------------------------------------------------------------------------------------------------------------------------------------
 
 notes:
 
@@ -167,9 +131,9 @@ FEIGN DARKNESS| 16 | 70%| induces [BLIND] status on all enemies; raises party EV
 LEADEN GAZE   | 32 | 60%| induces [DEATH] status on enemy                                               |PETRIFY ENEMY
 
 
- --------
-  ARMORY
- --------
+------------------------------------------------------------------------------------------------------------------------------------
+  2.b ARMORY                                                                                                                .[0b2]
+------------------------------------------------------------------------------------------------------------------------------------
 
 notes:
 
@@ -278,10 +242,11 @@ ELIXIR      |FULLY RESTORES HP/STATUS            | Restores all HP and cures [PO
 * Special equipment only used by MARSHAL
 
 
- -----------
-  MODIFIERS
- -----------
+------------------------------------------------------------------------------------------------------------------------------------
+  2.c MODIFIERS                                                                                                             .[0c2]
+------------------------------------------------------------------------------------------------------------------------------------
 
+Modifiers are passive / supportive effects added to equipment, which can be viewed on the equipment check sub-screen.
 
 X-FIRE    - damage is [FIRE]-elemental
 X-COLD    - damage is [COLD]-elemental
@@ -324,21 +289,23 @@ RECOVERY  - automatically recovers 4-8% mHP per round
 ------------------------------------------------------------------------------------------------------------------------------------
 
 
- -----------
-  KEY ITEMS
- -----------
+------------------------------------------------------------------------------------------------------------------------------------
+  2.d KEY ITEMS                                                                                                             .[0d2]
+------------------------------------------------------------------------------------------------------------------------------------
+
+This is a list of key items necessary to activate certain events, or have some significant effect on gameplay.
+
+RUNE KEY    - KEY TO THE ARCANIAN RUINS (unlocks the ARCANIAN RUINS)
+MANA SPHERE - MAGICAL RELIC OF THE ARCANIANS (used in several story events)
+ADAMANT ORE - POWERFUL METAL USED IN FORGING (given to dwarven smithy to make CALIBURN)
+DYNAMITE    - EXPLOSIVE THAT DESTROYS ROCKS (when used, it temporarily removes any of the "debris" icons found in the maps)
 
 
-RUNE KEY    - KEY TO THE ARCANIAN RUINS
-MANA SPHERE - MAGICAL RELIC OF THE ARCANIANS
-ADAMANT ORE - POWERFUL METAL USED IN FORGING
-DYNAMITE    - EXPLOSIVE THAT DESTROYS ROCKS
+------------------------------------------------------------------------------------------------------------------------------------
+  2.e TREASURE LIST / RANDOM ENCOUNTERS                                                                                     [.0e2]
+------------------------------------------------------------------------------------------------------------------------------------
 
-
- -----------------------------------
-  TREASURE LIST / RANDOM ENCOUNTERS
- -----------------------------------
-
+This is a list of rare treasures found only in chests, or through random encounters.
 
 ------------+------------------------------------------------------------------------------------------------------+----------------
  Treasure   | Location                                                                                             | Guarded by...
@@ -383,9 +350,9 @@ SERAPHIM ROD| drop from SHADOW LORD (1)                                         
 KRAKEN SHELL| drop from KRAKEN                                                                                     | N/A
 
 
- -------------------
-  RANDOM ENCOUNTERS
- -------------------
+------------------------------------------------------------------------------------------------------------------------------------
+  2.f RANDOM ENCOUNTERS                                                                                                     .[0f2]
+------------------------------------------------------------------------------------------------------------------------------------
 
 
  - when determining an enemy party, the game simply generates 1 through 3 enemies (of the same type)
@@ -412,9 +379,9 @@ CELESTIAL REALM, B1, B3, B4 | FIRE DRAKE, GORGON, STORM DRAGON, WYRM |  16
 CELESTIAL REALM, B2         | STORM DRAGON, TITAN, WYRM, FIRE DRAKE  |  24
 
 
- -----------
-  SHOP LIST
- -----------
+------------------------------------------------------------------------------------------------------------------------------------
+  2.g SHOP LIST                                                                                                             .[0g2]
+------------------------------------------------------------------------------------------------------------------------------------
 
 
 ------------------+--------------+-------+----------------+-------+----------
@@ -477,11 +444,9 @@ FALLS BASIN       |  --          |  --   | GOLDY SUNDER   | 16000 |      N/A
                   |  --          |  --   | LEADEN GAZE    | 12000 |
 
 
-
-
-====================================================================================================================================
- BESTIARY
-====================================================================================================================================
+------------------------------------------------------------------------------------------------------------------------------------
+  2.h BESTIARY                                                                                                              .[0h2]
+------------------------------------------------------------------------------------------------------------------------------------
 
  -------------------
   NORMAL ENCOUNTERS
@@ -937,9 +902,9 @@ Modifiers:
 ================================================================================
 
 
- --------------
-  ENEMY SKILLS
- --------------
+------------------------------------------------------------------------------------------------------------------------------------
+  2.i ENEMY SKILLS                                                                                                          .[0i2]
+------------------------------------------------------------------------------------------------------------------------------------
 
 
 (attack name as it appears in game | effect of attack)
@@ -957,11 +922,9 @@ AN EARTH-SHATTERING SPELL | non-elemental damage against party; damage = base WI
               A MAELSTROM | non-elemental damage against party; damage = WIS x1.25; induces [DEATH] with hit
 
 
-
-
-====================================================================================================================================
-  3.) SYSTEM NOTES
-====================================================================================================================================
+_-================================================================================================================================-_
+    3.) SYSTEM NOTES                                                                                                      .[003]
+_-================================================================================================================================-_
 
 
 STRENGTH - the base value of attack power; may not exceed 99
@@ -981,9 +944,9 @@ EVADE - the derived value of AGILITY and armor evasion, which equals total chanc
 When determining hit and evasion formulas in battle, simply subtract the target's EVADE value from the attacker's HIT value.
 
 
- ------------------
-  STATUS MODIFIERS
- ------------------
+------------------------------------------------------------------------------------------------------------------------------------
+  3.a STATUS MODIFIERS                                                                                                      .[0a3]
+------------------------------------------------------------------------------------------------------------------------------------
 
 
 Poison ("POISONED" status) - the target will suffer damage equal to mHP/8 every round, until healed. If the poison is not
@@ -1000,9 +963,9 @@ Death / Petrify ("FELLED" status) - the target is instantly slain, regardless of
 distinguish between death and petrification, as they result in the same effect) This status persists after battle.
 
 
- -----------------
-  BATTLE COMMANDS
- -----------------
+------------------------------------------------------------------------------------------------------------------------------------
+  3.b BATTLE COMMANDS                                                                                                       .[0b3]
+------------------------------------------------------------------------------------------------------------------------------------
 
 
 USE WEAPON - uses currently equipped weapon
