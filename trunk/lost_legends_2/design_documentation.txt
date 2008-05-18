@@ -897,7 +897,7 @@ A DEATHLY STRIKE
 
 Modifiers:
 
-[X-BLIND  ]  [O-ELEMENT]  [O-STATUS ]  [COUNTER  ]
+[X-BLIND  ]  [O-ALL    ]  [SHELL    ]  [COUNTER  ]
 
 ================================================================================
 
