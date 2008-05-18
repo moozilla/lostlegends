@@ -148,86 +148,86 @@ notes:
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Swords     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-BROADSWORD  | (none)                             | +12 |  0  |  0  | +56 |  0  | N/A                        | +1 STR, -1 WIS
-GLADIUS     | (none)                             | +18 |  0  |  0  | +56 |  0  | N/A                        | +2 STR, -1 WIS
-FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 |  0  | +8  | +56 |  0  |X-FIRE                      | +1 STR
-WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 |  0  |  0  | +56 |  0  |X-DRAGON, (CAUSTIC FOUNT)   | +2 STR
-EINHERJAR   |SWORD OF VENGEANCE                  | +20 | +8  |  0  | +56 | +2  |COUNTER                     | +1 STA, +1 STR
-CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +4  | +8  | +56 |  0  |CRITICAL, (GODLY SUNDER)    | +2 STR
-SANGUINARY  |BRITTLE SWORD THAT STEALS LIFE      |  +2 |  0  |  0  |  -2 |  0  |DRAIN                       | +1 HP, -1 to any
-MURASAME    |FABLED SWORD OF DARKNESS            | +18 |  0  |  0  | +64 | +4  |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR
+BROADSWORD  | (none)                             | +12 | ... | ... | +56 | ... | N/A                        | +1 STR, -1 WIS
+GLADIUS     | (none)                             | +18 | ... | ... | +56 | ... | N/A                        | +2 STR, -1 WIS
+FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 | ... | +08 | +56 | ... |X-FIRE                      | +1 STR
+WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 | ... | ... | +56 | ... |X-DRAGON, (CAUSTIC FOUNT)   | +2 STR
+EINHERJAR   |SWORD OF VENGEANCE                  | +20 | +08 | ... | +56 | +02 |COUNTER                     | +1 STA, +1 STR
+CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +04 | +08 | +56 | ... |CRITICAL, (GODLY SUNDER)    | +2 STR
+SANGUINARY  |BRITTLE SWORD THAT STEALS LIFE      | +02 | ... | ... | -02 | ... |DRAIN                       | +1 HP, -1 to any
+MURASAME    |FABLED SWORD OF DARKNESS            | +18 | ... | ... | +64 | +04 |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Axes       | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-FRANCESCA   | (none)                             | +16 |  0  |  0  | +42 | -4  | N/A                        | +2 STR, +1 HP, -1 AGI
-OGRISH AXE  |EFFECTIVE VS. OGRES                 | +20 |  0  |  0  | +42 | -4  |X-OGRE                      | +4 STR, +1 HP, -1 AGI
-STORM RENDER|AXE THAT CONJURES STORMS            | +36 |  0  | +4  | +42 | -4  |X-COLD, (RENDING GALE)      | +2 STR, +1 HP, -1 AGI
-STONEGRINDER|RIDDEN WITH A GORGON'S CURSE        | +24 |  0  |  0  | +42 | -4  |X-DEATH                     | +2 STR, +1 STA, -1 AGI
-RUIN AXE    |AN ANCIENT,ENCHANTED AXE            | +44 | +4  |  0  | +36 | -4  |X-ENCHANT                   | +2 STR, +1 HP, -1 AGI
+FRANCESCA   | (none)                             | +16 | ... | ... | +42 | -04 | N/A                        | +2 STR, +1 HP, -1 AGI
+OGRISH AXE  |EFFECTIVE VS. OGRES                 | +20 | ... | ... | +42 | -04 |X-OGRE                      | +4 STR, +1 HP, -1 AGI
+STORM RENDER|AXE THAT CONJURES STORMS            | +36 | ... | +04 | +42 | -04 |X-COLD, (RENDING GALE)      | +2 STR, +1 HP, -1 AGI
+STONEGRINDER|RIDDEN WITH A GORGON'S CURSE        | +24 | ... | ... | +42 | -04 |X-DEATH                     | +2 STR, +1 STA, -1 AGI
+RUIN AXE    |AN ANCIENT,ENCHANTED AXE            | +44 | +04 | ... | +36 | -04 |X-ENCHANT                   | +2 STR, +1 HP, -1 AGI
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Bows       | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-LONG BOW    | (none)                             |  +8 | -2  |   0 | +64 | -2  |X-WINGED                    | +1 AGI, +1 STR
-SYLVAN BOW  |BOW THAT ENHANCES MAGIC             | +14 | -2  |  +8 | +64 | -2  |X-WINGED                    | +2 AGI, +1 WIS
-ACRID SHOT  |BOW TIPPED WITH VENOM               | +18 | -2  |   0 | +64 | -2  |X-WINGED, X-POISON          | +2 AGI, +1 STR
-ARTEMIS BOW | (none)                             | +22 |  0  | +12 | +64 | -2  |X-WINGED                    | +4 AGI, +1 STR
-GASTRAPHETES|VERY LIGHT CROSSBOW                 | +28 |  0  |   0 | +72 |  0  |X-WINGED, CRITICAL          | +2 AGI, +1 STR
+LONG BOW    | (none)                             | +08 | -02 | ... | +64 | -02 |X-WINGED                    | +1 AGI, +1 STR
+SYLVAN BOW  |BOW THAT ENHANCES MAGIC             | +14 | -02 | +08 | +64 | -02 |X-WINGED                    | +2 AGI, +1 WIS
+ACRID SHOT  |BOW TIPPED WITH VENOM               | +18 | -02 | ... | +64 | -02 |X-WINGED, X-POISON          | +2 AGI, +1 STR
+ARTEMIS BOW | (none)                             | +22 | ... | +12 | +64 | -02 |X-WINGED                    | +4 AGI, +1 STR
+GASTRAPHETES|VERY LIGHT CROSSBOW                 | +28 | ... | ... | +72 | ... |X-WINGED, CRITICAL          | +2 AGI, +1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Staves     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-WOODEN STAFF| (none)                             |  +6 |  0  | +10 | +42 |  0  | N/A                        | +1 WIS, -1 STR
-WAR SCEPTER |A COMBAT MACE                       | +12 |  0  | +12 | +56 |  0  | N/A                        | +1 STR, +1 WIS
-SERAPHIM ROD|STAFF THAT GRANTS LIFE              | +10 |  0  | +18 | +42 |  0  |RECOVERY                    | +2 WIS, -1 STR
-VESPERTINE  |STAFF ENCOMPASSING DARKNESS         | +16 |  0  | +28 | +36 |  0  |X-BLIND, X-ENCHANT          | +4 WIS, -1 STR
-RUNIC STAFF |ANCIENT STAFF OF LIFE MAGIC         |  +8 |  0  | +32 | +42 |  0  |(VIM ORISON)                | +2 WIS, -1 STR
+WOODEN STAFF| (none)                             | +06 | ... | +10 | +42 | ... | N/A                        | +1 WIS, -1 STR
+WAR SCEPTER |A COMBAT MACE                       | +12 | ... | +12 | +56 | ... | N/A                        | +1 STR, +1 WIS
+SERAPHIM ROD|STAFF THAT GRANTS LIFE              | +10 | ... | +18 | +42 | ... |RECOVERY                    | +2 WIS, -1 STR
+VESPERTINE  |STAFF ENCOMPASSING DARKNESS         | +16 | ... | +28 | +36 | ... |X-BLIND, X-ENCHANT          | +4 WIS, -1 STR
+RUNIC STAFF |ANCIENT STAFF OF LIFE MAGIC         | +08 | ... | +32 | +42 | ... |(VIM ORISON)                | +2 WIS, -1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Other*     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-PISTOL*     | (none)                             | +8  |  0  |  0  | +32 |  0  |X-FIRE, CRITICAL            | (none)
+PISTOL*     | (none)                             | +08 | ... | ... | +32 | ... |X-FIRE, CRITICAL            | (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Shields    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-CLOAK       |CLOAK FOR SHIELDING                 |  0  |  +1 |  0  |  0  | +4  | N/A                        | +1 AGI
-ESCUTCHEON  |SMALL FENCING SHIELD                |  0  |  +2 |  0  |  0  | +2  | N/A                        | +1 HP
-FULL SHIELD | (none)                             |  0  |  +4 |  0  |  0  | +4  | N/A                        | +1 HP
-AEGIS SHIELD|SHIELD THAT WARDS GORGONS           |  0  |  +8 |  0  |  0  | +4  |O-DEATH                     | +1 HP, +1 STA
-GOLD CAPOTE |LIGHT CAPE FOR EVASION              |  0  |  +2 | +8  |  0  | +8  | N/A                        | +2 AGI, +1 WIS
-KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    |  0  | +12 |  0  |  0  | +2  |O-ELEMENT, SHELL            | +2 HP, +1 STA
+CLOAK       |CLOAK FOR SHIELDING                 | ... | +01 | ... | ... | +04 | N/A                        | +1 AGI
+ESCUTCHEON  |SMALL FENCING SHIELD                | ... | +02 | ... | ... | +02 | N/A                        | +1 HP
+FULL SHIELD | (none)                             | ... | +04 | ... | ... | +04 | N/A                        | +1 HP
+AEGIS SHIELD|SHIELD THAT WARDS GORGONS           | ... | +08 | ... | ... | +04 |O-DEATH                     | +1 HP, +1 STA
+GOLD CAPOTE |LIGHT CAPE FOR EVASION              | ... | +02 | +08 | ... | +08 | N/A                        | +2 AGI, +1 WIS
+KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    | ... | +12 | ... | ... | +02 |O-ELEMENT, SHELL            | +2 HP, +1 STA
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Helmets    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-FEATHER CAP | (none)                             |  0  | +2  | +4  |  0  | +2  | N/A                        | +1 WIS
-BASINET     | (none)                             |  0  | +6  |  0  |  0  | -2  | N/A                        | +1 STA, -1 AGI
-HEADBAND    |HEADWEAR WORN BY FIGHTERS           | +8  | +2  |  0  | +8  | +2  | N/A                        | +1 STR
-SKULL VISAGE|GRIM HELMET OF UNDEAD ARMIES        |  0  | +4  | +8  | -8  | -2  |DRAIN, W-COLD               | +1 WIS, +1 STA, -1 AGI
-DRAGON HELM |HELMET THAT WARDS FIRE              |  0  | +8  |  0  |  0  | -2  |O-FIRE                      | +1 HP, +1 STA, -1 AGI
-RIBBON      |RIBBON THAT WARDS STATUS            |  0  |  0  |  0  |  0  | +2  |O-STATUS                    | +1 to any
+FEATHER CAP | (none)                             | ... | +02 | +04 | ... | +02 | N/A                        | +1 WIS
+BASINET     | (none)                             | ... | +06 | ... | ... | -02 | N/A                        | +1 STA, -1 AGI
+HEADBAND    |HEADWEAR WORN BY FIGHTERS           | +08 | +02 | ... | +08 | +02 | N/A                        | +1 STR
+SKULL VISAGE|GRIM HELMET OF UNDEAD ARMIES        | ... | +04 | +08 | -08 | -02 |DRAIN, W-COLD               | +1 WIS, +1 STA, -1 AGI
+DRAGON HELM |HELMET THAT WARDS FIRE              | ... | +08 | ... | ... | -02 |O-FIRE                      | +1 HP, +1 STA, -1 AGI
+RIBBON      |RIBBON THAT WARDS STATUS            | ... | ... | ... | ... | +02 |O-STATUS                    | +1 to any
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Armor      | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-CAMBRIC     | (none)                             |   0 |  +8 |   0 |  0  | +2  |W-FIRE                      | +1 HP, +1 WIS
-BRIGANDINE  | (none)                             |   0 | +14 |   0 |  0  | +2  | N/A                        | +2 HP, +1 STA
-CUIRASS     | (none)                             |   0 | +20 |   0 |  0  | -2  | N/A                        | +6 HP, +2 STA, -1 AGI
-KENPO GI    |TRAINING GARB OF FIGHTERS           | +12 | +10 |   0 | +8  | +4  |W-FIRE, COUNTER             | +2 HP, +1 STR
-DARK SHROUD |SWIFT NINJA CLOTHING                |   0 | +14 |   0 |  0  | +8  |W-FIRE                      | +4 HP, +1 AGI
-MINERVA     |LIGHT ARMOR WORN BY ELVES           |   0 | +14 |  +8 |  0  | +2  |SHELL                       | +4 HP, +1 STA, +1 WIS
-SERPENTSKIN |TUNIC THAT WARDS FIRE               |   0 | +16 |   0 |  0  | +2  |O-FIRE, W-COLD              | +4 HP, +1 STA
-ARCHON ROBES| (none)                             |   0 | +12 | +12 |  0  |  0  |O-COLD, SHELL               | +2 HP, +1 WIS
-MIRROR MAIL |ARMOR THAT WARDS MAGIC              |   0 | +28 |   0 |  0  | -2  |SHELL                       | +6 HP, +2 STA, -1 AGI
-TIN PLATE*  | (none)                             |   0 |   0 |   0 |  0  |  0  |O-STATUS, SHELL             | (none)
+CAMBRIC     | (none)                             | ... | +08 | ... | ... | +02 |W-FIRE                      | +1 HP, +1 WIS
+BRIGANDINE  | (none)                             | ... | +14 | ... | ... | +02 | N/A                        | +2 HP, +1 STA
+CUIRASS     | (none)                             | ... | +20 | ... | ... | -02 | N/A                        | +6 HP, +2 STA, -1 AGI
+KENPO GI    |TRAINING GARB OF FIGHTERS           | +12 | +10 | ... | +08 | +04 |W-FIRE, COUNTER             | +2 HP, +1 STR
+DARK SHROUD |SWIFT NINJA CLOTHING                | ... | +14 | ... | ... | +08 |W-FIRE                      | +4 HP, +1 AGI
+MINERVA     |LIGHT ARMOR WORN BY ELVES           | ... | +14 | +08 | ... | +02 |SHELL                       | +4 HP, +1 STA, +1 WIS
+SERPENTSKIN |TUNIC THAT WARDS FIRE               | ... | +16 | ... | ... | +02 |O-FIRE, W-COLD              | +4 HP, +1 STA
+ARCHON ROBES| (none)                             | ... | +12 | +12 | ... | ... |O-COLD, SHELL               | +2 HP, +1 WIS
+MIRROR MAIL |ARMOR THAT WARDS MAGIC              | ... | +28 | ... | ... | -02 |SHELL                       | +6 HP, +2 STA, -1 AGI
+TIN PLATE*  | (none)                             | ... | ... | ... | ... | ... |O-STATUS, SHELL             | (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Accessories| Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-GAUNTLET    | (none)                             | +2  | +2  |  0  | +2  | +2  | N/A                        | +1 HP
-POWER SASH  |SASH WORN BY FIGHTERS               | +8  | +2  |  0  | +2  | +2  | N/A                        | +1 STR
-GENJI GLOVE | (none)                             | +4  | +2  |  0  | +4  | +2  |CRITICAL                    | +1 to any
-PEGASUS SHOE|WINGED SHOES THAT GRANT AGILITY     |  0  | +2  |  0  | +4  | +4  | N/A                        | +1 AGI
-DRAGON SCALE|SCALE THAT WARDS FIRE               |  0  | +2  |  0  |  0  |  0  |O-FIRE, W-COLD              | +1 STA
-COBALT BAND |BAND THAT WARDS COLD                |  0  |  0  | +2  |  0  |  0  |O-COLD                      | +1 WIS
-JADE ARMLET |ARMLET THAT WARDS POISON            |  0  |  0  | +2  |  0  |  0  |O-POISON                    | +1 WIS
-LAMIA'S TEAR|PENDANT THAT WARDS ENCHANTMENT      |  0  |  0  | +2  |  0  |  0  |O-ENCHANT                   | +1 WIS
-ANGEL RING  |RING THAT WARDS DEATH               |  0  |  0  | +2  |  0  |  0  |O-DEATH, RECOVERY           | +1 WIS
-ORNATE RING |GLIMMERING RING THAT WARDS MAGIC    | +2  | +2  | +2  | +2  | +2  |O-ALL, SHELL                | +1 to any
+GAUNTLET    | (none)                             | +02 | +02 | ... | +02 | +02 | N/A                        | +1 HP
+POWER SASH  |SASH WORN BY FIGHTERS               | +08 | +02 | ... | +02 | +02 | N/A                        | +1 STR
+GENJI GLOVE | (none)                             | +04 | +02 | ... | +04 | +02 |CRITICAL                    | +1 to any
+PEGASUS SHOE|WINGED SHOES THAT GRANT AGILITY     | ... | +02 | ... | +04 | +04 | N/A                        | +1 AGI
+DRAGON SCALE|SCALE THAT WARDS FIRE               | ... | +02 | ... | ... | ... |O-FIRE, W-COLD              | +1 STA
+COBALT BAND |BAND THAT WARDS COLD                | ... | ... | +02 | ... | ... |O-COLD                      | +1 WIS
+JADE ARMLET |ARMLET THAT WARDS POISON            | ... | ... | +02 | ... | ... |O-POISON                    | +1 WIS
+LAMIA'S TEAR|PENDANT THAT WARDS ENCHANTMENT      | ... | ... | +02 | ... | ... |O-ENCHANT                   | +1 WIS
+ANGEL RING  |RING THAT WARDS DEATH               | ... | ... | +02 | ... | ... |O-DEATH, RECOVERY           | +1 WIS
+ORNATE RING |GLIMMERING RING THAT WARDS MAGIC    | +02 | +02 | +02 | +02 | +02 |O-ALL, SHELL                | +1 to any
 
 ------------+------------------------------------+----------------------------------------------------------------------------------
  Alchemy    | Description                        | Effect
