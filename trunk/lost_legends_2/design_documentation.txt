@@ -102,7 +102,7 @@ notes:
 
  - all augmentive spells (i.e., MALICE MIRROR) are effective until the end of battle, and their values may stack
 
- - only 6 spells may be memorized total; they must be purchased from magic shops
+ - only 6 spells may be memorized total; (but they can be removed at any time) they must be purchased from magic shops
 
  - each character has a "spell charge" (MANA) value, which determines how many spells can be cast in one day (8 max)
 
@@ -148,86 +148,86 @@ notes:
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Swords     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-BROADSWORD  | (none)                             | +12 | ... | ... | +56 | ... | N/A                        | +1 STR, -1 WIS
-GLADIUS     | (none)                             | +18 | ... | ... | +56 | ... | N/A                        | +2 STR, -1 WIS
-FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 | ... | +08 | +56 | ... |X-FIRE                      | +1 STR
-WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 | ... | ... | +56 | ... |X-DRAGON, (CAUSTIC FOUNT)   | +2 STR
-EINHERJAR   |SWORD OF VENGEANCE                  | +20 | +08 | ... | +56 | +02 |COUNTER                     | +1 STA, +1 STR
-CALIBURN    |THE BLADE OF LEGENDS...             | +32 | +04 | +08 | +56 | ... |CRITICAL, (GODLY SUNDER)    | +2 STR
-SANGUINARY  |BRITTLE SWORD THAT STEALS LIFE      | +02 | ... | ... | -02 | ... |DRAIN                       | +1 HP, -1 to any
-MURASAME    |FABLED SWORD OF DARKNESS            | +18 | ... | ... | +64 | +04 |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR
+BROADSWORD  | (none)                             | +12 | ... | ... | +56 | ... | N/A                        | +1 STR, (none), -1 WIS
+GLADIUS     | (none)                             | +18 | ... | ... | +56 | ... | N/A                        | +2 STR, (none), -1 WIS
+FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 | ... | +08 | +56 | ... |X-FIRE                      | +1 STR, (none), (none)
+WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 | ... | ... | +56 | ... |X-DRAGON, (CAUSTIC FOUNT)   | +2 STR, (none), (none)
+EINHERJAR   |SWORD OF VENGEANCE                  | +20 | +08 | ... | +56 | +02 |COUNTER                     | +1 STA, +1 STR, (none)
+JUSTICAR    |THE BLADE OF LEGENDS...             | +32 | +04 | +08 | +56 | ... |CRITICAL, (GODLY SUNDER)    | +2 STR, (none), (none)
+SANGUINARY  |BRITTLE SWORD THAT STEALS LIFE      | +02 | ... | ... | -02 | ... |DRAIN                       | +1 mHP, (none), -1 any
+MURASAME    |FABLED SWORD OF DARKNESS            | +18 | ... | ... | +64 | +04 |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR, (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Axes       | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-FRANCESCA   | (none)                             | +16 | ... | ... | +42 | -04 | N/A                        | +2 STR, +1 HP, -1 AGI
-OGRISH AXE  |EFFECTIVE VS. OGRES                 | +20 | ... | ... | +42 | -04 |X-OGRE                      | +4 STR, +1 HP, -1 AGI
-STORM RENDER|AXE THAT CONJURES STORMS            | +36 | ... | +04 | +42 | -04 |X-COLD, (RENDING GALE)      | +2 STR, +1 HP, -1 AGI
+FRANCESCA   | (none)                             | +16 | ... | ... | +42 | -04 | N/A                        | +2 STR, +1 mHP, -1 AGI
+OGRISH AXE  |EFFECTIVE VS. OGRES                 | +20 | ... | ... | +42 | -04 |X-OGRE                      | +4 STR, +1 mHP, -1 AGI
+STORM RENDER|AXE THAT CONJURES STORMS            | +36 | ... | +04 | +42 | -04 |X-COLD, (RENDING GALE)      | +2 STR, +1 mHP, -1 AGI
 STONEGRINDER|RIDDEN WITH A GORGON'S CURSE        | +24 | ... | ... | +42 | -04 |X-DEATH                     | +2 STR, +1 STA, -1 AGI
-RUIN AXE    |AN ANCIENT,ENCHANTED AXE            | +44 | +04 | ... | +36 | -04 |X-ENCHANT                   | +2 STR, +1 HP, -1 AGI
+RUIN AXE    |AN ANCIENT,ENCHANTED AXE            | +44 | +04 | ... | +36 | -04 |X-ENCHANT                   | +2 STR, +1 mHP, -1 AGI
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Bows       | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-LONG BOW    | (none)                             | +08 | -02 | ... | +64 | -02 |X-WINGED                    | +1 AGI, +1 STR
-SYLVAN BOW  |BOW THAT ENHANCES MAGIC             | +14 | -02 | +08 | +64 | -02 |X-WINGED                    | +2 AGI, +1 WIS
-ACRID SHOT  |BOW TIPPED WITH VENOM               | +18 | -02 | ... | +64 | -02 |X-WINGED, X-POISON          | +2 AGI, +1 STR
-ARTEMIS BOW | (none)                             | +22 | ... | +12 | +64 | -02 |X-WINGED                    | +4 AGI, +1 STR
-GASTRAPHETES|VERY LIGHT CROSSBOW                 | +28 | ... | ... | +72 | ... |X-WINGED, CRITICAL          | +2 AGI, +1 STR
+LONG BOW    | (none)                             | +08 | -02 | ... | +64 | -02 |X-WINGED                    | +1 AGI, +1 STR, (none)
+SYLVAN BOW  |BOW THAT ENHANCES MAGIC             | +14 | -02 | +08 | +64 | -02 |X-WINGED                    | +2 AGI, +1 WIS, (none)
+ACRID SHOT  |BOW TIPPED WITH VENOM               | +18 | -02 | ... | +64 | -02 |X-WINGED, X-POISON          | +2 AGI, +1 STR, (none)
+ARTEMIS BOW | (none)                             | +22 | ... | +12 | +64 | -02 |X-WINGED                    | +4 AGI, +1 STR, (none)
+GASTRAPHETES|VERY LIGHT CROSSBOW                 | +28 | ... | ... | +72 | ... |X-WINGED, CRITICAL          | +2 AGI, +1 STR, (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Staves     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-WOODEN STAFF| (none)                             | +06 | ... | +10 | +42 | ... | N/A                        | +1 WIS, -1 STR
-WAR SCEPTER |A COMBAT MACE                       | +12 | ... | +12 | +56 | ... | N/A                        | +1 STR, +1 WIS
-SERAPHIM ROD|STAFF THAT GRANTS LIFE              | +10 | ... | +18 | +42 | ... |RECOVERY                    | +2 WIS, -1 STR
-VESPERTINE  |STAFF ENCOMPASSING DARKNESS         | +16 | ... | +28 | +36 | ... |X-BLIND, X-ENCHANT          | +4 WIS, -1 STR
-RUNIC STAFF |ANCIENT STAFF OF LIFE MAGIC         | +08 | ... | +32 | +42 | ... |(VIM ORISON)                | +2 WIS, -1 STR
+WOODEN STAFF| (none)                             | +06 | ... | +10 | +42 | ... | N/A                        | +1 WIS, (none), -1 STR
+WAR SCEPTER |A COMBAT MACE                       | +12 | ... | +12 | +56 | ... | N/A                        | +1 STR, +1 WIS, (none)
+SERAPHIM ROD|STAFF THAT GRANTS LIFE              | +10 | ... | +18 | +42 | ... |RECOVERY                    | +2 WIS, (none), -1 STR
+VESPERTINE  |STAFF ENCOMPASSING DARKNESS         | +16 | ... | +28 | +36 | ... |X-BLIND, X-ENCHANT          | +4 WIS, (none), -1 STR
+RUNIC STAFF |ANCIENT STAFF OF LIFE MAGIC         | +08 | ... | +32 | +42 | ... |(VIM ORISON)                | +2 WIS, (none), -1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Other*     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-PISTOL*     | (none)                             | +08 | ... | ... | +32 | ... |X-FIRE, CRITICAL            | (none)
+PISTOL*     | (none)                             | +08 | ... | ... | +32 | ... |X-FIRE, CRITICAL            | (none), (none), (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Shields    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-CLOAK       |CLOAK FOR SHIELDING                 | ... | +01 | ... | ... | +04 | N/A                        | +1 AGI
-ESCUTCHEON  |SMALL FENCING SHIELD                | ... | +02 | ... | ... | +02 | N/A                        | +1 HP
-FULL SHIELD | (none)                             | ... | +04 | ... | ... | +04 | N/A                        | +1 HP
-AEGIS SHIELD|SHIELD THAT WARDS GORGONS           | ... | +08 | ... | ... | +04 |O-DEATH                     | +1 HP, +1 STA
-GOLD CAPOTE |LIGHT CAPE FOR EVASION              | ... | +02 | +08 | ... | +08 | N/A                        | +2 AGI, +1 WIS
-KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    | ... | +12 | ... | ... | +02 |O-ELEMENT, SHELL            | +2 HP, +1 STA
+CLOAK       |CLOAK FOR SHIELDING                 | ... | +01 | ... | ... | +04 | N/A                        | +1 AGI, (none), (none)
+ESCUTCHEON  |SMALL FENCING SHIELD                | ... | +02 | ... | ... | +02 | N/A                        | (none), +1 mHP, (none)
+FULL SHIELD | (none)                             | ... | +04 | ... | ... | +04 | N/A                        | +1 mHP, (none), (none)
+AEGIS SHIELD|SHIELD THAT WARDS GORGONS           | ... | +08 | ... | ... | +04 |O-DEATH                     | +1 mHP, +1 STA, (none)
+GOLD CAPOTE |LIGHT CAPE FOR EVASION              | ... | +02 | +08 | ... | +08 | N/A                        | +2 AGI, (none), +1 WIS
+KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    | ... | +12 | ... | ... | +02 |O-ELEMENT, SHELL            | +2 mHP, +1 STA, (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Helmets    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-FEATHER CAP | (none)                             | ... | +02 | +04 | ... | +02 | N/A                        | +1 WIS
-BASINET     | (none)                             | ... | +06 | ... | ... | -02 | N/A                        | +1 STA, -1 AGI
-HEADBAND    |HEADWEAR WORN BY FIGHTERS           | +08 | +02 | ... | +08 | +02 | N/A                        | +1 STR
-SKULL VISAGE|GRIM HELMET OF UNDEAD ARMIES        | ... | +04 | +08 | -08 | -02 |DRAIN, W-COLD               | +1 WIS, +1 STA, -1 AGI
-DRAGON HELM |HELMET THAT WARDS FIRE              | ... | +08 | ... | ... | -02 |O-FIRE                      | +1 HP, +1 STA, -1 AGI
-RIBBON      |RIBBON THAT WARDS STATUS            | ... | ... | ... | ... | +02 |O-STATUS                    | +1 to any
+FEATHER CAP | (none)                             | ... | +02 | +04 | ... | +02 | N/A                        | +1 AGI, (none), +1 WIS
+BASINET     | (none)                             | ... | +06 | ... | ... | -02 | N/A                        | +1 STA, (none), -1 AGI
+HEADBAND    |HEADWEAR WORN BY FIGHTERS           | +08 | +02 | ... | +08 | +02 | N/A                        | +1 STR, +1 AGI, (none)
+SKULL VISAGE|GRIM HELMET OF UNDEAD ARMIES        | ... | +04 | +08 | -08 | -02 |DRAIN, W-COLD               | +1 STA, +1 WIS, -1 AGI
+DRAGON HELM |HELMET THAT WARDS FIRE              | ... | +08 | ... | ... | -02 |O-FIRE                      | +1 mHP, +1 STA, -1 AGI
+RIBBON      |RIBBON THAT WARDS STATUS            | ... | ... | ... | ... | +02 |O-STATUS                    | (none), +1 any, (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Armor      | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-CAMBRIC     | (none)                             | ... | +08 | ... | ... | +02 |W-FIRE                      | +1 HP, +1 WIS
-BRIGANDINE  | (none)                             | ... | +14 | ... | ... | +02 | N/A                        | +2 HP, +1 STA
-CUIRASS     | (none)                             | ... | +20 | ... | ... | -02 | N/A                        | +6 HP, +2 STA, -1 AGI
-KENPO GI    |TRAINING GARB OF FIGHTERS           | +12 | +10 | ... | +08 | +04 |W-FIRE, COUNTER             | +2 HP, +1 STR
-DARK SHROUD |SWIFT NINJA CLOTHING                | ... | +14 | ... | ... | +08 |W-FIRE                      | +4 HP, +1 AGI
-MINERVA     |LIGHT ARMOR WORN BY ELVES           | ... | +14 | +08 | ... | +02 |SHELL                       | +4 HP, +1 STA, +1 WIS
-SERPENTSKIN |TUNIC THAT WARDS FIRE               | ... | +16 | ... | ... | +02 |O-FIRE, W-COLD              | +4 HP, +1 STA
-ARCHON ROBES| (none)                             | ... | +12 | +12 | ... | ... |O-COLD, SHELL               | +2 HP, +1 WIS
-MIRROR MAIL |ARMOR THAT WARDS MAGIC              | ... | +28 | ... | ... | -02 |SHELL                       | +6 HP, +2 STA, -1 AGI
-TIN PLATE*  | (none)                             | ... | ... | ... | ... | ... |O-STATUS, SHELL             | (none)
+CAMBRIC     | (none)                             | ... | +08 | ... | ... | +02 |W-FIRE                      | +1 mHP, +1 WIS, (none)
+BRIGANDINE  | (none)                             | ... | +14 | ... | ... | +02 | N/A                        | +2 mHP, +1 STA, (none)
+CUIRASS     | (none)                             | ... | +20 | ... | ... | -02 | N/A                        | +6 mHP, +2 STA, -1 AGI
+KENPO GI    |TRAINING GARB OF FIGHTERS           | +12 | +10 | ... | +08 | +04 |W-FIRE, COUNTER             | +2 mHP, +1 STR, +1 AGI
+DARK SHROUD |SWIFT NINJA CLOTHING                | ... | +14 | ... | ... | +08 |W-FIRE                      | +4 mHP, +1 AGI, (none)
+MINERVA     |LIGHT ARMOR WORN BY ELVES           | ... | +14 | +08 | ... | +02 |SHELL                       | +4 mHP, +1 STA, +1 WIS
+SERPENTSKIN |TUNIC THAT WARDS FIRE               | ... | +16 | ... | ... | +02 |O-FIRE, W-COLD              | +4 mHP, +1 STA, (none)
+ARCHON ROBES| (none)                             | ... | +12 | +12 | ... | ... |O-COLD, SHELL               | +2 mHP, +1 WIS, (none)
+MIRROR MAIL |ARMOR THAT WARDS MAGIC              | ... | +28 | ... | ... | -02 |SHELL                       | +6 mHP, +2 STA, -1 AGI
+TIN PLATE*  | (none)                             | ... | ... | ... | ... | ... |O-STATUS, SHELL             | (none), (none), (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Accessories| Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-GAUNTLET    | (none)                             | +02 | +02 | ... | +02 | +02 | N/A                        | +1 HP
-POWER SASH  |SASH WORN BY FIGHTERS               | +08 | +02 | ... | +02 | +02 | N/A                        | +1 STR
-GENJI GLOVE | (none)                             | +04 | +02 | ... | +04 | +02 |CRITICAL                    | +1 to any
-PEGASUS SHOE|WINGED SHOES THAT GRANT AGILITY     | ... | +02 | ... | +04 | +04 | N/A                        | +1 AGI
-DRAGON SCALE|SCALE THAT WARDS FIRE               | ... | +02 | ... | ... | ... |O-FIRE, W-COLD              | +1 STA
-COBALT BAND |BAND THAT WARDS COLD                | ... | ... | +02 | ... | ... |O-COLD                      | +1 WIS
-JADE ARMLET |ARMLET THAT WARDS POISON            | ... | ... | +02 | ... | ... |O-POISON                    | +1 WIS
-LAMIA'S TEAR|PENDANT THAT WARDS ENCHANTMENT      | ... | ... | +02 | ... | ... |O-ENCHANT                   | +1 WIS
-ANGEL RING  |RING THAT WARDS DEATH               | ... | ... | +02 | ... | ... |O-DEATH, RECOVERY           | +1 WIS
-ORNATE RING |GLIMMERING RING THAT WARDS MAGIC    | +02 | +02 | +02 | +02 | +02 |O-ALL, SHELL                | +1 to any
+GAUNTLET    | (none)                             | +02 | +02 | ... | +02 | +02 | N/A                        | (none), +1 mHP, +1 STR
+POWER SASH  |SASH WORN BY FIGHTERS               | +08 | +02 | ... | +02 | +02 | N/A                        | +1 STR, (none), (none)
+GENJI GLOVE | (none)                             | +04 | +02 | ... | +04 | +02 |CRITICAL                    | +1 any, (none), +1 AGI
+PEGASUS SHOE|WINGED SHOES THAT GRANT AGILITY     | ... | +02 | ... | +04 | +04 | N/A                        | +1 AGI, (none), (none)
+DRAGON SCALE|SCALE THAT WARDS FIRE               | ... | +02 | ... | ... | ... |O-FIRE, W-COLD              | +1 STA, (none), (none)
+COBALT BAND |BAND THAT WARDS COLD                | ... | ... | +02 | ... | ... |O-COLD                      | +1 WIS, (none), (none)
+JADE ARMLET |ARMLET THAT WARDS POISON            | ... | ... | +02 | ... | ... |O-POISON                    | +1 WIS, (none), +1 STA
+LAMIA'S TEAR|PENDANT THAT WARDS ENCHANTMENT      | ... | ... | +02 | ... | ... |O-ENCHANT                   | +1 WIS, (none), (none)
+ANGEL RING  |RING THAT WARDS DEATH               | ... | ... | +02 | ... | ... |O-DEATH, RECOVERY           | +1 WIS, (none), +1 mHP
+ORNATE RING |GLIMMERING RING THAT WARDS MAGIC    | +02 | +02 | +02 | +02 | +02 |O-ALL, SHELL                | +1 any, (none), +1 WIS
 
 ------------+------------------------------------+----------------------------------------------------------------------------------
  Alchemy    | Description                        | Effect
@@ -254,8 +254,8 @@ X-POISON  - inflicts [POISON] status on target with attack (1/8 chance)
 X-SLEEP   - inflicts [ENCHANT] status on target with attack (1/8 chance)
 X-BLIND   - inflicts [BLIND] status on target with attack (1/8 chance)
 X-DEATH   - inflicts [DEATH] status on target with attack (1/8 chance)
-X-OGRE    - ignore ABSORB vs. OGRE and TITAN
-X-DRAGON  - ignore ABSORB vs. FIRE DRAKE, STORM DRAGON and WYRM
+X-OGRE    - ignore ABSORB vs. [OGRE]
+X-DRAGON  - ignore ABSORB vs. [DRAGON]
 X-WINGED  - ignore ABSORB vs. [WINGED] monsters
 O-FIRE    - negates [FIRE] damage
 O-COLD    - negates [COLD] damage
@@ -297,7 +297,7 @@ This is a list of key items necessary to activate certain events, or have some s
 
 RUNE KEY    - KEY TO THE ARCANIAN RUINS (unlocks the ARCANIAN RUINS)
 MANA SPHERE - MAGICAL RELIC OF THE ARCANIANS (used in several story events)
-ADAMANT ORE - POWERFUL METAL USED IN FORGING (given to dwarven smithy to make CALIBURN)
+ADAMANT ORE - POWERFUL METAL USED IN FORGING (given to dwarven smithy to make JUSTICAR)
 DYNAMITE    - EXPLOSIVE THAT DESTROYS ROCKS (when used, it temporarily removes any of the "debris" icons found in the maps)
 
 
@@ -324,8 +324,8 @@ STORM RENDER| search pot in house in GLADSHEIM VILLAGE                          
 GOLD CAPOTE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
 GENJI GLOVE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
 DYNAMITE    | purchase from man in house for 32000 GP                                                              | none
-EINHERJAR   | chest in VALHALLA PALACE                                                                             | none
-SKULL VISAGE| chest in VALHALLA PALACE, BARRACKS                                                                   | WRAITH x3
+EINHERJAR   | chest in VALHALLA PALACE                                                                             | WRAITH x2
+SKULL VISAGE| chest in VALHALLA PALACE, BARRACKS                                                                   | WRAITH x2
 DARK SHROUD | chest in ASNOTH WARSHIP, CARGO HOLD                                                                  | none
 ORNATE RING | chest in CELESTIAL REALM, B2                                                                         | STORM DRAGON x3
 RUIN AXE    | chest in CELESTIAL REALM, B2                                                                         | TITAN x3
@@ -340,7 +340,7 @@ SANGUINARY  | search first shelf in GIELGUD's room (ASNOTH CASTLE)              
 MURASAME    | search skull in FALLS BASIN                                                                          | WRAITH
 HEADBAND    | comes equipped on GLENN                                                                              | N/A
 RUNE KEY    | recieve from man in SHIPBUILDER'S VILLAGE                                                            | N/A
-CALIBURN    | trade ADAMANT to weapon smith in SHIPBUILDER'S VILLAGE                                               | N/A
+JUSTICAR    | trade ADAMANT to weapon smith in SHIPBUILDER'S VILLAGE                                               | N/A
 ANGEL RING  | drop from MEDUSA                                                                                     | N/A
 OGRISH AXE  | rare drop from TITAN                                                                                 | N/A
 STONEGRINDER| rare drop from GORGON                                                                                | N/A
@@ -356,6 +356,8 @@ KRAKEN SHELL| drop from KRAKEN                                                  
 
 
  - when determining an enemy party, the game simply generates 1 through 3 enemies (of the same type)
+
+ - chance to generate enemy party is such: 70% for one enemy, 20% for 2 enemies, 10% for 3
 
 ----------------------------+----------------------------------------+------
  Location                   | Enemy Party (in oder of priority)      | Rate
@@ -460,7 +462,7 @@ notes:
 
 
 ================================================================================
-THE GLOOMWING [WINGED]
+GLOOMWING [WINGED]
 
 HP 0036 | GP 0012 | Spoils: (none)
 
@@ -476,7 +478,7 @@ Modifiers:
 [O-POISON ]  [W-FIRE   ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE VENOM WING [WINGED]
+VENOM WING [WINGED]
 
 HP 0064 | GP 0120 | Spoils: PANACEA [ 1/ 8]
 
@@ -492,7 +494,7 @@ Modifiers:
 [O-POISON ]  [O-ENCHANT]  [W-FIRE   ]  [ -none-  ]
 
 ================================================================================
-THE TREANT
+TREANT
 
 HP 0042 | GP 0024 | Spoils: (none)
 
@@ -508,7 +510,7 @@ Modifiers:
 [W-FIRE   ]  [COUNTER  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE ROPER
+ROPER
 
 HP 0078 | GP 0160 | Spoils: (none)
 
@@ -524,7 +526,7 @@ Modifiers:
 [W-FIRE   ]  [COUNTER  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE CAVE TOAD
+CAVE TOAD
 
 HP 0038 | GP 0014 | Spoils: (none)
 
@@ -540,7 +542,7 @@ Modifiers:
 [O-POISON ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE GIGAS TOAD
+GIGAS TOAD
 
 HP 0096 | GP 0260 | Spoils: (none)
 
@@ -556,7 +558,7 @@ Modifiers:
 [X-POISON ]  [O-POISON ]  [O-ENCHANT]  [O-DEATH  ]
 
 ================================================================================
-THE OGRE
+OGRE [OGRE]
 
 HP 0056 | GP 0042 | Spoils: LIFE ROOT [ 1/16]
 
@@ -572,7 +574,7 @@ Modifiers:
 [CRITICAL ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE TITAN
+TITAN [OGRE]
 
 HP 0120 | GP 0180 | Spoils: OGRISH AXE [ 1/48]
 
@@ -588,7 +590,7 @@ Modifiers:
 [CRITICAL ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE WRAITH [UNDEAD]
+WRAITH [UNDEAD]
 
 HP 0092 | GP 0160 | Spoils: OGRISH AXE [ 1/48]
 
@@ -604,7 +606,7 @@ Modifiers:
 [O-DEATH  ]  [W-FIRE   ]  [RECOVERY ]  [ -none-  ]
 
 ================================================================================
-THE SCORPION
+SCORPION
 
 HP 0038 | GP 0012 | Spoils: (none)
 
@@ -620,7 +622,7 @@ Modifiers:
 [O-POISON ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE SEA SCORPION [MARINE]
+SEA SCORPION [MARINE]
 
 HP 0052 | GP 0048 | Spoils: (none)
 
@@ -636,7 +638,7 @@ Modifiers:
 [O-POISON ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE GORGON
+GORGON
 
 HP 0072 | GP 0160 | Spoils: STONEGRINDER [ 1/64]
 
@@ -652,7 +654,7 @@ Modifiers:
 [O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE COCKATRICE
+COCKATRICE [WINGED]
 
 HP 0058 | GP 0042 | Spoils: (none)
 
@@ -668,7 +670,7 @@ Modifiers:
 [O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE ROC
+ROC [WINGED]
 
 HP 0072 | GP 0096 | Spoils: (none)
 
@@ -684,7 +686,7 @@ Modifiers:
 [O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE FIRE DRAKE [WINGED]
+FIRE DRAKE [DRAGON] [WINGED]
 
 HP 0220 | GP 0600 | Spoils: DRAGON SCALE [ 1/32]
 
@@ -700,7 +702,7 @@ Modifiers:
 [X-FIRE   ]  [O-FIRE   ]  [O-DEATH  ]  [W-COLD   ]
 
 ================================================================================
-THE STORM DRAGON [WINGED]
+STORM DRAGON [DRAGON] [WINGED]
 
 HP 0240 | GP 0600 | Spoils: SERPENTSKIN [ 1/32]
 
@@ -716,7 +718,7 @@ Modifiers:
 [X-COLD   ]  [O-COLD   ]  [O-DEATH  ]  [W-FIRE   ]
 
 ================================================================================
-THE WYRM [WINGED]
+WYRM [WINGED]
 
 HP 0280 | GP 0800 | Spoils: DRAGON HELM [ 1/32]
 
@@ -732,7 +734,7 @@ Modifiers:
 [O-ELEMENT]  [O-DEATH  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE CROCODILE [MARINE]
+CROCODILE [MARINE]
 
 HP 0062 | GP 0064 | Spoils: (none)
 
@@ -748,7 +750,7 @@ Modifiers:
 [ -none-  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE FROST GATOR [MARINE]
+FROST GATOR [MARINE]
 
 HP 0180 | GP 0400 | Spoils: (none)
 
@@ -764,7 +766,7 @@ Modifiers:
 [X-COLD   ]  [O-COLD   ]  [W-FIRE   ]  [ -none-  ]
 
 ================================================================================
-THE HERMIT [MARINE]
+HERMIT [MARINE]
 
 HP 0080 | GP 0120 | Spoils: (none)
 
@@ -780,7 +782,7 @@ Modifiers:
 [SHELL    ]  [CRITICAL ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE DIRE CRAB [MARINE]
+DIRE CRAB [MARINE]
 
 HP 0220 | GP 0550 | Spoils: (none)
 
@@ -804,7 +806,7 @@ Modifiers:
 
 
 ================================================================================
-THE MEDUSA
+MEDUSA
 
 HP 0156 | GP 0160 | Spoils: ANGEL RING [ 1/ 1]
 
@@ -820,7 +822,7 @@ Modifiers:
 [O-ENCHANT]  [O-DEATH  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE DOPPLEGANGER [UNDEAD]
+DOPPLEGANGER [UNDEAD]
 
 HP 0320 | GP 0800 | Spoils: ELIXIR [ 1/ 1]
 
@@ -836,14 +838,14 @@ Modifiers:
 [O-DEATH  ]  [W-FIRE   ]  [COUNTER  ]  [RECOVERY ]
 
 ================================================================================
-THE SHADOW LORD
+SHADOW LORD
 
 HP 0600 | GP 0000 | Spoils: SERAPHIM ROD [ 1/ 1]
 
 DAM 064 | DEF 024 | WIS 48 | AGI 38 | HIT 80% | EVA 12%
 
 UNHOLY SCOURGE
-WAR SCEPTER
+WAR SCEPTER (item: staff)
 CAUSTIC FOUNT
 A DEATHLY STRIKE
 
@@ -852,15 +854,15 @@ Modifiers:
 [O-ENCHANT]  [O-DEATH  ]  [ -none-  ]  [ -none-  ]
 
 ================================================================================
-THE SHADOW LORD (2)
+SHADOW LORD (2)
 
 HP 0900 | GP 0000 | Spoils: (none)
 
 DAM 092 | DEF 032 | WIS 72 | AGI 64 | HIT 80% | EVA 16%
 
-SAGUINARY (sword)  
-RENDING GALE
+SAGUINARY (item: sword)
 UNHOLY SCOURGE
+AN EARTH-SHATTERING SPELL
 INNER STRENGTH
 
 Modifiers:
@@ -868,7 +870,7 @@ Modifiers:
 [O-STATUS ]  [SHELL    ]  [CRITICAL ]  [ -none-  ]
 
 ================================================================================
-THE SHADOW LORD (3) [UNDEAD]
+SHADOW LORD (3) [UNDEAD]
 
 HP 1100 | GP 0000 | Spoils: (none)
 
@@ -884,7 +886,7 @@ Modifiers:
 [O-STATUS ]  [W-FIRE   ]  [COUNTER  ]  [CRITICAL ]
 
 ================================================================================
-THE KRAKEN [MARINE]
+KRAKEN [MARINE]
 
 HP 3200 | GP 9800 | Spoils: KRAKEN SHELL [ 1/ 1]
 
@@ -906,20 +908,20 @@ Modifiers:
   2.i ENEMY SKILLS                                                                                                          .[0i2]
 ------------------------------------------------------------------------------------------------------------------------------------
 
-
-(attack name as it appears in game | effect of attack)
+This describes the various skills exclusive to enemies. The appear in order of: (attack name as it appears in game | effect of
+attack)
 
                 ITS CLAWS | base DAMAGE
-                ITS FANGS | base DAMAGE; 1/2 chance of [POISON]
-            ITS TENTACLES | eight seperate attacks; damage = DAMAGE/4 (ignore ABSORB)
+                ITS FANGS | base DAMAGE; 50% chance of [POISON]
+            ITS TENTACLES | eight seperate attacks; hit rate = HIT/2; damage = DAMAGE/4 (ignore ABSORB)
               ITS STINGER | DAMAGE/3 (ignore ABSORB) and [POISON] to target
          SERPENT'S BREATH | [FIRE]-elemental; DAMAGE/2 + WIS/4; entire party
           A STORMY BREATH | [COLD]-elemental; DAMAGE/2 + WIS/4; entire party
          A VENOMOUS CLOUD | [POISON] entire party at 100% success, depending on base HIT (no damage)
-         A DEATHLY STRIKE | DAMAGE x1.25; add [DEATH]
+         A DEATHLY STRIKE | DAMAGE x1.25; 50% chance to add [DEATH]
          A VAMPIRIC TOUCH | damage = 10% target mHP; (ignore ABSORB) heals 10% of enemy mHP
 AN EARTH-SHATTERING SPELL | non-elemental damage against party; damage = base WIS
-              A MAELSTROM | non-elemental damage against party; damage = WIS x1.25; induces [DEATH] with hit
+              A MAELSTROM | non-elemental damage against party; damage = WIS x1.25; 50% chance to add [DEATH]
 
 
 _-================================================================================================================================-_
@@ -942,6 +944,10 @@ EVADE - the derived value of AGILITY and armor evasion, which equals total chanc
   (EVADE = AGILITY/8 + derived equipment bonus)
 
 When determining hit and evasion formulas in battle, simply subtract the target's EVADE value from the attacker's HIT value.
+
+{critical} - this is a hidden attribute which determines the occurance of critical hits. By default, this value is 1/32, meaning
+every 1 out of 32 attacks will be a critical hit. This attribute may never be altered, except when an ability (such as the CRITICAL
+bonus on a weapon) changes it.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------
