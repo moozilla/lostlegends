@@ -461,135 +461,63 @@ notes:
  - [UNDEAD] foes are invulnerable to HP drain (i.e., negates the drain effect of SANGUINARY sword)
 
 
-================================================================================
-GLOOMWING [WINGED]
+=======================================================                      =======================================================
+GLOOMWING [WINGED]                                                           VENOM WING [WINGED]
 
-HP 0036 | GP 0012 | Spoils: (none)
+HP 0036 | GP 0012 | Spoils: (none)                                           HP 0064 | GP 0120 | Spoils: PANACEA [ 1/ 8]
 
-DAM 028 | DEF 006 | WIS 00 | AGI 24 | HIT 72% | EVA 12%
+DAM 028 | DEF 006 | WIS 00 | AGI 24 | HIT 72% | EVA 12%                      DAM 048 | DEF 012 | WIS 00 | AGI 28 | HIT 78% | EVA 16%
 
-ITS FANGS
-ITS FANGS
-ITS STINGER
-ITS STINGER
+ITS FANGS                                                                    ITS FANGS
+ITS FANGS                                                                    A VENOMOUS CLOUD
+ITS STINGER                                                                  ITS STINGER
+ITS STINGER                                                                  A VENOMOUS CLOUD
 
-Modifiers:
+[O-POISON ]  [W-FIRE   ]  [ -none-  ]  [ -none-  ]                           [O-POISON ]  [O-ENCHANT]  [W-FIRE   ]  [ -none-  ]
 
-[O-POISON ]  [W-FIRE   ]  [ -none-  ]  [ -none-  ]
+=======================================================                      =======================================================
+TREANT                                                                       ROPER
 
-================================================================================
-VENOM WING [WINGED]
+HP 0042 | GP 0024 | Spoils: (none)                                           HP 0078 | GP 0160 | Spoils: (none)
 
-HP 0064 | GP 0120 | Spoils: PANACEA [ 1/ 8]
+DAM 036 | DEF 012 | WIS 00 | AGI 16 | HIT 72% | EVA 08%                      DAM 072 | DEF 024 | WIS 00 | AGI 24 | HIT 78% | EVA 12%
 
-DAM 048 | DEF 012 | WIS 00 | AGI 28 | HIT 78% | EVA 16%
+ITS CLAWS                                                                    ITS CLAWS
+ITS CLAWS                                                                    ITS TENTACLES
+ITS CLAWS                                                                    ITS CLAWS
+ITS TENTACLES                                                                ITS TENTACLES
 
-ITS FANGS
-A VENOMOUS CLOUD
-ITS STINGER
-A VENOMOUS CLOUD
+[W-FIRE   ]  [COUNTER  ]  [ -none-  ]  [ -none-  ]                           [W-FIRE   ]  [COUNTER  ]  [ -none-  ]  [ -none-  ]
 
-Modifiers:
+=======================================================                      =======================================================
+CAVE TOAD                                                                    GIGAS TOAD
 
-[O-POISON ]  [O-ENCHANT]  [W-FIRE   ]  [ -none-  ]
+HP 0038 | GP 0014 | Spoils: (none)                                           HP 0038 | GP 0014 | Spoils: (none)
 
-================================================================================
-TREANT
+DAM 032 | DEF 006 | WIS 00 | AGI 22 | HIT 72% | EVA 08%                      DAM 064 | DEF 016 | WIS 00 | AGI 42 | HIT 82% | EVA 24%
 
-HP 0042 | GP 0024 | Spoils: (none)
+ITS FANGS                                                                    ITS FANGS
+ITS FANGS                                                                    ITS FANGS
+ITS FANGS                                                                    ITS FANGS
+ITS FANGS                                                                    ITS FANGS
 
-DAM 036 | DEF 012 | WIS 00 | AGI 16 | HIT 72% | EVA 08%
+[O-POISON ]  [ -none-  ]  [ -none-  ]  [ -none-  ]                           [X-POISON ]  [O-POISON ]  [O-ENCHANT]  [O-DEATH  ]
 
-ITS CLAWS
-ITS CLAWS
-ITS CLAWS
-ITS TENTACLES
+=======================================================                      =======================================================
+OGRE [OGRE]                                                                  TITAN [OGRE]
 
-Modifiers:
+HP 0056 | GP 0042 | Spoils: LIFE ROOT [ 1/16]                                HP 0120 | GP 0180 | Spoils: OGRISH AXE [ 1/48]
 
-[W-FIRE   ]  [COUNTER  ]  [ -none-  ]  [ -none-  ]
+DAM 042 | DEF 012 | WIS 00 | AGI 12 | HIT 74% | EVA 08%                      DAM 052 | DEF 016 | WIS 42 | AGI 16 | HIT 78% | EVA 12%
 
-================================================================================
-ROPER
+FRANCESCA (item: axe)                                                        OGRISH AXE (item: axe)
+FRANCESCA (item: axe)                                                        OGRISH AXE (item: axe)
+FRANCESCA (item: axe)                                                        OGRISH AXE (item: axe)
+FRANCESCA (item: axe)                                                        AN EARTH-SHATTERING SPELL
 
-HP 0078 | GP 0160 | Spoils: (none)
+[CRITICAL ]  [ -none-  ]  [ -none-  ]  [ -none-  ]                           [CRITICAL ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
-DAM 072 | DEF 024 | WIS 00 | AGI 24 | HIT 78% | EVA 12%
-
-ITS CLAWS
-ITS CLAWS
-ITS TENTACLES
-ITS TENTACLES
-
-Modifiers:
-
-[W-FIRE   ]  [COUNTER  ]  [ -none-  ]  [ -none-  ]
-
-================================================================================
-CAVE TOAD
-
-HP 0038 | GP 0014 | Spoils: (none)
-
-DAM 032 | DEF 006 | WIS 00 | AGI 22 | HIT 72% | EVA 08%
-
-ITS FANGS
-ITS FANGS
-ITS FANGS
-ITS FANGS
-
-Modifiers:
-
-[O-POISON ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
-
-================================================================================
-GIGAS TOAD
-
-HP 0096 | GP 0260 | Spoils: (none)
-
-DAM 064 | DEF 016 | WIS 00 | AGI 42 | HIT 82% | EVA 24%
-
-ITS FANGS
-ITS FANGS
-ITS FANGS
-ITS FANGS
-
-Modifiers:
-
-[X-POISON ]  [O-POISON ]  [O-ENCHANT]  [O-DEATH  ]
-
-================================================================================
-OGRE [OGRE]
-
-HP 0056 | GP 0042 | Spoils: LIFE ROOT [ 1/16]
-
-DAM 042 | DEF 012 | WIS 00 | AGI 12 | HIT 74% | EVA 08%
-
-FRANCESCA
-FRANCESCA
-FRANCESCA
-FRANCESCA
-
-Modifiers:
-
-[CRITICAL ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
-
-================================================================================
-TITAN [OGRE]
-
-HP 0120 | GP 0180 | Spoils: OGRISH AXE [ 1/48]
-
-DAM 052 | DEF 016 | WIS 42 | AGI 16 | HIT 78% | EVA 12%
-
-OGRISH AXE
-OGRISH AXE
-OGRISH AXE
-AN EARTH-SHATTERING SPELL
-
-Modifiers:
-
-[CRITICAL ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
-
-================================================================================
+=======================================================                      =======================================================
 WRAITH [UNDEAD]
 
 HP 0092 | GP 0160 | Spoils: OGRISH AXE [ 1/48]
@@ -601,43 +529,23 @@ CHILL TOUCH
 ITS FANGS
 A VAMPIRIC TOUCH
 
-Modifiers:
-
 [O-DEATH  ]  [W-FIRE   ]  [RECOVERY ]  [ -none-  ]
 
-================================================================================
-SCORPION
+=======================================================                      =======================================================
+SCORPION                                                                     SEA SCORPION [MARINE]
 
-HP 0038 | GP 0012 | Spoils: (none)
+HP 0038 | GP 0012 | Spoils: (none)                                           HP 0052 | GP 0048 | Spoils: (none)
 
-DAM 028 | DEF 006 | WIS 00 | AGI 32 | HIT 78% | EVA 12%
+DAM 028 | DEF 006 | WIS 00 | AGI 32 | HIT 78% | EVA 12%                      DAM 038 | DEF 008 | WIS 00 | AGI 36 | HIT 80% | EVA 16%
 
-ITS STINGER
-ITS CLAWS
-ITS STINGER
-ITS STINGER
+ITS STINGER                                                                  ITS CLAWS
+ITS CLAWS                                                                    ITS STINGER
+ITS STINGER                                                                  ITS CLAWS
+ITS STINGER                                                                  ITS CLAWS
 
-Modifiers:
+[O-POISON ]  [ -none-  ]  [ -none-  ]  [ -none-  ]                           [O-POISON ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
-[O-POISON ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
-
-================================================================================
-SEA SCORPION [MARINE]
-
-HP 0052 | GP 0048 | Spoils: (none)
-
-DAM 038 | DEF 008 | WIS 00 | AGI 36 | HIT 80% | EVA 16%
-
-ITS CLAWS
-ITS STINGER
-ITS CLAWS
-ITS CLAWS
-
-Modifiers:
-
-[O-POISON ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
-
-================================================================================
+=======================================================                      =======================================================
 GORGON
 
 HP 0072 | GP 0160 | Spoils: STONEGRINDER [ 1/64]
@@ -649,75 +557,39 @@ LEADEN GAZE
 SIREN'S ARIA
 ITS FANGS
 
-Modifiers:
-
 [O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
-================================================================================
-COCKATRICE [WINGED]
+=======================================================                      =======================================================
+COCKATRICE [WINGED]                                                          ROC [WINGED]
 
-HP 0058 | GP 0042 | Spoils: (none)
+HP 0058 | GP 0042 | Spoils: (none)                                           HP 0072 | GP 0096 | Spoils: (none)
 
-DAM 038 | DEF 008 | WIS 00 | AGI 38 | HIT 80% | EVA 16%
+DAM 038 | DEF 008 | WIS 00 | AGI 38 | HIT 80% | EVA 16%                      DAM 052 | DEF 012 | WIS 00 | AGI 42 | HIT 82% | EVA 16%
 
-ITS CLAWS
-ITS CLAWS
-ITS CLAWS
-LEADEN GAZE
-
-Modifiers:
-
-[O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
-
-================================================================================
-ROC [WINGED]
-
-HP 0072 | GP 0096 | Spoils: (none)
-
-DAM 052 | DEF 012 | WIS 00 | AGI 42 | HIT 82% | EVA 16%
-
-ITS CLAWS
-LEADEN GAZE
-ITS CLAWS
-LEADEN GAZE
+ITS CLAWS                                                                    ITS CLAWS
+ITS CLAWS                                                                    LEADEN GAZE
+ITS CLAWS                                                                    ITS CLAWS
+LEADEN GAZE                                                                  LEADEN GAZE
 
 Modifiers:
 
-[O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
+[O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]                           [O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
 
-================================================================================
-FIRE DRAKE [DRAGON] [WINGED]
+=======================================================                      =======================================================
+FIRE DRAKE [DRAGON] [WINGED]                                                 STORM DRAGON [DRAGON] [WINGED]
 
-HP 0220 | GP 0600 | Spoils: DRAGON SCALE [ 1/32]
+HP 0220 | GP 0600 | Spoils: DRAGON SCALE [ 1/32]                             HP 0240 | GP 0600 | Spoils: SERPENTSKIN [ 1/32]
 
-DAM 072 | DEF 024 | WIS 56 | AGI 28 | HIT 80% | EVA 16%
+DAM 072 | DEF 024 | WIS 56 | AGI 28 | HIT 80% | EVA 16%                      DAM 072 | DEF 024 | WIS 62 | AGI 28 | HIT 80% | EVA 16%
 
-ITS CLAWS
-SERPENT'S BREATH
-ITS CLAWS
-SERPENT'S BREATH
+ITS CLAWS                                                                    ITS CLAWS
+SERPENT'S BREATH                                                             A STORMY BREATH
+ITS CLAWS                                                                    ITS CLAWS
+SERPENT'S BREATH                                                             A STORMY BREATH
 
-Modifiers:
+[X-FIRE   ]  [O-FIRE   ]  [O-DEATH  ]  [W-COLD   ]                           [X-COLD   ]  [O-COLD   ]  [O-DEATH  ]  [W-FIRE   ]
 
-[X-FIRE   ]  [O-FIRE   ]  [O-DEATH  ]  [W-COLD   ]
-
-================================================================================
-STORM DRAGON [DRAGON] [WINGED]
-
-HP 0240 | GP 0600 | Spoils: SERPENTSKIN [ 1/32]
-
-DAM 072 | DEF 024 | WIS 62 | AGI 28 | HIT 80% | EVA 16%
-
-ITS CLAWS
-A STORMY BREATH
-ITS CLAWS
-A STORMY BREATH
-
-Modifiers:
-
-[X-COLD   ]  [O-COLD   ]  [O-DEATH  ]  [W-FIRE   ]
-
-================================================================================
+=======================================================                      =======================================================
 WYRM [WINGED]
 
 HP 0280 | GP 0800 | Spoils: DRAGON HELM [ 1/32]
@@ -729,75 +601,37 @@ SERPENT'S BREATH
 A STORMY BREATH
 A MAELSTROM
 
-Modifiers:
-
 [O-ELEMENT]  [O-DEATH  ]  [ -none-  ]  [ -none-  ]
 
-================================================================================
-CROCODILE [MARINE]
+=======================================================                      =======================================================
+CROCODILE [MARINE]                                                           FROST GATOR [MARINE]
 
-HP 0062 | GP 0064 | Spoils: (none)
+HP 0062 | GP 0064 | Spoils: (none)                                           HP 0180 | GP 0400 | Spoils: (none)
 
-DAM 042 | DEF 012 | WIS 00 | AGI 24 | HIT 78% | EVA 12%
+DAM 042 | DEF 012 | WIS 00 | AGI 24 | HIT 78% | EVA 12%                      DAM 072 | DEF 016 | WIS 64 | AGI 36 | HIT 80% | EVA 16%
 
-ITS CLAWS
-ITS CLAWS
-ITS CLAWS
-ITS CLAWS
+ITS CLAWS                                                                    ITS CLAWS
+ITS CLAWS                                                                    ITS CLAWS
+ITS CLAWS                                                                    RENDING GALE
+ITS CLAWS                                                                    RENDING GALE
 
-Modifiers:
+[ -none-  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]                           [X-COLD   ]  [O-COLD   ]  [W-FIRE   ]  [ -none-  ]
 
-[ -none-  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
+=======================================================                      =======================================================
+HERMIT [MARINE]                                                              DIRE CRAB [MARINE]
 
-================================================================================
-FROST GATOR [MARINE]
+HP 0080 | GP 0120 | Spoils: (none)                                           HP 0220 | GP 0550 | Spoils: (none)
 
-HP 0180 | GP 0400 | Spoils: (none)
+DAM 064 | DEF 024 | WIS 00 | AGI 16 | HIT 78% | EVA 08%                      DAM 082 | DEF 042 | WIS 68 | AGI 24 | HIT 80% | EVA 12%
 
-DAM 072 | DEF 016 | WIS 64 | AGI 36 | HIT 80% | EVA 16%
+ITS CLAWS                                                                    ITS CLAWS
+ITS CLAWS                                                                    ITS CLAWS
+ITS CLAWS                                                                    AN EARTH-SHATTERING SPELL
+ITS CLAWS                                                                    ITS CLAWS
 
-ITS CLAWS
-ITS CLAWS
-RENDING GALE
-RENDING GALE
+[SHELL    ]  [CRITICAL ]  [ -none-  ]  [ -none-  ]                           [O-ENCHANT]  [O-DEATH  ]  [SHELL    ]  [CRITICAL ]
 
-Modifiers:
-
-[X-COLD   ]  [O-COLD   ]  [W-FIRE   ]  [ -none-  ]
-
-================================================================================
-HERMIT [MARINE]
-
-HP 0080 | GP 0120 | Spoils: (none)
-
-DAM 064 | DEF 024 | WIS 00 | AGI 16 | HIT 78% | EVA 08%
-
-ITS CLAWS
-ITS CLAWS
-ITS CLAWS
-ITS CLAWS
-
-Modifiers:
-
-[SHELL    ]  [CRITICAL ]  [ -none-  ]  [ -none-  ]
-
-================================================================================
-DIRE CRAB [MARINE]
-
-HP 0220 | GP 0550 | Spoils: (none)
-
-DAM 082 | DEF 042 | WIS 68 | AGI 24 | HIT 80% | EVA 12%
-
-ITS CLAWS
-ITS CLAWS
-ITS CLAWS
-AN EARTH-SHATTERING SPELL
-
-Modifiers:
-
-[O-ENCHANT]  [O-DEATH  ]  [SHELL    ]  [CRITICAL ]
-
-================================================================================
+=======================================================                      =======================================================
 
 
  -----------------
@@ -805,7 +639,7 @@ Modifiers:
  -----------------
 
 
-================================================================================
+=======================================================
 MEDUSA
 
 HP 0156 | GP 0160 | Spoils: ANGEL RING [ 1/ 1]
@@ -817,11 +651,9 @@ ITS CLAWS
 LEADEN GAZE
 ITS CLAWS
 
-Modifiers:
-
 [O-ENCHANT]  [O-DEATH  ]  [ -none-  ]  [ -none-  ]
 
-================================================================================
+=======================================================
 DOPPLEGANGER [UNDEAD]
 
 HP 0320 | GP 0800 | Spoils: ELIXIR [ 1/ 1]
@@ -833,43 +665,23 @@ A VAMPIRIC TOUCH
 CHILL TOUCH
 UNHOLY SCOURGE
 
-Modifiers:
-
 [O-DEATH  ]  [W-FIRE   ]  [COUNTER  ]  [RECOVERY ]
 
-================================================================================
-SHADOW LORD
+=======================================================                      =======================================================
+SHADOW LORD                                                                  SHADOW LORD (2)
 
-HP 0600 | GP 0000 | Spoils: SERAPHIM ROD [ 1/ 1]
+HP 0600 | GP 0000 | Spoils: SERAPHIM ROD [ 1/ 1]                             HP 0900 | GP 0000 | Spoils: (none)
 
-DAM 064 | DEF 024 | WIS 48 | AGI 38 | HIT 80% | EVA 12%
+DAM 064 | DEF 024 | WIS 48 | AGI 38 | HIT 80% | EVA 12%                      DAM 092 | DEF 032 | WIS 72 | AGI 64 | HIT 80% | EVA 16%
 
-UNHOLY SCOURGE
-WAR SCEPTER (item: staff)
-CAUSTIC FOUNT
-A DEATHLY STRIKE
+UNHOLY SCOURGE                                                               SAGUINARY (item: sword)
+WAR SCEPTER (item: staff)                                                    UNHOLY SCOURGE
+CAUSTIC FOUNT                                                                AN EARTH-SHATTERING SPELL
+A DEATHLY STRIKE                                                             INNER STRENGTH
 
-Modifiers:
+[O-ENCHANT]  [O-DEATH  ]  [ -none-  ]  [ -none-  ]                           [O-STATUS ]  [SHELL    ]  [CRITICAL ]  [ -none-  ]
 
-[O-ENCHANT]  [O-DEATH  ]  [ -none-  ]  [ -none-  ]
-
-================================================================================
-SHADOW LORD (2)
-
-HP 0900 | GP 0000 | Spoils: (none)
-
-DAM 092 | DEF 032 | WIS 72 | AGI 64 | HIT 80% | EVA 16%
-
-SAGUINARY (item: sword)
-UNHOLY SCOURGE
-AN EARTH-SHATTERING SPELL
-INNER STRENGTH
-
-Modifiers:
-
-[O-STATUS ]  [SHELL    ]  [CRITICAL ]  [ -none-  ]
-
-================================================================================
+=======================================================                      =======================================================
 SHADOW LORD (3) [UNDEAD]
 
 HP 1100 | GP 0000 | Spoils: (none)
@@ -881,11 +693,9 @@ ITS FANGS
 A MAELSTROM
 A DEATHLY STRIKE
 
-Modifiers:
-
 [O-STATUS ]  [W-FIRE   ]  [COUNTER  ]  [CRITICAL ]
 
-================================================================================
+=======================================================
 KRAKEN [MARINE]
 
 HP 3200 | GP 9800 | Spoils: KRAKEN SHELL [ 1/ 1]
@@ -897,11 +707,9 @@ ITS FANGS
 UNHOLY SCOURGE
 A DEATHLY STRIKE
 
-Modifiers:
-
 [X-BLIND  ]  [O-ALL    ]  [SHELL    ]  [COUNTER  ]
 
-================================================================================
+=======================================================
 
 
 ------------------------------------------------------------------------------------------------------------------------------------
