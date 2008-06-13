@@ -325,7 +325,7 @@ MIRROR MAIL | chest in ARCANIAN RUINS, 9F                                       
 STORM RENDER| search pot in house in GLADSHEIM VILLAGE                                                             | none
 GOLD CAPOTE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
 GENJI GLOVE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
-DYNAMITE    | purchase from man in house for 32000 GP                                                              | none
+DYNAMITE    | purchase from man in house for 24000 GP                                                              | none
 EINHERJAR   | chest in VALHALLA PALACE                                                                             | WRAITH x2
 SKULL VISAGE| chest in VALHALLA PALACE, BARRACKS                                                                   | WRAITH x2
 DARK SHROUD | chest in ASNOTH WARSHIP, CARGO HOLD                                                                  | none
@@ -356,6 +356,7 @@ KRAKEN SHELL| drop from KRAKEN                                                  
   2.f RANDOM ENCOUNTERS                                                                                                     .[0f2]
 ------------------------------------------------------------------------------------------------------------------------------------
 
+ - rate indicates the usual number of steps taken before a random encounter occurs
 
  - when determining an enemy party, the game simply generates 1 through 3 enemies (of the same type)
 
@@ -367,20 +368,20 @@ KRAKEN SHELL| drop from KRAKEN                                                  
 TERRA OVERWORLD             | GLOOMWING, TREANT, SCORPION, OGRE      |  16
 TERRA UNDERWORLD            | OGRE, VENOMWING, COCKATRICE            |  16
 TERRA SEA                   | CROCODILE, HERMIT, SEA SCORPION        |  24
-GORGON CAVE                 | CAVE TOAD, SCORPION, COCKATRICE        |  16
+GORGON CAVE                 | CAVE TOAD, SCORPION, COCKATRICE        |  12
 ARCANIAN RUINS, 1F-4F       | WRAITH, OGRE, TITAN                    |   8
 ARCANIAN RUINS, 5F-9F       | TITAN, ROC, FIRE DRAKE, GORGON         |   8
 ARCANIAN RUINS, B1-B4       | WRAITH, GORGON                         |   8
-ASNOTH WARSHIP              | VENOMWING, WRAITH, OGRE                |  16
-FEY WOOD (both)             | VENOMWING, ROPER, GLOOMWING            |  16
+ASNOTH WARSHIP              | VENOMWING, WRAITH, OGRE                |  12
+FEY WOOD (both)             | VENOMWING, ROPER, GLOOMWING            |  12
 RAGNOTH RUINS               | SCORPION, COCKATRICE                   |  24
 RAGNOTH RUINS - TOWER       | WRAITH                                 |   8
 UNDERSEA SHRINE, 1F, B1, B2 | GIGAS TOAD, DIRE CRAB, FROST GATOR     |   8
 FALLS BASIN                 | DIRE CRAB, WYRM, FIRE DRAKE, GORGON    |   8
 VALHALLA PALACE             | TITAN                                  |  16
 VALHALLA PALACE, BARRACKS   | WRAITH                                 |   8
-CELESTIAL REALM, B1, B3, B4 | FIRE DRAKE, GORGON, STORM DRAGON, WYRM |  16
-CELESTIAL REALM, B2         | STORM DRAGON, TITAN, WYRM, FIRE DRAKE  |  24
+CELESTIAL REALM, B1, B3, B4 | FIRE DRAKE, GORGON, STORM DRAGON, WYRM |  12
+CELESTIAL REALM, B2         | STORM DRAGON, TITAN, WYRM, FIRE DRAKE  |  16
 
 
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -466,7 +467,7 @@ notes:
 =======================================================                      =======================================================
 GLOOMWING [WINGED]                                                           VENOM WING [WINGED]
 
-HP 0036 | GP 0012 | Spoils: (none)                                           HP 0064 | GP 0120 | Spoils: PANACEA [ 1/ 8]
+HP 0036 | GP 0012 | Spoils: (none)                                           HP 0064 | GP 0120 | Spoils: PANACEA [ 1/16]
 
 DAM 028 | DEF 006 | WIS 00 | AGI 24 | HIT 72% | EVA 12%                      DAM 048 | DEF 012 | WIS 00 | AGI 28 | HIT 78% | EVA 16%
 
@@ -480,7 +481,7 @@ ITS STINGER                                                                  A V
 =======================================================                      =======================================================
 TREANT                                                                       ROPER
 
-HP 0042 | GP 0024 | Spoils: (none)                                           HP 0078 | GP 0160 | Spoils: (none)
+HP 0042 | GP 0024 | Spoils: LIFE ROOT [ 1/ 8]                                HP 0078 | GP 0160 | Spoils: SOMA DROP [ 1/16]
 
 DAM 036 | DEF 012 | WIS 00 | AGI 16 | HIT 72% | EVA 08%                      DAM 072 | DEF 024 | WIS 00 | AGI 24 | HIT 78% | EVA 12%
 
@@ -496,7 +497,7 @@ CAVE TOAD                                                                    GIG
 
 HP 0038 | GP 0014 | Spoils: (none)                                           HP 0038 | GP 0014 | Spoils: (none)
 
-DAM 032 | DEF 006 | WIS 00 | AGI 22 | HIT 72% | EVA 08%                      DAM 064 | DEF 016 | WIS 00 | AGI 42 | HIT 82% | EVA 24%
+DAM 032 | DEF 006 | WIS 00 | AGI 22 | HIT 72% | EVA 08%                      DAM 064 | DEF 016 | WIS 00 | AGI 42 | HIT 82% | EVA 16%
 
 ITS FANGS                                                                    ITS FANGS
 ITS FANGS                                                                    ITS FANGS
@@ -522,7 +523,7 @@ FRANCESCA (item: axe)                                                        AN 
 =======================================================                      =======================================================
 WRAITH [UNDEAD]
 
-HP 0092 | GP 0160 | Spoils: OGRISH AXE [ 1/48]
+HP 0092 | GP 0160 | Spoils: MANA DEW [ 1/32]
 
 DAM 064 | DEF 024 | WIS 38 | AGI 16 | HIT 80% | EVA 12%
 
@@ -550,7 +551,7 @@ ITS STINGER                                                                  ITS
 =======================================================                      =======================================================
 GORGON
 
-HP 0072 | GP 0160 | Spoils: STONEGRINDER [ 1/64]
+HP 0072 | GP 0160 | Spoils: STONEGRINDER [ 1/48]
 
 DAM 058 | DEF 024 | WIS 00 | AGI 24 | HIT 78% | EVA 12%
 
@@ -559,12 +560,12 @@ LEADEN GAZE
 SIREN'S ARIA
 ITS FANGS
 
-[O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
+[O-ENCHANT]  [O-DEATH  ]  [ -none-  ]  [ -none-  ]
 
 =======================================================                      =======================================================
 COCKATRICE [WINGED]                                                          ROC [WINGED]
 
-HP 0058 | GP 0042 | Spoils: (none)                                           HP 0072 | GP 0096 | Spoils: (none)
+HP 0058 | GP 0042 | Spoils: PANACEA [ 1/16]                                  HP 0072 | GP 0096 | Spoils: PANACEA [ 1/16]
 
 DAM 038 | DEF 008 | WIS 00 | AGI 38 | HIT 80% | EVA 16%                      DAM 052 | DEF 012 | WIS 00 | AGI 42 | HIT 82% | EVA 16%
 
@@ -575,19 +576,19 @@ LEADEN GAZE                                                                  LEA
 
 Modifiers:
 
-[O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]                           [O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]
+[O-DEATH  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]                           [O-ENCHANT]  [O-DEATH  ]  [ -none-  ]  [ -none-  ]
 
 =======================================================                      =======================================================
 FIRE DRAKE [DRAGON] [WINGED]                                                 STORM DRAGON [DRAGON] [WINGED]
 
-HP 0220 | GP 0600 | Spoils: DRAGON SCALE [ 1/32]                             HP 0240 | GP 0600 | Spoils: SERPENTSKIN [ 1/32]
+HP 0220 | GP 0600 | Spoils: DRAGON SCALE [ 1/16]                             HP 0240 | GP 0600 | Spoils: SERPENTSKIN [ 1/32]
 
 DAM 072 | DEF 024 | WIS 56 | AGI 28 | HIT 80% | EVA 16%                      DAM 072 | DEF 024 | WIS 62 | AGI 28 | HIT 80% | EVA 16%
 
 ITS CLAWS                                                                    ITS CLAWS
-SERPENT'S BREATH                                                             A STORMY BREATH
+THE SERPENT'S BREATH                                                         A STORMY BREATH
 ITS CLAWS                                                                    ITS CLAWS
-SERPENT'S BREATH                                                             A STORMY BREATH
+THE SERPENT'S BREATH                                                         A STORMY BREATH
 
 [X-FIRE   ]  [O-FIRE   ]  [O-DEATH  ]  [W-COLD   ]                           [X-COLD   ]  [O-COLD   ]  [O-DEATH  ]  [W-FIRE   ]
 
@@ -599,16 +600,16 @@ HP 0280 | GP 0800 | Spoils: DRAGON HELM [ 1/32]
 DAM 078 | DEF 028 | WIS 64 | AGI 36 | HIT 82% | EVA 16%
 
 ITS CLAWS
-SERPENT'S BREATH
+THE SERPENT'S BREATH
 A STORMY BREATH
 A MAELSTROM
 
-[O-ELEMENT]  [O-DEATH  ]  [ -none-  ]  [ -none-  ]
+[O-ELEMENT]  [O-ENCHANT]  [O-DEATH  ]  [ -none-  ]
 
 =======================================================                      =======================================================
 CROCODILE [MARINE]                                                           FROST GATOR [MARINE]
 
-HP 0062 | GP 0064 | Spoils: (none)                                           HP 0180 | GP 0400 | Spoils: (none)
+HP 0062 | GP 0064 | Spoils: (none)                                           HP 0180 | GP 0400 | Spoils: COBALT BAND [ 1/32]
 
 DAM 042 | DEF 012 | WIS 00 | AGI 24 | HIT 78% | EVA 12%                      DAM 072 | DEF 016 | WIS 64 | AGI 36 | HIT 80% | EVA 16%
 
@@ -617,7 +618,7 @@ ITS CLAWS                                                                    ITS
 ITS CLAWS                                                                    RENDING GALE
 ITS CLAWS                                                                    RENDING GALE
 
-[ -none-  ]  [ -none-  ]  [ -none-  ]  [ -none-  ]                           [X-COLD   ]  [O-COLD   ]  [W-FIRE   ]  [ -none-  ]
+[CRITICAL ]  [ -none-  ]  [ -none-  ]  [ -none-  ]                           [X-COLD   ]  [O-COLD   ]  [W-FIRE   ]  [ -none-  ]
 
 =======================================================                      =======================================================
 HERMIT [MARINE]                                                              DIRE CRAB [MARINE]
@@ -646,7 +647,7 @@ MEDUSA
 
 HP 0156 | GP 0160 | Spoils: ANGEL RING [ 1/ 1]
 
-DAM 038 | DEF 008 | WIS 00 | AGI 16 | HIT 72% | EVA 10%
+DAM 038 | DEF 008 | WIS 00 | AGI 16 | HIT 72% | EVA 08%
 
 ITS CLAWS
 ITS CLAWS
@@ -672,9 +673,9 @@ UNHOLY SCOURGE
 =======================================================                      =======================================================
 SHADOW LORD                                                                  SHADOW LORD (2)
 
-HP 0600 | GP 0000 | Spoils: SERAPHIM ROD [ 1/ 1]                             HP 0900 | GP 0000 | Spoils: (none)
+HP 0480 | GP 0000 | Spoils: SERAPHIM ROD [ 1/ 1]                             HP 0600 | GP 0000 | Spoils: (none)
 
-DAM 064 | DEF 024 | WIS 48 | AGI 38 | HIT 80% | EVA 12%                      DAM 092 | DEF 032 | WIS 72 | AGI 64 | HIT 80% | EVA 16%
+DAM 064 | DEF 024 | WIS 48 | AGI 38 | HIT 80% | EVA 08%                      DAM 092 | DEF 032 | WIS 72 | AGI 64 | HIT 80% | EVA 12%
 
 UNHOLY SCOURGE                                                               SAGUINARY (item: sword)
 WAR SCEPTER (item: staff)                                                    UNHOLY SCOURGE
@@ -688,7 +689,7 @@ SHADOW LORD (3) [UNDEAD]
 
 HP 1100 | GP 0000 | Spoils: (none)
 
-DAM 110 | DEF 028 | WIS 72 | AGI 72 | HIT 90% | EVA 24%
+DAM 110 | DEF 028 | WIS 72 | AGI 72 | HIT 90% | EVA 16%
 
 A VAMPIRIC TOUCH
 ITS FANGS
@@ -725,7 +726,7 @@ attack)
                 ITS FANGS | base DAMAGE; 50% chance of [POISON]
             ITS TENTACLES | eight seperate attacks; hit rate = HIT/2; damage = DAMAGE/4 (ignore ABSORB)
               ITS STINGER | DAMAGE/3 (ignore ABSORB) and [POISON] to target
-         SERPENT'S BREATH | [FIRE]-elemental; DAMAGE/2 + WIS/4; entire party
+     THE SERPENT'S BREATH | [FIRE]-elemental; DAMAGE/2 + WIS/4; entire party
           A STORMY BREATH | [COLD]-elemental; DAMAGE/2 + WIS/4; entire party
          A VENOMOUS CLOUD | [POISON] entire party at 100% success, depending on base HIT (no damage)
          A DEATHLY STRIKE | DAMAGE x1.25; 50% chance to add [DEATH]
