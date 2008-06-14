@@ -165,7 +165,7 @@ FRANCESCA   | (none)                             | +16 | ... | ... | +42 | -04 |
 OGRISH AXE  |EFFECTIVE VS. OGRES                 | +20 | ... | ... | +42 | -04 |X-OGRE                      | +4 STR, +1 mHP, -1 AGI
 STORM RENDER|AXE THAT CONJURES STORMS            | +36 | ... | +04 | +42 | -04 |X-COLD, (RENDING GALE)      | +2 STR, +1 mHP, -1 AGI
 STONEGRINDER|RIDDEN WITH A GORGON'S CURSE        | +24 | ... | ... | +42 | -04 |X-DEATH                     | +2 STR, +1 STA, -1 AGI
-RUIN AXE    |AN ANCIENT,ENCHANTED AXE            | +44 | +04 | ... | +36 | -04 |X-ENCHANT                   | +2 STR, +1 mHP, -1 AGI
+RUINOUS AXE |AN ANCIENT,ENCHANTED AXE            | +44 | +04 | ... | +36 | -04 |X-ENCHANT                   | +2 STR, +1 mHP, -1 AGI
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Bows       | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -330,7 +330,7 @@ EINHERJAR   | chest in VALHALLA PALACE                                          
 SKULL VISAGE| chest in VALHALLA PALACE, BARRACKS                                                                   | WRAITH x2
 DARK SHROUD | chest in ASNOTH WARSHIP, CARGO HOLD                                                                  | none
 ORNATE RING | chest in CELESTIAL REALM, B2                                                                         | STORM DRAGON x3
-RUIN AXE    | chest in CELESTIAL REALM, B2                                                                         | TITAN x3
+RUINOUS AXE | chest in CELESTIAL REALM, B2                                                                         | TITAN x3
 ADAMANT ORE | chest in CELESTIAL REALM, B2                                                                         | none
 ARTEMIS BOW | chest in CELESTIAL REALM, B1                                                                         | ROC x3
 VESPERTINE  | chest in CELESTIAL REALM, B1                                                                         | GORGON x3
@@ -565,7 +565,7 @@ ITS FANGS
 =======================================================                      =======================================================
 COCKATRICE [WINGED]                                                          ROC [WINGED]
 
-HP 0058 | GP 0042 | Spoils: PANACEA [ 1/16]                                  HP 0072 | GP 0096 | Spoils: PANACEA [ 1/16]
+HP 0058 | GP 0042 | Spoils: PANACEA [ 1/16]                                  HP 0072 | GP 0096 | Spoils: ANGEL TEAR [ 1/32]
 
 DAM 038 | DEF 008 | WIS 00 | AGI 38 | HIT 80% | EVA 16%                      DAM 052 | DEF 012 | WIS 00 | AGI 42 | HIT 82% | EVA 16%
 
