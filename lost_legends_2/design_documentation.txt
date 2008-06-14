@@ -68,7 +68,7 @@ STR 10 | STA 08 | WIS 16 | AGI 16         STR 16 | STA 12 | WIS 12 | AGI 14     
 
 WPN WOODEN STAFF  SHD  (none)             WPN BROADSWORD    SHD ESCUTCHEON          WPN FRANCESCA     SHD CLOAK
 HLM  (none)       ARM CAMBRIC             HLM  (none)       ARM BRIGANDINE          HLM HEADBAND      ARM BRIGANDINE
-ACC JADE ARMLET   ITM LIFE ROOT           ACC  (none)       ITM  (none)             ACC  (none)       ITM  (none)
+ACC JADE ARMLET   ITM LIFE SPRIG          ACC  (none)       ITM  (none)             ACC  (none)       ITM  (none)
 
 spellbook: (3 mana)                       spellbook: (3 mana)                       spellbook: (0 mana)
 
@@ -77,7 +77,7 @@ FAERIE FIRE                               LAY ON HANDS                          
 ----------------------------------        ----------------------------------        ----------------------------------
 D. KNIGHT         072 mHP                 ROSE                                      MARSHAL           180 mHP
 
-STR 22 | STA 14 | WIS 20 | AGI 16         (stats carry over from D. KNIGHT)         STR 92 | STA 80 | WIS 00 | AGI 64
+STR 22 | STA 14 | WIS 20 | AGI 18         (stats carry over from D. KNIGHT)         STR 92 | STA 80 | WIS 00 | AGI 64
 
 WPN GLADIUS       SHD FULL SHIELD         WPN GLADIUS       SHD FULL SHIELD         WPN  PISTOL       SHD  (none)
 HLM BASINET       ARM CUIRASS             HLM BASINET       ARM CUIRASS             HLM  (none)       ARM  TIN PLATE
@@ -234,7 +234,7 @@ ORNATE RING |GLIMMERING RING THAT WARDS MAGIC    | +02 | +02 | +02 | +02 | +02 |
 ------------+------------------------------------+----------------------------------------------------------------------------------
  Alchemy    | Description                        | Effect
 ------------+------------------------------------+----------------------------------------------------------------------------------
-LIFE ROOT   |RESTORES 12-24 HP                   | Restores 12-24 HP
+LIFE SPRIG  |RESTORES 12-24 HP                   | Restores 12-24 HP
 PANACEA     |RESTORES STATUS                     | Cures [POISON] and / or [BLIND] status
 MANA DEW    |RESTORES MANA                       | Restores a spell charge
 ANGEL TEAR  |RAISES FALLEN ALLY                  | Restores a fallen ally with 1 HP
@@ -398,7 +398,7 @@ RAGNOTH VILLAGE   | BROADSWORD   |   300 | LAY ON HANDS   |   200 |    80 GP
                   | CAMBRIC      |    60 | CHILL TOUCH    |   400 |
                   | FEATHER CAP  |    80 |  --            |  --   |
                   | CLOAK        |    80 |  --            |  --   |
-- (page 2) ------ | LIFE ROOT    |    40 |  --            |  --   |
+- (page 2) ------ | LIFE SPRIG   |    40 |  --            |  --   |
                   | PANACEA      |   120 |  --            |  --   |
                   | ANGEL TEAR   |   400 |  --            |  --   |
 ------------------+--------------+-------+----------------+-------+----------
@@ -411,7 +411,7 @@ TRISTRAN VILLAGE  | FRANCESCA    |   600 | EGRESSION      |   800 |   120 GP
 - (page 2) ------ | COBALT BAND  |  1100 |  --            |  --   |
                   | JADE ARMLET  |  1100 |  --            |  --   |
                   | LAMIA'S TEAR |  1100 |  --            |  --   |
-                  | LIFE ROOT    |    40 |  --            |  --   |
+                  | LIFE SPRIG   |    40 |  --            |  --   |
                   | PANACEA      |   120 |  --            |  --   |
                   | ANGEL TEAR   |   400 |  --            |  --   |
 ------------------+--------------+-------+----------------+-------+----------
@@ -424,7 +424,7 @@ GLADSHEIM VILLAGE | BROADSWORD   |   300 |  --            |  --   |   160 GP
                   | BASINET      |   800 |  --            |  --   |
                   | ESCUTCHEON   |   600 |  --            |  --   |
                   | DRAGON SCALE |  1100 |  --            |  --   |
-- (page 2) ------ | LIFE ROOT    |    40 |  --            |  --   |
+- (page 2) ------ | LIFE SPRIG   |    40 |  --            |  --   |
                   | SOMA DROP    |   200 |  --            |  --   |
                   | PANACEA      |   120 |  --            |  --   |
                   | ANGEL TEAR   |   400 |  --            |  --   |
@@ -435,7 +435,7 @@ ASNOTH ARMORY     | GLADIUS      |  1200 | VIM ORISON     |  4400 |      N/A
                   | BASINET      |   800 | RENDING GALE   |  9800 |
                   | FULL SHIELD  |  1100 |  --            |  --   |
                   | GAUNTLET     |   800 |  --            |  --   |
-- (page 2) ------ | LIFE ROOT    |    40 |  --            |  --   |
+- (page 2) ------ | LIFE SPRIG   |    40 |  --            |  --   |
                   | PANACEA      |   120 |  --            |  --   |
                   | ANGEL TEAR   |   400 |  --            |  --   |
                   | MANA DEW     |   800 |  --            |  --   |
@@ -481,7 +481,7 @@ ITS STINGER                                                                  A V
 =======================================================                      =======================================================
 TREANT                                                                       ROPER
 
-HP 0042 | GP 0024 | Spoils: LIFE ROOT [ 1/ 8]                                HP 0078 | GP 0160 | Spoils: SOMA DROP [ 1/16]
+HP 0042 | GP 0024 | Spoils: LIFE SPRIG [ 1/ 8]                               HP 0078 | GP 0160 | Spoils: SOMA DROP [ 1/16]
 
 DAM 036 | DEF 012 | WIS 00 | AGI 16 | HIT 72% | EVA 08%                      DAM 072 | DEF 024 | WIS 00 | AGI 24 | HIT 78% | EVA 12%
 
@@ -509,7 +509,7 @@ ITS FANGS                                                                    ITS
 =======================================================                      =======================================================
 OGRE [OGRE]                                                                  TITAN [OGRE]
 
-HP 0056 | GP 0042 | Spoils: LIFE ROOT [ 1/16]                                HP 0120 | GP 0180 | Spoils: OGRISH AXE [ 1/48]
+HP 0056 | GP 0042 | Spoils: LIFE SPRIG [ 1/16]                               HP 0120 | GP 0180 | Spoils: OGRISH AXE [ 1/48]
 
 DAM 042 | DEF 012 | WIS 00 | AGI 12 | HIT 74% | EVA 08%                      DAM 052 | DEF 016 | WIS 42 | AGI 16 | HIT 78% | EVA 12%
 
@@ -787,7 +787,7 @@ distinguish between death and petrification, as they result in the same effect) 
 
 USE WEAPON - uses currently equipped weapon
 CAST SPELL - opens spell inventory
-USE ITEM - uses currently equipped item (items in inventory stock can't be used -- they must be equipped)
-DEFEND - skips current turn and negates all damage
-RECOUP - skips current turn and recovers 16% mHP
-WITHDRAW - attempts to flee battle (target AGI must be higher than enemy for success)
+USE ITEM - uses currently equipped item (items in inventory stock can't be used without equipping them first)
+PARRY - skips current turn and negates all damage, but doesn't evade any status ailmentation
+RECOUP - skips current turn and recovers 16% mHP, plus a 32% chance of recovering from [POISON] status
+WITHDRAW - attempts to flee battle (character AGI must be higher than enemy for success)
