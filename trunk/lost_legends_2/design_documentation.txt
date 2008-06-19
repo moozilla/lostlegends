@@ -255,7 +255,7 @@ X-COLD    - damage is [COLD]-elemental
 X-POISON  - inflicts [POISON] status on target with attack (1/8 chance)
 X-SLEEP   - inflicts [ENCHANT] status on target with attack (1/8 chance)
 X-BLIND   - inflicts [BLIND] status on target with attack (1/8 chance)
-X-DEATH   - inflicts [DEATH] status on target with attack (1/8 chance)
+X-DEATH   - inflicts [DEATH] status on target with attack (1/16 chance)
 X-OGRE    - ignore ABSORB vs. [OGRE]
 X-DRAGON  - ignore ABSORB vs. [DRAGON]
 X-WINGED  - ignore ABSORB vs. [WINGED] monsters
