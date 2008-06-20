@@ -79,7 +79,7 @@ D. KNIGHT         072 mHP                 ROSE                                  
 
 STR 22 | STA 14 | WIS 20 | AGI 18         (stats carry over from D. KNIGHT)         STR 92 | STA 80 | WIS 00 | AGI 64
 
-WPN GLADIUS       SHD FULL SHIELD         WPN GLADIUS       SHD FULL SHIELD         WPN  PISTOL       SHD  (none)
+WPN ARDENT STEEL  SHD FULL SHIELD         WPN ARDENT STEEL  SHD FULL SHIELD         WPN  PISTOL       SHD  (none)
 HLM BASINET       ARM CUIRASS             HLM BASINET       ARM CUIRASS             HLM  (none)       ARM  TIN PLATE
 ACC  (none)       ITM  (none)             ACC  (none)       ITM  (none)             ACC  (none)       ITM  (none)
 
@@ -151,10 +151,10 @@ notes:
  Swords     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 BROADSWORD  | (none)                             | +12 | ... | ... | +56 | ... | N/A                        | +1 STR, (none), -1 WIS
-GLADIUS     | (none)                             | +18 | ... | ... | +56 | ... | N/A                        | +2 STR, (none), -1 WIS
+ARDENT STEEL| (none)                             | +18 | ... | ... | +56 | ... | N/A                        | +2 STR, (none), -1 WIS
 FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 | ... | +08 | +56 | ... |X-FIRE                      | +1 STR, (none), (none)
 WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 | ... | ... | +56 | ... |X-DRAGON, (CAUSTIC FOUNT)   | +2 STR, (none), (none)
-EINHERJAR   |SWORD OF VENGEANCE                  | +20 | +08 | ... | +56 | +02 |COUNTER                     | +1 STA, +1 STR, (none)
+VENGED SWORD|SWORD OF VENGEANCE                  | +20 | +08 | ... | +56 | +02 |COUNTER                     | +1 STA, +1 STR, (none)
 JUSTICAR    |THE BLADE OF LEGENDS...             | +32 | +04 | +08 | +56 | ... |CRITICAL, (GODLY SUNDER)    | +2 STR, (none), (none)
 SANGUINARY  |BRITTLE SWORD THAT STEALS LIFE      | +02 | ... | ... | -02 | ... |DRAIN                       | +1 mHP, (none), -1 any
 MURASAME    |FABLED SWORD OF DARKNESS            | +18 | ... | ... | +64 | +04 |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR, (none)
@@ -326,7 +326,7 @@ STORM RENDER| search pot in house in GLADSHEIM VILLAGE                          
 GOLD CAPOTE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
 GENJI GLOVE | chest in weapon shop in GLADSHEIM VILLAGE                                                            | none
 DYNAMITE    | purchase from man in house for 24000 GP                                                              | none
-EINHERJAR   | chest in VALHALLA PALACE                                                                             | WRAITH x2
+VENGED SWORD| chest in VALHALLA PALACE                                                                             | WRAITH x2
 SKULL VISAGE| chest in VALHALLA PALACE, BARRACKS                                                                   | WRAITH x2
 DARK SHROUD | chest in ASNOTH WARSHIP, CARGO HOLD                                                                  | none
 ORNATE RING | chest in CELESTIAL REALM, B2                                                                         | STORM DRAGON x3
@@ -429,7 +429,7 @@ GLADSHEIM VILLAGE | BROADSWORD   |   300 |  --            |  --   |   160 GP
                   | PANACEA      |   120 |  --            |  --   |
                   | ANGEL TEAR   |   400 |  --            |  --   |
 ------------------+--------------+-------+----------------+-------+----------
-ASNOTH ARMORY     | GLADIUS      |  1200 | VIM ORISON     |  4400 |      N/A
+ASNOTH ARMORY     | ARDENT STEEL |  1200 | VIM ORISON     |  4400 |      N/A
                   | WAR SCEPTER  |   900 | PHOENIX PLUME  |  4400 |
                   | CUIRASS      |  1400 | CAUSTIC FOUNT  |  9800 |
                   | BASINET      |   800 | RENDING GALE   |  9800 |
