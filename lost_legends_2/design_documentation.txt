@@ -152,10 +152,10 @@ notes:
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 BROADSWORD  | (none)                             | +12 | ... | ... | +56 | ... | N/A                        | +1 STR, (none), -1 WIS
 ARDENT STEEL| (none)                             | +18 | ... | ... | +56 | ... | N/A                        | +2 STR, (none), -1 WIS
-FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 | ... | +08 | +56 | ... |X-FIRE                      | +1 STR, (none), (none)
+FLAMETONGUE |SWORD DECALED WITH FLAMES           | +22 | ... | +04 | +56 | ... |X-FIRE                      | +1 STR, (none), (none)
 WYRMSCORNE  |EFFECTIVE VS. DRAGONS               | +22 | ... | ... | +56 | ... |X-DRAGON, (CAUSTIC FOUNT)   | +2 STR, (none), (none)
 VENGED SWORD|SWORD OF VENGEANCE                  | +20 | +08 | ... | +56 | +02 |COUNTER                     | +1 STA, +1 STR, (none)
-JUSTICAR    |THE BLADE OF LEGENDS...             | +32 | +04 | +08 | +56 | ... |CRITICAL, (GODLY SUNDER)    | +2 STR, (none), (none)
+JUSTICAR    |THE BLADE OF LEGENDS...             | +32 | +04 | +04 | +56 | ... |CRITICAL, (GODLY SUNDER)    | +2 STR, (none), (none)
 SANGUINARY  |BRITTLE SWORD THAT STEALS LIFE      | +02 | ... | ... | -02 | ... |DRAIN                       | +1 mHP, (none), -1 any
 MURASAME    |FABLED SWORD OF DARKNESS            | +18 | ... | ... | +64 | +04 |X-BLIND, CRITICAL, COUNTER  | +2 AGI, +1 STR, (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -178,8 +178,8 @@ GASTRAPHETES|VERY LIGHT CROSSBOW                 | +28 | ... | ... | +72 | ... |
  Staves     | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 WOODEN STAFF| (none)                             | +06 | ... | +10 | +42 | ... | N/A                        | +1 WIS, (none), -1 STR
-WAR SCEPTER |A COMBAT MACE                       | +12 | ... | +12 | +56 | ... | N/A                        | +1 STR, +1 WIS, (none)
-SERAPHIM ROD|STAFF THAT GRANTS LIFE              | +10 | ... | +18 | +42 | ... |RECOVERY                    | +2 WIS, (none), -1 STR
+WAR SCEPTER |A COMBAT MACE                       | +14 | ... | +12 | +56 | ... | N/A                        | +1 STR, +1 WIS, (none)
+SERAPHIM ROD|STAFF THAT GRANTS LIFE              | +10 | +02 | +18 | +42 | ... |RECOVERY                    | +2 WIS, (none), -1 STR
 VESPERTINE  |STAFF ENCOMPASSING DARKNESS         | +16 | ... | +28 | +36 | ... |X-BLIND, X-ENCHANT          | +4 WIS, (none), -1 STR
 RUNIC STAFF |ANCIENT STAFF OF LIFE MAGIC         | +08 | ... | +32 | +42 | ... |(VIM ORISON)                | +2 WIS, (none), -1 STR
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
@@ -189,20 +189,20 @@ PISTOL*     | (none)                             | +08 | ... | ... | +32 | ... |
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Shields    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
-CLOAK       |CLOAK FOR SHIELDING                 | ... | +01 | ... | ... | +04 | N/A                        | +1 AGI, (none), (none)
+CLOAK       |CLOAK FOR SHIELDING                 | ... | +01 | ... | +02 | +04 | N/A                        | +1 AGI, (none), (none)
 ESCUTCHEON  |SMALL FENCING SHIELD                | ... | +02 | ... | ... | +02 | N/A                        | (none), +1 mHP, (none)
 FULL SHIELD | (none)                             | ... | +04 | ... | ... | +04 | N/A                        | +1 mHP, (none), (none)
 AEGIS SHIELD|SHIELD THAT WARDS GORGONS           | ... | +08 | ... | ... | +04 |O-DEATH                     | +1 mHP, +1 STA, (none)
-GOLD CAPOTE |LIGHT CAPE FOR EVASION              | ... | +02 | +08 | ... | +08 | N/A                        | +2 AGI, (none), +1 WIS
+GOLD CAPOTE |LIGHT CAPE FOR EVASION              | ... | +02 | +08 | +02 | +08 | N/A                        | +2 AGI, (none), +1 WIS
 KRAKEN SHELL|SHIELD CRAFTED FROM KRAKEN SHELL    | ... | +12 | ... | ... | +02 |O-ELEMENT, SHELL            | +2 mHP, +1 STA, (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Helmets    | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
 FEATHER CAP | (none)                             | ... | +02 | +04 | ... | +02 | N/A                        | +1 AGI, (none), +1 WIS
-BASINET     | (none)                             | ... | +06 | ... | ... | -02 | N/A                        | +1 STA, (none), -1 AGI
-HEADBAND    |HEADWEAR WORN BY FIGHTERS           | +08 | +02 | ... | +08 | +02 | N/A                        | +1 STR, +1 AGI, (none)
-SKULL VISAGE|GRIM HELMET OF UNDEAD ARMIES        | ... | +04 | +08 | -08 | -02 |DRAIN, W-COLD               | +1 STA, +1 WIS, -1 AGI
-DRAGON HELM |HELMET THAT WARDS FIRE              | ... | +08 | ... | ... | -02 |O-FIRE                      | +1 mHP, +1 STA, -1 AGI
+BASINET     | (none)                             | ... | +06 | ... | -02 | -02 | N/A                        | +1 STA, (none), -1 AGI
+HEADBAND    |HEADWEAR WORN BY FIGHTERS           | +08 | +02 | ... | +02 | +02 | N/A                        | +1 STR, +1 AGI, (none)
+SKULL VISAGE|GRIM HELMET OF UNDEAD ARMIES        | ... | +04 | +08 | -02 | -02 |DRAIN, W-COLD               | +1 STA, +1 WIS, -1 AGI
+DRAGON HELM |HELMET THAT WARDS FIRE              | ... | +08 | ... | -02 | -02 |O-FIRE                      | +1 mHP, +1 STA, -1 AGI
 RIBBON      |RIBBON THAT WARDS STATUS            | ... | ... | ... | ... | +02 |O-STATUS                    | (none), +1 any, (none)
 ------------+------------------------------------+-----+-----+-----+-----+-----+----------------------------+-----------------------
  Armor      | Description                        | DAM | DEF | WIS | HIT | EVA | Modifiers                  | Gain
@@ -210,8 +210,8 @@ RIBBON      |RIBBON THAT WARDS STATUS            | ... | ... | ... | ... | +02 |
 CAMBRIC     | (none)                             | ... | +08 | ... | ... | +02 |W-FIRE                      | +1 mHP, +1 WIS, (none)
 BRIGANDINE  | (none)                             | ... | +14 | ... | ... | +02 | N/A                        | +2 mHP, +1 STA, (none)
 CUIRASS     | (none)                             | ... | +20 | ... | ... | -02 | N/A                        | +6 mHP, +2 STA, -1 AGI
-KENPO GI    |TRAINING GARB OF FIGHTERS           | +12 | +10 | ... | +08 | +04 |W-FIRE, COUNTER             | +2 mHP, +1 STR, +1 AGI
-DARK SHROUD |SWIFT NINJA CLOTHING                | ... | +14 | ... | ... | +08 |W-FIRE                      | +4 mHP, +1 AGI, (none)
+KENPO GI    |TRAINING GARB OF FIGHTERS           | +12 | +10 | ... | +02 | +04 |W-FIRE, COUNTER             | +2 mHP, +1 STR, +1 AGI
+DARK SHROUD |SWIFT NINJA CLOTHING                | ... | +14 | ... | +02 | +08 |W-FIRE                      | +4 mHP, +1 AGI, (none)
 MINERVA     |LIGHT ARMOR WORN BY ELVES           | ... | +14 | +08 | ... | +02 |SHELL                       | +4 mHP, +1 STA, +1 WIS
 SERPENTSKIN |TUNIC THAT WARDS FIRE               | ... | +16 | ... | ... | +02 |O-FIRE, W-COLD              | +4 mHP, +1 STA, (none)
 ARCHON ROBES| (none)                             | ... | +12 | +12 | ... | ... |O-COLD, SHELL               | +2 mHP, +1 WIS, (none)
@@ -743,10 +743,15 @@ _-==============================================================================
 STRENGTH - the base value of attack power; may not exceed 99
 STAMINA - the base value of defense power; may not exceed 99
 WISDOM - the base value of magic power; may not exceed 99
-AGILITY - the base value of hit and evasion; may not exceed 99
+AGILITY - the base initiative; (turn order) may not exceed 99
 
 DAMAGE - the derived value of STRENGTH and weapon damage, which equals total attack damage; may not exceed 255
 ABSORB - the derived value of STAMINA and armor defense, which equals total defense power; may not exceed 255
+
+{defense} - to determine the total damage of a weapon attack, first compare the DAMAGE of the attacker to the ABSORB of the target.
+Subtracting the value results in the total amount of damage inflicted by the attack. If the value should be negative, disregard it
+and credit 1 point of damage. This formula also applies to magic damage and special attacks, though each has its own damage
+calculation to factor in. For instance, a magic spell does not borrow from the caster's DAMAGE score at all, but rather WISDOM.
 
 HIT - the derived value of AGILITY and weapon accuracy, which equals total attack accuracy; may not exceed 99
   (HIT = AGILITY + derived equipment bonus)
@@ -754,11 +759,16 @@ HIT - the derived value of AGILITY and weapon accuracy, which equals total attac
 EVADE - the derived value of AGILITY and armor evasion, which equals total chance to evade; may not exceed 32
   (EVADE = AGILITY/8 + derived equipment bonus)
 
-When determining hit and evasion formulas in battle, simply subtract the target's EVADE value from the attacker's HIT value.
+{success rate} - when determining hit and evasion formulas in battle, simply subtract the target's EVADE value from the attacker's
+HIT value. That score represents the total success rate of the attack. If the resulting value is negative on either end, disregard
+it and credit a 10% success rate.
 
 {critical} - this is a hidden attribute which determines the occurance of critical hits. By default, this value is 1/32, meaning
 every 1 out of 32 attacks will be a critical hit. This attribute may never be altered, except when an ability (such as the CRITICAL
 bonus on a weapon) changes it.
+
+{initiatve} - to determine turn order in battle, the system checks each participant's AGILITY score. Participants with the highest
+score go first, followed by the second highest, etc. Characters with matching scores are simply given a random turn order.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------
