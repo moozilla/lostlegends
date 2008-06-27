@@ -44,11 +44,8 @@
 #define ['] 42
 #define [,] 43
 #define [right_quotation] 44
-#define ["r] 44
 #define [left_quotation] 45
-#define ["l] 45
 #define [left_quotation_period] 46
-#define [."] 46
 #define [-] 47
 #define [/] 48
 #define [*] 49
