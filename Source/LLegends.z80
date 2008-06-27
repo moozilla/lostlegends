@@ -3,10 +3,14 @@
 ;routinename + number for sub labels
 ;p_name and b_name for pointers and buffer pointers
  	.nolist
-#include "spasm.inc"
+#include "ti83plus.inc"
+#include "app.inc"
 #include "LLegends.inc"
 	.list
-ClearBreakPoints()
+
+.echo > breakpoints.brk "\n"
+#define break() .echo >> breakpoints.brk $
+
 defpage(0,"LLegends")
 	jp start
 ;USE FOR BCALLING ROUTINES
