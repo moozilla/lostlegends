@@ -724,7 +724,7 @@ attack)
 
                 ITS CLAWS | base DAMAGE
                 ITS FANGS | base DAMAGE; 50% chance of [POISON]
-            ITS TENTACLES | eight seperate attacks; hit rate = HIT/2; damage = DAMAGE/4 (ignore ABSORB)
+            ITS TENTACLES | eight seperate attacks; hit rate = HIT/2; damage = DAMAGE/6 (ignore ABSORB)
               ITS STINGER | DAMAGE/3 (ignore ABSORB) and [POISON] to target
      THE SERPENT'S BREATH | [FIRE]-elemental; DAMAGE/2 + WIS/4; entire party
           A STORMY BREATH | [COLD]-elemental; DAMAGE/2 + WIS/4; entire party
