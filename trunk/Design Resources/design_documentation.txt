@@ -1,6 +1,5 @@
--- LOST LEGENDS PROJECT - DESIGN DOCUMENTATION beta --
+-- LOST LEGENDS PROJECT - DESIGN DOCUMENTATION --
 
-written by G.HILMARSSON
 
 platform            - TI-84+
 resolution          - 96x64 px.
