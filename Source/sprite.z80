@@ -247,7 +247,9 @@ NSpriteMov_right_shift2x3:
 ;do the last animation
 ;works ok, but too FAST!!!!!!	
 	
-	
+;++++++++++++++++++++++++++++++++++++++++++++
+;HERE
+;++++++++++++++++++++++++++++++++++++++++++++	
 	
 NSpriteMov_left_shift:
 NSpriteMov_up_shift:

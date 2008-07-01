@@ -187,5 +187,5 @@ myString:
 .echo >>sizes.txt "Code Space:", keyboardz80code + mapper2z80code + customfontz80code + mapgetz80code + spritez80code + graylibxinccode, "\n"
 .echo >>sizes.txt "Data Space:", keyboardz80data + mapper2z80data + customfontz80data + mapgetz80data + spritez80data + graylibxincdata, "\n\n"
 
-.block ($8000-$)-96			; 96 for signature
+;.block ($8000-$)-96			; 96 for signature
 validate()

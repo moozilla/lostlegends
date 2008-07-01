@@ -1,3 +1,5 @@
+Working on scrolling directions (up, down, left -right already done-) in NSpriteMov in sprite.z80!
+
 VERY IMPORTANT!!
 ================
 use a lifo structure to handle major section changes.  If the place you're about to scroll off to is null, then refer to the lifo structure
