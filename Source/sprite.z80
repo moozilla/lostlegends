@@ -252,6 +252,87 @@ NSpriteMov_right_shift2x3:
 ;++++++++++++++++++++++++++++++++++++++++++++	
 	
 NSpriteMov_left_shift:
+	ld a,5				;sprite should be on the left now.
+	ld (px),a			;update px permanently
+	ld hl, 5
+	add hl,de			;updating ctile
+	ld (ctile),hl
+	ld hl,(NBleft)		;left node's address
+	ld a,h
+	or l				;check if it's NULL
+	jp z,spriteReturn	;reverse portal handling w/ DEFAULT PORTAL OBJECT
+	ld de, charleft
+	call NSpriteMov_LDassist	;pointers to correct animations have been added
+	push hl
+	ld a, %00100101			;scroll it over once TO THE LEFTS
+	call scrollmap
+	call draw6x4map			;clean slate
+	break()	
+	pop hl				;x, y in pixels in hl
+	ld a, 14
+	add a,h				;first shift is 16 + 2 = 14 in x coordinate
+	ld h,a				; update hl
+	ld b,16				;height
+	ld ix,charleft2 + 64
+	ld de,charleft2
+	ld (gs16maskedsprite),de	;load mask and sprite in right spot
+	push hl				;preserve the coordinates
+	call gs16masked		;first animation
+	ld b, NumAniS
+	ld c, AniSDelta - 16   ;prep the counter and the delta
+	pop hl				;restore hl
+	;break()
+NSpriteMov_left_shift2:
+	push bc
+	push hl
+	ld a,b
+	or %00100000			;turn on the right direction
+	;dec a
+	;ld a, 1 | %00100000
+	;add a,b
+	call scrollmap
+	call draw6x4map			;clean slate
+	pop hl
+	pop bc
+	push bc	
+	bit 0,b			;test if odd/even -> even = second sprite
+	jr nz,NSpriteMov_left_shift2x2
+	ld ix,(sanime2Mask)
+	ld de,(sanime2)
+	ld (gs16maskedsprite),de
+	jp NSpriteMov_left_shift2x3
+NSpriteMov_left_shift2x2:
+	ld ix,(sanime1mask)
+	ld de,(sanime1)
+	ld (gs16maskedsprite),de
+NSpriteMov_left_shift2x3:
+	ld a,h
+	sub c		;decrement coordinate based on animation number
+	ld h,a
+	push hl
+	ld b,16		;height
+	call gs16masked
+	call gscopybuffer
+	pop hl
+	pop bc
+	djnz NSpriteMov_left_shift2
+	push hl
+	ld a, %00100000		;zero a because we're on the other side
+	call scrollmap
+	call draw6x4map
+	pop hl
+	ld a, 14
+	add a,h				;last shift is 16 - 2 = 14 in x coordinate
+	ld h,a				; update hl
+	ld b,16				;height
+	ld ix,charleft + 64
+	ld de,charleft
+	ld (gs16maskedsprite),de	;load mask and sprite in right spot
+	call gs16masked
+	call gscopybuffer
+	ld de,(NBleft)
+	call mapDatatoRam			;retrieve correct object data
+	ret	
 NSpriteMov_up_shift:
 NSpriteMov_down_shift:
 ret

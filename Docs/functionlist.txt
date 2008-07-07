@@ -44,7 +44,7 @@ scrollmap
 by Jason Lee (Liazon)
 =====================================================
 a = direction bits{7, 6, 5, no bits} respectively for up, down, left, right
-a {bits 4-0} = amount of shift/starting row/column
+a {bits 4-0} = amount of shift (starting row or column)
 0 - 5 for columns
 0, 6, 12, 18 for rows
 JUST MAKE SURE YOU CHECK YOUR LOOPING METHOD WHEN USING THESE!!!!!

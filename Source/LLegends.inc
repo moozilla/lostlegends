@@ -3,6 +3,7 @@
 #define corevar appbackupscreen
 #define py corevar
 #define px py + 1
+;NOTE: py and px are tile coordinates.
 #define ctile px + 1
 #define sanime1 ctile + 2
 #define sanime1Mask sanime1 + 2
