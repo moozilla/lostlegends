@@ -1,3 +1,5 @@
+Got left done.
+
 Working on scrolling directions (up, down, left -right already done-) in NSpriteMov in sprite.z80!
 
 VERY IMPORTANT!!
