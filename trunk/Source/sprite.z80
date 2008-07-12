@@ -70,7 +70,7 @@ NSpriteMov_up_skip:
 	bit b_down,a
 	ret nz
 	ld a,(py)
-	cp 4			;check if it's already at bottom
+	cp 3			;check if it's already at bottom
 	jp z,NSpriteMov_down_shift
 	ld hl,$0006
 	add hl,de			;hl looking at tile below
@@ -160,7 +160,7 @@ NSpriteMov_Hori_S2:
 	pop hl
 	pop bc
 	djnz NSpriteMov_Hori
-	ret
+	ret			;why was there a retc here?????
 	
 ;a = (px), hl = ??, bc = x,y in pixels, de = (ctile)	
 NSpriteMov_right_shift:
@@ -205,7 +205,7 @@ NSpriteMov_right_shift2:
 	pop bc
 	push bc	
 	bit 0,b			;test if odd/even -> even = second sprite
-	jr nz,NSpriteMov_right_shift2x2
+	jr z,NSpriteMov_right_shift2x2
 	ld ix,(sanime2Mask)
 	ld de,(sanime2)
 	ld (gs16maskedsprite),de
@@ -247,10 +247,6 @@ NSpriteMov_right_shift2x3:
 ;do the last animation
 ;works ok, but too FAST!!!!!!	
 	
-;++++++++++++++++++++++++++++++++++++++++++++
-;HERE
-;++++++++++++++++++++++++++++++++++++++++++++	
-	
 NSpriteMov_left_shift:
 	ld a,5				;sprite should be on the left now.
 	ld (px),a			;update px permanently
@@ -267,7 +263,7 @@ NSpriteMov_left_shift:
 	ld a, %00100101			;scroll it over once TO THE LEFTS
 	call scrollmap
 	call draw6x4map			;clean slate
-	break()	
+	;break()	
 	pop hl				;x, y in pixels in hl
 	ld a, 14
 	add a,h				;first shift is 16 + 2 = 14 in x coordinate
@@ -296,7 +292,7 @@ NSpriteMov_left_shift2:
 	pop bc
 	push bc	
 	bit 0,b			;test if odd/even -> even = second sprite
-	jr nz,NSpriteMov_left_shift2x2
+	jr z,NSpriteMov_left_shift2x2
 	ld ix,(sanime2Mask)
 	ld de,(sanime2)
 	ld (gs16maskedsprite),de
@@ -333,9 +329,120 @@ NSpriteMov_left_shift2x3:
 	ld de,(NBleft)
 	call mapDatatoRam			;retrieve correct object data
 	ret	
+
+;++++++++++++++++++++++++++++++++++++++++++++
+;HERE
+;++++++++++++++++++++++++++++++++++++++++++++	
+;a = (py), hl = ??, bc = x,y in pixels, de = (ctile)
 NSpriteMov_up_shift:
+	ld a,3			;we're at the bottom of the screen if we scrolled up!
+	ld (py), a		;update py permanently
+	ld hl, 18		;add 3 rows to get ctile to the bottom row
+	add hl,de
+	ld (ctile),hl
+	ld hl, (NBup)		;up node's address
+	ld a,h
+	or l			;check if it's null
+	jp z, spriteReturn	;reverse portal handling w/ DEFAULT PORTAL OBJECT
+	ld de, charup		;address to up sprite's data
+	call NSpriteMov_LDassist	;pointers to correct animations have been loaded in buffer, hl has x,y in pixels
+	ld b, NumAni		;load in the counter and the delta
+	ld c, 16 - AniDelta	;it's opposite for the opposite direction to down lol
+NSpriteMov_up_shift2:
+	push bc			;save counter and delta on stack
+	push hl			;save down x,y in pixels on stack
+	ld a,b
+	dec a
+	sla a
+	ld e,a
+	sla a
+	add a,e
+	set 7,a			;another x6 situation.  set 7 for up on the scrollmap
+	call scrollmap
+	call draw6x4map		;clean slate
+	pop hl
+	pop bc
+	push bc
+	bit 0,b			;test if odd/even -> odd = second sprite
+	jr nz,NSpriteMov_up_shift2x2
+	ld ix,(sanime2Mask)
+	ld de,(sanime2)
+	ld (gs16maskedsprite),de
+	jp NSpriteMov_up_shift2x3
+NSpriteMov_up_shift2x2:
+	ld ix,(sanime1mask)
+	ld de,(sanime1)
+	ld (gs16maskedsprite),de
+NSpriteMov_up_shift2x3:
+	ld a,c
+	add a,l			;increment the y coordinate
+	ld l,a
+	ld a,h			;put x coordinate in a
+	push hl			;save for next loop
+	ld b,16		;height
+	call gs16masked
+	call gscopybuffer
+	pop hl
+	pop bc
+	djnz NSpriteMov_up_shift2	;loop
+	ld de,(NBup)
+	call mapDatatoRam			;retrieve correct object data
+	ret
+
 NSpriteMov_down_shift:
-ret
+	xor a			;we're at the top of the screen if we scroll down!
+	ld (py), a		;update py permanently
+	ld hl, -(18)		;subtract 3 rows to get ctile back to the top row
+	add hl,de
+	ld (ctile),hl
+	ld hl, (NBdown)		;down node's address
+	ld a,h
+	or l			;check if it's null
+	jp z, spriteReturn	;reverse portal handling w/ DEFAULT PORTAL OBJECT
+	ld de, chardown		;address to up sprite's data
+	call NSpriteMov_LDassist	;pointers to correct animations have been loaded in buffer, hl has x,y in pixels
+	ld b, NumAni		;load in the counter and the delta
+	ld c, AniDelta - 16
+NSpriteMov_down_shift2:
+	push bc			;save counter and delta on stack
+	push hl			;save down x,y in pixels on stack
+	ld a,4
+	sub b
+	sla a
+	ld e,a
+	sla a
+	add a,e
+	set 6,a			; remember we have to mult by 6 for up/down
+	call scrollmap
+	call draw6x4map		;clean slate
+	pop hl
+	pop bc
+	push bc
+	bit 0,b			;test if odd/even -> odd = second sprite
+	jr nz,NSpriteMov_down_shift2x2
+	ld ix,(sanime2Mask)
+	ld de,(sanime2)
+	ld (gs16maskedsprite),de
+	jp NSpriteMov_down_shift2x3
+NSpriteMov_down_shift2x2:
+	ld ix,(sanime1mask)
+	ld de,(sanime1)
+	ld (gs16maskedsprite),de
+NSpriteMov_down_shift2x3:
+	ld a,c
+	add a,l			;increment the y coordinate
+	ld l,a
+	ld a,h			;put x coordinate in a
+	push hl			;save for next loop
+	ld b,16		;height
+	call gs16masked
+	call gscopybuffer
+	pop hl
+	pop bc
+	djnz NSpriteMov_down_shift2	;loop
+	ld de,(NBdown)
+	call mapDatatoRam			;retrieve correct object data
+	ret
 
 ;de points to the incoming map section
 ;========================================
