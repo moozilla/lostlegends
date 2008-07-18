@@ -26,7 +26,7 @@
 ;===========================================
 ;gs16masked
 ;other defines
-#define TIMERCOUNT 250			;timer constant
+#define TIMERCOUNT 70/10			;timer constant
 #define gs16maskedwidth gstempsprite
 #define gs16maskedsprite gs16maskedwidth + 1
 #define numAni 4

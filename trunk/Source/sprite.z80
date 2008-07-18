@@ -2,19 +2,19 @@
 ;hopefully will make drawing steady
 ;========================
 haltdraw:
-	ret
 	push hl
 	push de
 haltdraw_loop:
+	halt
 	ld hl,(vblankc)
-	inc hl
 	ld de,TIMERCOUNT
-	add hl,de
+	or a
 	sbc hl,de			;see LLegends.inc to adjust
-	jr nz,haltdraw_loop	
+	jr c,haltdraw_loop	
+
 	ld hl,$0000
 	ld (vblankc),hl
-	push de
+	pop de
 	pop hl
 	ret
 
@@ -127,7 +127,7 @@ NSpriteMov_Vert_S2:
 	push hl
 	ld b,16		;height
 	call gs16masked
-	call haltdraw
+	
 	call gscopybuffer
 	pop hl
 	pop bc
