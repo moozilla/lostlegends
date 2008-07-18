@@ -62,6 +62,7 @@ loop:
 	call keyget
 	bit b_yequal,a
 	jp z,exit
+	call haltdraw
 	call Nspritemov
 #comment
 	bit b_down,a
