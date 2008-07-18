@@ -2,9 +2,11 @@
 ;hopefully will make drawing steady
 ;========================
 haltdraw:
-	push hl
-	push de
+	;push hl
+	;push de
+	push af
 haltdraw_loop:
+#comment
 	halt
 	ld hl,(vblankc)
 	ld de,TIMERCOUNT
@@ -14,8 +16,16 @@ haltdraw_loop:
 
 	ld hl,$0000
 	ld (vblankc),hl
-	pop de
-	pop hl
+#endcomment
+	halt
+	ld a,(frame_count)
+	cp TIMERCOUNT
+	jr c, haltdraw_loop
+	xor a
+	ld (frame_count),a
+	pop af
+	;pop de
+	;pop hl
 	ret
 
 SpriteStart:
@@ -127,7 +137,7 @@ NSpriteMov_Vert_S2:
 	push hl
 	ld b,16		;height
 	call gs16masked
-	
+	call haltdraw
 	call gscopybuffer
 	pop hl
 	pop bc
