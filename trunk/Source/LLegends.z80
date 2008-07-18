@@ -10,6 +10,7 @@
 
 .echo > breakpoints.brk "\n"
 #define break() .echo >> breakpoints.brk $
+#define DOFRAMECOUNT		;activates a counter in case you want one
 
 defpage(0,"LLegends")
 	jp start

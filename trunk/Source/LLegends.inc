@@ -1,6 +1,7 @@
 ;LLegends.z80
 ;===========================================
-#define corevar appbackupscreen
+#define vblankc appbackupscreen
+#define corevar vblankc +2 
 #define py corevar
 #define px py + 1
 ;NOTE: py and px are tile coordinates.
@@ -25,6 +26,7 @@
 ;===========================================
 ;gs16masked
 ;other defines
+#define TIMERCOUNT 250			;timer constant
 #define gs16maskedwidth gstempsprite
 #define gs16maskedsprite gs16maskedwidth + 1
 #define numAni 4

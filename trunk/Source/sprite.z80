@@ -1,3 +1,23 @@
+;========================
+;hopefully will make drawing steady
+;========================
+haltdraw:
+	ret
+	push hl
+	push de
+haltdraw_loop:
+	ld hl,(vblankc)
+	inc hl
+	ld de,TIMERCOUNT
+	add hl,de
+	sbc hl,de			;see LLegends.inc to adjust
+	jr nz,haltdraw_loop	
+	ld hl,$0000
+	ld (vblankc),hl
+	push de
+	pop hl
+	ret
+
 SpriteStart:
 ;NSpriteMov
 ;by Jason Lee (Liazon)
@@ -107,6 +127,7 @@ NSpriteMov_Vert_S2:
 	push hl
 	ld b,16		;height
 	call gs16masked
+	call haltdraw
 	call gscopybuffer
 	pop hl
 	pop bc
@@ -156,6 +177,7 @@ NSpriteMov_Hori_S2:
 	push hl
 	ld b,16		;height
 	call gs16masked
+	call haltdraw
 	call gscopybuffer
 	pop hl
 	pop bc
@@ -221,6 +243,7 @@ NSpriteMov_right_shift2x3:
 	push hl
 	ld b,16		;height
 	call gs16masked
+	call haltdraw
 	call gscopybuffer
 	pop hl
 	pop bc
@@ -240,6 +263,7 @@ NSpriteMov_right_shift2x3:
 	ld de,charright
 	ld (gs16maskedsprite),de	;load mask and sprite in right spot
 	call gs16masked
+	call haltdraw
 	call gscopybuffer
 	ld de,(NBright)
 	call mapDatatoRam			;retrieve correct object data
@@ -308,6 +332,7 @@ NSpriteMov_left_shift2x3:
 	push hl
 	ld b,16		;height
 	call gs16masked
+	call haltdraw
 	call gscopybuffer
 	pop hl
 	pop bc
@@ -325,6 +350,7 @@ NSpriteMov_left_shift2x3:
 	ld de,charleft
 	ld (gs16maskedsprite),de	;load mask and sprite in right spot
 	call gs16masked
+	call haltdraw
 	call gscopybuffer
 	ld de,(NBleft)
 	call mapDatatoRam			;retrieve correct object data
@@ -381,6 +407,7 @@ NSpriteMov_up_shift2x3:
 	push hl			;save for next loop
 	ld b,16		;height
 	call gs16masked
+	call haltdraw
 	call gscopybuffer
 	pop hl
 	pop bc
@@ -436,6 +463,7 @@ NSpriteMov_down_shift2x3:
 	push hl			;save for next loop
 	ld b,16		;height
 	call gs16masked
+	call haltdraw
 	call gscopybuffer
 	pop hl
 	pop bc
