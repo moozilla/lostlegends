@@ -1,7 +1,8 @@
 ;LLegends.z80
 ;===========================================
-#define vblankc appbackupscreen
-#define corevar vblankc +2 
+;#define vblankc appbackupscreen
+;#define corevar vblankc +2 
+#define corevar appbackupscreen
 #define py corevar
 #define px py + 1
 ;NOTE: py and px are tile coordinates.

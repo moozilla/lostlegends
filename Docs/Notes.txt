@@ -1,3 +1,5 @@
+Change engine so that it simply doesn't accept key presses until 8 steps later.
+
 Got left done.
 
 Working on scrolling directions (up, down, left -right already done-) in NSpriteMov in sprite.z80!

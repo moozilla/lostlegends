@@ -510,12 +510,12 @@ notse:
 	ld de,interrupt_entry
 	ldir
 #ifdef DOFRAMECOUNT
-	;xor a
-	;ld (frame_count),a
-	push hl
-	ld hl,$0000
-	ld (vblankc),hl
-	pop hl
+	xor a
+	ld (frame_count),a
+	;push hl
+	;ld hl,$0000
+	;ld (vblankc),hl
+	;pop hl
 #ENDIF
 
 	xor a		;Fastest speed
@@ -677,11 +677,11 @@ greyintSE:
 	call settimer	;sets time for next interrupt
 	call lcd
 #ifdef DOFRAMECOUNT
-	;ld hl,frame_count
-	;inc (hl)
-	ld hl,(vblankc)
-	inc hl
-	ld (vblankc),hl
+	ld hl,frame_count
+	inc (hl)
+	;ld hl,(vblankc)
+	;inc hl
+	;ld (vblankc),hl
 #endif
 	pop af
 	out ($6),a
@@ -741,11 +741,11 @@ IntStart:
 #ENDIF
 	call lcd
 #ifdef DOFRAMECOUNT
-	;ld hl,frame_count
-	;inc (hl)
-	ld hl,(vblankc)
-	inc hl
-	ld (vblankc),hl
+	ld hl,frame_count
+	inc (hl)
+	;ld hl,(vblankc)
+	;inc hl
+	;ld (vblankc),hl
 #endif
 #IFDEF TI83P
 	pop af
