@@ -4,10 +4,20 @@ keyget	(keyboard.z80)
 mapDatatoRAM (mapget.z80)
 scrollmap	(mapget.z80)
 gs16masked	(sprite.z80)
+NSpriteMov	(sprite.z80)
+haltdraw	(sprite.z80)
 customPutC (customfont.z80)
 draw6x4map (mapper2.z80)
 DExA	(mapper2.z80)
 calcCtile (mapget.z80)
+
+Obj_findfirst
+========================================
+c register contains the object type we are looking for.
+hl = starting point for search
+a = number of objects left to search
+outputs hl = node of interest
+outputs carry flag if not found
 
 CalcCTile
 by Jason Lee (Liazon)
@@ -57,6 +67,7 @@ a = x
 l = y
 b = height
 gstempsprite + 1 = sprite pointer!!!!	(gs16maskedsprite)
+
 gstempsprite = used for scrolling storage
 uses ASMFlag1 bit 1
 sprites arranged like so

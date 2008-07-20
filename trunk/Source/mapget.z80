@@ -123,6 +123,7 @@ scrollmap_hortinsert:
 	ret
 mapgetcodebottom:	
 #include "node_grendale_castle.inc"
+#include "node_overworld.inc"
 mapgetbottom:
 #define mapgetz80size mapgetbottom - mapgetstart
 #define mapgetz80data mapgetbottom - mapgetcodebottom

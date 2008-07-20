@@ -365,10 +365,6 @@ NSpriteMov_left_shift2x3:
 	ld de,(NBleft)
 	call mapDatatoRam			;retrieve correct object data
 	ret	
-
-;++++++++++++++++++++++++++++++++++++++++++++
-;HERE
-;++++++++++++++++++++++++++++++++++++++++++++	
 ;a = (py), hl = ??, bc = x,y in pixels, de = (ctile)
 NSpriteMov_up_shift:
 	ld a,3			;we're at the bottom of the screen if we scrolled up!
@@ -488,12 +484,38 @@ NSpriteMov_down_shift2x3:
 ;LOTS OF WORK ON THIS IN THE FUTURE!!
 ;NEED TO HANDLE OBJECT SCANS BEFORE checking for impassability
 spriteReturn:
-	call mapdatatoRam
+	ld c, obj_reverseportal		;load the object type we're looking for
+	ld a, (NBObjnum)		;load the number of objects available to search
+	ld hl,NBObjstart		;load the entry point for search
+	call obj_findfirst
+	inc hl				;hl should point to location byte
+	ld a,(hl)
+	ld b,a				;temporarily hold a copy in b
+	and $0F				;mask out upper bits
+	ld (py),a			;update py
+	ld a,b				;restore
+	srl a \ srl a \ srl a \ srl a	;shift over to get x portion
+	ld (px),a			;update px
+	inc hl
+	ld e,(hl)			;z80 is little endian, hopefully spasm agrees
+	inc hl
+	ld d,(hl)			;now de should have node pointer
+	call mapdatatoRam		;get the data for the new node in
+	ld hl,NBMap
+	call calcctile			;update ctile
 	call draw6x4map
-	ld a,(NBObjStart)			;by default, default position is first object!!!
-	ld e,a
-	and %00001111			;mask out the x
-	ld (py),a
+	ld ix,chardown + 64
+	ld hl,chardown
+	ld (gs16maskedsprite),hl	;prepare to draw sprite
+	ld a,(py)
+	sla a \ sla a \ sla a \ sla a	;multiply by 16
+	ld l,a
+	ld a,(px)
+	sla a \ sla a \ sla a \ sla a 	;multiply by 16
+	ld b, 16
+	call gs16masked
+	call gscopybuffer
+	call haltdraw
 	ret
 
 ;gs16masked

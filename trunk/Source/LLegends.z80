@@ -6,6 +6,7 @@
 #include "ti83plus.inc"
 #include "app.inc"
 #include "LLegends.inc"
+#include "objdefine.inc"
 	.list
 
 .echo > breakpoints.brk "\n"
@@ -62,7 +63,7 @@ loop:
 	call keyget
 	bit b_yequal,a
 	jp z,exit
-	call haltdraw
+	;call haltdraw
 	call Nspritemov
 #comment
 	bit b_down,a
@@ -182,6 +183,7 @@ myString:
 #include "mapper2.z80"
 #include "mapget.z80"
 #include "sprite.z80"
+#include "objmap.z80"
 
 .echo >>sizes.txt "++OTHER\n"
 .echo >>sizes.txt "to allocate:", AllocSize, "\n"
