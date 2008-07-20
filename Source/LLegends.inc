@@ -6,7 +6,7 @@
 #define py corevar
 #define px py + 1
 ;NOTE: py and px are tile coordinates.
-#define ctile px + 1
+#define ctile px + 1			;an pointer to current tile entry in map buffer
 #define sanime1 ctile + 2
 #define sanime1Mask sanime1 + 2
 #define sanime2 sanime1Mask + 2

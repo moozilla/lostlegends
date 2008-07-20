@@ -1,0 +1,24 @@
+;c register contains the object type we are looking for.
+;hl = starting point for search
+;a = number of objects left to search
+;outputs hl = node of interest
+;outputs carry flag if not found
+obj_findfirst:
+	push bc
+	push de
+	ld de, OBJsize
+	ld b,a			;counter has the number of objects.
+obj_findfirst2:
+	ld a,(hl)		;load the object indentifier into a
+	cp c			
+	jr z,obj_findfirst3	;return if it is the object type we want
+	add hl,de		;increase hl to read next object entry
+	djnz obj_findfirst2
+	pop de
+	pop bc
+	scf			;set carry flag
+	ret
+obj_findfirst3:
+	pop de
+	pop bc
+	ret

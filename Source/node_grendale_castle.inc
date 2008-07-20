@@ -141,7 +141,9 @@ grendale_castle_3x1:
 	.dw 0	;FUTURE LINK TO ANOTHER MAP IN ANOTHER FILE!!!!!
 	.dw 0
 	.dw 0
-	.db 0
+	.db 1
+	.db obj_reverseportal, $22
+	.dw overworld_0x3
 grendale_castle_3x2:
 	.db $08,$08,$08,$08,$08,$08
 	.db $08,$3A,$08,$1D,$1D,$08
