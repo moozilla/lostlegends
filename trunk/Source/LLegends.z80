@@ -65,6 +65,8 @@ loop:
 	jp z,exit
 	;call haltdraw
 	call Nspritemov
+	ld hl,(py)
+	call tile_analyze
 #comment
 	bit b_down,a
 	call z,down

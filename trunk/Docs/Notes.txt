@@ -1,3 +1,8 @@
+working on tile_analyze in objmap.z80
+
+SHOULD ORDER OBJECTS BY X THEN Y FOR EASIER SEARCH
+Need to work on portal objects.  Analyze current tile after the move.
+
 Reverse portal works.  See sprite_return
 
 Forget that.

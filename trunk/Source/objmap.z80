@@ -22,3 +22,65 @@ obj_findfirst3:
 	pop de
 	pop bc
 	ret
+
+;l = y
+;h = x
+;all so you can just do ld hl,(py) to get both or you can modify x or y
+tile_analyze:
+	ld a,(NBobjnum)		;number of objects in the node
+	or a			;cp 0, don't bother searching if there are none to search
+	ret z
+	push bc
+	push de
+	ld b,a			;that should be the counter
+	ld a,h
+	rlca \ rlca \ rlca \ rlca	;shifts x coordinate into upper 4 bits
+	or l				;now a looks like 4bits:x, 4bits:y
+	ld c,a				;use c
+	ld hl,NBobjstart+1		;start at top of list, look at second byte, which is the x,y byte
+	ld de, OBJsize			;delta for traversing list
+tile_analyzeloop:
+	ld a,(hl)
+	cp c
+	jr z,tile_analyzefound
+	add hl,de			;look at next entry
+	djnz tile_analyzeloop
+	scf				;set carry flag to indicate not found
+	pop de
+	pop bc
+	ret
+tile_analyzefound:
+	dec hl				;set pointer to look at the object type byte (first byte)
+	ld e,(hl)
+	ld d,0
+	sla e				;pointers are words
+	rl d				;in case of carry
+	inc hl \ inc hl
+	ld c,(hl)
+	inc hl
+	ld b,(hl)			;load whatever arguments into bc, remember it's little endian
+	ld hl,tile_redirecttable
+	add hl,de			;should point to the right place now, assuming jp (hl) does pc = (hl)
+	ld e,(hl)
+	inc hl				;assuming jp (hl) does pc = hl
+	ld d,(hl)			;z80 is little endian
+	ex de,hl			;hl now has the code pointer
+	call call_hl
+	pop de
+	pop bc
+	ret
+
+;(hl) is the new pc
+call_hl:
+	jp (hl)
+
+tile_redirecttable:
+	.dw objDoNothing
+	.dw objDoNothing
+
+objDoNothing:
+	ret
+	
+	
+	
+	
