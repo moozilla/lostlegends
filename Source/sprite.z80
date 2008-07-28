@@ -1,3 +1,11 @@
+;b = # of waits
+haltdrawloop:
+	push bc
+	call haltdraw
+	pop bc
+	djnz haltdrawloop
+	ret
+
 ;========================
 ;hopefully will make drawing steady
 ;========================
@@ -514,8 +522,15 @@ spriteReturn:
 	sla a \ sla a \ sla a \ sla a 	;multiply by 16
 	ld b, 16
 	call gs16masked
+	ld a,$FF
+	ld (gsactivebuf1),a
+	ld hl,gsactivebuf1
+	ld de,gsactivebuf1 +1
+	ld bc, 768*2
+	ldir
+	ld b, 10			;wait between black screen and teleport
+	call haltdrawloop
 	call gscopybuffer
-	call haltdraw
 	ret
 
 ;gs16masked
