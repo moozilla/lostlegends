@@ -153,7 +153,9 @@ grendale_castle_3x2:
 	.dw 0
 	.dw 0
 	.dw 0
-	.db 0
+	.db 1
+;actual portal to 3x3, see objdefine.inc for format definitions
+	.db obj_portal, $11, $22, $01|%10000000
 grendale_castle_3x3:
 	.db $08,$08,$0E,$08,$08,$08
 	.db $08,$02,$02,$2C,$1E,$08
@@ -163,5 +165,9 @@ grendale_castle_3x3:
 	.dw 0
 	.dw 0
 	.dw 0
-	.db 0
+	.db 1
+;actual portal to 3x2, see objdefine for format definitions
+	.db obj_portal, $12, $12, $00
+	 
+	
 	
