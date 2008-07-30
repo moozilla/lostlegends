@@ -152,6 +152,9 @@ objPortalready:
 objPortal_Table:
 	.dw grendale_castle_3x2
 	.dw grendale_castle_3x3
+	.dw grendale_castle_0x3
+	.dw grendale_castle_0x2
+	.dw grendale_castle_3x1
 	
 	
 	
