@@ -1,3 +1,5 @@
+WHEN ADDING PORTAL OBJECTS!! remember to add the destination to the vector table in objmap.z80: objportal_table
+
 working on tile_analyze in objmap.z80
 
 SHOULD ORDER OBJECTS BY X THEN Y FOR EASIER SEARCH
