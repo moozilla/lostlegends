@@ -38,7 +38,7 @@ overworld_0x3:
 	.db $12|imp,$12|imp,$41,$42,$43|imp,$12|imp
 	.db $00,$00,$00,$00,$00,$00
 	.db $12|imp,$12|imp,$00,$00,$00,$12|imp
-	.dw 0		;FOR TESTING PURPOSES, THIS NODE HAS BEEN SECTIONED OFF
+	.dw 0		
 	.dw overworld_1x3
 	.dw overworld_0x2
 	.dw overworld_0x4
@@ -135,7 +135,9 @@ overworld_2x2:
 	.dw 0
 	.dw 0
 	.dw 0
-	.db 0
+	.db 1
+;portal to living forest
+	.db obj_portal, $22, $23|%00001000, $07
 overworld_2x3:
 	.db $14|imp,$03,$03,$03,$03,$14|imp
 	.db $14|imp,$03,$03,$03,$03,$14|imp
