@@ -155,6 +155,9 @@ objPortal_Table:
 	.dw grendale_castle_0x3
 	.dw grendale_castle_0x2
 	.dw grendale_castle_3x1
+	.dw living_forest_1x0
+	.dw living_forest_0x0
+	.dw living_forest_3x1
 	
 	
 	
