@@ -1,3 +1,17 @@
+64 total items, data fields:
+name
+description
+type
+Qt/uses
+equipable
+effects, including status effects
+
+***in the inventory, the only important info is the item identity and the quantity/uses left
+
+WHEN ADDING NEW NODE MAP FILES, they need to be included in mapget.z80
+
+WHEN ADDING NEW FILES, SVN ADD <filename>!
+
 WHEN ADDING PORTAL OBJECTS!! remember to add the destination to the vector table in objmap.z80: objportal_table
 
 working on tile_analyze in objmap.z80
