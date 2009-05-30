@@ -1,0 +1,7 @@
+#labels Phase-Implementation
+#Keep track of progress done by active members.
+
+= Recent Progress =
+Galandros:
+- optimized by space keyget rotine, also preserves ix (tested)
+- seeing code
