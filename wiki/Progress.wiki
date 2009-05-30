@@ -5,3 +5,5 @@
 Galandros:
 - optimized by space keyget rotine, also preserves ix (tested)
 - seeing code
+- I will implement what remains (text script)
+- Making JavaScript utility to convert normal text strings to custom font.
