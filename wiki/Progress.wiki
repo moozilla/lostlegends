@@ -5,12 +5,23 @@
 
 *Galandros:*
   * optimized by space keyget rotine, also preserves ix (tested)
+  * optimized grayscale masks, way much less flicker on emulator now
   * seeing code
   * I will implement what remains (text script)
   * Making JavaScript utility to convert normal text strings to custom font.
+ My to do:
+  * data for font set is repeated. Optimize customfontC and FontSet. (code first, optimize later)
+  * need to see if all text is done
+  * support word-wrapping and translations
 
-= Active Member =
-  * Galandros
+= To Do =
+    * Object engine
+    * Battle engine
+    * Menus
+    * Scripting/Story implementation
 
 = Requests =
 Liazon, what happened to you? In your last news, you said that passed some pc problems and continue the project...
+
+= Active Members =
+  * Galandros
