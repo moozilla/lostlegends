@@ -1,5 +1,5 @@
+#summary Keep track of progress done by active members.
 #labels Phase-Implementation
-Keep track of progress done by active members.
 
 = Recent Progress =
 
@@ -8,3 +8,9 @@ Keep track of progress done by active members.
   * seeing code
   * I will implement what remains (text script)
   * Making JavaScript utility to convert normal text strings to custom font.
+
+= Active Member =
+  * Galandros
+
+= Requests =
+Liazon, what happened to you? In your last news, you said that passed some pc problems and continue the project...
