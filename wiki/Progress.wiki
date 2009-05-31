@@ -4,15 +4,24 @@
 = Recent Progress =
 
 *Galandros:*
+  * Picked project! Uh, uh!
   * optimized by space keyget rotine, also preserves ix (tested)
   * optimized grayscale masks, way much less flicker on emulator now
-  * seeing code
-  * I will implement what remains (text script)
-  * Making JavaScript utility to convert normal text strings to custom font.
+
  My to do:
-  * data for font set is repeated. Optimize customfontC and FontSet. (code first, optimize later)
-  * need to see if all text is done
-  * support word-wrapping and translations
+# see all code
+# Making JavaScript utility to convert normal text strings to custom font
+# enter data (texts, items, etc.)
+# code what remains
+# Optimize things (but code and finish first, optimize later)
+  * data for font set is repeated. (Dark Layer === Light Layer)
+  * Optimize customfontC and FontSet (even Liazon noted)
+  * mapper2.z80 --> labels "draw6x4map_dark" and "draw6x4map_light"
+
+Personal Notes
+  * routines to implement:
+  * text script that supports word-wrapping and translations
+  * 
 
 = To Do =
     * Object engine
@@ -21,7 +30,7 @@
     * Scripting/Story implementation
 
 = Requests =
-Liazon, what happened to you? In your last news, you said that passed some pc problems and continue the project...
+Liazon, what happened to you? In your last news, you said that passed some pc problems and continue the project... Zera is worried too.
 
 = Active Members =
   * Galandros
