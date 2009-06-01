@@ -1,5 +1,5 @@
 #summary Keep track of progress done by active members.
-#labels Phase-Implementation
+#labels Featured,Phase-Requirements
 
 = Recent Progress =
 
@@ -17,6 +17,7 @@
   * data for font set is repeated. (Dark Layer = Light Layer)
   * Optimize customfontC and FontSet (even Liazon noted)
   * mapper2.z80 --> labels "draw6x4map_dark" and "draw6x4map_light"
+  * add constant multiply by 6. No need for DExA for this
 
 === Personal Notes ===
   * routines to implement:
