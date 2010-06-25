@@ -6,12 +6,12 @@ grendale_castle_0x0:
 	.db $08|imp,$08|imp,$08|imp,$08|imp,$08|imp,$08|imp
 	.db $08|imp,$1D|imp,$1B|imp,$1A|imp,$1B|imp,$08|imp
 	.db $08|imp,$02,$02,$02,$02,$08|imp
-	.db $08|imp,$08|imp,$08|imp,$0E,$08|imp,$08|imp
+	.db $08|imp,$08|imp,$08|imp,$0E,$08|imp,$08|imp		;6x4 map tile data. imp is mask to not walk into tile - Galandros
 	.dw 0
 	.dw grendale_castle_1x0
 	.dw 0
-	.dw 0
-	.db 0						
+	.dw 0						;now up,down,left, right direction to other nodes
+	.db 0						;Galandros: discovered, number of ojects added to this
 grendale_castle_0x1:
 	.db $08|imp,$0C|imp,$1F|imp,$20|imp,$0C|imp,$08|imp
 	.db $0C|imp,$0D|imp,$21|imp,$22|imp,$0D|imp,$0C|imp

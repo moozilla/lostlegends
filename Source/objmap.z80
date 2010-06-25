@@ -1,3 +1,4 @@
+
 ;c register contains the object type we are looking for.
 ;hl = starting point for search
 ;a = number of objects left to search
@@ -9,10 +10,10 @@ obj_findfirst:
 	ld de, OBJsize
 	ld b,a			;counter has the number of objects.
 obj_findfirst2:
-	ld a,(hl)		;load the object indentifier into a
-	cp c			
+	ld a,(hl)			;load the object indentifier into a
+	cp c
 	jr z,obj_findfirst3	;return if it is the object type we want
-	add hl,de		;increase hl to read next object entry
+	add hl,de			;increase hl to read next object entry
 	djnz obj_findfirst2
 	pop de
 	pop bc
@@ -28,18 +29,18 @@ obj_findfirst3:
 ;all so you can just do ld hl,(py) to get both or you can modify x or y
 tile_analyze:
 	ld a,(NBobjnum)		;number of objects in the node
-	or a			;cp 0, don't bother searching if there are none to search
+	or a				;cp 0, don't bother searching if there are none to search
 	ret z
 	push bc
 	push de
 	ld b,a			;that should be the counter
 	ld a,h
 	rlca \ rlca \ rlca \ rlca	;shifts x coordinate into upper 4 bits
-	or l				;now a looks like 4bits:x, 4bits:y
+	or l					;now a looks like 4bits:x, 4bits:y
 	ld c,a				;use c
 	ld hl,NBobjstart+1		;start at top of list, look at second byte, which is the x,y byte
 	ld de, OBJsize			;delta for traversing list
-tile_analyzeloop:
+tile_analyzeloop:			;looks like obj_find. optimize later
 	ld a,(hl)
 	cp c
 	jr z,tile_analyzefound
@@ -50,7 +51,7 @@ tile_analyzeloop:
 	pop bc
 	ret
 tile_analyzefound:
-	dec hl				;set pointer to look at the object type byte (first byte)
+	dec hl			;set pointer to look at the object type byte (first byte)
 	ld e,(hl)
 	ld d,0
 	sla e				;pointers are words
@@ -60,9 +61,9 @@ tile_analyzefound:
 	inc hl
 	ld b,(hl)			;load whatever arguments into bc, remember it's little endian
 	ld hl,tile_redirecttable
-	add hl,de			;should point to the right place now, assuming jp (hl) does pc = (hl)
+	add hl,de			;should point to the right place now
 	ld e,(hl)
-	inc hl				;assuming jp (hl) does pc = hl
+	inc hl			;jp (hl) does pc = hl
 	ld d,(hl)			;z80 is little endian
 	ex de,hl			;hl now has the code pointer
 	call call_hl
@@ -70,13 +71,13 @@ tile_analyzefound:
 	pop bc
 	ret
 
-;(hl) is the new pc
+;hl is the new pc
 call_hl:
 	jp (hl)
 
 tile_redirecttable:
 	.dw objDoNothing
-	.dw objDoNothing
+	.dw objDoNothing			;obj_reverseportal
 	.dw objPortalCode
 
 objDoNothing:
@@ -87,32 +88,32 @@ objDoNothing:
 objPortalCode:
 	ld a,c		;save x,y destination in a
 	and $07		;mask out the x portion in upper bits AS WELL AS up/down flag
-	ld (py),a	;update (py) permanently
+	ld (py),a		;update (py) permanently
 	ld a,c		;restore
 	srl a \ srl a
 	srl a \ srl a	;shift over x portion
 	rr c \ srl c	;preserve up/down flag in bit 6 of c
-	ld (px),a	;update (px) permanently
+	ld (px),a		;update (px) permanently
 	ld a,c
-	or b		;now left/right flag is flattened onto bit 7, we don't care about bits 0-5 though
+	or b			;now left/right flag is flattened onto bit 7, we don't care about bits 0-5 though
 	push af		;preserve the left/right and up/down flags
 	ld c,b
 	ld b,0		;prep for addition
-	sla c		;index x2 because pointers are 2 bytes each, we can ignore the missing top bit because it's the left/right flag
+	sla c			;index x2 because pointers are 2 bytes each, we can ignore the missing top bit because it's the left/right flag
 	ld hl,objPortal_Table		;start of the table
 	add hl,bc
 	ld e,(hl)
 	inc hl
-	ld d,(hl)	;z80 is little endian, de now has the node pointer
-	call mapdatatoram	;at this point we don't care if registers destroyed
-	ld hl,NBMap		;just because of the way I designed calcctile
+	ld d,(hl)			;z80 is little endian, de now has the node pointer
+	call mapdatatoram		;at this point we don't care if registers destroyed
+	ld hl,NBMap			;just because of the way I designed calcctile
 	call calcctile		;I don't know why I did this, but I have to live with this until I finish
 	call draw6x4map		;obviously render to buffers
-	pop af		;restore the flags for direction, they are in a register btw
-	rla		;carry flag will have bit 7
+	pop af			;restore the flags for direction, they are in a register btw
+	rla				;carry flag will have bit 7
 	jr c, objPortalLeftRight	;set, then it's the left/right axis
-	rla 		;carry flag will have bit 6
-	jr c, objPortalUP	; CARRY set, then it's the up sprite
+	rla				;carry flag will have bit 6
+	jr c, objPortalUP		; CARRY set, then it's the up sprite
 	ld ix,chardown + 64
 	ld hl, chardown
 	jp objPortalready
@@ -121,7 +122,7 @@ objPortalUP:
 	ld hl, charup
 	jp objPortalready
 objPortalLeftRight:
-	rla 		;carry flag will have bit 6
+	rla 				;carry flag will have bit 6
 	jr c, objPortalLeft	;set, then it's the left sprite
 	ld ix, charright + 64
 	ld hl, charright
@@ -130,24 +131,25 @@ objPortalLeft:
 	ld ix, charleft + 64
 	ld hl, charleft
 objPortalready:
-	ld (gs16maskedsprite),hl	;prepare to draw sprite
+	ld (gs16maskedsprite),hl		;prepare to draw sprite
 	ld a,(py)
-	sla a \ sla a \ sla a \ sla a	;multiply by 16
+	sla a \ sla a \ sla a \ sla a		;multiply by 16
 	ld l,a
 	ld a,(px)
 	sla a \ sla a \ sla a \ sla a 	;multiply by 16
 	ld b, 16
 	call gs16masked
-	ld a,$FF
-	ld (gsactivebuf1),a
+;	ld a,$FF
+;	ld (gsactivebuf1),a
 	ld hl,gsactivebuf1
+	ld (hl),$FF			;cheap trick -3 bytes by Galandros
 	ld de,gsactivebuf1 +1
-	ld bc, 768*2
+	ld bc, 768*2		;check if overflows buffer...
 	ldir
 	ld b, 10			;wait between black screen and teleport
 	call haltdrawloop
 	call gscopybuffer
-	ret	
+	ret
 
 objPortal_Table:
 	.dw grendale_castle_3x2
@@ -158,8 +160,8 @@ objPortal_Table:
 	.dw living_forest_1x0
 	.dw living_forest_0x0
 	.dw living_forest_3x1
-	
-	
-	
-	
-	
+
+
+
+
+
