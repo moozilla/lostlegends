@@ -1,6 +1,5 @@
 ;Tile data - Graphics Studio
 
-
 mapperTiles:
  ;Tile 0
  .db $00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00

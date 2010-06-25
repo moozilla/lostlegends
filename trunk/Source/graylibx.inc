@@ -991,7 +991,7 @@ gslargerotate1 = $+1
 	call gsLargeRow
 	pop bc
 	pop hl
-	ld	de,gbuf2
+	ld de,gbuf2
 	add hl,de
 
 gsLargeRow:
@@ -1033,10 +1033,7 @@ gsLargemask2 = $+1
 
 graylibbottom:
 #define graylibxinccode graylibbottom - graylibtop
+#define graylibxincsize graylibxinccode
 #define graylibxincdata 0
-.echo >>sizes.txt "++graylibx.inc\n"
-.echo >>sizes.txt "RGP size:", graylibbottom - graylibtop, "\n\n"
 
-
-
-
+ print_sizes("graylibx.inc", graylibxincsize, graylibxincdata, graylibxinccode)

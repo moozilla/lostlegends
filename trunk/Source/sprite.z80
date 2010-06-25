@@ -1,65 +1,27 @@
-;b = # of waits
-haltdrawloop:
-	push bc
-	call haltdraw
-	pop bc
-	djnz haltdrawloop
-	ret
-
-;========================
-;hopefully will make drawing steady
-;========================
-haltdraw:
-	;push hl
-	;push de
-	push af
-haltdraw_loop:
-#comment
-	halt
-	ld hl,(vblankc)
-	ld de,TIMERCOUNT
-	or a
-	sbc hl,de			;see LLegends.inc to adjust
-	jr c,haltdraw_loop	
-
-	ld hl,$0000
-	ld (vblankc),hl
-#endcomment
-	halt
-	ld a,(frame_count)
-	cp TIMERCOUNT
-	jr c, haltdraw_loop
-	xor a
-	ld (frame_count),a
-	pop af
-	;pop de
-	;pop hl
-	ret
-
 SpriteStart:
 ;NSpriteMov
 ;by Jason Lee (Liazon)
 ;========================================
 ;a = keyinput results from the keyget routine
 NSpriteMov:
-	ld de,(ctile)	;load the address to the current tile to de
-	ld bc,(py)		;c = py, b = px
+	ld de,(ctile)				;load the address to the current tile to de
+	ld bc,(py)					;c = py, b = px
 	sla b \ sla b \ sla b \ sla b		;*x16 gets pixel coordinates
 	sla c \ sla c \ sla c \ sla c		;*x16 gets pixel coordinates
-	bit b_right,a
+	bit bRight,a
 	jr nz,NSpriteMov_right_skip
 	ld a,(px)
-	cp 5				;check if current x tile # is 5
+	cp 5						;check if current x tile # is 5
 	jp z,NSpriteMov_right_shift		;go to a block of code that handles shifting the plane
 	ld hl,charright
-	inc de				;de points to tile to right
-	ex de,hl			;switch the two
+	inc de					;de points to tile to right
+	ex de,hl					;switch the two
 	bit impabit,(hl)
 	jp nz,NSpriteMov_Hori_Zero
 	inc a
-	ld (px),a			;update px permanently
-	ld (ctile),hl		;update current tile permanently
-	ld a,aniDelta			;4 PART ANIMATION, animation delta
+	ld (px),a					;update px permanently
+	ld (ctile),hl				;update current tile permanently
+	ld a,aniDelta				;4 PART ANIMATION, animation delta
 	call NSpriteMov_LDassist
 	jp NSpriteMov_Hori
 NSpriteMov_Hori_Zero:
@@ -67,30 +29,30 @@ NSpriteMov_Hori_Zero:
 	call NSpriteMov_LDassist
 	jp NSpriteMov_Hori
 NSpriteMov_right_skip:
-	bit b_left,a
+	bit bLeft,a
 	jp nz,NSpriteMov_left_skip
 	ld a,(px)
-	or a				;check if current x # tile is 0
-	jp z,NSpriteMov_left_shift			;go to a block to handle plane shifts
+	or a						;check if current x # tile is 0
+	jp z,NSpriteMov_left_shift		;go to a block to handle plane shifts
 	ld hl,charleft
-	dec de				;de points to tile to left
+	dec de					;de points to tile to left
 	ex de,hl
 	bit impabit,(hl)
 	jp nz,NSpriteMov_Hori_Zero
 	dec a
 	ld (px),a
-	ld (ctile),hl			;updat px and tile permanently
+	ld (ctile),hl				;updat px and tile permanently
 	ld a,-1*aniDelta
 	call NSpriteMov_LDassist
 	jp NSpriteMov_Hori
 NSpriteMov_left_skip:
-	bit b_up,a
+	bit bUp,a
 	jp nz,NSpriteMov_up_skip
 	ld a,(py)
 	or a
 	jp z,NSpriteMov_up_shift
 	ld hl,-6
-	add hl,de			;hl looking at tile above
+	add hl,de					;hl looking at tile above
 	ld de,charup
 	bit impabit,(hl)
 	jp nz,NSpriteMov_Vert_Zero
@@ -105,13 +67,13 @@ NSpriteMov_Vert_Zero:
 	call NSpriteMov_LDassist
 	jp NSPriteMov_Vert
 NSpriteMov_up_skip:	
-	bit b_down,a
+	bit bDown,a
 	ret nz
 	ld a,(py)
-	cp 3			;check if it's already at bottom
+	cp 3						;check if it's already at bottom
 	jp z,NSpriteMov_down_shift
 	ld hl,$0006
-	add hl,de			;hl looking at tile below
+	add hl,de					;hl looking at tile below
 	ld de,chardown
 	bit impabit,(hl)
 	jp nz,NSpriteMov_Vert_Zero
@@ -123,11 +85,11 @@ NSpriteMov_up_skip:
 NSPriteMov_Vert:	
 	push bc
 	push hl
-	call draw6x4map			;clean slate
+	call draw6x4map				;clean slate
 	pop hl
 	pop bc
 	push bc
-	bit 0,b			;test if odd/even -> even = second sprite
+	bit 0,b					;test if odd/even -> even = second sprite
 	jr nz,NSpriteMov_Vert_S
 	ld ix,(sanime2Mask)
 	ld de,(sanime2)
@@ -139,11 +101,11 @@ NSpriteMov_Vert_S:
 	ld (gs16maskedsprite),de
 NSpriteMov_Vert_S2:
 	ld a,l
-	add a,c			;increment the y coordinate
+	add a,c					;increment the y coordinate
 	ld l,a
-	ld a,h			;put x in a
+	ld a,h					;put x in a
 	push hl
-	ld b,16		;height
+	ld b,16					;height
 	call gs16masked
 	call haltdraw
 	call gscopybuffer
@@ -166,15 +128,15 @@ NSpriteMov_LDassist:
 	sla c				;mult by 2, back to 64
 	add hl,bc
 	ld (sanime2mask),hl
-	pop hl				;hl has x and y pixel data
+	pop hl			;hl has x and y pixel data
 	ld c,a
-	ld b,numAni				; b = 4 # of animations, c = delta
+	ld b,numAni			; b = 4 # of animations, c = delta
 	ret
 
 NSpriteMov_Hori:
 	push bc
 	push hl
-	call draw6x4map			;clean slate
+	call draw6x4map		;clean slate
 	pop hl
 	pop bc
 	push bc
@@ -193,14 +155,14 @@ NSpriteMov_Hori_S2:
 	add a,h			;increment the x coordinate
 	ld h,a
 	push hl
-	ld b,16		;height
+	ld b,16			;height
 	call gs16masked
 	call haltdraw
 	call gscopybuffer
 	pop hl
 	pop bc
 	djnz NSpriteMov_Hori
-	ret			;why was there a retc here?????
+	ret				;why was there a retc here?????
 	
 ;a = (px), hl = ??, bc = x,y in pixels, de = (ctile)	
 NSpriteMov_right_shift:
@@ -212,11 +174,11 @@ NSpriteMov_right_shift:
 	ld hl,(NBright)		;right node's address
 	ld a,h
 	or l				;check if it's NULL
-	jp z,spriteReturn	;reverse portal handling w/ DEFAULT PORTAL OBJECT
+	jp z,spriteReturn		;reverse portal handling w/ DEFAULT PORTAL OBJECT
 	ld de, charright
 	call NSpriteMov_LDassist	;pointers to correct animations have been added
 	push hl
-	xor a			;scroll it over once
+	xor a					;scroll it over once
 	call scrollmap
 	call draw6x4map			;clean slate
 	pop hl				;x, y in pixels in hl
@@ -228,15 +190,15 @@ NSpriteMov_right_shift:
 	ld de,charright2
 	ld (gs16maskedsprite),de	;load mask and sprite in right spot
 	push hl				;preserve the coordinates
-	call gs16masked		;first animation
+	call gs16masked			;first animation
 	ld b, NumAniS
-	ld c, AniSDelta - 16   ;prep the counter and the delta
+	ld c, AniSDelta - 16		;prep the counter and the delta
 	pop hl				;restore hl
 	;break()
 NSpriteMov_right_shift2:
 	push bc
 	push hl
-	ld a, 5 | %0001000				;the amount of tiles to scroll happens to correspond to the number of animations
+	ld a, 5 | %0001000		;the amount of tiles to scroll happens to correspond to the number of animations
 	sub b
 	;or %0001000			;turn on the right direction
 	call scrollmap
@@ -244,7 +206,7 @@ NSpriteMov_right_shift2:
 	pop hl
 	pop bc
 	push bc	
-	bit 0,b			;test if odd/even -> even = second sprite
+	bit 0,b				;test if odd/even -> even = second sprite
 	jr z,NSpriteMov_right_shift2x2
 	ld ix,(sanime2Mask)
 	ld de,(sanime2)
@@ -256,7 +218,7 @@ NSpriteMov_right_shift2x2:
 	ld (gs16maskedsprite),de
 NSpriteMov_right_shift2x3:
 	ld a,c
-	add a,h			;increment the x coordinate
+	add a,h				;increment the x coordinate
 	ld h,a
 	push hl
 	ld b,16		;height
@@ -275,7 +237,7 @@ NSpriteMov_right_shift2x3:
 	pop hl
 	ld a, -(14)
 	add a,h				;last shift is -16 + 3 = -14 in x coordinate
-	ld h,a				; update hl
+	ld h,a				;update hl
 	ld b,16				;height
 	ld ix,charright + 64
 	ld de,charright
@@ -287,18 +249,18 @@ NSpriteMov_right_shift2x3:
 	call mapDatatoRam			;retrieve correct object data
 	ret		
 ;do the last animation
-;works ok, but too FAST!!!!!!	
+;works ok, but too FAST!!!!!!
 	
 NSpriteMov_left_shift:
 	ld a,5				;sprite should be on the left now.
-	ld (px),a			;update px permanently
+	ld (px),a				;update px permanently
 	ld hl, 5
-	add hl,de			;updating ctile
+	add hl,de				;updating ctile
 	ld (ctile),hl
-	ld hl,(NBleft)		;left node's address
+	ld hl,(NBleft)			;left node's address
 	ld a,h
-	or l				;check if it's NULL
-	jp z,spriteReturn	;reverse portal handling w/ DEFAULT PORTAL OBJECT
+	or l					;check if it's NULL
+	jp z,spriteReturn			;reverse portal handling w/ DEFAULT PORTAL OBJECT
 	ld de, charleft
 	call NSpriteMov_LDassist	;pointers to correct animations have been added
 	push hl
@@ -315,9 +277,9 @@ NSpriteMov_left_shift:
 	ld de,charleft2
 	ld (gs16maskedsprite),de	;load mask and sprite in right spot
 	push hl				;preserve the coordinates
-	call gs16masked		;first animation
+	call gs16masked			;first animation
 	ld b, NumAniS
-	ld c, AniSDelta - 16   ;prep the counter and the delta
+	ld c, AniSDelta - 16		;prep the counter and the delta
 	pop hl				;restore hl
 	;break()
 NSpriteMov_left_shift2:
@@ -333,7 +295,7 @@ NSpriteMov_left_shift2:
 	pop hl
 	pop bc
 	push bc	
-	bit 0,b			;test if odd/even -> even = second sprite
+	bit 0,b				;test if odd/even -> even = second sprite
 	jr z,NSpriteMov_left_shift2x2
 	ld ix,(sanime2Mask)
 	ld de,(sanime2)
@@ -345,10 +307,10 @@ NSpriteMov_left_shift2x2:
 	ld (gs16maskedsprite),de
 NSpriteMov_left_shift2x3:
 	ld a,h
-	sub c		;decrement coordinate based on animation number
+	sub c					;decrement coordinate based on animation number
 	ld h,a
 	push hl
-	ld b,16		;height
+	ld b,16			;height
 	call gs16masked
 	call haltdraw
 	call gscopybuffer
@@ -356,7 +318,7 @@ NSpriteMov_left_shift2x3:
 	pop bc
 	djnz NSpriteMov_left_shift2
 	push hl
-	ld a, %00100000		;zero a because we're on the other side
+	ld a, %00100000			;zero a because we're on the other side
 	call scrollmap
 	call draw6x4map
 	pop hl
@@ -375,35 +337,35 @@ NSpriteMov_left_shift2x3:
 	ret	
 ;a = (py), hl = ??, bc = x,y in pixels, de = (ctile)
 NSpriteMov_up_shift:
-	ld a,3			;we're at the bottom of the screen if we scrolled up!
-	ld (py), a		;update py permanently
-	ld hl, 18		;add 3 rows to get ctile to the bottom row
+	ld a,3				;we're at the bottom of the screen if we scrolled up!
+	ld (py), a				;update py permanently
+	ld hl, 18				;add 3 rows to get ctile to the bottom row
 	add hl,de
 	ld (ctile),hl
-	ld hl, (NBup)		;up node's address
+	ld hl, (NBup)			;up node's address
 	ld a,h
-	or l			;check if it's null
-	jp z, spriteReturn	;reverse portal handling w/ DEFAULT PORTAL OBJECT
-	ld de, charup		;address to up sprite's data
+	or l					;check if it's null
+	jp z, spriteReturn		;reverse portal handling w/ DEFAULT PORTAL OBJECT
+	ld de, charup			;address to up sprite's data
 	call NSpriteMov_LDassist	;pointers to correct animations have been loaded in buffer, hl has x,y in pixels
-	ld b, NumAni		;load in the counter and the delta
-	ld c, 16 - AniDelta	;it's opposite for the opposite direction to down lol
+	ld b, NumAni			;load in the counter and the delta
+	ld c, 16 - AniDelta		;it's opposite for the opposite direction to down lol
 NSpriteMov_up_shift2:
-	push bc			;save counter and delta on stack
-	push hl			;save down x,y in pixels on stack
+	push bc				;save counter and delta on stack
+	push hl				;save down x,y in pixels on stack
 	ld a,b
 	dec a
 	sla a
 	ld e,a
 	sla a
 	add a,e
-	set 7,a			;another x6 situation.  set 7 for up on the scrollmap
+	set 7,a				;another x6 situation.  set 7 for up on the scrollmap
 	call scrollmap
-	call draw6x4map		;clean slate
+	call draw6x4map			;clean slate
 	pop hl
 	pop bc
 	push bc
-	bit 0,b			;test if odd/even -> odd = second sprite
+	bit 0,b				;test if odd/even -> odd = second sprite
 	jr nz,NSpriteMov_up_shift2x2
 	ld ix,(sanime2Mask)
 	ld de,(sanime2)
@@ -415,11 +377,11 @@ NSpriteMov_up_shift2x2:
 	ld (gs16maskedsprite),de
 NSpriteMov_up_shift2x3:
 	ld a,c
-	add a,l			;increment the y coordinate
+	add a,l				;increment the y coordinate
 	ld l,a
-	ld a,h			;put x coordinate in a
-	push hl			;save for next loop
-	ld b,16		;height
+	ld a,h				;put x coordinate in a
+	push hl				;save for next loop
+	ld b,16				;height
 	call gs16masked
 	call haltdraw
 	call gscopybuffer
@@ -431,14 +393,14 @@ NSpriteMov_up_shift2x3:
 	ret
 
 NSpriteMov_down_shift:
-	xor a			;we're at the top of the screen if we scroll down!
-	ld (py), a		;update py permanently
+	xor a				;we're at the top of the screen if we scroll down!
+	ld (py), a			;update py permanently
 	ld hl, -(18)		;subtract 3 rows to get ctile back to the top row
 	add hl,de
 	ld (ctile),hl
 	ld hl, (NBdown)		;down node's address
 	ld a,h
-	or l			;check if it's null
+	or l				;check if it's null
 	jp z, spriteReturn	;reverse portal handling w/ DEFAULT PORTAL OBJECT
 	ld de, chardown		;address to up sprite's data
 	call NSpriteMov_LDassist	;pointers to correct animations have been loaded in buffer, hl has x,y in pixels
@@ -493,22 +455,22 @@ NSpriteMov_down_shift2x3:
 ;NEED TO HANDLE OBJECT SCANS BEFORE checking for impassability
 spriteReturn:
 	ld c, obj_reverseportal		;load the object type we're looking for
-	ld a, (NBObjnum)		;load the number of objects available to search
-	ld hl,NBObjstart		;load the entry point for search
+	ld a, (NBObjnum)			;load the number of objects available to search
+	ld hl,NBObjstart			;load the entry point for search
 	call obj_findfirst
 	inc hl				;hl should point to location byte
 	ld a,(hl)
 	ld b,a				;temporarily hold a copy in b
 	and $0F				;mask out upper bits
-	ld (py),a			;update py
+	ld (py),a				;update py
 	ld a,b				;restore
 	srl a \ srl a \ srl a \ srl a	;shift over to get x portion
-	ld (px),a			;update px
+	ld (px),a				;update px
 	inc hl
-	ld e,(hl)			;z80 is little endian, hopefully spasm agrees
+	ld e,(hl)				;z80 is little endian, hopefully spasm agrees
 	inc hl
-	ld d,(hl)			;now de should have node pointer
-	call mapdatatoRam		;get the data for the new node in
+	ld d,(hl)				;now de should have node pointer
+	call mapdatatoRam			;get the data for the new node in
 	ld hl,NBMap
 	call calcctile			;update ctile
 	call draw6x4map
@@ -516,19 +478,20 @@ spriteReturn:
 	ld hl,chardown
 	ld (gs16maskedsprite),hl	;prepare to draw sprite
 	ld a,(py)
-	sla a \ sla a \ sla a \ sla a	;multiply by 16
+	sla a \ sla a \ sla a \ sla a		;multiply by 16
 	ld l,a
 	ld a,(px)
 	sla a \ sla a \ sla a \ sla a 	;multiply by 16
 	ld b, 16
 	call gs16masked
-	ld a,$FF
-	ld (gsactivebuf1),a
+;	ld a,$FF
+;	ld (gsactivebuf1),a
 	ld hl,gsactivebuf1
+	ld (hl),$FF					;Galandros: -2 bytes
 	ld de,gsactivebuf1 +1
 	ld bc, 768*2
 	ldir
-	ld b, 10			;wait between black screen and teleport
+	ld b, 10				;wait between black screen and teleport
 	call haltdrawloop
 	call gscopybuffer
 	ret
@@ -561,14 +524,14 @@ gs16masked:
 	add hl,hl		;*12	
 	ld e,a
 	and $07			;a holds the number of bits to shift
-	ld (gs16maskedwidth),a			;save number of bits to shift in temp RAM
-	srl e			;/2
-	srl e			;/4
-	srl e			;/8
-	add hl,de		;hl = y*12; de = x rounded <- add to get screenbuffer offset
+	ld (gs16maskedwidth),a	;save number of bits to shift in temp RAM
+	srl e				;/2
+	srl e				;/4
+	srl e				;/8
+	add hl,de			;hl = y*12; de = x rounded <- add to get screenbuffer offset
 	ex de,hl
-	ld hl,gbuf2	
-	add hl,de		;address on light layer
+	ld hl,gbuf2
+	add hl,de			;address on light layer
 	push bc			;save the height for second round
 	push hl			;save light layer address for second round (sprite not mask)
 	ld hl,gbuf1
@@ -577,83 +540,83 @@ gs16masked:
 	push hl
 gs16masked_L1:
 	push hl			;save dark layer address
-	ld de,gbuf2-gbuf1
-	add hl,de		;dark layer address
-		ld d,(ix)	;using massive dec register
-		inc ix
-		ld e,(ix)
-		ld c,$FF		;zero out b for AND LOGIC!!!
-		ld a,(gs16maskedwidth)
-		or a		;cp 0
-		jr z,gs16masked_DMask
-		scf			;set carry
+	ld de,gbuf2-gbuf1		;768?
+	add hl,de			;dark layer address
+	ld d,(ix)		;using massive dec register
+	inc ix
+	ld e,(ix)
+	ld c,$FF		;zero out b for AND LOGIC!!!
+	ld a,(gs16maskedwidth)
+	or a			;cp 0
+	jr z,gs16masked_DMask
+	scf			;set carry
 gs16masked_shiftMask:
-		rr d		;shifting to the right -> destroyed bit goes into carry
-		rr e		;shifting to the right -> destroyed bit goes into carry
-		rr c		;shifting to the right
-		dec a
-		jr nz, gs16masked_shiftMask
+	rr d			;shifting to the right -> destroyed bit goes into carry
+	rr e			;shifting to the right -> destroyed bit goes into carry
+	rr c			;shifting to the right
+	dec a
+	jr nz, gs16masked_shiftMask
 gs16masked_DMask:	;AND LOGIC!!!!
-        ld   a,(hl)   ;graphbyte in a (DARK LAYER)
-        and   d      ;AND first byte
-        ld   (hl),a   ;back to buffer
-        inc   hl      ;increase pointer
-        ld   a,(hl)   ;graphbyte in a
-        and   e      ;AND second byte
-        ld   (hl),a   ;back to buffer
-		inc hl
-		ld a,(hl)
-		and c
-		ld (hl),a
-		pop hl			;repeat for light layer
-		ld   a,(hl)   ;graphbyte in a (LIGHT LAYER)
-        and   d      ;AND first byte
-        ld   (hl),a   ;back to buffer
-        inc   hl      ;increase pointer
-        ld   a,(hl)   ;graphbyte in a
-        and   e      ;AND second byte
-        ld   (hl),a   ;back to buffer
-		inc hl
-		ld a,(hl)
-		and c
-		ld (hl),a
-        inc   ix      ;increase sprite adress
-		ld de,10		
-		add hl,de		;next row of light layer
+      ld a,(hl)		;graphbyte in a (DARK LAYER)
+      and d			;AND first byte
+      ld (hl),a		;back to buffer
+      inc hl		;increase pointer
+      ld a,(hl)		;graphbyte in a
+      and e			;AND second byte
+      ld (hl),a		;back to buffer
+	inc hl
+	ld a,(hl)
+	and c
+	ld (hl),a
+	pop hl		;repeat for light layer
+	ld a,(hl)		;graphbyte in a (LIGHT LAYER)
+      and d			;AND first byte
+      ld (hl),a		;back to buffer
+      inc hl		;increase pointer
+      ld a,(hl)		;graphbyte in a
+      and e			;AND second byte
+      ld (hl),a		;back to buffer
+	inc hl
+	ld a,(hl)
+	and c
+	ld (hl),a
+      inc ix			;increase sprite adress
+	ld de,10		
+	add hl,de			;next row of light layer
 	djnz gs16masked_L1
-	ld ix,(gs16maskedsprite)		;give ix the pointer to the sprite
+	ld ix,(gs16maskedsprite)	;give ix the pointer to the sprite
 gs16masked_L3:
 	pop hl
 	pop bc
 gs16masked_L2:
-		ld d,(ix)	;using massive dec register
-		inc ix
-		ld e,(ix)
-		ld c,$00		;zero out c for XOR LOGIC!!!
-		ld a,(gs16maskedwidth)
-		or a		;cp 0
-		jr z,gs16masked_DMask2
+	ld d,(ix)		;using massive dec register
+	inc ix
+	ld e,(ix)
+	ld c,$00		;zero out c for XOR LOGIC!!!
+	ld a,(gs16maskedwidth)
+	or a			;cp 0
+	jr z,gs16masked_DMask2
 gs16masked_shiftMask2:
-		srl d		;shifting to the right -> destroyed bit goes into carry
-		rr e		;shifting to the right -> destroyed bit goes into carry
-		rr c		;shifting to the right
-		dec a
-		jr nz, gs16masked_shiftMask2
+	srl d			;shifting to the right -> destroyed bit goes into carry
+	rr e			;shifting to the right -> destroyed bit goes into carry
+	rr c			;shifting to the right
+	dec a
+	jr nz, gs16masked_shiftMask2
 gs16masked_DMask2:	;XOR LOGIC!!!!
-        ld   a,(hl)   ;graphbyte in a (DARK LAYER)
-        XOR   d      ;XOR first byte
-        ld   (hl),a   ;back to buffer
-        inc   hl      ;increase pointer
-        ld   a,(hl)   ;graphbyte in a
-        XOR   e      ;XOR second byte
-        ld   (hl),a   ;back to buffer
-		inc hl
-		ld a,(hl)
-		XOR c
-		ld (hl),a
-        inc   ix      ;increase sprite adress
-		ld de,10		;12
-		add hl,de		;next row of light layer
+      ld  a,(hl)			;graphbyte in a (DARK LAYER)
+      XOR d				;XOR first byte
+      ld  (hl),a			;back to buffer
+      inc hl			;increase pointer
+      ld  a,(hl)			;graphbyte in a
+      XOR e				;XOR second byte
+      ld  (hl),a			;back to buffer
+	inc hl
+	ld  a,(hl)
+	XOR c
+	ld  (hl),a
+	inc ix			;increase sprite adress
+	ld  de,10			;12
+	add hl,de			;next row of light layer
 	djnz gs16masked_L2
 	bit gs16maskedflag,(iy + mygfxflags)
 	jr z,gs16masked_exit
@@ -668,7 +631,4 @@ SpriteEnd:
 #define Spritez80size SpriteEnd - SpriteStart
 #define Spritez80data SpriteEnd - SpriteTiles
 #define Spritez80code Spritetiles - Spritestart
-.echo >>sizes.txt "++sprite.z80\n"
-.echo >>sizes.txt "Sprite.inc size:", Spritez80size, "\n"
-.echo >>sizes.txt "Sprite.inc data:", Spritez80data, "\n"
-.echo >>sizes.txt "Sprite.inc code:", Spritez80code, "\n\n"
+ print_sizes("customfont.z80", Spritez80size, Spritez80data, Spritez80code)

@@ -1,4 +1,4 @@
-Keep track of the character limits. Items are limited to 8 characters, and words cannot be longer than 16 characters, because they won't fit into the window space evenly.
+Keep track of the character limits. Items are limited to 8 characters, and words cannot be longer than 10 characters, because they won't fit into the window space evenly.
 
 ################################################################################
  introduction and ending text start here
@@ -733,3 +733,5 @@ INTELLIGENCE / MAGIC POWER
 
 
 AGILITY
+
+

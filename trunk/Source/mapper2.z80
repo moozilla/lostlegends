@@ -17,6 +17,8 @@ mapper2start:
 ;byte num_Objects //number of object entries following this
 ;}mapNode
 
+;Galandros: I don't know C so I saw the z80 code
+
 ;draw6x4map
 ;by Jason Lee (Liazon)
 ;=====================================================
@@ -34,13 +36,13 @@ draw6x4map_inner:
 	push bc
 	push hl			;save dark layer address
 	push hl			;save dark layer address again
-	ld de,64		;each tile has 64 bytes O_O
+	ld de,64			;each tile has 64 bytes O_O
 	ld a,(ix)
-	and %01111111	;mask out MSB for the hit detection bit	 		LOOK AT ME!!!!!!!!!!!!!!!
-	call DExA		;hl has offset to the start of the tile of interest
+	and %01111111		;mask out MSB for the hit detection bit	LOOK AT ME!!!!!!!!!!!!!!! --> looking
+	call DExA			;hl has offset to the start of the tile of interest
 	ld de,mapperTiles		;tiles base
-	add hl,de		;hl has pointer to tile to be rendered
-	ex de,hl		;de has pointer to tile to be rendered
+	add hl,de			;hl has pointer to tile to be rendered
+	ex de,hl			;de has pointer to tile to be rendered
 	pop hl			;restore screen address for darklayer
 	ld b,16
 draw6x4map_dark:
@@ -51,25 +53,26 @@ draw6x4map_dark:
 	ld a,(de)
 	ld (hl),a		;second byte
 	inc de
-	ld a,b			;store counter
+	ld a,b		;store counter
 	ld bc,11
 	add hl,bc		;next row on screen
-	ld b,a			;restore counter
+	ld b,a		;restore counter
 	djnz draw6x4map_dark
-	ld bc,-12 * 16 + gbuf2 - gbuf1		;find place on light layer, which is negative difference between two buffers, minus rows already down
+;Galandros: wtf. what ldi does??? optimize later...
+	ld bc, -12 * 16 + gbuf2 - gbuf1	;find place on light layer, which is negative difference between two buffers, minus rows already down
 	add hl,bc
 	ld b,16
 draw6x4map_light:
-	ld a,(de)		;1st byte
+	ld a,(de)			;1st byte
 	ld (hl),a
 	inc de
 	inc hl
 	ld a,(de)
-	ld (hl),a		;second byte
+	ld (hl),a			;second byte
 	inc de
 	ld a,b			;store counter
 	ld bc,11
-	add hl,bc		;next row on screen
+	add hl,bc			;next row on screen
 	ld b,a			;restore counter
 	djnz draw6x4map_light
 	pop hl			;restore original dark layer address and add 2 to get the next location in the row
@@ -78,33 +81,31 @@ draw6x4map_light:
 	inc ix 			;update ix to point to next map entry
 	pop bc			;restore counter
 	djnz draw6x4map_inner
-	ld de,12 * 15	;one less because of hl will end up on the next row of bytes
-	add hl,de		;address on darklayer for next row of tiles to screen
+	ld de,12 * 15		;one less because of hl will end up on the next row of bytes
+	add hl,de			;address on darklayer for next row of tiles to screen
 	pop bc			;restore counter
 	djnz draw6x4map_outer
 	ret				;exit here almost forgot it XD
 
 ;From Sigma's ASMin28
 ;outputs: b = 0; de destroyed; a destroyed
-DExA:			;hl = de x a
+DExA:				;hl = de x a
 	ld hl,0		;use hl to store product
 	ld b,8		;8 bits to check
 DExA_Loop:
-	rrca		;check lsb of a
+	rrca			;check lsb of a
 	jr nc, DExA_Skip	;if 0, skip add
 	add hl,de
 DExA_skip
-	sla e		;shift de 1 bit left
+	sla e			;shift de 1 bit left
 	rl d
 	djnz DExA_Loop
 	ret
+
 mapper2tilesstart:
 #include "tiles.inc"
 mapper2bottom:
 #define mapper2z80size mapper2bottom - mapper2start
 #define mapper2z80data mapper2bottom - mapper2tilesstart
 #define mapper2z80code mapper2tilesstart - mapper2start
-.echo >>sizes.txt "++mapper2.z80\n"
-.echo >>sizes.txt "mapper2.z80 size:", mapper2z80size, "\n"
-.echo >>sizes.txt "mapper2.z80 data:", mapper2z80data, "\n"
-.echo >>sizes.txt "mapper2.z80 code:", mapper2z80code, "\n\n"
+ print_sizes("mapper2.z80", mapper2z80size, mapper2z80data, mapper2z80code)

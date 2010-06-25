@@ -1,56 +1,52 @@
 keygettop:
 ;keyget
-;by Jason Lee (Liazon)
+;by Jason Lee (Liazon) and modified by Galandros
 ;=============================================
 ;for convenience, returns only y=, 2nd, mode, del, and arrows in the right spots
 ;other F2-5 keys are ignored and masked out
+
 ;the number of nops right now are for SE convenience
 ;subject to change. also might change to more efficient ways of wasting time without wasting space
 ;done. From 60 bytes to 45 bytes! preserves ix and tested! - Galandros
-;returns a = byte holding bits corresponding to down, left, right, up, y=, 2nd, mode, del
+;delay between port use: 23 to 24 clocks
+
+;returns: a = byte holding bits corresponding to down, left, right, up, y=, 2nd, mode, del
 keyget:
 	push hl
-	ld hl,gs_keymem	; 2 nops + 2 clocks
-; 1 nop = 1 byte and 4 clocks
 keygetloop:
-	ld a,$FF			;reset keyboard
-	out (1),a
-;4 nopes used to do 4 bytes, 16 clocks delay
-	ld a,(bc)
-	ld a,(bc)
-	ld a,kg_1			;23
+	ld a,$FF		;reset keyboard
 	out (1),a
 	push af
 	ld a,(bc)
-	nop
-;6 nopes used to do 6 bytes, 24 clocks delay
+	ld a,diGroup7
+	out (1),a
+	ld hl,gs_keymem
 	in a,(1)
 	and $F0			;protect the bits with y=, 2nd, mode, del; destroy others
-	ld (gs_keymem),a		;I DON'T KNOW WHAT JIM E USES THIS FOR, BUT I THINK THIS IS SAFE TEMPORARY STORAGE --> I know, he suggests to use as a copy
-	pop af
+	ld (gs_keymem),a		;keep a duplicate
+	pop af			;$FF popped
 ;	ld a,$FF
 	out (1),a
-;4 nopes used to do 4 bytes, 16 clocks delay
+;16 clocks delay
 	inc (hl)
 	dec (hl)
-	dec a
-;	ld a,kg_7			;the same as $FF-$01
+	dec a				;a = $FE = diKeyRowPad
+;	ld a,diKeyRowPad		;the same as $FF-$01
 	out (1),a
 	inc (hl)
 	dec (hl)
 	nop
-;6 nopes used to do 6 bytes, 24 clocks delay
+;24 clocks delay
 	in a,(1)
-;	ld ix,gs_keymem		;I didn't want to destroy a useful register ^^ SUBJECT TO CHANGE --> correct, changed
-	and $0F			;I DON'T KNOW THE NORMAL STATE OF UNUSED KEYS IN ARROWS; JUST A PRECAUTION! --> unused bits are always set
+	and $0F			;unused bits are set
 	or (hl)			;put the two bytes together
-;	cp $FF			;cp $FF probably unecessary since the above thing does the trick --> yeah, unnecessary
 	ld (hl),a
+	cp $FF			;need compare, inc doesn't affect carry
 	jp z,keygetloop		;keys are on by default (0 means key pressed, 1 means not)
 	pop hl
 	ret
 keygetbottom:
 #define keyboardz80code keygetbottom - keygettop
 #define keyboardz80data 0
-.echo >>sizes.txt "++keyboard.z80\n"
-.echo >>sizes.txt "keyget.z80 size:", keyboardz80code, "\n\n"
+#define keyboardz80size keyboardz80code+keyboardz80data
+ print_sizes("keyboard.z80", keyboardz80size, keyboardz80data, keyboardz80code)
